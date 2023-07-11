@@ -165,7 +165,6 @@
 
       # Startup
       exec-once=${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
-      exec-once=${pkgs.hyprpaper}/bin/hyprpaper
       exec-once=${pkgs.mako}/bin/mako
       # exec-once=swayidle -w
       exec-once=${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
