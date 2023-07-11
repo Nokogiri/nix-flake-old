@@ -5,17 +5,17 @@
     nginx.location = "/";
     #scanPath = "/var/lib/gitolite";
     repos = {
-      nix-config = {
-        path = "/var/lib/gitolite/repositories/nix-config.git";
+      nix-flake = {
+        path = "/var/lib/gitolite/repositories/nix-flake.git";
         desc = "nixos configuration";
         owner = "nokogiri";
       };
-      nixpkgs = {
-        path = "/var/lib/gitolite/repositories/nixpkgs.git";
-        desc = "fork of https://github.com/NixOS/nixpkgs";
-        owner = "nokogiri";
-        clone-url = "https://github.com/Nokogiri/nixpkgs";
-      };
+      #nixpkgs = {
+      #  path = "/var/lib/gitolite/repositories/nixpkgs.git";
+      #  desc = "fork of https://github.com/NixOS/nixpkgs";
+      #  owner = "nokogiri";
+      #  clone-url = "https://github.com/Nokogiri/nixpkgs";
+      #};
       iio-hyprland = {
         path = "/var/lib/gitolite/repositories/iio-hyprland.git";
         desc =
