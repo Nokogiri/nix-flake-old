@@ -8,8 +8,6 @@
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
   pass-wofi = pkgs.callPackage ./pass-wofi { };
-  plymouth-catppuccin-mocha =
-    pkgs.callPackage ./plymouth-catppuccin-mocha { };
   openmw = pkgs.libsForQt5.callPackage ./openmw { };
   portmod = pkgs.callPackage ./portmod { };
   #RBDOOM-3-BFG = pkgs.callPackage ./RBDOOM-3-BFG { };
