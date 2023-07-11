@@ -16,7 +16,7 @@
     ];
     initrd = {
       availableKernelModules = [ "nvme" "xhci_pci" "ahci" ];
-      kernelModules = [ "amdgpu" "cpufreq_conservative" ];
+      kernelModules = [ "amdgpu" ];
     };
     kernelModules = [ "kvm-amd" "zenpower" ];
     kernelPackages = pkgs.linuxPackages_latest;
@@ -27,7 +27,7 @@
       "cpufreq.default_governor=ondemand"
     ];
     # guided
-    #kernelParams = [ "amd_pstate=guided" "mitigations=off" "cpufreq.default_governor=schedutil" ];
+    #kernelParams = [ "amd_pstate=guided" "mitigations=off" "cpufreq.default_governor=ondemand" ];
     # active epp
     #kernelParams = [ "amd_pstate=active" "mitigations=off" "cpufreq.default_governor=powersave" "cpufreq.energy_performance_preference=balance_power" ];
     loader.efi.efiSysMountPoint = "/boot";
