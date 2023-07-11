@@ -1,5 +1,5 @@
 { pkgs, inputs, config, ... }:
-let catTheme = "Catppuccin-Frappe-Standard-Lavender-dark";
+let catTheme = "Catppuccin-Frappe-Standard-Sapphire-dark";
 in {
   home.packages = with pkgs; [
     (pkgs.writeTextFile {

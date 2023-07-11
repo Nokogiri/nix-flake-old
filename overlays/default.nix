@@ -22,19 +22,19 @@
       # Add term option, rename de to desktop, add scheme option
       patches = (oldAttrs.patches or [ ]) ++ [ ./pfetch.patch ];
     });
-    myTheme = "Catppuccin-Frappe-Standard-Lavender-dark";
+    myTheme = "Catppuccin-Frappe-Standard-Sapphire-dark";
     myGTK = prev.catppuccin-gtk.override {
-      accents = [ "lavender" ];
+      accents = [ "sapphire" ];
       size = "standard";
       tweaks = [ "rimless" ];
       variant = "frappe";
     };
     myQT = prev.catppuccin-kvantum.override {
-      accent = "Lavender";
+      accent = "Sapphire";
       variant = "Frappe";
     };
     myFolders = prev.catppuccin-papirus-folders.override {
-      accent = "lavender";
+      accent = "sapphire";
       flavor = "frappe";      
     };
     #mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
