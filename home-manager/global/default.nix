@@ -8,9 +8,8 @@
     ../colors
     inputs.nix-colors.homeManagerModules.default
     inputs.sops-nix.homeManagerModules.sops
+    inputs.nix-index-database.hmModules.nix-index
   ];
-  #home-manager.useGlobalPkgs = true;
-  #home-manager.useUserPackages = true;
   nixpkgs = {
     overlays = [
       outputs.overlays.modifications
