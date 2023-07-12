@@ -7,7 +7,13 @@
         scripts = [ pkgs.mpvScripts.mpris pkgs.mpvScripts.sponsorblock ];
       };
     };
-  home.packages = with pkgs; [ ani-cli jellyfin-media-player mpv ];
+  home.packages = with pkgs; [
+    ani-cli
+    jellyfin-media-player
+    mpv
+    yt-dlp
+    youtube-tui
+  ];
 
   xdg.desktopEntries."umpv" = {
     exec = "";

@@ -329,7 +329,7 @@
       windowrulev2 = workspace 3 silent,opaque,noblur,class:^(mpv)$
       windowrulev2 = workspace 6 silent,opaque,noblur,class:^(steam)$,title:^(Steam)$
       windowrulev2 = workspace 6 silent,opaque,noblur,fullscreen,class:^(steam)$,title:^(Steam Big Picture Mode)$
-      
+
       windowrulev2 = fullscreen,opaque,noblur,forceinput,class:^(.gamescope-wrapped)$
       windowrulev2 = workspace 7 silent,title:^(Spotify)$
       windowrulev2 = fullscreen,opaque,noblur,class:^(gamescope)$

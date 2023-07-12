@@ -58,13 +58,12 @@ in {
     };
   };
   home.file.".config/gtk-4.0/gtk.css".source =
-    "${pkgs.myGTK}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk.css";
+    "${pkgs.myGTK}/share/themes/${catTheme}/gtk-4.0/gtk.css";
   home.file.".config/gtk-4.0/gtk-dark.css".source =
-    "${pkgs.myGTK}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk-dark.css";
+    "${pkgs.myGTK}/share/themes/${catTheme}/gtk-4.0/gtk-dark.css";
   home.file.".config/gtk-4.0/assets" = {
     recursive = true;
-    source =
-      "${pkgs.myGTK}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/assets";
+    source = "${pkgs.myGTK}/share/themes/${catTheme}/gtk-4.0/assets";
   };
 
   home.pointerCursor = {
