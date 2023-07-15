@@ -6,7 +6,7 @@
 
   xdg.configFile."hypr/hyprpaper.conf".text = ''
     preload = ~/.config/hypr/paper/Totoro-Sapphire-Night.png
-    preload = ~/.config/hypr/paper/Totoro-Sapphire-Day.png
+    #preload = ~/.config/hypr/paper/Totoro-Sapphire-Day.png
     wallpaper = ,~/.config/hypr/paper/Totoro-Sapphire-Night.png
   '';
 
