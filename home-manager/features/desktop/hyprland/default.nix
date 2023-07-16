@@ -5,7 +5,7 @@
     #../wallpaper
     inputs.hyprland.homeManagerModules.default
     ./config.nix
-    ./hyprpaper.nix
+    ./wallpaper.nix
     ./iio-hyprland.nix
     #./plugins.nix
   ];
