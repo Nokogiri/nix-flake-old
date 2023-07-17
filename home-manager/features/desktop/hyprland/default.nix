@@ -2,12 +2,10 @@
   imports = [
     ../common
     ../common/wayland
-    #../wallpaper
     inputs.hyprland.homeManagerModules.default
     ./config.nix
     ./wallpaper.nix
     ./iio-hyprland.nix
-    #./plugins.nix
   ];
 
   home.packages = with pkgs;
