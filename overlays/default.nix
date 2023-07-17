@@ -22,7 +22,6 @@
       # Add term option, rename de to desktop, add scheme option
       patches = (oldAttrs.patches or [ ]) ++ [ ./pfetch.patch ];
     });
-    myTheme = "Catppuccin-Frappe-Standard-Sapphire-dark";
     myGTK = prev.catppuccin-gtk.override {
       accents = [ "sapphire" ];
       size = "standard";
@@ -37,10 +36,6 @@
       accent = "sapphire";
       flavor = "frappe";      
     };
-    #mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
-    #yt-dlp = prev.yt-dlp.overrideAttrs (oldAttrs: rec {
-    #  patches = (oldAttrs.patches or [ ]) ++ [ ./yt-dlp.patch ];
-    #});
   };
 
   #master-pkgs = self: super: {

@@ -28,6 +28,7 @@
     aria2
     comma # Install and run programs by sticking a , before them
     #distrobox # Nice escape hatch, integrates docker images with my environment
+    glow
 
     # archive stuff
     p7zip
@@ -45,21 +46,15 @@
     dfc # better df
     mediainfo
     gdu
-    #ncdu # TUI disk usage
     exa # Better ls
     ripgrep # Better grep
     fd # Better find
     file
-    #toybox # toying around
-    #httpie # Better curl
     jq # JSON pretty printer and manipulator
-    #trekscii # Cute startrek cli printer
     tealdeer
     ps_mem
 
-    #nix-zsh-completions
     nix-stray-roots
-    #nix-prefetch-git
-    #common-updater-scripts
+   
   ];
 }

@@ -55,6 +55,13 @@ in {
         gtk-application-prefer-dark-theme = true;
 
       };
+      extraCss = "
+        decoration, decoration:backdrop, window {
+          box-shadow: none;
+          border: none;
+          margin: 0;
+        }
+      ";
     };
   };
   home.file.".config/gtk-4.0/gtk.css".source =
