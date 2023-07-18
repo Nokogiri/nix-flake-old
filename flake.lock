@@ -241,11 +241,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1689631903,
-        "narHash": "sha256-4osi3+2cT76he3Wczn+BdumVVeutiSZxy0YRb4NUQHI=",
+        "lastModified": 1689691874,
+        "narHash": "sha256-c81l8OTpjw9XTt3b2pGn0HFCHx8jN+/1U/2Fh/H+lvY=",
         "owner": "hyprwm",
         "repo": "hyprland",
-        "rev": "7f47655f60be2c54dfa0e1758cbff20ab38217fc",
+        "rev": "08310b4af9ce289180d2b3adef157642379f158e",
         "type": "github"
       },
       "original": {
@@ -357,11 +357,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1689559347,
-        "narHash": "sha256-tY3XoPBTI0JBFKrpg/MLttA1Ga3V4GpJjNB4b7QX+Ps=",
+        "lastModified": 1689646015,
+        "narHash": "sha256-MO05NOUqkBJv9pgTT8n38s9xjaxdwyjlsDmtDZVTZZk=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "e2c318928219ed9752ff378cb410232c3be8a4d1",
+        "rev": "7b087b7f516ebb32cb38d17b2b2e198f984d11a0",
         "type": "github"
       },
       "original": {
@@ -514,11 +514,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1689626904,
-        "narHash": "sha256-aZUELx8yQrctZpekbxlMD86AbNHG4s03C8UbX8L9W6M=",
+        "lastModified": 1689687940,
+        "narHash": "sha256-68G4QBgXgRlvA4jwGQn4bjsibUPTxiv8ughkwiEJaBY=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "4b6680becbcdd5c7ce08e550a2953087ca9d7e03",
+        "rev": "2e762e115c4a9df08ecf13f3641b98bd46cd4527",
         "type": "github"
       },
       "original": {
@@ -659,11 +659,11 @@
       "flake": false,
       "locked": {
         "host": "gitlab.freedesktop.org",
-        "lastModified": 1686753331,
-        "narHash": "sha256-KovjVFwcuoUO0eu/UiWrnD3+m/K+SHSAVIz4xF9K1XA=",
+        "lastModified": 1689611045,
+        "narHash": "sha256-3RTOlQabkNetQ4O4UzSf57JPco9VGVHhSU1ls5uKBeE=",
         "owner": "wlroots",
         "repo": "wlroots",
-        "rev": "7e7633abf09b362d0bad9e3fc650fd692369291d",
+        "rev": "7791ffe0584c4ac13c170e1661ce33bdbd4a9b9e",
         "type": "gitlab"
       },
       "original": {
