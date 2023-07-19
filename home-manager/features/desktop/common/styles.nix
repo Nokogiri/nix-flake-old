@@ -6,11 +6,11 @@ let
 in {
   home.packages = with pkgs; [
     (pkgs.writeShellScriptBin "configure-gtk" ''
-              export XDG_DATA_DIRS=${datadir}:$XDG_DATA_DIRS
-              gnome_schema=org.gnome.desktop.interface
-              ${pkgs.glib.bin}/bin/gsettings set $gnome_schema gtk-theme '${config.gtk.theme.name}'
-              ${pkgs.glib.bin}/bin/gsettings set $gnome_schema icon-theme '${config.gtk.iconTheme.name}'
-              ${pkgs.glib.bin}/bin/gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
+      export XDG_DATA_DIRS=${datadir}:$XDG_DATA_DIRS
+      gnome_schema=org.gnome.desktop.interface
+      ${pkgs.glib.bin}/bin/gsettings set $gnome_schema gtk-theme '${config.gtk.theme.name}'
+      ${pkgs.glib.bin}/bin/gsettings set $gnome_schema icon-theme '${config.gtk.iconTheme.name}'
+      ${pkgs.glib.bin}/bin/gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
     '')
     myQT
     myGTK

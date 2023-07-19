@@ -19,8 +19,5 @@
     NO_AT_BRIDGE = "1";
   };
 
-  home.packages = with pkgs;
-    [
-      xdg_utils
-    ];
+  home.packages = with pkgs; [ xdg_utils ];
 }
