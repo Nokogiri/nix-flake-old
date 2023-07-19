@@ -21,8 +21,6 @@
 
   home.packages = with pkgs;
     [
-      #glib.bin
-      #libsForQt5.polkit-kde-agent
       xdg_utils
     ];
 }

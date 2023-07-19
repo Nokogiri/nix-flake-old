@@ -48,14 +48,10 @@
     steam
     steam-run
     steam-rom-manager
-    (pkgs.writeTextFile {
-      name = "steam-extest";
-      destination = "/bin/steam-extest";
-      executable = true;
-      text = ''
+    (pkgs.writeShellScriptBin "steam-extest" ''
         LD_PRELOAD=${inputs.extest.packages.x86_64-linux.default}/lib/libextest.so steam
-      '';
-    })
+      ''
+    )
   ];
 
   xdg.desktopEntries = {
