@@ -17,6 +17,7 @@
     #zeroad
     #airshipper # veloren
     arx-libertatis
+    dhewm3
     eduke32
     gzdoom
     openmw
