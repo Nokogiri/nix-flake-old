@@ -4,8 +4,10 @@
     ../common/wayland
     inputs.hyprland.homeManagerModules.default
     ./config.nix
-    ./wallpaper.nix
     ./iio-hyprland.nix
+    ./swaync.nix
+    ./wallpaper.nix
+    ./wvkbd.nix
   ];
 
   home.packages = with pkgs;

@@ -3,7 +3,7 @@
     ./avizo.nix
     ./fuzzel.nix
     ./gammastep.nix
-    ./mako.nix
+    #./mako.nix
     #./obs-studio.nix
     ./waybar.nix
     ./wofi.nix

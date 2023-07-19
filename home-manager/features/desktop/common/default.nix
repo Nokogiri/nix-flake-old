@@ -21,8 +21,7 @@
 
   home.packages = with pkgs; [
     glib.bin
-    libnotify
-    libsForQt5.polkit-kde-agent
+    #libsForQt5.polkit-kde-agent
     xdg_utils
   ];
 }
