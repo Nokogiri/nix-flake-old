@@ -11,7 +11,7 @@
 
   home.packages = with pkgs; [
     cliphist
-    glib.bin
+    #glib.bin
     grim
     imv
     slurp

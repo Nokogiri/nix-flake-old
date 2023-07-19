@@ -19,9 +19,10 @@
     NO_AT_BRIDGE = "1";
   };
 
-  home.packages = with pkgs; [
-    glib.bin
-    #libsForQt5.polkit-kde-agent
-    xdg_utils
-  ];
+  home.packages = with pkgs;
+    [
+      #glib.bin
+      #libsForQt5.polkit-kde-agent
+      xdg_utils
+    ];
 }

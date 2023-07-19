@@ -55,6 +55,6 @@
     ps_mem
 
     nix-stray-roots
-   
+
   ];
 }

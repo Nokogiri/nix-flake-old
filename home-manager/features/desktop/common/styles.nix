@@ -1,23 +1,17 @@
 { pkgs, inputs, config, ... }:
-let catTheme = "Catppuccin-Frappe-Standard-Sapphire-dark";
+let
+  catTheme = "Catppuccin-Frappe-Standard-Sapphire-dark";
+  schema = pkgs.gsettings-desktop-schemas;
+  datadir = "${schema}/share/gsettings-schemas/${schema.name}";
 in {
   home.packages = with pkgs; [
-    (pkgs.writeTextFile {
-      name = "configure-gtk";
-      destination = "/bin/configure-gtk";
-      executable = true;
-      text = let
-        schema = pkgs.gsettings-desktop-schemas;
-        datadir = "${schema}/share/gsettings-schemas/${schema.name}";
-      in ''
-        export XDG_DATA_DIRS=${datadir}:$XDG_DATA_DIRS
-        gnome_schema=org.gnome.desktop.interface
-        gsettings set $gnome_schema gtk-theme '${config.gtk.theme.name}'
-        gsettings set $gnome_schema icon-theme '${config.gtk.iconTheme.name}'
-        gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
-      '';
-    })
-
+    (pkgs.writeShellScriptBin "configure-gtk" ''
+              export XDG_DATA_DIRS=${datadir}:$XDG_DATA_DIRS
+              gnome_schema=org.gnome.desktop.interface
+              ${pkgs.glib.bin}/bin/gsettings set $gnome_schema gtk-theme '${config.gtk.theme.name}'
+              ${pkgs.glib.bin}/bin/gsettings set $gnome_schema icon-theme '${config.gtk.iconTheme.name}'
+              ${pkgs.glib.bin}/bin/gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
+    '')
     myQT
     myGTK
     myFolders
@@ -55,13 +49,8 @@ in {
         gtk-application-prefer-dark-theme = true;
 
       };
-      extraCss = "
-        decoration, decoration:backdrop, window {
-          box-shadow: none;
-          border: none;
-          margin: 0;
-        }
-      ";
+      extraCss =
+        "\n        decoration, decoration:backdrop, window {\n          box-shadow: none;\n          border: none;\n          margin: 0;\n        }\n      ";
     };
   };
   home.file.".config/gtk-4.0/gtk.css".source =
