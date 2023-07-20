@@ -4,13 +4,13 @@
     extraConfig = ''
       return {
        front_end = "WebGpu",
-       color_scheme = "Catppuccin Mocha",
+       color_scheme = "Catppuccin Frappe",
        font_size = 12.0 ,
        font = wezterm.font_with_fallback {
            'JetBrainsMono Nerd Font Mono',
          },
-       warn_about_missing_glyphs = false,
-       enable_kitty_graphics = true,
+       warn_about_missing_glyphs=false,
+       enable_kitty_graphics=false,
        enable_wayland = true,
        default_cursor_style = "BlinkingUnderline",
        window_background_opacity = 0.95,

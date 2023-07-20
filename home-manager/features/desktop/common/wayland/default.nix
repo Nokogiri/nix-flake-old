@@ -6,12 +6,12 @@
     #./mako.nix
     #./obs-studio.nix
     ./waybar.nix
+    ./wezterm.nix
     ./wofi.nix
   ];
 
   home.packages = with pkgs; [
     cliphist
-    #glib.bin
     grim
     imv
     slurp

@@ -10,8 +10,13 @@
     ./wvkbd.nix
   ];
 
-  home.packages = with pkgs;
-    [ inputs.hyprpicker.packages."x86_64-linux".hyprpicker ];
+  home.packages = with pkgs; [
+    inputs.hyprpicker.packages."x86_64-linux".hyprpicker
+    grimblast
+    hyprprop
+    scratchpad
+    
+  ];
 
   programs = {
     fish.loginShellInit = ''

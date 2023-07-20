@@ -13,7 +13,10 @@
     inputs.nur.nixosModules.nur
   ];
 
-  nixpkgs.overlays = [ inputs.hyprland.overlays.hyprland-extras ];
+  nixpkgs.overlays = [
+    inputs.hyprland.overlays.hyprland-extras
+    inputs.hyprwm-contrib.overlays.default
+  ];
   home.packages = with pkgs; [
 
     libsForQt5.kio-extras
