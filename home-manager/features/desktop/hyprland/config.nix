@@ -14,61 +14,6 @@
         #cursor_inactive_timeout=4
       }
 
-      plugin {
-        hy3 {
-          # disable gaps when only one window is onscreen
-          no_gaps_when_only = false
-
-          # offset from group split direction when only one window is in a group
-          group_inset = 1
-
-          # tab group settings
-          tabs {
-            # height of the tab bar
-            height = 24
-
-            # padding between the tab bar and its focused node
-            padding = 1
-
-            # the tab bar should animate in/out from the top instead of below the window
-            from_top = false
-
-            # render the window title on the bar
-            render_text = true
-
-            # rounding of tab bar corners
-            rounding = 6
-
-            # font to render the window title with
-            text_font = FiraCode Nerd Font
-
-            # height of the window title
-              text_height = 11
-
-            # left padding of the window title
-            text_padding = 2
-
-            # active tab bar segment color
-            #col.active = <color>
-
-            # urgent tab bar segment color
-            #col.urgent = <color>
-
-            # inactive tab bar segment color
-            #col.inactive = <color>
-
-            # active tab bar text color
-            #col.text.active = <color>
-
-            # urgent tab bar text color
-            #col.text.urgent = <color>
-
-            # inactive tab bar text color
-            #col.text.inactive = <color>
-          }
-        }
-      }
-
       monitor=eDP-1,preferred,auto,1
       monitor=,preferred,auto,1
 
@@ -230,7 +175,7 @@
       bind=SUPERSHIFT,q,killactive
       bind=SUPERSHIFT,e,exit
 
-      bind=SUPER,t,hy3:makegroup,tab
+      #bind=SUPER,t,hy3:makegroup,tab
       bind=SUPER,s,togglesplit
       bind=SUPER,f,fullscreen,1
       bind=SUPERSHIFT,f,fullscreen,0

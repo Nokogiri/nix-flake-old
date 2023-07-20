@@ -12,9 +12,9 @@
 
   home.packages = with pkgs; [
     cliphist
-    grim
+    #grim
     imv
-    slurp
+    #slurp
     swayidle
     swaylock-effects
     wl-clipboard
