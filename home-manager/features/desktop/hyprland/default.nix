@@ -2,8 +2,7 @@
   imports = [
     ../common
     ../common/wayland
-    #inputs.hyprland.homeManagerModules.default
-    
+    inputs.hyprland.homeManagerModules.default    
     ./config.nix
     ./iio-hyprland.nix
     ./swaync.nix
@@ -45,12 +44,12 @@
   };
 
   wayland.windowManager.hyprland = {
-    #enable = true;
+    enable = true;
     #plugins = [ inputs.hy3.packages.x86_64-linux.hy3 ];
     xwayland = {
       enable = true;
       hidpi = false;
     };
-    #recommendedEnvironment = true;
+    recommendedEnvironment = true;
   };
 }
