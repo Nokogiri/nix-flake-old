@@ -6,7 +6,7 @@
       enable = true;
       font = {
         name = "JetBrainsMono Nerd Font Mono";
-        size = 12;
+        size = 13;
       };
       theme = "Dracula";
       #theme = "Nord";

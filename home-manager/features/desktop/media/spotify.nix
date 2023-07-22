@@ -16,8 +16,8 @@ in {
   programs.spicetify = {
     windowManagerPatch = true;
     enable = true;
-    theme = spicePkgs.themes.catppuccin-frappe;
-    colorScheme = "lavender";
+    theme = spicePkgs.themes.Dracula;
+    #colorScheme = "lavender";
     enabledCustomApps = with spicePkgs.apps; [ lyrics-plus ];
     enabledExtensions = with spicePkgs.extensions; [
       shuffle
