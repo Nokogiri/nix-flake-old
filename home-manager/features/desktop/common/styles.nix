@@ -12,9 +12,12 @@ in {
       ${pkgs.glib.bin}/bin/gsettings set $gnome_schema icon-theme '${config.gtk.iconTheme.name}'
       ${pkgs.glib.bin}/bin/gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
     '')
-    myQT
-    myGTK
-    myFolders
+    dracula-theme
+    dracula-icon-theme
+    #myQT
+    #myGTK
+    #myFolders
+    #nordic
     libsForQt5.qt5ct
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
@@ -30,8 +33,9 @@ in {
       name = "FiraCode Nerd Font";
       size = 12;
     };
-    iconTheme = { name = "Papirus-Dark"; };
-    theme = { name = catTheme; };
+    iconTheme = { name = "Dracula"; };
+    #theme = { name = catTheme; };
+    theme = { name = "Dracula"; };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS
@@ -49,8 +53,8 @@ in {
         gtk-application-prefer-dark-theme = true;
 
       };
-      extraCss =
-        "@import \"catppuccin.css\";\n          decoration, decoration:backdrop, window {\n                  box-shadow: none;\n                  border: none;\n                  margin: 0;\n                  }\n        ";
+      #extraCss =
+      #  "@import \"catppuccin.css\";\n          decoration, decoration:backdrop, window {\n                  box-shadow: none;\n                  border: none;\n                  margin: 0;\n                  }\n        ";
     };
   };
   home.file.".config/gtk-3.0/catppuccin.css".source =

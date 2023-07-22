@@ -18,9 +18,11 @@
 
     # themepkgs 
     nordzy-cursor-theme
-    myGTK
-    myQT
-    myFolders
+    dracula-theme
+    dracula-icon-theme
+    #myGTK
+    #myQT
+    #myFolders
     libsForQt5.qt5ct  
     qt6Packages.qt6ct 
     libsForQt5.qtstyleplugin-kvantum

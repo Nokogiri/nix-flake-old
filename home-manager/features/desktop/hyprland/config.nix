@@ -110,10 +110,7 @@
 
       # Startup
       exec-once=${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
-      exec-once=${pkgs.mako}/bin/mako
-      # exec-once=swayidle -w
       exec-once=${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
-      #exec-once=${pkgs.iio-hyprland}/bin/iio-hyprland
 
       layerrule = blur, launcher
 

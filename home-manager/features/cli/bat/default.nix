@@ -1,9 +1,9 @@
 { pkgs, ... }: {
-  xdg.configFile."bat/themes/Catppuccin-frappe.tmTheme".source =
-    ./Catppuccin-mocha.tmTheme;
+  xdg.configFile."bat/themes/Dracula.tmTheme".source =
+    ./Dracula.tmTheme;
   programs.bat = {
     enable = true;
-    config.theme = "Catppuccin-frappe";
+    config.theme = "Dracula";
     extraPackages = with pkgs.bat-extras; [ batdiff batman batgrep batwatch ];
   };
 }

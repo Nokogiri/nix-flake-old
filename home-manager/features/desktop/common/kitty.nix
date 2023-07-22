@@ -8,7 +8,7 @@
         name = "JetBrainsMono Nerd Font Mono";
         size = 12;
       };
-      theme = "Catppuccin-Frappe";
+      theme = "Dracula";
       #theme = "Nord";
       settings = {
         # General settings
