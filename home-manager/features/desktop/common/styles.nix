@@ -57,21 +57,21 @@ in {
       #  "@import \"catppuccin.css\";\n          decoration, decoration:backdrop, window {\n                  box-shadow: none;\n                  border: none;\n                  margin: 0;\n                  }\n        ";
     };
   };
-  home.file.".config/gtk-3.0/catppuccin.css".source =
-    "${pkgs.myGTK}/share/themes/${catTheme}/gtk-3.0/gtk.css";
-  home.file.".config/gtk-3.0/gtk-dark.css".source =
-    "${pkgs.myGTK}/share/themes/${catTheme}/gtk-3.0/gtk-dark.css";
-  home.file.".config/gtk-3.0/assets" = {
-    recursive = true;
-    source = "${pkgs.myGTK}/share/themes/${catTheme}/gtk-3.0/assets";
-  };
+  #home.file.".config/gtk-3.0/catppuccin.css".source =
+  #  "${pkgs.myGTK}/share/themes/${catTheme}/gtk-3.0/gtk.css";
+  #home.file.".config/gtk-3.0/gtk-dark.css".source =
+  #  "${pkgs.myGTK}/share/themes/${catTheme}/gtk-3.0/gtk-dark.css";
+  #home.file.".config/gtk-3.0/assets" = {
+  #  recursive = true;
+  #  source = "${pkgs.myGTK}/share/themes/${catTheme}/gtk-3.0/assets";
+  #};
   home.file.".config/gtk-4.0/gtk.css".source =
-    "${pkgs.myGTK}/share/themes/${catTheme}/gtk-4.0/gtk.css";
+    "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk.css";
   home.file.".config/gtk-4.0/gtk-dark.css".source =
-    "${pkgs.myGTK}/share/themes/${catTheme}/gtk-4.0/gtk-dark.css";
+    "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk-dark.css";
   home.file.".config/gtk-4.0/assets" = {
     recursive = true;
-    source = "${pkgs.myGTK}/share/themes/${catTheme}/gtk-4.0/assets";
+    source = "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/assets";
   };
 
   home.pointerCursor = {
