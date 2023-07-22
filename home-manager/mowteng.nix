@@ -19,6 +19,8 @@
   ];
   home.packages = with pkgs; [
 
+    anytype 
+    
     libsForQt5.kio-extras
     kio-fuse
     libsForQt5.kdegraphics-thumbnailers
