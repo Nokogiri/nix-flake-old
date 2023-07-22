@@ -22,7 +22,10 @@
       {
         plugin = tmuxPlugins.dracula;
         extraConfig = ''
-          #set -g @dracula-show-battery true
+          set -g @dracula-border-contrast true
+          set -g @dracula-show-empty-plugins false
+          set -g @dracula-show-flags true
+
           set -g @dracula-show-powerline true
           set -g @dracula-refresh-rate 10
           set -g @dracula-plugins "cpu-usage ram-usage"
