@@ -22,16 +22,12 @@
       {
         plugin = tmuxPlugins.dracula;
         extraConfig = ''
-          set -g @dracula-show-battery true
+          #set -g @dracula-show-battery true
           set -g @dracula-show-powerline true
           set -g @dracula-refresh-rate 10
-          set -g @dracula-show-weather false
-          set -g @dracula-fixed-location "Erfurt"
           set -g @dracula-plugins "cpu-usage ram-usage"
         '';
-        #extraConfig = "set -g @catppuccin_flavour 'mocha'";
       }
-      tmuxPlugins.cpu
     ];
     shortcut = "a";
     terminal = "tmux-256color";
