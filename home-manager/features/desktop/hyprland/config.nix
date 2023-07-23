@@ -80,6 +80,7 @@
       debug {
         overlay=false
         disable_logs=false
+        enable_stdout_logs=true
       }
       binds {
         workspace_back_and_forth = true

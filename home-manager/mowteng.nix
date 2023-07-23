@@ -20,7 +20,7 @@
   home.packages = with pkgs; [
 
     anytype 
-    
+          
     libsForQt5.kio-extras
     kio-fuse
     libsForQt5.kdegraphics-thumbnailers
@@ -28,8 +28,6 @@
     libsForQt5.ffmpegthumbs
     libsForQt5.dolphin
 
-    opentabletdriver
-    #pcmanfm-qt
     transmission-qt
     snapcast
     dwarfs
@@ -37,6 +35,7 @@
     obsidian
 
     xournalpp
+    write_stylus
     # graphics stuff
     inkscape
     gimp
