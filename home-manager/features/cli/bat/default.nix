@@ -1,6 +1,6 @@
 { pkgs, ... }: {
-  xdg.configFile."bat/themes/Dracula.tmTheme".source =
-    ./Dracula.tmTheme;
+  #xidg.configFile."bat/themes/Dracula.tmTheme".source =
+  #  ./Dracula.tmTheme;
   programs.bat = {
     enable = true;
     config.theme = "Dracula";
