@@ -7,6 +7,8 @@
         auth            sufficient      pam_unix.so try_first_pass likeauth nullok
         auth            sufficient      pam_fprintd.so
         auth include login
+        auth       optional     pam_gnome_keyring.so
+        session    optional     pam_gnome_keyring.so auto_start
       '';
     };
   };
