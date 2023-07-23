@@ -11,7 +11,7 @@
         col.inactive_border=0xff666666
         no_cursor_warps=true
         no_border_on_floating=true
-        #cursor_inactive_timeout=4
+        cursor_inactive_timeout=4
       }
 
       monitor=eDP-1,preferred,auto,1
@@ -92,17 +92,17 @@
 
         follow_mouse=1
         touchpad {
-          disable_while_typing=false
+          disable_while_typing=true
         }
         touchdevice {
           output=eDP-1
         }
       }
 
-      device:wacom-hid-49c8-finger {
-          output=eDP-1
-          enabled=true
-      }
+      #device:wacom-hid-49c8-finger {
+      #    output=eDP-1
+      #    enabled=true
+      #}
       device:wacom-hid-49c8-pen {
         output=eDP-1
         enabled=true
