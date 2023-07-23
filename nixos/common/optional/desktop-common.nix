@@ -11,6 +11,9 @@
         session    optional     pam_gnome_keyring.so auto_start
       '';
     };
+    greetd = {
+      enableGnomeKeyring = true;
+    };
   };
   environment.systemPackages = with pkgs; [
     gtklock
