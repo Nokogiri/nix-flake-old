@@ -12,15 +12,15 @@
           sha256 = "i9FcuQdmNlJnMWQp7myF3N0tMD/2I0CaMs/PlD8o1gw=";
         };
       }
-      {
-        name = "catppuccin";
-        src = pkgs.fetchFromGitHub {
-          owner = "catppuccin";
-          repo = "fish";
-          rev = "b90966686068b5ebc9f80e5b90fdf8c02ee7a0ba";
-          sha256 = "wQlYQyqklU/79K2OXRZXg5LvuIugK7vhHgpahpLFaOw=";
-        };
-      }
+      #{
+      #  name = "catppuccin";
+      #  src = pkgs.fetchFromGitHub {
+      #    owner = "catppuccin";
+      #    repo = "fish";
+      #    rev = "b90966686068b5ebc9f80e5b90fdf8c02ee7a0ba";
+      #    sha256 = "wQlYQyqklU/79K2OXRZXg5LvuIugK7vhHgpahpLFaOw=";
+      #  };
+      #}
     ];
     shellAbbrs = {
 
