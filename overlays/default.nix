@@ -36,7 +36,9 @@
       accent = "sapphire";
       flavor = "frappe";      
     };
-    wayland-protocols = inputs.masterpkgs.legacyPackages.x86_64-linux.wayland-protocols;
+    
+    #wayland-protocols = inputs.masterpkgs.legacyPackages.x86_64-linux.wayland-protocols;
+    
     };
 
   #master-pkgs = self: super: {
