@@ -40,7 +40,8 @@
     inkscape
     gimp
     krita
-  ];
+
+    inputs.anyrun.packages.x86_64-linux.anyrun-with-all-plugins  ];
 
   programs = { password-store.enable = false; };
 }

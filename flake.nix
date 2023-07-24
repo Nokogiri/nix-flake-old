@@ -2,10 +2,10 @@
   description = "Your new nix config";
 
   inputs = {
-    #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    
+
     masterpkgs.url = "github:nixos/nixpkgs/master";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,28 +17,33 @@
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     nur.url = "github:nix-community/NUR";
 
     hyprland = {
       url = "github:hyprwm/hyprland/603de16f9a98688b79f19baa24d6e2c0346545f5";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-     
+
     hyprwm-contrib.url = "github:hyprwm/contrib";
+    
     hyprpicker.url = "github:hyprwm/hyprpicker";
 
-    spicetify-nix = {
-      url = github:the-argus/spicetify-nix;
+    anyrun = {
+      url = "github:Kirottu/anyrun";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    spicetify-nix = { url = "github:the-argus/spicetify-nix"; };
 
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     eww = {
       url = "github:elkowar/eww";
-      
+
     };
     nix-colors.url = "github:misterio77/nix-colors";
+    
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -50,9 +55,7 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       inherit (self) outputs;
-      forAllSystems = nixpkgs.lib.genAttrs [
-        "x86_64-linux"
-        ];
+      forAllSystems = nixpkgs.lib.genAttrs [ "x86_64-linux" ];
     in rec {
       # Your custom packages
       # Acessible through 'nix build', 'nix shell', etc
