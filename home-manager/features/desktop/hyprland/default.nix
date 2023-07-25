@@ -2,7 +2,8 @@
   imports = [
     ../common
     ../common/wayland
-    inputs.hyprland.homeManagerModules.default    
+    inputs.hyprland.homeManagerModules.default
+    ./anyrun.nix 
     ./config.nix
     ./iio-hyprland.nix
     ./swaync.nix
