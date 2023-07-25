@@ -29,11 +29,6 @@
     
     hyprpicker.url = "github:hyprwm/hyprpicker";
 
-    anyrun = {
-      url = "github:Kirottu/anyrun";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     spicetify-nix = { url = "github:the-argus/spicetify-nix"; };
 
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
