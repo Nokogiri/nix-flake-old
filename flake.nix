@@ -21,7 +21,7 @@
     nur.url = "github:nix-community/NUR";
 
     hyprland = {
-      url = "github:hyprwm/hyprland/603de16f9a98688b79f19baa24d6e2c0346545f5";
+      url = "github:hyprwm/hyprland"; #/603de16f9a98688b79f19baa24d6e2c0346545f5";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
