@@ -4,23 +4,26 @@
 
   imports = [ ./ff2mpv.json.nix ];
   home.packages = [ pkgs.ff2mpv pkgs.gopass-jsonapi ];
+  home.file.".mozilla/dracula" = {
+    recursive = true;
+    source = ./userChrome;
+  };
   programs.firefox = {
     enable = true;
     profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons;
       [
         vimium
         ublock-origin
+        privacy-redirect
         onetab
-        #gopass-bridge
         firefox-color
         ff2mpv
         bitwarden
         auto-tab-discard
       ]
-      #profiles.nokogiri.extensions = 
-      ++ [
+      ++ 
+      [
         sidebery
-        config.nur.repos.bandithedoge.firefoxAddons.betterviewer
         config.nur.repos.bandithedoge.firefoxAddons.sponsorblock
       ];
     profiles.nokogiri = {
@@ -40,9 +43,21 @@
         "browser.shell.defaultBrowserCheckCount" = 1;
         "browser.disableResetPrompt" = true;
         "media.hardwaremediakeys.enabled" = true;
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "svg.context-properties.content.enabled" = true;
+        "layout.css.color-mix.enabled" = true;
+        "browser.tabs.tabMinWidth" = 66;
+        "browser.tabs.tabClipWidth" = 86;
+        "browser.tabs.tabmanager.enabled" = false;
         #"browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":["ublock0_raymondhill_net-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","home-button","urlbar-container","downloads-button","library-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button","alltabs-button"],"PersonalToolbar":["import-button","personal-bookmarks"]},"seen":["save-to-pocket-button","developer-button","ublock0_raymondhill_net-browser-action"],"dirtyAreaCache":["nav-bar","PersonalToolbar","toolbar-menubar","TabsToolbar","widget-overflow-fixed-list"],"currentVersion":17,"newElementCount":3}'';
       };
-      userChrome = (import ./userChrome.css);
+      #userChrome = (import ./userChrome.css);
+      userChrome = ''
+       @import url("/home/nokogiri/.mozilla/dracula/userChrome.css");
+      '';
+      userContent = ''
+        @import url("/home/nokogiri/.mozilla/dracula/userContent.css");
+      '';
     };
     profiles.private = {
       name = "private";
