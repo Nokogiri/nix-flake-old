@@ -3,7 +3,7 @@
   home.packages = [ pkgs.swaybg ];
 
   xdg.configFile."hypr/wallpaper.png".source =
-    ./hyprpaper/Totoro-Sapphire-Night.png;
+    ./hyprpaper/nixos.png;
 
   systemd.user.services.swaybg = {
     Unit = { Description = "swaybg"; };
