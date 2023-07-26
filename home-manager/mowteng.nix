@@ -18,9 +18,7 @@
     inputs.hyprwm-contrib.overlays.default
   ];
   home.packages = with pkgs; [
-
-    anytype 
-          
+       
     libsForQt5.kio-extras
     kio-fuse
     libsForQt5.kdegraphics-thumbnailers
@@ -35,14 +33,10 @@
     obsidian
 
     xournalpp
-    write_stylus
+
     # graphics stuff
-    inkscape
     gimp
     krita
-
-    #inputs.anyrun.packages.x86_64-linux.anyrun-with-all-plugins  
     ];
 
-  programs = { password-store.enable = false; };
 }
