@@ -10,7 +10,7 @@
     ./styles.nix
     ./thunderbird.nix
     ./udisks.nix
-    ./youtube.nix
+    #./youtube.nix
     ./zathura.nix
   ];
 
