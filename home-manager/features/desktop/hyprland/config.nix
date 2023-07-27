@@ -267,12 +267,13 @@
       bind=SUPERSHIFT,9,movetoworkspacesilent,09
 
       windowrulev2 = workspace 2 silent,class:^(firefox)$
-      windowrule = float,^(org.kde.polkit-kde-authentication-agent-1)$
-      windowrulev2 = minsize 900 280,float,opaque,noblur,class:^(.*org.kde.polkit-kde-authentication-agent-1.*)$
-      windowrulev2 = opaque,noblur,float,title:^(.*Picture-in-Picture.*)$
-      windowrulev2 = workspace 3 silent,opaque,noblur,class:^(mpv)$
-      windowrulev2 = workspace 6 silent,opaque,noblur,class:^(steam)$,title:^(Steam)$
-      windowrulev2 = workspace 6 silent,opaque,noblur,fullscreen,class:^(steam)$,title:^(Steam Big Picture Mode)$
+      windowrulev2 = size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
+      windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
+      windowrulev2 = float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
+      windowrulev2 = float,center,size=60%,title:^(.*Picture-in-Picture.*)$,class:^(firefox)$
+      windowrulev2 = workspace 3 silent,class:^(mpv)$
+      windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam)$
+      windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$
 
       windowrulev2 = float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$
       windowrulev2 = fullscreen,opaque,noblur,forceinput,class:^(.gamescope-wrapped)$
