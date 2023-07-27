@@ -3,13 +3,14 @@
     ./global
     ./features/cli/nix-stuff.nix
     ./features/desktop/common
-    ./features/desktop/games
+    ./features/firefox
+    ./features/games
     #./features/desktop/gtk.nix
-    ./features/desktop/media
+    ./features/media
     ./features/helix
     ./features/desktop/eww
-    ./features/desktop/hyprland
-    #    ./features/desktop/sway
+    ./features/hyprland
+    #    ./features/sway
     inputs.nur.nixosModules.nur
   ];
 

@@ -1,6 +1,5 @@
 { pkgs, ... }: {
   imports = [
-    ./firefox
     ./gpg-agent.nix
     ./kitty.nix
     ./nnn-desktop.nix
