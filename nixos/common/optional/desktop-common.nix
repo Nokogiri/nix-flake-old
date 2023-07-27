@@ -22,7 +22,7 @@
     gtklock
 
     # for dolphin?
-    libsForQt5.kio-admin
+    #libsForQt5.kio-admin
 
     # themepkgs 
     nordzy-cursor-theme

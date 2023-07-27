@@ -14,7 +14,7 @@ in {
     };
   };
   programs.spicetify = {
-    windowManagerPatch = true;
+    windowManagerPatch = false;
     enable = true;
     theme = spicePkgs.themes.Dracula;
     #colorScheme = "lavender";

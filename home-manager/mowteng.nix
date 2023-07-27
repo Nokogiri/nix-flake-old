@@ -18,13 +18,16 @@
     inputs.hyprwm-contrib.overlays.default
   ];
   home.packages = with pkgs; [
-       
-    libsForQt5.kio-extras
-    kio-fuse
-    libsForQt5.kdegraphics-thumbnailers
-    libsForQt5.kimageformats
-    libsForQt5.ffmpegthumbs
-    libsForQt5.dolphin
+
+    handlr-regex
+    
+           
+    #libsForQt5.kio-extras
+    #kio-fuse
+    #libsForQt5.kdegraphics-thumbnailers
+    #libsForQt5.kimageformats
+    #libsForQt5.ffmpegthumbs
+    #libsForQt5.dolphin
 
     transmission-qt
     snapcast

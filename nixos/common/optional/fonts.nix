@@ -10,11 +10,11 @@
 
   fonts.packages = with pkgs; [
     nerdfonts
-    fira
-    fira-code
-    fira-mono
+    #fira
+    #fira-code
+    #fira-mono
     dejavu_fonts
-    jetbrains-mono
+    #jetbrains-mono
     twemoji-color-font
     noto-fonts
     noto-fonts-emoji

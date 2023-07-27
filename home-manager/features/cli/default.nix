@@ -36,7 +36,6 @@
     unzip
     unrar
     # misc
-    gopass
     pamixer
     ponymix
     sshfs-fuse

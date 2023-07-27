@@ -3,7 +3,7 @@
 {
 
   imports = [ ./ff2mpv.json.nix ];
-  home.packages = [ pkgs.ff2mpv pkgs.gopass-jsonapi ];
+  home.packages = [ pkgs.ff2mpv ];
   home.file.".mozilla/dracula" = {
     recursive = true;
     source = ./userChrome;

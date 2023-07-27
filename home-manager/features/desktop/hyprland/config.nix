@@ -279,6 +279,7 @@
       windowrulev2 = fullscreen,opaque,noblur,forceinput,class:^(.gamescope-wrapped)$
       windowrulev2 = workspace 7 silent,title:^(Spotify)$
       windowrulev2 = fullscreen,opaque,noblur,class:^(gamescope)$
+      layerrule=blur, wofi
       #blurls=waybar
       #blurls=wofi
 
