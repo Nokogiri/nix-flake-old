@@ -1,7 +1,7 @@
 { lib, inputs, pkgs, config, ... }: {
   imports = [
     ../desktop/common
-    ../desktop/common/wayland
+    ../wlr-utils
     inputs.hyprland.homeManagerModules.default
     ./config.nix
     ./iio-hyprland.nix

@@ -1,13 +1,8 @@
-{ pkgs, ... }: {
-  home.packages = with pkgs; [ libnotify swaynotificationcenter ];
+{
+  imports = [
+    ../wlr-utils/swaync.nix
+  ];
   systemd.user.services.swaynotificationcenter = {
-    Unit = { Description = "swaynotificationcenter"; };
-    Service = {
-      Type = "simple";
-      ExecStart = "${pkgs.swaynotificationcenter}/bin/swaync";
-      Restart = "on-failure";
-    };
     Install = { WantedBy = [ "hyprland-session.target" ]; };
   };
-
 }
