@@ -5,9 +5,6 @@
     inputs.hyprland.homeManagerModules.default
     ./config.nix
     ./iio-hyprland.nix
-    ./swaync.nix
-    #./hyprpaper.nix
-    ./wvkbd.nix
   ];
 
   home.packages = with pkgs; [
@@ -43,6 +40,18 @@
     };
   };
 
+  systemd.user.services = {
+    wvkbd = {
+      Install = { WantedBy = [ "hyprland-session.target" ]; };
+    };
+    swaynotificationcenter = {
+      Install = { WantedBy = [ "hyprland-session.target" ]; };
+    };
+    swaybg = {
+      Install = { WantedBy = [ "hyprland-session.target" ]; };
+    };
+  };
+    
   wayland.windowManager.hyprland = {
     enable = true;
     #plugins = [ inputs.hyprland-plugins.packages.x86_64-linux.hyprbars ];

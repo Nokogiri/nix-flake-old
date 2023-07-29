@@ -5,8 +5,9 @@
     ./gammastep.nix
     #./mako.nix
     #./obs-studio.nix
-    ./waybar.nix
+    ./waybar
     #./wezterm.nix
+    ./wvkbd.nix
     ./wofi.nix
   ];
 

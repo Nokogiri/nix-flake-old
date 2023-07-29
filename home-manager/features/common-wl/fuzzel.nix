@@ -14,10 +14,10 @@
   xdg.configFile."fuzzel/fuzzel.ini".text = ''
     # output=<not set>
     # font=monospace
-    font=CaskaydiaCove Nerd Font:size=13
+    font=FiraCode Nerd Font Propo:size=13
     dpi-aware=no
     prompt=➟ 
-    icon-theme=Papirus-Dark
+    icon-theme=Dracula
     icons-enabled=yes
     fields=filename,name,generic
     #password-character=*
