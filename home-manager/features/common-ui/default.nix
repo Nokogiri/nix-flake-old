@@ -10,6 +10,7 @@
     ./styles.nix
     ./thunderbird.nix
     ./udisks.nix
+    ./wallpaper
     ./zathura.nix
   ];
 

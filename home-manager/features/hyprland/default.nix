@@ -6,7 +6,6 @@
     ./config.nix
     ./iio-hyprland.nix
     ./swaync.nix
-    ../wallpaper
     #./hyprpaper.nix
     ./wvkbd.nix
   ];
