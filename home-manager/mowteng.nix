@@ -7,7 +7,7 @@
     #./features/desktop/gtk.nix
     ./features/media
     ./features/helix
-    ./features/desktop/eww
+    #./features/desktop/eww
     ./features/hyprland
     #    ./features/sway
     inputs.nur.nixosModules.nur

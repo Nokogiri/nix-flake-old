@@ -33,10 +33,10 @@
 
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
-    eww = {
-      url = "github:elkowar/eww";
-
-    };
+    #eww = {
+    #  url = "github:elkowar/eww";
+#
+    #};
     nix-colors.url = "github:misterio77/nix-colors";
     
     nix-index-database = {
