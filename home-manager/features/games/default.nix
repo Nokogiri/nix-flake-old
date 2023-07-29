@@ -31,7 +31,7 @@
     citra-canary
     #yuzu
     yuzu-early-access
-    ryujinx
+    #ryujinx
     dolphinEmuMaster
     retroarch
     libretro.beetle-pce-fast
