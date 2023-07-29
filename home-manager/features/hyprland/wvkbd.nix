@@ -1,6 +1,6 @@
 {
   imports = [
-    ../wlr-utils/wvkbd.nix
+    ../common-wl/wvkbd.nix
   ];
 
   systemd.user.services.wvkbd = {

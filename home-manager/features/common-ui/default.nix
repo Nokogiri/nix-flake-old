@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   imports = [
+    ./firefox
     ./gpg-agent.nix
     ./kitty.nix
     ./nnn-desktop.nix
@@ -9,7 +10,6 @@
     ./styles.nix
     ./thunderbird.nix
     ./udisks.nix
-    #./youtube.nix
     ./zathura.nix
   ];
 

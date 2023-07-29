@@ -2,8 +2,7 @@
   imports = [
     ./global
     ./features/cli/nix-stuff.nix
-    ./features/desktop/common
-    ./features/firefox
+    ./features/common-ui
     ./features/games
     #./features/desktop/gtk.nix
     ./features/media
@@ -21,14 +20,6 @@
   home.packages = with pkgs; [
 
     handlr-regex
-    
-           
-    #libsForQt5.kio-extras
-    #kio-fuse
-    #libsForQt5.kdegraphics-thumbnailers
-    #libsForQt5.kimageformats
-    #libsForQt5.ffmpegthumbs
-    #libsForQt5.dolphin
 
     transmission-qt
     snapcast

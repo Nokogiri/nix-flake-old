@@ -1,6 +1,6 @@
 {
   imports = [
-    ../wlr-utils/swaync.nix
+    ../common-wl/swaync.nix
   ];
   systemd.user.services.swaynotificationcenter = {
     Install = { WantedBy = [ "hyprland-session.target" ]; };
