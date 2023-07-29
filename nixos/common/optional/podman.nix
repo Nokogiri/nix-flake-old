@@ -3,5 +3,6 @@
   virtualisation.podman = {
     enable = true;
     extraPackages = [ pkgs.zfs ];
+    autoPrune.enable = false;
   };
 }
