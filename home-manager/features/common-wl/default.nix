@@ -5,8 +5,10 @@
     ./gammastep.nix
     #./mako.nix
     #./obs-studio.nix
+    ./swaylock.nix
+    ./swaync.nix
     ./waybar
-    #./wezterm.nix
+    ./wezterm.nix
     ./wvkbd.nix
     ./wofi.nix
   ];
@@ -15,7 +17,6 @@
     cliphist
     imv
     swayidle
-    swaylock-effects
     wl-clipboard
     wlr-randr
   ];
