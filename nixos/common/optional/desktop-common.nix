@@ -6,16 +6,7 @@
       text = ''
         auth            sufficient      pam_unix.so try_first_pass likeauth nullok
         auth            sufficient      pam_fprintd.so
-        auth include login
         '';
-    };
-    gtklock = {
-      name = "gtklock";
-      text = ''
-        auth            sufficient      pam_unix.so try_first_pass likeauth nullok
-        auth            sufficient      pam_fprintd.so
-        auth include login
-      '';
     };
     greetd = {
       enableGnomeKeyring = true;
@@ -25,18 +16,10 @@
   services.gnome.gnome-keyring.enable = true;
   
   environment.systemPackages = with pkgs; [
-    gtklock
-
-    # for dolphin?
-    #libsForQt5.kio-admin
-
     # themepkgs 
     nordzy-cursor-theme
     dracula-theme
     dracula-icon-theme
-    #myGTK
-    #myQT
-    #myFolders
     libsForQt5.qt5ct  
     qt6Packages.qt6ct 
     libsForQt5.qtstyleplugin-kvantum
