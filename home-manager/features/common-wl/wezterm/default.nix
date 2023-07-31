@@ -1,10 +1,11 @@
 {
+  xdg.configFile."wezterm/colors/dracula.toml".source = ./dracula.toml;
   programs.wezterm = {
     enable = true;
     extraConfig = ''
       return {
        front_end = "WebGpu",
-       color_scheme = "Catppuccin Frappe",
+       color_scheme = "Dracula (Official)",
        font_size = 12.0 ,
        font = wezterm.font_with_fallback {
            'JetBrainsMono Nerd Font Mono',
@@ -15,6 +16,8 @@
        default_cursor_style = "BlinkingUnderline",
        window_background_opacity = 0.95,
        hide_tab_bar_if_only_one_tab = true,
+       tab_bar_at_bottom = true,
+       use_fancy_tab_bar = false,
        show_tab_index_in_tab_bar = false,
        }
     '';
