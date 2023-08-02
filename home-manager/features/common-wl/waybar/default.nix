@@ -24,6 +24,7 @@
             active = "";
             default = "";
           };
+        };
         "battery" = {
           bat = "BAT0";
           states = {
@@ -40,5 +41,5 @@
         };
       };
     };
-  };
+
 }
