@@ -11,7 +11,7 @@
       cpupower
     ];
     initrd = {
-      availableKernelModules = [ "nvme" "xhci_pci" "ahci" ];
+      availableKernelModules = [ "nvme" "xhci_pci" "applespi" "applesmc" ];
       kernelModules = [ "i915" ];
     };
     kernelModules = [ "kvm-amd" ];

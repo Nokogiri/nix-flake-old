@@ -8,7 +8,7 @@
     inputs.hardware.nixosModules.common-pc-ssd
 
     ./hardware-configuration.nix
-
+    ./fixes
     ../common/global
     ../common/optional/avahi.nix
     ../common/optional/bluetooth.nix
