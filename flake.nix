@@ -88,7 +88,14 @@
           specialArgs = { inherit inputs outputs; };
         };
       };
-      # Standalone home-manager configuration entrypoint
+
+      nixosConfigurations = {
+        dewalt = nixpkgs.lib.nixosSystem {
+          modules = [ ./nixos/dewalt/configuration.nix ]
+            ++ (builtins.attrValues nixosModules);
+          specialArgs = { inherit inputs outputs; };
+        };
+      };      # Standalone home-manager configuration entrypoint
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
         "nokogiri@mowteng" = home-manager.lib.homeManagerConfiguration {
