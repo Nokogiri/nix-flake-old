@@ -15,11 +15,12 @@
     ../common/optional/desktop-common.nix
     ../common/optional/fonts.nix
     ../common/optional/greetd.nix
+    ../common/optional/grub-efi.nix
     ../common/optional/networkmanager.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
     ../common/optional/sane.nix
-    ../common/optional/systemd-boot.nix
+    #../common/optional/systemd-boot.nix
     ../common/optional/xdg-portal.nix
     
     ../common/users/nokogiri.nix

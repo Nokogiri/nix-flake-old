@@ -1,6 +1,6 @@
 { lib, config, modulesPath, pkgs, ... }: {
 
-  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
+  imports = [ (modulesPath + "/hardware/network/broadcom-43xx.nix") (modulesPath + "/installer/scan/not-detected.nix") ];
 
   boot = {
     extraModprobeConfig = ''
@@ -14,7 +14,7 @@
       availableKernelModules = [ "nvme" "xhci_pci" "applespi" "applesmc" ];
       kernelModules = [ "i915" ];
     };
-    kernelModules = [ "kvm-amd" ];
+    kernelModules = [ "kvm-intel" "applespi" "applesmc" ];
     kernelPackages = pkgs.linuxPackages_latest;
     loader.efi.efiSysMountPoint = "/boot/efi";
     supportedFilesystems = [ "btrfs" ];
@@ -23,51 +23,48 @@
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
+      device = "/dev/disk/by-uuid/b9405584-5f46-4dbe-92a1-721e9e72170a";
       fsType = "btrfs";
       options = [ "subvol=nixos/root" "compress=zstd" ];
     };
 
     "/var/lib" = {
-      device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
+      device = "/dev/disk/by-uuid/b9405584-5f46-4dbe-92a1-721e9e72170a";
       fsType = "btrfs";
       options = [ "subvol=nixos/lib" "compress=zstd" ];
     };
 
     "/var/log" = {
-      device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
+      device = "/dev/disk/by-uuid/b9405584-5f46-4dbe-92a1-721e9e72170a";
       fsType = "btrfs";
       options = [ "subvol=nixos/log" "compress=zstd" ];
     };
 
     "/nix" = {
-      device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
+      device = "/dev/disk/by-uuid/b9405584-5f46-4dbe-92a1-721e9e72170a";
       fsType = "btrfs";
       options = [ "subvol=nixos/store" "compress=zstd" ];
     };
 
-    "/home/nokogiri" = {
-      device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
+    "/home" = {
+      device = "/dev/disk/by-uuid/b9405584-5f46-4dbe-92a1-721e9e72170a";
       fsType = "btrfs";
-      options = [ "subvol=@nokogiri" "compress=zstd" ];
+      options = [ "subvol=home" "compress=zstd" ];
     };
 
     "/boot" = {
-      device = "/dev/disk/by-uuid/8C9D-013B";
-      fsType = "vfat";
-      options = [
-        "fmask=0022"
-        "dmask=0022"
-        "codepage=437"
-        "iocharset=ascii"
-        "shortname=mixed"
-        "utf8"
-      ];
+      device = "/dev/disk/by-uuid/fb184598-96f7-4123-af47-9dc00f9581a6";
+      fsType = "ext4";
     };
+    "/boot/efi" =
+    { device = "/dev/disk/by-uuid/5F66-17ED";
+      fsType = "vfat";
+    };
+
   };
 
   swapDevices = [{
-    device = "/dev/disk/by-uuid/93ae631f-7897-4c18-afd6-95d17c14ae2c";
+    device = "/dev/disk/by-uuid/906d022c-2126-4bff-8a5e-ec337b8ba115";
     priority = 100;
   }];
 
