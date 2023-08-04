@@ -21,11 +21,7 @@
         bitwarden
         auto-tab-discard
       ]
-      ++ 
-      [
-        sidebery
-        config.nur.repos.bandithedoge.firefoxAddons.sponsorblock
-      ];
+      ++ [ sidebery config.nur.repos.bandithedoge.firefoxAddons.sponsorblock ];
     profiles.nokogiri = {
       name = "nokogiri";
       path = "nokogiri";
@@ -53,7 +49,7 @@
       };
       #userChrome = (import ./userChrome.css);
       userChrome = ''
-       @import url("/home/nokogiri/.mozilla/dracula/userChrome.css");
+        @import url("/home/nokogiri/.mozilla/dracula/userChrome.css");
       '';
       userContent = ''
         @import url("/home/nokogiri/.mozilla/dracula/userContent.css");
@@ -85,7 +81,7 @@
       };
 
       userChrome = ''
-       @import url("/home/nokogiri/.mozilla/dracula/userChrome.css");
+        @import url("/home/nokogiri/.mozilla/dracula/userChrome.css");
       '';
       userContent = ''
         @import url("/home/nokogiri/.mozilla/dracula/userContent.css");

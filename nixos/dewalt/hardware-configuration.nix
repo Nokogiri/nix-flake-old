@@ -1,15 +1,16 @@
 { lib, config, modulesPath, pkgs, ... }: {
 
-  imports = [ (modulesPath + "/hardware/network/broadcom-43xx.nix") (modulesPath + "/installer/scan/not-detected.nix") ];
+  imports = [
+    (modulesPath + "/hardware/network/broadcom-43xx.nix")
+    (modulesPath + "/installer/scan/not-detected.nix")
+  ];
 
   boot = {
     extraModprobeConfig = ''
       blacklist pcspkr
       options usb-storage quirks=090c:1000:,152d:0578:u,0bc2:2322:u
     '';
-    extraModulePackages = with config.boot.kernelPackages; [
-      cpupower
-    ];
+    extraModulePackages = with config.boot.kernelPackages; [ cpupower ];
     initrd = {
       availableKernelModules = [ "nvme" "xhci_pci" "applespi" "applesmc" ];
       kernelModules = [ "i915" ];
@@ -56,8 +57,8 @@
       device = "/dev/disk/by-uuid/fb184598-96f7-4123-af47-9dc00f9581a6";
       fsType = "ext4";
     };
-    "/boot/efi" =
-    { device = "/dev/disk/by-uuid/5F66-17ED";
+    "/boot/efi" = {
+      device = "/dev/disk/by-uuid/5F66-17ED";
       fsType = "vfat";
     };
 

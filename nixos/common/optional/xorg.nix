@@ -1,10 +1,6 @@
-{ pkgs, ... }:{
+{ pkgs, ... }: {
   services.xserver = {
     enable = true;
-    videoDrivers = [
-      "amdgpu"
-      "modesetting"
-      "fbdev"
-    ];
+    videoDrivers = [ "amdgpu" "modesetting" "fbdev" ];
   };
 }

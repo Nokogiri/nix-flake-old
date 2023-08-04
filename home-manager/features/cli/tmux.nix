@@ -18,20 +18,18 @@
     '';
     newSession = true;
     prefix = "C-a";
-    plugins = with pkgs; [
-      {
-        plugin = tmuxPlugins.dracula;
-        extraConfig = ''
-          set -g @dracula-border-contrast true
-          set -g @dracula-show-empty-plugins false
-          set -g @dracula-show-flags true
+    plugins = with pkgs; [{
+      plugin = tmuxPlugins.dracula;
+      extraConfig = ''
+        set -g @dracula-border-contrast true
+        set -g @dracula-show-empty-plugins false
+        set -g @dracula-show-flags true
 
-          set -g @dracula-show-powerline true
-          set -g @dracula-refresh-rate 10
-          set -g @dracula-plugins "cpu-usage ram-usage"
-        '';
-      }
-    ];
+        set -g @dracula-show-powerline true
+        set -g @dracula-refresh-rate 10
+        set -g @dracula-plugins "cpu-usage ram-usage"
+      '';
+    }];
     shortcut = "a";
     terminal = "tmux-256color";
   };

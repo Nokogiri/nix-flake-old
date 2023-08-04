@@ -22,7 +22,7 @@
     ../common/optional/sane.nix
     #../common/optional/systemd-boot.nix
     ../common/optional/xdg-portal.nix
-    
+
     ../common/users/nokogiri.nix
 
     ./local
@@ -38,10 +38,7 @@
     hostId = "05fc919c";
   };
 
-    environment.systemPackages = with pkgs; [
-      lm_sensors
-    exfatprogs
-  ];
+  environment.systemPackages = with pkgs; [ lm_sensors exfatprogs ];
 
   hardware = {
     opengl = {

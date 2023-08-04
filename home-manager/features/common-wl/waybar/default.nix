@@ -8,15 +8,15 @@
     style = ./style.css;
     settings = {
       mainBar = {
-        
+
         layer = "top";
         position = "top";
         height = 42;
-        
+
         modules-left = [ "wlr/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "tray" "battery" "pulseaudio"];
-        
+        modules-right = [ "tray" "battery" "pulseaudio" ];
+
         "wlr/workspaces" = {
           format = "{icon}";
           on-click = "activate";
@@ -31,15 +31,15 @@
             good = 81;
             warning = 35;
             critical = 20;
-            };
+          };
           format-charging = "{icon} 󱐌";
           format-full = "{icon}";
           format = "{icon}";
           format-icons = [ "" "" "" "" "" "" "" "" "" "" ];
           tooltip = true;
-          }; 
         };
       };
     };
+  };
 
 }

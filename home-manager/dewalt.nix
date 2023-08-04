@@ -32,6 +32,6 @@
     # graphics stuff
     #gimp
     #krita
-    ];
+  ];
 
 }

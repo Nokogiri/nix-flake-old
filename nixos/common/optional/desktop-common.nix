@@ -6,22 +6,20 @@
       text = ''
         auth            sufficient      pam_unix.so try_first_pass likeauth nullok
         auth            sufficient      pam_fprintd.so
-        '';
+      '';
     };
-    greetd = {
-      enableGnomeKeyring = true;
-    };
+    greetd = { enableGnomeKeyring = true; };
   };
 
   services.gnome.gnome-keyring.enable = true;
-  
+
   environment.systemPackages = with pkgs; [
     # themepkgs 
     nordzy-cursor-theme
     dracula-theme
     dracula-icon-theme
-    libsForQt5.qt5ct  
-    qt6Packages.qt6ct 
+    libsForQt5.qt5ct
+    qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
     qt6Packages.qtstyleplugin-kvantum
   ];
