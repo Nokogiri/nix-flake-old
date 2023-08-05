@@ -22,18 +22,24 @@
         inactive_opacity=0.8
         fullscreen_opacity=1.0
         rounding=6
-        blur=true
-        blur_size=3
-        blur_passes=1
-        blur_new_optimizations=true
-        blur_ignore_opacity=false
-        blur_xray=false
+        #blur=true
+        #blur_size=3
+        #blur_passes=1
+        #blur_new_optimizations=true
+        #blur_ignore_opacity=false
+        #blur_xray=false
         drop_shadow=true
         
         shadow_range=24
         shadow_offset=3 3
         col.shadow=0x44000000
         col.shadow_inactive=0x66000000
+        
+        blur {
+          size = 3
+          passes = 1
+          new_optimizations = true
+        }
       }
 
       animations {
