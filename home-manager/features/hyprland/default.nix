@@ -2,7 +2,7 @@
   imports = [
     ../common-ui
     ../common-wl
-    inputs.hyprland.homeManagerModules.default
+    #inputs.hyprland.homeManagerModules.default
     ./config.nix
     ./iio-hyprland.nix
   ];
@@ -55,6 +55,6 @@
       enable = true;
       hidpi = false;
     };
-    recommendedEnvironment = true;
+    #recommendedEnvironment = true;
   };
 }
