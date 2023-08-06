@@ -1,14 +1,14 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
-    ./global
-    ./features/cli/nix-stuff.nix
-    ./features/common-ui
-    ./features/games
+    ../global
+    ../features/cli/nix-stuff.nix
+    ../features/common-ui
+    ../features/games
     #./features/desktop/gtk.nix
-    ./features/media
-    ./features/helix
+    ../features/media
+    ../features/helix
     #./features/desktop/eww
-    ./features/hyprland
+    ../features/hyprland
     #    ./features/sway
     inputs.nur.nixosModules.nur
   ];
