@@ -4,7 +4,7 @@
   xdg.configFile."waybar/colors.css".source = ./colors.css;
   programs.waybar = {
     enable = true;
-    package = inputs.hyprland.packages.x86_64-linux.waybar-hyprland;
+    package = inputs.hyprland-git.packages.x86_64-linux.waybar-hyprland;
     style = ./style.css;
     settings = {
       mainBar = {

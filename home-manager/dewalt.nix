@@ -14,7 +14,7 @@
   ];
 
   nixpkgs.overlays = [
-    inputs.hyprland.overlays.hyprland-extras
+    inputs.hyprland-git.overlays.hyprland-extras
     inputs.hyprwm-contrib.overlays.default
   ];
   home.packages = with pkgs; [

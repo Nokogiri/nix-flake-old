@@ -2,7 +2,7 @@
   imports = [
     ../common-ui
     ../common-wl
-    #inputs.hyprland.homeManagerModules.default
+    inputs.hyprland-git.homeManagerModules.default
     ./config.nix
     ./iio-hyprland.nix
   ];
@@ -53,7 +53,7 @@
     #plugins = [ inputs.hyprland-plugins.packages.x86_64-linux.hyprbars ];
     xwayland = {
       enable = true;
-      hidpi = false;
+      hidpi = true;
     };
     #recommendedEnvironment = true;
   };

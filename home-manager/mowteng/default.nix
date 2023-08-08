@@ -9,13 +9,15 @@
     ../features/helix
     #./features/desktop/eww
     ../features/hyprland
+    #../features/hyprland/mowteng.nix
     #    ./features/sway
     inputs.nur.nixosModules.nur
   ];
 
   nixpkgs.overlays = [
-    inputs.hyprland.overlays.hyprland-extras
+    inputs.hyprland-git.overlays.hyprland-extras
     inputs.hyprwm-contrib.overlays.default
+    inputs.slight.overlays.default
   ];
   home.packages = with pkgs; [
 
@@ -27,6 +29,8 @@
     fuse-overlayfs
     obsidian
 
+    slight
+    
     xournalpp
 
     # graphics stuff
