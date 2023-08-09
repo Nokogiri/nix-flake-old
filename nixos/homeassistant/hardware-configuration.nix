@@ -44,6 +44,7 @@
       "mitigations=off"
       "sdhci.debug_quirks2=4"
       "mitigations=off"
+      "zfs.zfs_arc_max=2147483648"
     ];
     supportedFilesystems = [ "zfs" "btrfs" ];
   };
