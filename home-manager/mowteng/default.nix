@@ -29,6 +29,7 @@
     fuse-overlayfs
     obsidian
 
+    fastfetch
     slight
     
     xournalpp

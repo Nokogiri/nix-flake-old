@@ -2,11 +2,13 @@
   imports = [
     ./bash.nix
     ./bat
+    ./btop.nix
     ./fish.nix
     ./fzf.nix
     ./git.nix
     ./gpg-agent.nix
     ./lsd.nix
+    ./micro
     ./nnn.nix
     ./pfetch.nix
     ./ranger.nix
@@ -41,7 +43,7 @@
 
     neofetch
     bc # Calculator
-    btop # same
+    #btop # same
     dfc # better df
     mediainfo
     gdu
