@@ -1279,11 +1279,19 @@
     },
     "masterpkgs": {
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1691526168,
         "narHash": "sha256-hvZp+jadeS+oBRc2mAJT2tQ14aJ9Lt73ncDU72n3f+0=",
         "owner": "nixos",
         "repo": "nixpkgs",
         "rev": "5627735a7c9e6ffc35ca3c66d97c6731cb8eeefb",
+=======
+        "lastModified": 1691565987,
+        "narHash": "sha256-wy3IOxMXFnb4W+deD2410jUYl0kELojfDa/gzGi/4dw=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "aeee6bcaa5754b4501268f6e40a2974d76e0fbee",
+>>>>>>> f0f5d3e (nix flake update)
         "type": "github"
       },
       "original": {
@@ -1379,11 +1387,11 @@
         "nixpkgs": "nixpkgs_22"
       },
       "locked": {
-        "lastModified": 1691371585,
-        "narHash": "sha256-Co5ibUIvp9xPtPmqkIX9igS3V1Opmblp3EpnOq5TdWc=",
+        "lastModified": 1691544427,
+        "narHash": "sha256-OwVJ6hn/Yqye3sO1Z6CjdoQvVUMuielyr1Fn/Epqg7A=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "f502af686d14e9941e33fe8bd4c692113f695bff",
+        "rev": "ab3c5557225d31e36bf447561133ef0850c7eb47",
         "type": "github"
       },
       "original": {
@@ -1910,11 +1918,11 @@
     },
     "nixpkgs_23": {
       "locked": {
-        "lastModified": 1691368598,
-        "narHash": "sha256-ia7li22keBBbj02tEdqjVeLtc7ZlSBuhUk+7XTUFr14=",
+        "lastModified": 1691472822,
+        "narHash": "sha256-XVfYZ2oB3lNPVq6sHCY9WkdQ8lHoIDzzbpg8bB6oBxA=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "5a8e9243812ba528000995b294292d3b5e120947",
+        "rev": "41c7605718399dcfa53dd7083793b6ae3bc969ff",
         "type": "github"
       },
       "original": {
@@ -2082,11 +2090,19 @@
     },
     "nur_3": {
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1691524028,
         "narHash": "sha256-0Lj46/vFKQZtZ7pjy3bfCNIunj33qdy4ESEf4jDO/o0=",
         "owner": "nix-community",
         "repo": "NUR",
         "rev": "21ee81bc9150aee5a9ddd4482e3700320f45803b",
+=======
+        "lastModified": 1691559855,
+        "narHash": "sha256-UkXcNHsasO0sr8W8X8wGeM1bBuLC5tHEueryGSLaE+E=",
+        "owner": "nix-community",
+        "repo": "NUR",
+        "rev": "c987eac4f579d9e989d5a0cde93d688592bda990",
+>>>>>>> f0f5d3e (nix flake update)
         "type": "github"
       },
       "original": {
