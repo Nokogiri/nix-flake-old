@@ -41,7 +41,7 @@
     ponymix
     sshfs-fuse
 
-    neofetch
+    fastfetch
     bc # Calculator
     #btop # same
     dfc # better df
