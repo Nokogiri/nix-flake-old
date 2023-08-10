@@ -17,6 +17,9 @@
       monitor=eDP-1,preferred,auto,1.15
       monitor=,preferred,auto,1
 
+	  xwayland {
+	  	force_zero_scaling = true
+	  }
       decoration {
         active_opacity=1.0
         inactive_opacity=0.8
