@@ -28,7 +28,7 @@
 
     # emulation
     cemu
-    citra-canary
+    #citra-canary
     #yuzu
     yuzu-early-access
     ryujinx
