@@ -46,43 +46,37 @@
       "mitigations=off"
       "zfs.zfs_arc_max=2147483648"
     ];
-    supportedFilesystems = [ "zfs" "btrfs" ];
+    supportedFilesystems = [ "btrfs" ];
   };
 
   fileSystems."/" = {
-    device = "homeassistant/system/root";
-    fsType = "zfs";
-    options = [ "zfsutil" "X-mount.mkdir" ];
+    device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
+    fsType = "btrfs";
+    options = [ "subvol=nixos/root" "compress=zstd" ];
   };
 
   fileSystems."/var/lib" = {
-    device = "homeassistant/system/var/lib";
-    fsType = "zfs";
-    options = [ "zfsutil" "X-mount.mkdir" ];
+    device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
+    fsType = "btrfs";
+    options = [ "subvol=nixos/lib" "compress=zstd" ];
   };
 
   fileSystems."/var/log" = {
-    device = "homeassistant/system/var/log";
-    fsType = "zfs";
-    options = [ "zfsutil" "X-mount.mkdir" ];
-  };
-
-  fileSystems."/tmp" = {
-    device = "homeassistant/system/tmp";
-    fsType = "zfs";
-    options = [ "zfsutil" "X-mount.mkdir" ];
+    device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
+    fsType = "btrfs";
+    options = [ "subvol=nixos/log" "compress=zstd" ];
   };
 
   fileSystems."/home" = {
-    device = "homeassistant/data/home";
-    fsType = "zfs";
-    options = [ "zfsutil" "X-mount.mkdir" ];
+    device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
+    fsType = "btrfs";
+    options = [ "subvol=home" "compress=zstd" ];
   };
 
   fileSystems."/nix" = {
-    device = "homeassistant/local/nix";
-    fsType = "zfs";
-    options = [ "zfsutil" "X-mount.mkdir" ];
+    device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
+    fsType = "btrfs";
+    options = [ "subvol=nixos/store" "compress=zstd" ];
   };
 
   fileSystems."/media/extHDD" = {
