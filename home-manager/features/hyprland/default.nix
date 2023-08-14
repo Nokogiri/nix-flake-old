@@ -53,8 +53,6 @@
     #plugins = [ inputs.hyprland-plugins.packages.x86_64-linux.hyprbars ];
     xwayland = {
       enable = true;
-      hidpi = true;
     };
-    #recommendedEnvironment = true;
   };
 }

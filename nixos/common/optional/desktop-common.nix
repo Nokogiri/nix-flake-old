@@ -37,7 +37,7 @@
       enable = true;
       xwayland = {
         enable = true;
-        hidpi = false;
+        #hidpi = false;
       };
     };
   };
