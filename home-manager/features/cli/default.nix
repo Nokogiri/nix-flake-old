@@ -9,7 +9,6 @@
     ./gpg-agent.nix
     ./lsd.nix
     ./micro
-    ./nnn.nix
     ./pfetch.nix
     ./ranger.nix
     ./ssh.nix
@@ -19,7 +18,7 @@
 
   home.sessionVariables = {
     PATH = "$PATH:$HOME/.local/bin";
-    EDITOR = "${pkgs.helix}/bin/hx";
+    EDITOR = "${pkgs.micro}/bin/micro";
     XDG_CACHE_HOME = "\${HOME}/.cache";
     XDG_CONFIG_HOME = "\${HOME}/.config";
     XDG_BIN_HOME = "\${HOME}/.local/bin";
