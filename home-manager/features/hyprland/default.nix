@@ -1,4 +1,4 @@
-{ lib, inputs, pkgs, config, ... }:{
+{ lib, inputs, pkgs, config, ... }: {
   imports = [
     ../common-ui
     ../common-wl
@@ -51,8 +51,6 @@
   wayland.windowManager.hyprland = {
     enable = true;
     #plugins = [ inputs.hyprland-plugins.packages.x86_64-linux.hyprbars ];
-    xwayland = {
-      enable = true;
-    };
+    xwayland = { enable = true; };
   };
 }

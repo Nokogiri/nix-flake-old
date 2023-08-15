@@ -2,8 +2,8 @@
   programs.micro = {
     enable = true;
     settings = {
-    	autoclose = true;
-    	colorscheme = "dracula";
+      autoclose = true;
+      colorscheme = "dracula";
     };
   };
   home.sessionVariables = { MICRO_TRUECOLOR = "1"; };

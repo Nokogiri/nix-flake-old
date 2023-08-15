@@ -30,7 +30,7 @@
     obsidian
 
     slight
-    
+
     xournalpp
 
     # graphics stuff
