@@ -4,12 +4,8 @@
     ../features/cli/nix-stuff.nix
     ../features/common-ui
     ../features/games
-    #./features/desktop/gtk.nix
     ../features/media
-    ../features/helix
-    #./features/desktop/eww
     ../features/hyprland
-    #../features/hyprland/mowteng.nix
     #    ./features/sway
     inputs.nur.nixosModules.nur
   ];
