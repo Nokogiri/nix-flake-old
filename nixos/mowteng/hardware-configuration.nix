@@ -60,7 +60,7 @@
       options = [ "subvol=nixos/store" "compress=zstd" ];
     };
 
-    "/home/nokogiri" = {
+    "/home" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
       options = [ "subvol=@nokogiri" "compress=zstd" ];
