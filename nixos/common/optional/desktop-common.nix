@@ -39,7 +39,7 @@
     #    enable = true;
         #hidpi = false;
     #  };
-    };
+    #};
   };
 
   services = {
