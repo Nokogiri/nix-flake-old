@@ -33,12 +33,12 @@
 
   programs = {
     dconf.enable = true;
-    hyprland = {
-      enable = true;
-      xwayland = {
-        enable = true;
+    #hyprland = {
+    #  enable = true;
+    #  xwayland = {
+    #    enable = true;
         #hidpi = false;
-      };
+    #  };
     };
   };
 
@@ -50,7 +50,6 @@
     flatpak.enable = true;
     gvfs.enable = true;
     printing.enable = true;
-    #tumbler.enable = true;
     udisks2.enable = true;
     upower.enable = true;
   };

@@ -9,10 +9,6 @@ in {
           "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd '$SHELL -l'";
         user = "greeter";
       };
-      #initial_session = {
-      #  command = "$SHELL -l";
-      #  inherit user;
-      #};
     };
   };
 }
