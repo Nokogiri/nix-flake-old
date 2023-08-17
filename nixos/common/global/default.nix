@@ -1,7 +1,6 @@
 # This file (and the global directory) holds config that i use on all hosts
 { lib, inputs, outputs, ... }: {
   imports = [
-    #inputs.impermanence.nixosModules.impermanence
     inputs.home-manager.nixosModules.home-manager
     inputs.nix-index-database.nixosModules.nix-index
 

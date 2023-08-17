@@ -21,10 +21,9 @@
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
-    #../common/optional/system76.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/xdg-portal.nix
-    #../common/optional/xorg.nix
+
 
     ../common/users/nokogiri.nix
 
