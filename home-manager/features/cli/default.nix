@@ -52,7 +52,7 @@
     file
     jq # JSON pretty printer and manipulator
     tealdeer
-    ps_mem
+    #ps_mem
 
     nix-stray-roots
 
