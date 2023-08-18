@@ -14,7 +14,7 @@
               cursor_inactive_timeout=4
             }
 
-            monitor=eDP-1,preferred,auto,1.15
+            monitor=eDP-1,preferred,auto,1.25
             monitor=,preferred,auto,1
 
       	  xwayland {

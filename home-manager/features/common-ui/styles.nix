@@ -30,8 +30,9 @@ in {
     enable = true;
     cursorTheme = { name = "Nordzy-cursors"; };
     font = {
-      name = "FiraCode Nerd Font";
-      size = 11;
+      #name = "FiraCode Nerd Font";
+      name = "JetBrainsMonoNL Nerd Font Propo";
+      size = 10;
     };
     iconTheme = { name = "Dracula"; };
     #theme = { name = catTheme; };
@@ -77,7 +78,7 @@ in {
   home.pointerCursor = {
     x11.enable = true;
     gtk.enable = true;
-    size = 24;
+    size = 16;
     name = "Nordzy-cursors";
     package = pkgs.nordzy-cursor-theme;
     x11.defaultCursor = "left_ptr";

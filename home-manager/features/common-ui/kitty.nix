@@ -1,15 +1,13 @@
 {
   xdg.configFile."kitty/tab_bar.py".source = ./kitty-tab_bar.py;
-  #home.sessionVariables = { TERMINAL = "kitty"; };
   programs = {
     kitty = {
       enable = true;
       font = {
         name = "JetBrainsMono Nerd Font Mono";
-        size = 10.5;
+        size = 10;
       };
       theme = "Dracula";
-      #theme = "Nord";
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";

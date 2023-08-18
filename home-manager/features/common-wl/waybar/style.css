@@ -3,7 +3,7 @@
 * {
     border: none;
     /*background: none;*/
-    font-family: 'Fira Code', 'Symbols Nerd Font Mono';
+    font-family: 'JetBrains Mono', 'Symbols Nerd Font Mono';
     font-size:18px;
     font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }

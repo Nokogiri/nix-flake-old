@@ -4,12 +4,15 @@
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
       nerdfonts = nerdfonts.override {
-        fonts = [ "Go-Mono" "FiraMono" "FiraCode" "iA-Writer" "JetBrainsMono" ];
+        fonts = [ "FiraCode" "JetBrainsMono" ];
       };
     };
 
   fonts.packages = with pkgs; [
     nerdfonts
+    fira
+    fira-code
+    jetbrains-mono
     dejavu_fonts
     twemoji-color-font
     noto-fonts
