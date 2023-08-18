@@ -14,10 +14,6 @@ in {
     '')
     dracula-theme
     dracula-icon-theme
-    #myQT
-    #myGTK
-    #myFolders
-    #nordic
     libsForQt5.qt5ct
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
@@ -30,12 +26,10 @@ in {
     enable = true;
     cursorTheme = { name = "Nordzy-cursors"; };
     font = {
-      #name = "FiraCode Nerd Font";
       name = "JetBrainsMonoNL Nerd Font Propo";
       size = 10;
     };
     iconTheme = { name = "Dracula"; };
-    #theme = { name = catTheme; };
     theme = { name = "Dracula"; };
     gtk2 = {
       extraConfig = ''
@@ -53,20 +47,10 @@ in {
         gtk-enable-animations = true;
         gtk-application-prefer-dark-theme = true;
 
-      };
-      #extraCss =
-      #  "@import \"catppuccin.css\";\n          decoration, decoration:backdrop, window {\n                  box-shadow: none;\n                  border: none;\n                  margin: 0;\n                  }\n        ";
+      }; 
     };
-  };
-  #home.file.".config/gtk-3.0/catppuccin.css".source =
-  #  "${pkgs.myGTK}/share/themes/${catTheme}/gtk-3.0/gtk.css";
-  #home.file.".config/gtk-3.0/gtk-dark.css".source =
-  #  "${pkgs.myGTK}/share/themes/${catTheme}/gtk-3.0/gtk-dark.css";
-  #home.file.".config/gtk-3.0/assets" = {
-  #  recursive = true;
-  #  source = "${pkgs.myGTK}/share/themes/${catTheme}/gtk-3.0/assets";
-  #};
   home.file.".config/gtk-4.0/gtk.css".source =
+  };
     "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk.css";
   home.file.".config/gtk-4.0/gtk-dark.css".source =
     "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk-dark.css";
