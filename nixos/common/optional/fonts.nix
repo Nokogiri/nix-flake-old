@@ -10,8 +10,6 @@
 
   fonts.packages = with pkgs; [
     nerdfonts
-    fira
-    fira-code
     jetbrains-mono
     dejavu_fonts
     twemoji-color-font
@@ -29,9 +27,9 @@
       enable = true;
       antialias = true;
       defaultFonts = {
-        serif = [ "FiraCode Nerd Font" ];
-        sansSerif = [ "FiraCode Nerd Font" ];
-        monospace = [ "FiraCode Nerd Font Mono" ];
+        serif = [ "JetBrainsMono Nerd Font Propo" ];
+        sansSerif = [ "JetBrainsMono Nerd Font Propo" ];
+        monospace = [ "JetBrainsMono Nerd Font Mono" ];
         emoji = [ "Noto Color Emoji" ];
       };
     };
