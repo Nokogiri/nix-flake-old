@@ -4,6 +4,7 @@
     ../features/cli/nix-stuff.nix
     ../features/common-ui
     ../features/games
+    ../features/helix
     ../features/media
     ../features/hyprland
     #    ./features/sway

@@ -74,12 +74,6 @@
               #animation=workspaces,1,2,easeout,slide
             }
 
-            #dwindle {
-            #  col.group_border_active=0xffEEEEEE
-              #col.group_border=0xff999999
-            #  split_width_multiplier=1.35
-            #}
-
             misc {
               disable_hyprland_logo=true
               disable_splash_rendering=true
@@ -101,17 +95,13 @@
 
               follow_mouse=1
               touchpad {
-                disable_while_typing=true
+                disable_while_typing = true
+                natural_scroll = true
               }
               touchdevice {
                 output=eDP-1
               }
             }
-
-            #device:wacom-hid-49c8-finger {
-            #    output=eDP-1
-            #    enabled=true
-            #}
             device:wacom-hid-49c8-pen {
               output=eDP-1
               enabled=true
