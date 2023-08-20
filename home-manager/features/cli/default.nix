@@ -3,7 +3,7 @@
     ./bash.nix
     ./bat
     ./btop.nix
-    ./fish.nix
+    ./fish
     ./fzf.nix
     ./git.nix
     ./gpg-agent.nix

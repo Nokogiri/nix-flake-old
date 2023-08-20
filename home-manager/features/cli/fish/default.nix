@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+  xdg.configFile."fish/themes/Dracula.theme".source = ./Dracula.theme;
   programs.fish = {
     enable = true;
     functions = { fish_greeting = ""; };
