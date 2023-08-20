@@ -51,6 +51,7 @@
       clear = "printf '\\033[2J\\033[3J\\033[1;1H'";
     };
     interactiveShellInit = ''
+      fish_config theme choose Dracula
       set --global KITTY_INSTALLATION_DIR "${pkgs.kitty}/lib/kitty"
       set --global KITTY_SHELL_INTEGRATION enabled
       source "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish"
