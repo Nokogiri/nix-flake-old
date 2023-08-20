@@ -11,7 +11,7 @@
 tooltip {
     font-size: 16px;
     background: none;
-    background-color: @background;
+    background-color: @background-darker;
     color: @forefround;
 }
 
@@ -58,7 +58,8 @@ window#waybar {
     /*background: rgba(48,52,70,0.88);*/
     /*background-color: transparent;*/
     /*background: rgb(48,52,70);*/
-    background: linear-gradient(180deg, rgba(48,52,70,0.88) 0%,rgba(48,52,70,0.00) 100%);
+    /*background: linear-gradient(180deg, rgba(48,52,70,0.88) 0%,rgba(48,52,70,0.00) 100%);*/
+    background: @background;
     transition-duration: 1.5s;
     transition-property: color;
     /*padding: 10px 10px 10px 10px;*/
@@ -88,12 +89,12 @@ window#waybar.hidden {
 
 #workspaces button.active {
     background: none;
-    color: @green;
+    color: @purple;
 }
 
 #workspaces button.persistent {
     background: none;
-    color: @surface2;
+    color: @background-darker;
 }
 #workspaces button.urgent {
     background: none;

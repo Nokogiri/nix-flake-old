@@ -15,7 +15,7 @@
 
         modules-left = [ "wlr/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "tray" "battery" "pulseaudio" ];
+        modules-right = [ "tray" "battery" "network" "pulseaudio" ];
 
         "wlr/workspaces" = {
           format = "{icon}";
@@ -24,6 +24,12 @@
             active = "";
             default = "";
           };
+        };
+        "clock" = {
+          format = "{:%H:%M}";
+          format-alt = "{:%d.%m.%Y %H:%M}";
+          tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+          min-length = 5;
         };
         "battery" = {
           bat = "BAT0";
@@ -36,6 +42,35 @@
           format-full = "{icon}";
           format = "{icon}";
           format-icons = [ "" "" "" "" "" "" "" "" "" "" ];
+          tooltip = true;
+        };
+        "network" = {
+          format-wifi = "";
+          format-ethernet = "";
+          format-linked = "(No IP) ";
+          format-disconnected = "";
+          interval = 60;
+          on-click = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor";
+        };
+        "pulseaudio" = {
+          scroll-step = 2.5;
+          tooltip-format = "{volume}% {icon} {desc}";
+          format = "{volume}% {icon}";
+          format-bluetooth = "{volume}% {icon} ";
+          format-bluetooth-muted = "󰝟 {icon} ";
+          format-muted = "";
+          format-source = "{volume}% ";
+          format-source-muted = "";
+          format-icons = {
+            headphone = "";
+            hands-free = "";
+            headset = "";
+            phone = "";
+            portable = "";
+            car =  "";
+            default = "";
+          };
+          on-click = "${pkgs.lxqt.pavucontrol-qt}/bin/pavucontrol-qt";
           tooltip = true;
         };
       };
