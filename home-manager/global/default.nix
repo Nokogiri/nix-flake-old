@@ -15,21 +15,6 @@
       outputs.overlays.modifications
       outputs.overlays.additions
       outputs.overlays.master-pkgs
-      #(self: super: {
-     # 	heroic-unwrapped = inputs.masterpkgs.legacyPackages.x86_64-linux.heroic-unwrapped;
-  	#	heroic = inputs.masterpkgs.legacyPackages.x86_64-linux.heroic;
-     # })
-      #(self: super: {
-      #    mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
-      #})
-
-      # Or overlays exported from other flakes:
-      # Or define it inline, for example:
-      # (final: prev: {
-      #   hi = final.hello.overrideAttrs (oldAttrs: {
-      #     patches = [ ./change-hello-to-hi.patch ];
-      #   });
-      # })
     ];
     config = {
       allowUnfree = true;
@@ -42,10 +27,6 @@
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
     stateVersion = lib.mkDefault "22.05";
   };
-
-  # Add stuff for your user as you see fit:
-  # programs.neovim.enable = true;
-  #home.packages = with pkgs; [ steam ];
 
   programs = {
     home-manager.enable = true;

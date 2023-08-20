@@ -9,7 +9,6 @@
     ./gpg-agent.nix
     ./lsd.nix
     ./micro
-    ./pfetch.nix
     ./ranger.nix
     ./ssh.nix
     ./starship.nix
