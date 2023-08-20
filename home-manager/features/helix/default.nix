@@ -1,5 +1,4 @@
 {
-  xdg.configFile."helix/themes".source = ./themes;
   programs.helix = {
     enable = true;
     settings = {

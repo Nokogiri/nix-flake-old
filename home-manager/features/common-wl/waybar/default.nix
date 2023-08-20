@@ -38,9 +38,9 @@
             warning = 35;
             critical = 20;
           };
-          format-charging = "{icon} 󱐌";
-          format-full = "{icon}";
-          format = "{icon}";
+          format-charging = "{capacity}% {icon} 󱐌";
+          format-full = "{capacity}% {icon}";
+          format = "{cpacity}% {icon}";
           format-icons = [ "" "" "" "" "" "" "" "" "" "" ];
           tooltip = true;
         };
