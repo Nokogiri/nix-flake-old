@@ -59,7 +59,7 @@ window#waybar {
     /*background-color: transparent;*/
     /*background: rgb(48,52,70);*/
     /*background: linear-gradient(180deg, rgba(48,52,70,0.88) 0%,rgba(48,52,70,0.00) 100%);*/
-    background: @background;
+    background: linear-gradient(0deg, @background 0%, @background-darker 100%);
     transition-duration: 1.5s;
     transition-property: color;
     /*padding: 10px 10px 10px 10px;*/
@@ -122,14 +122,14 @@ window#waybar.hidden {
 #pulseaudio,
 #tray {
     background-color: transparent;
-    color: @text;
+    color: @foreground;
     padding: 0px 10px 0px 10px;
 }
 
 
 #battery.charging {
     background-color: transparent;
-    color: @teal;
+    color: @green;
 }
 
 @keyframes blink {

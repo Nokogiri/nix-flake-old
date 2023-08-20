@@ -56,7 +56,7 @@
           scroll-step = 2.5;
           tooltip-format = "{volume}% {icon} {desc}";
           format = "{volume}% {icon}";
-          format-bluetooth = "{volume}% {icon} ";
+          format-bluetooth = "{volume}% ";
           format-bluetooth-muted = "󰝟 {icon} ";
           format-muted = "";
           format-source = "{volume}% ";
