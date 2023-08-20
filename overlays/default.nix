@@ -44,7 +44,7 @@
 
   master-pkgs = self: super: {
   	heroic-unwrapped = inputs.masterpkgs.legacyPackages.x86_64-linux.heroic-unwrapped;
- # 	heroic = inputs.masterpkgs.legacyPackages.x86_64-linux.heroic;
+   	heroic = inputs.masterpkgs.legacyPackages.x86_64-linux.heroic;
   #  mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
   #  wayland-protocols = inputs.masterpkgs.legacyPackages.x86_64-linux.wayland-protocols;
   };
