@@ -39,31 +39,31 @@
     "/" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
-      options = [ "subvol=nixos/root" "compress=zstd" ];
+      options = [ "subvol=nixos/root" "compress-force=zstd:6" ];
     };
 
     "/var/lib" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
-      options = [ "subvol=nixos/lib" "compress=zstd" ];
+      options = [ "subvol=nixos/lib" "compress-force=zstd:6" ];
     };
 
     "/var/log" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
-      options = [ "subvol=nixos/log" "compress=zstd" ];
+      options = [ "subvol=nixos/log" "compress-force=zstd:6" ];
     };
 
     "/nix" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
-      options = [ "subvol=nixos/store" "compress=zstd" ];
+      options = [ "subvol=nixos/store" "compress-force=zstd:6" ];
     };
 
     "/home" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
-      options = [ "subvol=@nokogiri" "compress=zstd" ];
+      options = [ "subvol=@nokogiri" "compress-force=zstd:6" ];
     };
 
     "/boot" = {

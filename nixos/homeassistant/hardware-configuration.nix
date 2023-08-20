@@ -52,31 +52,31 @@
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
     fsType = "btrfs";
-    options = [ "subvol=nixos/root" "compress=zstd" ];
+    options = [ "subvol=nixos/root" "compress-force=zstd:6" ];
   };
 
   fileSystems."/var/lib" = {
     device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
     fsType = "btrfs";
-    options = [ "subvol=nixos/lib" "compress=zstd" ];
+    options = [ "subvol=nixos/lib" "compress-force=zstd:6" ];
   };
 
   fileSystems."/var/log" = {
     device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
     fsType = "btrfs";
-    options = [ "subvol=nixos/log" "compress=zstd" ];
+    options = [ "subvol=nixos/log" "compress-force=zstd:6" ];
   };
 
   fileSystems."/home" = {
     device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
     fsType = "btrfs";
-    options = [ "subvol=home" "compress=zstd" ];
+    options = [ "subvol=home" "compressi-force=zstd:6" ];
   };
 
   fileSystems."/nix" = {
     device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
     fsType = "btrfs";
-    options = [ "subvol=nixos/store" "compress=zstd" ];
+    options = [ "subvol=nixos/store" "compress-force=zstd:6" ];
   };
 
   fileSystems."/media/extHDD" = {
