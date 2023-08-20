@@ -5,8 +5,6 @@
   cemu = pkgs.callPackage ./cemu { };
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
   fastfetch = pkgs.callPackage ./fastfetch { };
-  #heroic-unwrapped = pkgs.callPackage ./heroic {};
-  #heroic = pkgs.callPackage ./heroic/fhsenv.nix {};
   iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   iio-sensor-proxy = pkgs.callPackage ./iio-sensor-proxy { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
