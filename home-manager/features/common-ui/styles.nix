@@ -62,7 +62,7 @@ in {
   home.pointerCursor = {
     x11.enable = true;
     gtk.enable = true;
-    size = 16;
+    size = 24;
     name = "Nordzy-cursors";
     package = pkgs.nordzy-cursor-theme;
     x11.defaultCursor = "left_ptr";

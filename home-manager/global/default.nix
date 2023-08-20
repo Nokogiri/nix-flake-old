@@ -15,6 +15,10 @@
       outputs.overlays.modifications
       outputs.overlays.additions
       #outputs.overlays.master-pkgs
+      (self: super: {
+      	heroic-unwrapped = inputs.masterpkgs.legacyPackages.x86_64-linux.heroic-unwrapped;
+  		heroic = inputs.masterpkgs.legacyPackages.x86_64-linux.heroic;
+      })
       #(self: super: {
       #    mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
       #})
