@@ -96,7 +96,7 @@
               follow_mouse=1
               touchpad {
                 disable_while_typing = true
-                natural_scroll = true
+                natural_scroll = false
               }
               touchdevice {
                 output=eDP-1
