@@ -2,6 +2,7 @@
 
 {
   xdg.configFile."waybar/colors.css".source = ./colors.css;
+  home.packages = [ pkgs.wttrbar ];
   programs.waybar = {
     enable = true;
     package = pkgs.waybar-hyprland;
@@ -14,7 +15,7 @@
         height = 42;
 
         modules-left = [ "wlr/workspaces" ];
-        modules-center = [ "clock" ];
+        modules-center = [ "custom/weather" "clock" ];
         modules-right = [ "tray" "battery" "network" "pulseaudio" ];
 
         "wlr/workspaces" = {
@@ -72,6 +73,13 @@
           };
           on-click = "${pkgs.lxqt.pavucontrol-qt}/bin/pavucontrol-qt";
           tooltip = true;
+        };
+        "custom/weather" = {
+          format = "{}° C";
+          tooltip = true;
+          interval = 60;
+          exec = "${pkgs.wttrbar}/bin/wttrbar --hide-conditions";
+          return-type = "json";
         };
       };
     };

@@ -10,22 +10,20 @@
 
 tooltip {
     font-size: 16px;
-    background: none;
-    background-color: @background-darker;
-    color: @forefround;
+    border: 2px solid @background-darker;
+    background: @background;
+    color: @foreground;
 }
 
 tooltip * {
     background: none;
     background-color: transparent;
-    border: none;
     color: @foreground;
     padding: 3px 3px 3px 3px;
 }
 
 .modules-left {
     margin: 0px 8px 8px 0px;
-    /*background: rgba(48,52,70,0.88);*/
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -33,8 +31,6 @@ tooltip * {
 }
 
 .modules-center {
-    /*margin: 8px 2px 0px 2px;*/
-    /*background: rgba(48,52,70,0.88);*/
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 10px;
@@ -42,7 +38,6 @@ tooltip * {
 }
 
 .modules-right {
-    /*background: rgba(48,52,70,0.88);*/
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 10px;
@@ -55,15 +50,9 @@ tooltip * {
 }
 
 window#waybar {
-    /*background: rgba(48,52,70,0.88);*/
-    /*background-color: transparent;*/
-    /*background: rgb(48,52,70);*/
-    /*background: linear-gradient(180deg, rgba(48,52,70,0.88) 0%,rgba(48,52,70,0.00) 100%);*/
-    background: linear-gradient(0deg, @background 0%, @background-darker 100%);
+    background: linear-gradient(0deg, @background 20%, @background-darker 100%);
     transition-duration: 1.5s;
     transition-property: color;
-    /*padding: 10px 10px 10px 10px;*/
-    
 }
 
 window#waybar.hidden {
@@ -104,9 +93,9 @@ window#waybar.hidden {
 /* 1st block */
 #custom-weather {
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 18px;
+    font-size: 14px;
     background-color: transparent;
-    color: @text;
+    color: @foreground;
 /*    padding: 0px 10px 0px 10px;*/
 }
 #clock,

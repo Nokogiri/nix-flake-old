@@ -8,10 +8,19 @@
       src = pkgs.fetchFromGitHub {
         owner = "PatrickF1";
         repo = "fzf.fish";
-        rev = "63c8f8e65761295da51029c5b6c9e601571837a1";
-        sha256 = "i9FcuQdmNlJnMWQp7myF3N0tMD/2I0CaMs/PlD8o1gw=";
+        rev = "f9e2e48a54199fe7c6c846556a12003e75ab798e";
+        sha256 = "CqRSkwNqI/vdxPKrShBykh+eHQq9QIiItD6jWdZ/DSM=";
       };
     }
+    #{
+    #  name = "man";
+    #  src = pkgs.fetchFromGitHub {
+    #    owner = "PatrickF1";
+    #    repo = "colored_man_pages.fish";
+    #    rev = "f885c2507128b70d6c41b043070a8f399988bc7a";
+    #    sha256 = "ii9gdBPlC1/P1N9xJzqomrkyDqIdTg+iCg0mwNVq2EU=";
+    #  };
+    #}
     #{
     #  name = "catppuccin";
     #  src = pkgs.fetchFromGitHub {

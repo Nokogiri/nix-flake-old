@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 
-  imports = [ ./spotify.nix ];
+  imports = [ ./mpv.nix ./spotify.nix ];
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
       mpv = mpv.override {
@@ -10,7 +10,7 @@
   home.packages = with pkgs; [
     ani-cli
     jellyfin-media-player
-    mpv
+    #mpv
     yt-dlp
     youtube-tui
   ];
