@@ -47,7 +47,7 @@ in {
         gtk-enable-animations = true;
         gtk-application-prefer-dark-theme = true;
 
-      }; 
+      };
     };
   };
   home.file.".config/gtk-4.0/gtk.css".source =

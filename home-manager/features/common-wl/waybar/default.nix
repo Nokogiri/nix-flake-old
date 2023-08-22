@@ -29,7 +29,9 @@
         "clock" = {
           format = "{:%H:%M}";
           format-alt = "{:%d.%m.%Y %H:%M}";
-          tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+          tooltip-format = ''
+            <big>{:%Y %B}</big>
+            <tt><small>{calendar}</small></tt>'';
           min-length = 5;
         };
         "battery" = {
@@ -68,7 +70,7 @@
             headset = "";
             phone = "";
             portable = "";
-            car =  "";
+            car = "";
             default = "";
           };
           on-click = "${pkgs.lxqt.pavucontrol-qt}/bin/pavucontrol-qt";

@@ -1,4 +1,4 @@
-{ pkgs, lib, ...}:{
+{ pkgs, lib, ... }: {
   programs.mpv = {
     enable = true;
     config = {

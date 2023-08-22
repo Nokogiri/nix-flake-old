@@ -52,6 +52,7 @@
 
     };
     shellAliases = {
+      cat = "bat --paging=never --decorations=never";
       # Get ip
       getip = "curl ifconfig.me";
       # SSH with kitty terminfo

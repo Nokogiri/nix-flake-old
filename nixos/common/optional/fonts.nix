@@ -3,9 +3,8 @@
 {
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
-      nerdfonts = nerdfonts.override {
-        fonts = [ "FiraCode" "JetBrainsMono" ];
-      };
+      nerdfonts =
+        nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; };
     };
 
   fonts.packages = with pkgs; [

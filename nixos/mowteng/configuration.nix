@@ -24,7 +24,6 @@
     ../common/optional/systemd-boot.nix
     ../common/optional/xdg-portal.nix
 
-
     ../common/users/nokogiri.nix
 
     ./local

@@ -31,9 +31,7 @@
 
   qt.style = "Kvantum-Dark";
 
-  programs = {
-    dconf.enable = true;
-  };
+  programs = { dconf.enable = true; };
 
   services = {
     dbus = {
