@@ -1,6 +1,27 @@
 { pkgs, lib, ... }: {
   programs.mpv = {
     enable = true;
+    bindings = {
+      "right" = "seek 5; script-binding uosc/flash-timeline";
+      "left" = " seek -5; script-binding uosc/flash-timeline";
+      "shift+right" = "seek  30; script-binding uosc/flash-timeline";
+      "shift+left" = "seek -30; script-binding uosc/flash-timeline";
+      "m" = "cycle mute; script-binding uosc/flash-volume";
+      "up" = "add volume  10; script-binding uosc/flash-volume";
+      "down" = "add volume -10; script-binding uosc/flash-volume";
+
+      "mbtn_right" = "script-binding uosc/menu";
+      "menu" = "script-binding uosc/menu";
+      "alt+m" = "script-binding uosc/menu";
+      "o" = "script-binding uosc/open-file";
+      "alt+s" = "script-binding uosc/load-subtitles";
+      "S" = "script-binding uosc/subtitles";
+      "A" = "script-binding uosc/audio";
+      "ctrl+f" = "script-binding uosc/stream-quality";
+      "ctrl+s" = "async screenshot";
+      "C" = "script-binding uosc/chapters";
+      "q" = "quit";
+    };
     config = {
       ao = "pipewire";
       hwdec = "auto";
@@ -25,13 +46,18 @@
 
       screenshot-format = "png";
       screenshot-png-compression = 8;
-      screenshot-template = "'~/Pictures/Screenshots/%F_(%P)_%n'";
+      screenshot-template = "~/Pictures/Screenshots/%F_(%P)_%n";
 
       cache = true;
       demuxer-max-bytes = "400MiB";
       demuxer-max-back-bytes = "300MiB";
 
-      script-opts = "ytdl_hook-ytdl_path=${pkgs.yt-dlp}/bin/yt-dlp";
+      #script-opts = "ytdl_hook-ytdl_path=${pkgs.yt-dlp}/bin/yt-dlp";
+    };
+    scriptOpts = {
+      ytdl_hook = {
+        ytdl_path = "${pkgs.yt-dlp}/bin/yt-dlp";
+      };
     };
   };
 }
