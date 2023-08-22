@@ -54,10 +54,12 @@
 
       #script-opts = "ytdl_hook-ytdl_path=${pkgs.yt-dlp}/bin/yt-dlp";
     };
-    scriptOpts = {
-      ytdl_hook = {
-        ytdl_path = "${pkgs.yt-dlp}/bin/yt-dlp";
-      };
-    };
+    scriptOpts = { ytdl_hook = { ytdl_path = "${pkgs.yt-dlp}/bin/yt-dlp"; }; };
+    scripts = with pkgs; [
+      mpvScripts.mpris
+      mpvScripts.uosc
+      mpvScripts.thumbfast
+      mpvScripts.sponsorblock
+    ];
   };
 }

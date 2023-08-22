@@ -1,12 +1,12 @@
 { pkgs, ... }: {
 
   imports = [ ./mpv.nix ./spotify.nix ];
-  nixpkgs.config.packageOverrides = pkgs:
-    with pkgs; {
-      mpv = mpv.override {
-        scripts = [ pkgs.mpvScripts.mpris pkgs.mpvScripts.sponsorblock ];
-      };
-    };
+  #nixpkgs.config.packageOverrides = pkgs:
+  #  with pkgs; {
+  #    mpv = mpv.override {
+  #      scripts = [ pkgs.mpvScripts.mpris pkgs.mpvScripts.sponsorblock ];
+  #    };
+  #  };
   home.packages = with pkgs; [
     ani-cli
     jellyfin-media-player
