@@ -14,6 +14,7 @@
       extraConfig = {
         init.defaultBranch = "main";
         feature.manyFiles = true;
+        index.skipHash = false;
       };
       lfs = { enable = true; };
 
