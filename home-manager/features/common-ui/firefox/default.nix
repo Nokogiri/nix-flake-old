@@ -57,7 +57,16 @@
         @import url("/home/nokogiri/.mozilla/dracula/userContent.css");
       '';
     };
-    profiles.private = {
+    
+      profiles.private.extensions = with config.nur.repos.rycee.firefox-addons;
+      [
+        vimium
+        ublock-origin
+        onetab
+        ff2mpv
+      ]
+      ++ [ sidebery config.nur.repos.bandithedoge.firefoxAddons.sponsorblock ];
+      profiles.private = {
       name = "private";
       path = "private";
       bookmarks = { };
