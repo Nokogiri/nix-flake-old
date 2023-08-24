@@ -5,7 +5,7 @@
   home.packages = [ pkgs.wttrbar ];
   programs.waybar = {
     enable = true;
-    package = pkgs.waybar-hyprland;
+    #package = pkgs.waybar-hyprland;
     style = ./style.css;
     settings = {
       mainBar = {
