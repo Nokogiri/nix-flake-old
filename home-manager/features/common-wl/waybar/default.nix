@@ -14,11 +14,11 @@
         position = "top";
         height = 42;
 
-        modules-left = [ "wlr/workspaces" ];
+        modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "custom/weather" "clock" ];
         modules-right = [ "tray" "battery" "network" "pulseaudio" ];
 
-        "wlr/workspaces" = {
+        "hyprland/workspaces" = {
           format = "{icon}";
           on-click = "activate";
           format-icons = {

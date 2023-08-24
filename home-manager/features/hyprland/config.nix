@@ -95,7 +95,7 @@
 
               follow_mouse=1
               touchpad {
-                disable_while_typing = true
+                disable_while_typing = false
                 natural_scroll = false
               }
               touchdevice {

@@ -51,8 +51,6 @@
       cache = true;
       demuxer-max-bytes = "400MiB";
       demuxer-max-back-bytes = "300MiB";
-
-      #script-opts = "ytdl_hook-ytdl_path=${pkgs.yt-dlp}/bin/yt-dlp";
     };
     scriptOpts = { ytdl_hook = { ytdl_path = "${pkgs.yt-dlp}/bin/yt-dlp"; }; };
     scripts = with pkgs; [

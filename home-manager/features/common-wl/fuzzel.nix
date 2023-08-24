@@ -14,7 +14,7 @@
   xdg.configFile."fuzzel/fuzzel.ini".text = ''
     # output=<not set>
     # font=monospace
-    font=FiraCode Nerd Font Propo:size=13
+    font=JetBrainsMono Nerd Font Propo:size=13
     dpi-aware=no
     prompt=➟ 
     icon-theme=Dracula
