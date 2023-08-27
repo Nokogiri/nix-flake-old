@@ -27,7 +27,11 @@
     #  "cpufreq.default_governor=ondemand"
     #];
     # guided
-    #kernelParams = [ "amd_pstate=guided" "mitigations=off" "cpufreq.default_governor=ondemand" ];
+    #kernelParams = [
+    #  "amd_pstate=guided"
+    #  "mitigations=off"
+    #  "cpufreq.default_governor=ondemand"
+    #];
     # active epp
     kernelParams = [ "amd_pstate=active" "mitigations=off" "cpufreq.default_governor=powersave" ];
     loader.efi.efiSysMountPoint = "/boot";
