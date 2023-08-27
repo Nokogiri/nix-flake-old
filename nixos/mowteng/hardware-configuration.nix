@@ -21,15 +21,15 @@
     kernelModules = [ "kvm-amd" "zenpower" ];
     kernelPackages = pkgs.linuxPackages_latest;
     # passive epp
-    kernelParams = [
-      "amd_pstate=passive"
-      "mitigations=off"
-      "cpufreq.default_governor=ondemand"
-    ];
+    #kernelParams = [
+    #  "amd_pstate=passive"
+    #  "mitigations=off"
+    #  "cpufreq.default_governor=ondemand"
+    #];
     # guided
     #kernelParams = [ "amd_pstate=guided" "mitigations=off" "cpufreq.default_governor=ondemand" ];
     # active epp
-    #kernelParams = [ "amd_pstate=active" "mitigations=off" "cpufreq.default_governor=powersave" "cpufreq.energy_performance_preference=balance_power" ];
+    kernelParams = [ "amd_pstate=active" "mitigations=off" "cpufreq.default_governor=powersave" "cpufreq.energy_performance_preference=balance_power" ];
     loader.efi.efiSysMountPoint = "/boot";
     supportedFilesystems = [ "btrfs" ];
     tmp.cleanOnBoot = true;
