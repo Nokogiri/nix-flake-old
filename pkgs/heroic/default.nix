@@ -7,7 +7,7 @@
 , nodejs
 , python3
 , makeWrapper
-, electron
+, electron_25
 , gogdl
 , legendary-gl
 , nile
@@ -89,7 +89,7 @@ in stdenv.mkDerivation rec {
       "${nile}"/bin/nile \
       "$out/share/${appName}/build/bin/${binPlatform}"
 
-    makeWrapper "${electron}/bin/electron" "$out/bin/heroic" \
+    makeWrapper "${electron_25}/bin/electron" "$out/bin/heroic" \
       --inherit-argv0 \
       --add-flags --disable-gpu-compositing \
       --add-flags $out/share/${appName} \
