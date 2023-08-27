@@ -45,7 +45,7 @@
           };
           format-charging = "{capacity}% {icon} 󱐌";
           format-full = "{capacity}% {icon}";
-          format = "{cpacity}% {icon}";
+          format-discharging = "{capacity}% {icon}";
           format-icons = [ "" "" "" "" "" "" "" "" "" "" ];
           tooltip = true;
         };

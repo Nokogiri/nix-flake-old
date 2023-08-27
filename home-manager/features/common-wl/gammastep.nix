@@ -7,7 +7,7 @@
     settings = {
       general = {
         adjustment-method = "wayland";
-        fade = "1";
+        fade = "0";
       };
     };
     temperature = {

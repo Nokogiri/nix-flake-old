@@ -14,7 +14,7 @@
               cursor_inactive_timeout=0
             }
 
-            monitor=eDP-1,preferred,auto,1.25
+            monitor=eDP-1,preferred,auto,auto
             monitor=,preferred,auto,1
 
       	  xwayland {
@@ -112,6 +112,7 @@
             exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
             exec-once = ${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
             exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
+            exec-once = hyprctl keyword monitor "eDP-1,preferred,auto,1.25"
 
             layerrule = blur, launcher
 
