@@ -83,13 +83,17 @@ window#waybar.hidden {
 
 #workspaces button.persistent {
     background: none;
-    color: @background-darker;
+    color: @cyan;
 }
 #workspaces button.urgent {
     background: none;
     color: @critical;
 }
 
+#workspaces button.empty {
+    background: none;
+    color: @cyan;
+}
 /* 1st block */
 #custom-weather {
     font-family: "JetBrainsMono Nerd Font";

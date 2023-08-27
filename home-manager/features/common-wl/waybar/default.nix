@@ -24,6 +24,8 @@
           format-icons = {
             active = "";
             default = "";
+            persistant = "◌";
+            empty = "◌";
           };
         };
         "clock" = {
