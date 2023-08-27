@@ -12,6 +12,8 @@ buildFHSEnv {
   # Many Wine and native games need 32-bit libraries.
   multiArch = true;
 
+  unshareIpc = false;
+
   targetPkgs = pkgs: with pkgs; [
     heroic-unwrapped
     gamemode
