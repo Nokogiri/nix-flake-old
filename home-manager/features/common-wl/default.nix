@@ -18,6 +18,7 @@
   home.sessionVariables = {
     BEMENU_BACKEND = "wayland";
     MOZ_ENABLE_WAYLAND = 1;
+    NIXOS_OZONE_WL = 1;
     QT_QPA_PLATFORM = "wayland;xcb";
     QT_QPA_PLATFORMTHEME = "qt5ct";
     QT_PLUGIN_PATH =
