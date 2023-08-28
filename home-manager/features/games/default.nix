@@ -8,7 +8,7 @@
     # general
     gamescope
     mangohud
-    prismlauncher
+    #prismlauncher
     heroic
     portmod
 
@@ -17,7 +17,7 @@
     #zeroad
     #airshipper # veloren
     arx-libertatis
-    dhewm3
+    #dhewm3
     eduke32
     gzdoom
     openmw
@@ -30,8 +30,8 @@
     cemu
     #citra-canary
     #yuzu
-    yuzu-early-access
-    ryujinx
+    #yuzu-early-access
+    #ryujinx
     dolphinEmuMaster
     retroarch
     libretro.beetle-pce-fast
