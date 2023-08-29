@@ -30,7 +30,11 @@
   ];
 
   nixpkgs = {
-    overlays = [ outputs.overlays.additions outputs.overlays.modifications outputs.overlays.master-pkgs ];
+    overlays = [
+      outputs.overlays.additions
+      outputs.overlays.modifications
+      outputs.overlays.master-pkgs
+    ];
     config = { allowUnfree = true; };
   };
 

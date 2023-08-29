@@ -33,7 +33,11 @@
     #  "cpufreq.default_governor=ondemand"
     #];
     # active epp
-    kernelParams = [ "amd_pstate=active" "mitigations=off" "cpufreq.default_governor=powersave" ];
+    kernelParams = [
+      "amd_pstate=active"
+      "mitigations=off"
+      "cpufreq.default_governor=powersave"
+    ];
     loader.efi.efiSysMountPoint = "/boot";
     supportedFilesystems = [ "btrfs" ];
     tmp.cleanOnBoot = true;
