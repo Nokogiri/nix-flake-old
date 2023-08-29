@@ -79,7 +79,7 @@
           tooltip = true;
         };
         "custom/weather" = {
-          format = "{}° C";
+          format = "{}°C";
           tooltip = true;
           interval = 60;
           exec = "${pkgs.wttrbar}/bin/wttrbar --hide-conditions";
