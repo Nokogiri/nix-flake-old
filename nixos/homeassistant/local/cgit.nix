@@ -32,6 +32,11 @@
         desc = "Catppuccin in one place for me";
         owner = "nokogiri";
       };
+      dracula-plymouth = {
+      	path = "/var/lib/gitolite/repositories/dracula-plymouth.git";
+      	desc = "Dracula plymouth theme";
+      	owner = "nokogiri";
+      };
     };
     settings = {
       root-desc = "Git?";
