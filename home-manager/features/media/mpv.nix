@@ -56,7 +56,7 @@
     scripts = with pkgs; [
       mpvScripts.mpris
       mpvScripts.uosc
-      mpvScripts.thumbfast
+      #mpvScripts.thumbfast
       mpvScripts.sponsorblock
     ];
   };
