@@ -33,7 +33,7 @@
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
-      outputs.overlays.master-pkgs
+      #outputs.overlays.master-pkgs
     ];
     config = { allowUnfree = true; };
   };

@@ -7,7 +7,6 @@
     ../features/helix
     ../features/media
     ../features/hyprland
-    #    ./features/sway
     inputs.nur.nixosModules.nur
   ];
 
@@ -34,5 +33,5 @@
     gimp
     krita
   ];
-
+  machineType.desktop = true;
 }
