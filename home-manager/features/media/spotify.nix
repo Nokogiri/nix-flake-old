@@ -17,7 +17,6 @@ in {
     windowManagerPatch = false;
     enable = true;
     theme = spicePkgs.themes.Dracula;
-    #colorScheme = "lavender";
     enabledCustomApps = with spicePkgs.apps; [ lyrics-plus ];
     enabledExtensions = with spicePkgs.extensions; [
       shuffle
