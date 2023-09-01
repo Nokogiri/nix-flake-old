@@ -8,8 +8,8 @@
     ./git.nix
     ./gpg-agent.nix
     ./lsd.nix
-    ./micro
-    ./ranger.nix
+    #./micro
+    #./ranger.nix
     ./ssh.nix
     ./starship.nix
     ./tmux.nix
@@ -18,7 +18,8 @@
 
   home.sessionVariables = {
     PATH = "$PATH:$HOME/.local/bin";
-    EDITOR = "${pkgs.micro}/bin/micro";
+    EDITOR = "${pkgs.helix}/bin/hx";
+#    MANPAGER
     XDG_CACHE_HOME = "\${HOME}/.cache";
     XDG_CONFIG_HOME = "\${HOME}/.config";
     XDG_BIN_HOME = "\${HOME}/.local/bin";

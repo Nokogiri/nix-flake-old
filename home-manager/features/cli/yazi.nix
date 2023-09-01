@@ -1,5 +1,6 @@
-{ pkgs, ... }:{
-  home.packages = with pkgs; [ ffmpegthumbnailer unar jq poppler fd ripgrep fzf zoxide ];
+{ pkgs, lib, config, ... }: 
+lib.mkMerge [{
+  home.packages = with pkgs; [ unar jq fd ripgrep fzf zoxide ];
   programs.yazi = {
     enable = true;
     settings = {
@@ -9,3 +10,6 @@
     };
   };
 }
+(lib.mkIf config.machineType.desktop  {
+  home.packages = with pkgs; [ unar jq fd ripgrep fzf zoxide ];
+})]

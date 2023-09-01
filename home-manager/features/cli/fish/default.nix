@@ -20,7 +20,7 @@
     #    rev = "f885c2507128b70d6c41b043070a8f399988bc7a";
     #    sha256 = "ii9gdBPlC1/P1N9xJzqomrkyDqIdTg+iCg0mwNVq2EU=";
     #  };
-    #}
+    #:}
     #{
     #  name = "catppuccin";
     #  src = pkgs.fetchFromGitHub {
@@ -62,6 +62,7 @@
     };
     interactiveShellInit = ''
       fish_config theme choose Dracula
+      fzf_configure_bindings --history=\cr
       set --global KITTY_INSTALLATION_DIR "${pkgs.kitty}/lib/kitty"
       set --global KITTY_SHELL_INTEGRATION enabled
       source "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish"
