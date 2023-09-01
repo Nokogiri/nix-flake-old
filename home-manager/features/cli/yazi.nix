@@ -4,10 +4,16 @@ lib.mkMerge [{
   programs.yazi = {
     enable = true;
     settings = {
-      sort_by = "natural";
-      sort_dir_first = true;
-      show_symlink = true;
+      manager = {
+        sort_by = "alphabetical";
+        sort_dir_first = true;
+        show_symlink = true;
+      };
+      opener = {
+        text = [ { exec = "$EDITOR $@"; block = true; } ];
+      };
     };
+    
   };
 }
 (lib.mkIf config.machineType.desktop  {

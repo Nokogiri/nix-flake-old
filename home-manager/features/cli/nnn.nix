@@ -6,8 +6,8 @@
       src = (pkgs.fetchFromGitHub {
         owner = "Nokogiri";
         repo = "nnn";
-        rev = "d3e246768100c2b004829b3d849efd1f2004a9cb"; # 01.04.2023
-        sha256 = "sha256-ACxG+U6PzsyriP/GJwZ95eYHAT2CeV28Il56W9K4AbY=";
+        rev = "c992716cbb2f8d1df3ebdc6444a66fe20d3e625f"; # 01.09.2023
+        sha256 = "sha256-8YXWSniPu7RJTcf5nzXpgQTWXldWFujgHYmQTdvfb3M=";
       }) + "/plugins";
       mappings = { p = "preview-tui"; };
     };

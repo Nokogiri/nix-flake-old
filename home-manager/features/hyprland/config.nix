@@ -267,9 +267,12 @@
             bind=SUPERSHIFT,9,movetoworkspacesilent,09
 
             windowrulev2 = workspace 2 silent,class:^(firefox)$
+            
             windowrulev2 = size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
             windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
             windowrulev2 = float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
+
+            windowrulev2 = center:class:^(xdg-desktop-portal-gtk)$title:^(Open With…)$
             windowrulev2 = float,center,size=60%,title:^(.*Picture-in-Picture.*)$,class:^(firefox)$
             windowrulev2 = workspace 3 silent,class:^(mpv)$
             windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam)$
