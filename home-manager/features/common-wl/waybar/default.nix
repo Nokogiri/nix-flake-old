@@ -78,6 +78,10 @@
           on-click = "${pkgs.lxqt.pavucontrol-qt}/bin/pavucontrol-qt";
           tooltip = true;
         };
+        "tray" = {
+          show-passive-items = true;
+          spacing = 10;
+        };
         "custom/weather" = {
           format = "{}°C";
           tooltip = true;

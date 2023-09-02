@@ -10,7 +10,7 @@
     ./lsd.nix
     #./micro
     ./nnn.nix
-    #./ranger.nix
+    ./ranger.nix
     ./ssh.nix
     ./starship.nix
     ./tmux.nix

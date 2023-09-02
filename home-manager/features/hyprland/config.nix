@@ -272,7 +272,7 @@
             windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
             windowrulev2 = float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
 
-            windowrulev2 = center:class:^(xdg-desktop-portal-gtk)$title:^(Open With…)$
+            windowrulev2 = center,class:^(xdg-desktop-portal-gtk)$title:^(Open With…)$
             windowrulev2 = float,center,size=60%,title:^(.*Picture-in-Picture.*)$,class:^(firefox)$
             windowrulev2 = workspace 3 silent,class:^(mpv)$
             windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam)$
@@ -286,6 +286,9 @@
             #blurls=waybar
             #blurls=wofi
 
+            # Center Stuff
+            windowrulev2 = center,class:^(heroic)$,title:^(Exit)$
+            
     '';
   };
 }
