@@ -40,6 +40,7 @@
 
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
+    joshuto.url = "github:kamiyaa/joshuto";
     #eww = {
     #  url = "github:elkowar/eww";
 #
