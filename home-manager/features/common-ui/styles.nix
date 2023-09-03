@@ -14,6 +14,8 @@ in {
     '')
     dracula-theme
     dracula-icon-theme
+    papirus-icon-theme
+    nordzy-icon-theme
     libsForQt5.qt5ct
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
@@ -24,13 +26,13 @@ in {
 
   gtk = {
     enable = true;
-    cursorTheme = { name = "Nordzy-cursors"; };
+    cursorTheme = { name = "Nordzy-cursors-white"; };
     font = {
       name = "JetBrainsMonoNL Nerd Font Propo";
       size = 10;
     };
-    iconTheme = { name = "Dracula"; };
-    theme = { name = "Dracula"; };
+    iconTheme = { name = "Papirus-Dark"; package = pkgs.papirus-icon-theme;  };
+    theme = { name = "Dracula";  package = pkgs.dracula-theme; };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS
@@ -60,20 +62,12 @@ in {
     recursive = true;
     source = "${pkgs.dracula-theme}/share/themes/Dracula";
   };
-  #home.file.".icons/Dracula" = {
-  #  recursive = true;
-  #  source = "${pkgs.dracula-icon-theme}/share/icons/Dracula";
-  #};
-  #home.file.".icons/Nordzy-cursors" = {
-  #  recursive = true;
-  #  source = "${pkgs.nordzy-cursor-theme}/share/icons/Nordzy-cursors";
-  #};
 
   home.pointerCursor = {
     x11.enable = true;
     gtk.enable = true;
     size = 24;
-    name = "Nordzy-cursors";
+    name = "Nordzy-cursors-white";
     package = pkgs.nordzy-cursor-theme;
     x11.defaultCursor = "left_ptr";
   };
