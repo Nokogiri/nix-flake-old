@@ -278,6 +278,7 @@
             windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam)$
             windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$
 
+            
             windowrulev2 = float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$
             windowrulev2 = fullscreen,opaque,noblur,forceinput,class:^(.gamescope-wrapped)$
             windowrulev2 = workspace 7 silent,title:^(Spotify)$
@@ -288,7 +289,9 @@
 
             # Center Stuff
             windowrulev2 = center,class:^(heroic)$,title:^(Exit)$
-            
+            windowrulev2 = center,class:^(gimp-2.99)$,floating:1
+            windowrulev2 = center:class:^(file-*),title:^(Export Image as*),floating:1
+            windowrulev2 = center,title:^(Really Quit*),floating:1
     '';
   };
 }

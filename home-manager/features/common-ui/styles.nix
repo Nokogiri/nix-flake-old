@@ -54,10 +54,20 @@ in {
     "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk.css";
   home.file.".config/gtk-4.0/gtk-dark.css".source =
     "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk-dark.css";
-  home.file.".config/gtk-4.0/assets" = {
+
+  # for flatpaks
+  home.file.".themes/Dracula" = {
     recursive = true;
-    source = "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/assets";
+    source = "${pkgs.dracula-theme}/share/themes/Dracula";
   };
+  #home.file.".icons/Dracula" = {
+  #  recursive = true;
+  #  source = "${pkgs.dracula-icon-theme}/share/icons/Dracula";
+  #};
+  #home.file.".icons/Nordzy-cursors" = {
+  #  recursive = true;
+  #  source = "${pkgs.nordzy-cursor-theme}/share/icons/Nordzy-cursors";
+  #};
 
   home.pointerCursor = {
     x11.enable = true;
