@@ -44,8 +44,8 @@
     border=bd93f9ff
 
     [border]
-    width=0
-    radius=3
+    width=2
+    radius=4
 
     [dmenu]
     mode=text  # text|index

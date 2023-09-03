@@ -14,7 +14,7 @@
               cursor_inactive_timeout=0
             }
 
-            monitor=eDP-1,preferred,auto,auto
+            #monitor=eDP-1,preferred,auto,1.25
             monitor=,preferred,auto,1
 
       	  xwayland {
@@ -121,7 +121,7 @@
             bindm=SUPER,mouse:273,resizewindow
 
             # Program bindings
-            bind=SUPER,Return,exec,kitty
+            bind=SUPER,Return,exec,wezterm
             bind=SUPER,w,exec,makoctl dismiss
             bind=SUPER,v,exec,$TERMINAL $SHELL -ic nvim
             bind=SUPER,m,exec,$TERMINAL $SHELL -ic neomutt
