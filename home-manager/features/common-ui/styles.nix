@@ -12,10 +12,9 @@ in {
       ${pkgs.glib.bin}/bin/gsettings set $gnome_schema icon-theme '${config.gtk.iconTheme.name}'
       ${pkgs.glib.bin}/bin/gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
     '')
-    dracula-theme
-    dracula-icon-theme
-    papirus-icon-theme
-    nordzy-icon-theme
+    #dracula-theme
+    #dracula-icon-theme
+    #nordzy-icon-theme
     libsForQt5.qt5ct
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
@@ -31,7 +30,7 @@ in {
       name = "JetBrainsMonoNL Nerd Font Propo";
       size = 10;
     };
-    iconTheme = { name = "Papirus-Dark"; package = pkgs.papirus-icon-theme;  };
+    iconTheme = { name = "Dracula"; package = pkgs.dracula-icon-theme;  };
     theme = { name = "Dracula";  package = pkgs.dracula-theme; };
     gtk2 = {
       extraConfig = ''

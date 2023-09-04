@@ -3,14 +3,11 @@
     ./avizo.nix
     ./fuzzel.nix
     ./gammastep.nix
-    #./mako.nix
     #./obs-studio.nix
     ./swaylock.nix
     ./swaync.nix
     ./waybar
-    #./wezterm
     ./wvkbd.nix
-    ./wofi.nix
   ];
 
   home.packages = with pkgs; [ cliphist imv swayidle wl-clipboard wlr-randr ];

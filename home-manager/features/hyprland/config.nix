@@ -128,9 +128,9 @@
             bind=SUPER,b,exec,firefox
 
             #bind=SUPER,p,exec,pkill -9 wofi || wofi -S drun -x 10 -y 10 -W 25% -H 60%
-            bind=SUPER,p,exec,pkill -9 wofi || wofi -S drun
+            bind=SUPER,p,exec,pkill -9 fuzzel || hyprfuzzel
             bind,XF86HomePage,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
-            bind=SUPER,d,exec,hyprfuzzel
+            bind=SUPER,d,exec,pkill -9 hyprfuzzel || hyprfuzzel
             bind=SUPER,i,exec,cliphist list | fuzzel -d -w 96 | cliphist decode | wl-copy
             bind=,Scroll_Lock,exec,pass-wofi # fn+k
             bind=,XF86Calculator,exec,pass-wofi # fn+f12
