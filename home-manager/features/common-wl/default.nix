@@ -8,7 +8,7 @@
     ./swaylock.nix
     ./swaync.nix
     ./waybar
-    ./wezterm
+    #./wezterm
     ./wvkbd.nix
     ./wofi.nix
   ];
