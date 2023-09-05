@@ -290,7 +290,7 @@
             # Center Stuff
             windowrulev2 = center,class:^(heroic)$,title:^(Exit)$
             windowrulev2 = center,class:^(gimp-2.99)$,floating:1
-            windowrulev2 = center:class:^(file-*),title:^(Export Image as*),floating:1
+            windowrulev2 = center,class:^(file-*),title:^(Export Image as*),floating:1
             windowrulev2 = center,title:^(Really Quit*),floating:1
     '';
   };

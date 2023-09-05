@@ -9,8 +9,9 @@
 
   fonts.packages = with pkgs; [
     nerdfonts
-    jetbrains-mono
     dejavu_fonts
+    jetbrains-mono
+    lato
     twemoji-color-font
     noto-fonts
     noto-fonts-emoji
@@ -26,8 +27,8 @@
       enable = true;
       antialias = true;
       defaultFonts = {
-        serif = [ "JetBrainsMono Nerd Font Propo" ];
-        sansSerif = [ "JetBrainsMono Nerd Font Propo" ];
+        serif = [ "Noto Serif" ];
+        sansSerif = [ "Noto Sans" ];
         monospace = [ "JetBrainsMono Nerd Font Mono" ];
         emoji = [ "Noto Color Emoji" ];
       };

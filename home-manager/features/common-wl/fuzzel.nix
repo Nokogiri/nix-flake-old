@@ -7,15 +7,15 @@
       destination = "/bin/hyprfuzzel";
       executable = true;
       text = ''
-        ${pkgs.fuzzel}/bin/fuzzel --log-level=error -w 45 -l 25 --layer=overlay  
+        ${pkgs.fuzzel}/bin/fuzzel --log-level=error -w 45 -l 10 --layer=overlay  
       '';
     })
   ];
   xdg.configFile."fuzzel/fuzzel.ini".text = ''
     # output=<not set>
     # font=monospace
-    font=JetBrainsMono Nerd Font Propo:size=13
-    dpi-aware=no
+    font=Lato:size=9
+    dpi-aware=yes
     prompt=➟ 
     icon-theme=Dracula
     icons-enabled=yes
@@ -27,7 +27,7 @@
     terminal=kitty
     # launch-prefix=<not set>
 
-    width=35
+    width=45
     horizontal-pad=10
     vertical-pad=10
     inner-pad=10
@@ -44,8 +44,8 @@
     border=bd93f9ff
 
     [border]
-    width=2
-    radius=4
+    width=1
+    radius=8
 
     [dmenu]
     mode=text  # text|index
