@@ -7,14 +7,14 @@
       destination = "/bin/hyprfuzzel";
       executable = true;
       text = ''
-        ${pkgs.fuzzel}/bin/fuzzel --log-level=error -w 45 -l 10 --layer=overlay  
+        ${pkgs.fuzzel}/bin/fuzzel --log-level=error -l 10 --layer=overlay -w 20  
       '';
     })
   ];
   xdg.configFile."fuzzel/fuzzel.ini".text = ''
     # output=<not set>
     # font=monospace
-    font=Lato:size=9
+    font=Lato:size=10
     dpi-aware=yes
     prompt=➟ 
     icon-theme=Dracula

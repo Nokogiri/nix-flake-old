@@ -27,7 +27,7 @@ in {
     enable = true;
     cursorTheme = { name = "Nordzy-cursors-white"; };
     font = {
-      name = "Lato";
+      name = "Noto Sans";
       size = 10;
     };
     iconTheme = { name = "Dracula"; package = pkgs.dracula-icon-theme;  };

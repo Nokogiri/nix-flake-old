@@ -96,7 +96,7 @@ window#waybar.hidden {
 }
 /* 1st block */
 #custom-weather {
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "Lato";
     font-size: 14px;
     background-color: transparent;
     color: @foreground;
