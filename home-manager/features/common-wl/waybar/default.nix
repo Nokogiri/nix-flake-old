@@ -46,11 +46,11 @@
           format-charging = "{capacity}% {icon} 󱐌";
           format-full = "{capacity}% {icon}";
           format-discharging = "{capacity}% {icon}";
-          format-icons = [ "" "" "" "" "" "" "" "" "" "" ];
+          format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
           tooltip = true;
         };
         "network" = {
-          format-wifi = "";
+          format-wifi = "󰤨 ";
           format-ethernet = "";
           format-linked = "(No IP) ";
           format-disconnected = "";
@@ -61,19 +61,19 @@
           scroll-step = 2.5;
           tooltip-format = "{volume}% {icon} {desc}";
           format = "{volume}% {icon}";
-          format-bluetooth = "{volume}% ";
-          format-bluetooth-muted = "󰝟 {icon} ";
-          format-muted = "";
-          format-source = "{volume}% ";
-          format-source-muted = "";
+          format-bluetooth = "{volume}%  ";
+          format-bluetooth-muted = "  ";
+          format-muted = " ";
+          format-source = "{volume}%  ";
+          format-source-muted = " ";
           format-icons = {
-            headphone = "";
-            hands-free = "";
-            headset = "";
-            phone = "";
-            portable = "";
-            car = "";
-            default = "";
+            headphone = "  ";
+            hands-free = "  ";
+            headset =  "  ";
+            phone = "  ";
+            portable = "  ";
+            car = "  ";
+            default = " 󰕾 ";
           };
           on-click = "${pkgs.lxqt.pavucontrol-qt}/bin/pavucontrol-qt";
           tooltip = true;

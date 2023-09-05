@@ -4,15 +4,13 @@
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
       nerdfonts =
-        nerdfonts.override { fonts = [ "Hack" "JetBrainsMono" "SourceCodePro" ]; };
+        nerdfonts.override { fonts = [ "Hack" "NerdFontsSymbolsOnly" ]; };
     };
 
   fonts.packages = with pkgs; [
     nerdfonts
     dejavu_fonts
     hack-font
-    jetbrains-mono
-    lato
     twemoji-color-font
     noto-fonts
     noto-fonts-emoji
@@ -28,9 +26,9 @@
       enable = true;
       antialias = true;
       defaultFonts = {
-        serif = [ "Lato" ];
-        sansSerif = [ "Lato" ];
-        monospace = [ "Hack" ];
+        serif = [ "Hack Nerd Font Propo" ];
+        sansSerif = [ "Hack Nerd Font Propo" ];
+        monospace = [ "Hack Nerd Font Mono" ];
         emoji = [ "Noto Color Emoji" ];
       };
     };
