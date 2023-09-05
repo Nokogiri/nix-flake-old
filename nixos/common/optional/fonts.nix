@@ -4,12 +4,13 @@
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
       nerdfonts =
-        nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
+        nerdfonts.override { fonts = [ "Hack" "JetBrainsMono" ]; };
     };
 
   fonts.packages = with pkgs; [
     nerdfonts
     dejavu_fonts
+    hack-font
     jetbrains-mono
     lato
     twemoji-color-font
