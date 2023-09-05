@@ -38,9 +38,9 @@
     };
     spicetify-nix = { url = "github:the-argus/spicetify-nix"; };
 
-    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+    #nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
-    joshuto.url = "github:kamiyaa/joshuto";
+    #joshuto.url = "github:kamiyaa/joshuto";
     #eww = {
     #  url = "github:elkowar/eww";
 #
