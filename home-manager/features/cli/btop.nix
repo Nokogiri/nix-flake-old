@@ -8,7 +8,7 @@
       use_fstab = true;
       only_physicla = true;
 
-      disks_filter = "exclude=tmp /nix/store /var/lib /var/log /";
+      disks_filter = "exclude=tmp /nix/store /var/lib /var/log /export/extHDD /export/Downloads /export/webdav /boot/efi /boot";
     };
   };
 }

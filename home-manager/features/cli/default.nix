@@ -8,7 +8,7 @@
     ./git.nix
     ./gpg-agent.nix
     ./lsd.nix
-    #./micro
+    ./micro
     ./nnn.nix
     ./ranger.nix
     ./ssh.nix

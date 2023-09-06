@@ -84,6 +84,11 @@
     fsType = "btrfs";
     options = [ "compress-force=zstd" "noatime" "nofail" ];
   };
+  fileSystems."/media/Vault3.1" = {
+    device = "/dev/disk/by-uuid/aee8a1c9-f265-4103-ba79-869773e4e99c";
+    fsType = "btrfs";
+    options = [ "compress-force=zstd:6" "noatime" "nofail" ];
+  };
   swapDevices =
     [{ device = "/dev/disk/by-uuid/0cd7afe0-c1e1-4d9f-8172-48f677434826"; }];
 
