@@ -27,7 +27,7 @@
     '';
     shares = {
       public = {
-        path = "/media/Vault3.1";
+        path = "/media/Vault3.1/public";
         browseable = "yes";
         "read only" = "no";
         "guest ok" = "yes";
@@ -36,6 +36,36 @@
         "force user" = "nokogiri";
         "force group" = "users";
       };
+      personal = {
+        path = "/media/Vault3.1/personal";
+        browseable = "yes";
+        "read only" = "no";
+        "guest ok" = "no";
+        "create mask" = "0644";
+        "directory mask" = "0755";
+        "force user" = "nokogiri";
+        "force group" = "users";
+      };
+      misc = {
+        path = "/media/Vault3.1/misc";
+        browseable = "yes";
+        "read only" = "no";
+        "guest ok" = "yes";
+        "create mask" = "0644";
+        "directory mask" = "0755";
+        "force user" = "nokogiri";
+        "force group" = "users";
+      };
+      media = {
+        path = "/media/Vault3.1/media";
+        browseable = "yes";
+        "read only" = "no";
+        "guest ok" = "yes";
+        "create mask" = "0644";
+        "directory mask" = "0755";
+        "force user" = "nokogiri";
+        "force group" = "users";
+      };   
     };
   };
 }
