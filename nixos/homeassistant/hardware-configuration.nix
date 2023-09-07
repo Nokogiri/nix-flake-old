@@ -79,7 +79,7 @@
     options = [ "subvol=nixos/store" "compress-force=zstd:6" ];
   };
 
-  fileSystems."/media/extHDD" = {
+  fileSystems."/media/Vault1.1" = {
     device = "/dev/disk/by-uuid/10a2e8f7-656f-414a-bddf-e3d5e6a6d7a0";
     fsType = "btrfs";
     options = [ "compress-force=zstd" "noatime" "nofail" ];
