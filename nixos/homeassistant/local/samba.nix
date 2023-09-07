@@ -27,7 +27,7 @@
     '';
     shares = {
       public = {
-        path = "/media/extHDD";
+        path = "/media/Vault3.1";
         browseable = "yes";
         "read only" = "no";
         "guest ok" = "yes";
