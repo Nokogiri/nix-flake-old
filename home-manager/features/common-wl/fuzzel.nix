@@ -7,7 +7,7 @@
       destination = "/bin/hyprfuzzel";
       executable = true;
       text = ''
-        ${pkgs.fuzzel}/bin/fuzzel --log-level=error -l 10 --layer=overlay   
+        ${pkgs.fuzzel}/bin/fuzzel --log-level=error -l 10 --layer=overlay -w 30 
       '';
     })
   ];
