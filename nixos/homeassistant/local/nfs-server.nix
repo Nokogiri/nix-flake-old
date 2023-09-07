@@ -1,6 +1,6 @@
 {
-  fileSystems."/export/webdav" = {
-    device = "/srv/webdav";
+  fileSystems."/export/Vault3.1" = {
+    device = "/media/Vault3.1";
     options = [ "bind" ];
   };
 
@@ -29,8 +29,8 @@
   };
   services.nfs.server.exports = ''
     /export            10.200.200.0/24(rw,fsid=0,no_subtree_check) 192.168.178.0/24(rw,fsid=0,no_subtree_check)
-    /export/webdav     10.200.200.0/24(rw,nohide,insecure,no_subtree_check) 192.168.178.0/24(rw,nohide,insecure,no_subtree_check)
     /export/extHDD     10.200.200.0/24(rw,nohide,insecure,no_subtree_check) 192.168.178.0/24(rw,nohide,insecure,no_subtree_check)
     /export/Downloads  10.200.200.0/24(rw,nohide,insecure,no_subtree_check) 192.168.178.0/24(rw,nohide,insecure,no_subtree_check)
+    /export/Vault3.1   10.200.200.0/24(rw,nohide,insecure,no_subtree_check) 192.168.178.0/24(rw,nohide,insecure,no_subtree_check)
   '';
 }
