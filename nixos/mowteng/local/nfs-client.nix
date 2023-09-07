@@ -33,6 +33,6 @@
   in [
     (commonAutoMountOptions // { where = "/media/nfs/Vault3.1"; })
     (commonAutoMountOptions // { where = "/media/nfs/Downloads"; })
-    (commonAutoMountOptions // { where = "/media/nfs/extHDD"; })
+    (commonAutoMountOptions // { where = "/media/nfs/Vault1.1"; })
   ];
 }
