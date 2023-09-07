@@ -2,7 +2,7 @@
   sops.secrets.vaultwarden = { sopsFile = ../../common/secrets.yaml; };
   services.vaultwarden = {
     enable = true;
-    backupDir = "/media/extHDD/warden";
+    backupDir = "/media/Vault3.1/backup/warden";
     config = {
       DOMAIN = "https://vault.fishoeder.net";
       WEB_VAULT_FOLDER = "${pkgs.bitwarden_rs-vault}/share/vaultwarden/vault";

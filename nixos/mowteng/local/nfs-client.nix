@@ -9,8 +9,8 @@
 
   in [
     (commonMountOptions // {
-      what = "10.200.200.1:/webdav";
-      where = "/media/nfs/Obsidian";
+      what = "10.200.200.1:/Vault3.1";
+      where = "/media/nfs/Vault3.1";
     })
 
     (commonMountOptions // {
@@ -31,7 +31,7 @@
     };
 
   in [
-    (commonAutoMountOptions // { where = "/media/nfs/Obsidian"; })
+    (commonAutoMountOptions // { where = "/media/nfs/Vault3.1"; })
     (commonAutoMountOptions // { where = "/media/nfs/Downloads"; })
     (commonAutoMountOptions // { where = "/media/nfs/extHDD"; })
   ];
