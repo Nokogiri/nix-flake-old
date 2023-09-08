@@ -1,19 +1,25 @@
 { lib
 , stdenv
 , fetchFromGitHub
+, fetchgit
 }:
 
 stdenv.mkDerivation {
   name = "dracula-plymouth";
   version = "2021-01-14";
 
-  src = fetchFromGitHub {
-    repo = "plymouth";
-    owner = "dracula";
-    rev = "37aa09b27ecee4a825b43d2c1d20b502e8f19c96";
-    hash = "sha256-7YwkBzkAND9lfH2ewuwna1zUkQStBBx4JHGw3/+svhA=";
-  };
+  #src = fetchFromGitHub {
+  #  repo = "plymouth";
+  #  owner = "dracula";
+  #  rev = "37aa09b27ecee4a825b43d2c1d20b502e8f19c96";
+  #  hash = "sha256-7YwkBzkAND9lfH2ewuwna1zUkQStBBx4JHGw3/+svhA=";
+  #};
 
+  src = fetchgit {
+    url = "https://git.fishoeder.net/dracula-plymouth";
+    rev = "83ba3ff0f490fb64dc225c4d82b0a19edc0db770";
+    hash = "sha256-PWnI3OoIlHmQ1HIvcKQk1A+bbb6WsIiWvkWIqJ3CNS8=";
+  };
   dontConfigure = true;
   dontBuild = true;
 

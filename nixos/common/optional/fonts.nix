@@ -29,7 +29,7 @@
         serif = [ "Hack Nerd Font Propo" ];
         sansSerif = [ "Hack Nerd Font Propo" ];
         monospace = [ "Hack Nerd Font Mono" ];
-        emoji = [ "Twitter Color Emoji" ];
+        emoji = [ "Noto Color Emoji" ];
       };
     };
   };
