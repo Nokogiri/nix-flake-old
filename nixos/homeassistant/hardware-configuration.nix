@@ -109,10 +109,9 @@
     fsType = "ext4";
   };
 
-  zramSwap = {
-    enable = true;
-    priority = 5;
-  };
+  #zramSwap = {
+  #  
+  #};
 
   hardware = {
     cpu.intel.updateMicrocode =

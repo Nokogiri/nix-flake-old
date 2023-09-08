@@ -25,6 +25,7 @@
     ../common/optional/resolved.nix
     ../common/optional/vaultwarden.nix
     ../common/optional/wireguard-server.nix
+    ../common/optional/zramswap.nix
     ../common/users/nokogiri.nix
 
     ./podman
