@@ -69,10 +69,10 @@
     priority = 100;
   }];
 
-  zramSwap = {
-    enable = true;
-    priority = 5;
-  };
+  #zramSwap = {
+  #  enable = true;
+  #  priority = 5;
+  #};
 
   hardware = {
     cpu.intel.updateMicrocode = true;
