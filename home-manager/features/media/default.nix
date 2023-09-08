@@ -1,11 +1,7 @@
 { pkgs, ... }: {
 
   imports = [ ./mpv.nix ./spotify.nix ./yt-dlp.nix ];
-  home.packages = with pkgs; [
-    ani-cli
-    jellyfin-media-player
-    youtube-tui
-  ];
+  home.packages = with pkgs; [ ani-cli jellyfin-media-player youtube-tui ];
 
   xdg.desktopEntries."umpv" = {
     exec = "";

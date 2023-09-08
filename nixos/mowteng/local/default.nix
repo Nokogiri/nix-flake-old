@@ -7,5 +7,6 @@
     ./tlp.nix
     ./nfs-client.nix
     ./firewall.nix
+    #./bees.nix
   ];
 }

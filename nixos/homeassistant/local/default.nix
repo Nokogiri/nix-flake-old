@@ -1,5 +1,6 @@
 {
   imports = [
+    ./bees.nix
     ./cgit.nix
     ./dave.nix
     ./firewall.nix

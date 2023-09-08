@@ -69,7 +69,7 @@
           format-icons = {
             headphone = "  ";
             hands-free = "  ";
-            headset =  "  ";
+            headset = "  ";
             phone = "  ";
             portable = "  ";
             car = "  ";

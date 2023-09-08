@@ -21,7 +21,7 @@
   home.sessionVariables = {
     PATH = "$PATH:$HOME/.local/bin";
     EDITOR = "${pkgs.helix}/bin/hx";
-#    MANPAGER
+    #    MANPAGER
     XDG_CACHE_HOME = "\${HOME}/.cache";
     XDG_CONFIG_HOME = "\${HOME}/.config";
     XDG_BIN_HOME = "\${HOME}/.local/bin";

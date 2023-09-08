@@ -65,7 +65,7 @@
         "directory mask" = "0755";
         "force user" = "nokogiri";
         "force group" = "users";
-      };   
+      };
       backup = {
         path = "/media/Vault3.1/backup";
         browseable = "yes";
@@ -75,6 +75,7 @@
         "directory mask" = "0755";
         "force user" = "nokogiri";
         "force group" = "users";
-      };       };
+      };
+    };
   };
 }

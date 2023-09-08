@@ -30,8 +30,14 @@ in {
       name = "Hack Nerd Font Propo";
       size = 10;
     };
-    iconTheme = { name = "Dracula"; package = pkgs.dracula-icon-theme;  };
-    theme = { name = "Dracula";  package = pkgs.dracula-theme; };
+    iconTheme = {
+      name = "Dracula";
+      package = pkgs.dracula-icon-theme;
+    };
+    theme = {
+      name = "Dracula";
+      package = pkgs.dracula-theme;
+    };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS

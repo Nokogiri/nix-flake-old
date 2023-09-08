@@ -45,8 +45,8 @@
         "browser.tabs.tabMinWidth" = 66;
         "browser.tabs.tabClipWidth" = 86;
         "browser.tabs.tabmanager.enabled" = false;
-        "apz.fling_min_velocity_threshold" = 1.5;
-        "apz.fling_friction" = 5.0e-3;
+        "apz.fling_min_velocity_threshold" = 1.9;
+        "apz.fling_friction" = 1.5e-2;
         #"browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":["ublock0_raymondhill_net-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","home-button","urlbar-container","downloads-button","library-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button","alltabs-button"],"PersonalToolbar":["import-button","personal-bookmarks"]},"seen":["save-to-pocket-button","developer-button","ublock0_raymondhill_net-browser-action"],"dirtyAreaCache":["nav-bar","PersonalToolbar","toolbar-menubar","TabsToolbar","widget-overflow-fixed-list"],"currentVersion":17,"newElementCount":3}'';
       };
       #userChrome = (import ./userChrome.css);
@@ -57,16 +57,11 @@
         @import url("/home/nokogiri/.mozilla/dracula/userContent.css");
       '';
     };
-    
-      profiles.private.extensions = with config.nur.repos.rycee.firefox-addons;
-      [
-        vimium
-        ublock-origin
-        onetab
-        ff2mpv
-      ]
+
+    profiles.private.extensions = with config.nur.repos.rycee.firefox-addons;
+      [ vimium ublock-origin onetab ff2mpv ]
       ++ [ sidebery config.nur.repos.bandithedoge.firefoxAddons.sponsorblock ];
-      profiles.private = {
+    profiles.private = {
       name = "private";
       path = "private";
       bookmarks = { };
@@ -87,6 +82,8 @@
         "browser.tabs.tabMinWidth" = 66;
         "browser.tabs.tabClipWidth" = 86;
         "browser.tabs.tabmanager.enabled" = false;
+        "apz.fling_min_velocity_threshold" = 1.9;
+        "apz.fling_friction" = 1.5e-2;
         #"browser.uiCustomization.state" = ''
         #  {"placements":{"widget-overflow-fixed-list":["ublock0_raymondhill_net-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","home-button","urlbar-container","downloads-button","library-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button","alltabs-button"],"PersonalToolbar":["import-button","personal-bookmarks"]},"seen":["save-to-pocket-button","developer-button","ublock0_raymondhill_net-browser-action"],"dirtyAreaCache":["nav-bar","PersonalToolbar","toolbar-menubar","TabsToolbar","widget-overflow-fixed-list"],"currentVersion":17,"newElementCount":3}'';
       };

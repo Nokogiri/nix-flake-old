@@ -16,7 +16,7 @@
       outputs.overlays.modifications
       outputs.overlays.additions
       #outputs.overlays.master-pkgs
-      
+
     ];
     config = {
       allowUnfree = true;

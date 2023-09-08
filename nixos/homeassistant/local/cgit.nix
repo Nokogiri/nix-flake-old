@@ -33,9 +33,9 @@
         owner = "nokogiri";
       };
       dracula-plymouth = {
-      	path = "/var/lib/gitolite/repositories/dracula-plymouth.git";
-      	desc = "Dracula plymouth theme";
-      	owner = "nokogiri";
+        path = "/var/lib/gitolite/repositories/dracula-plymouth.git";
+        desc = "Dracula plymouth theme";
+        owner = "nokogiri";
       };
     };
     settings = {
