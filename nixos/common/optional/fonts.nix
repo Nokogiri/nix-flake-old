@@ -8,12 +8,13 @@
     };
 
   fonts.packages = with pkgs; [
-    nerdfonts
     dejavu_fonts
     hack-font
+    nerdfonts
     noto-fonts
     noto-fonts-emoji
     noto-fonts-cjk-sans
+    twemoji-color-font
     weather-icons
   ];
 
@@ -28,7 +29,7 @@
         serif = [ "Hack Nerd Font Propo" ];
         sansSerif = [ "Hack Nerd Font Propo" ];
         monospace = [ "Hack Nerd Font Mono" ];
-        emoji = [ "Noto Color Emoji" ];
+        emoji = [ "Twitter Color Emoji" ];
       };
     };
   };
