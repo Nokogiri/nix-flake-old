@@ -3,11 +3,12 @@
     ./bash.nix
     ./bat
     ./btop.nix
+    ./eza.nix
     ./fish
     ./fzf.nix
     ./git.nix
     ./gpg-agent.nix
-    ./lsd.nix
+    #./lsd.nix
     ./micro
     ./nnn.nix
     ./ranger.nix
