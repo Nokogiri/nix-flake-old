@@ -1,6 +1,5 @@
 {
   imports = [
-    ./bees.nix
     ./cgit.nix
     ./dave.nix
     ./firewall.nix
@@ -13,6 +12,5 @@
     ./rclone.nix
     ./jellyfin.nix
     ./transmission.nix
-    #./webdav-server-rs.nix
   ];
 }
