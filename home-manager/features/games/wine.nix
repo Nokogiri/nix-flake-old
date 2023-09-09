@@ -1,3 +1,3 @@
 { pkgs, ... }: {
-  home.packages = with pkgs; [ wineWowPackages.stableFull winetricks bottles ];
+  home.packages = with pkgs; [ wineWowPackages.stableFull winetricks ];
 }
