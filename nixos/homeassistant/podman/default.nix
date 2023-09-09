@@ -1,7 +1,7 @@
 {
   imports = [
     # ./anisette-alt.nix
-    ./calibre-web.nix
+    #./calibre-web.nix
     ./esphome.nix
     ./homeassistant.nix
     ./pihole.nix
