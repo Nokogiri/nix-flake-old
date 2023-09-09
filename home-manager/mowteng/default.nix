@@ -16,7 +16,6 @@
     inputs.slight.overlays.default
   ];
   home.packages = with pkgs; [
-
     handlr-regex
 
     transmission-qt
@@ -25,13 +24,12 @@
     fuse-overlayfs
     obsidian
 
-    slight
-
     xournalpp
 
     # graphics stuff
-    gimp
+    #gimp
     krita
   ];
+
   machineType.desktop = true;
 }
