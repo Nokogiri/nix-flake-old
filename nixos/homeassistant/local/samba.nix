@@ -46,16 +46,6 @@
         "force user" = "nokogiri";
         "force group" = "users";
       };
-      misc = {
-        path = "/media/Vault3.1/misc";
-        browseable = "yes";
-        "read only" = "no";
-        "guest ok" = "yes";
-        "create mask" = "0644";
-        "directory mask" = "0755";
-        "force user" = "nokogiri";
-        "force group" = "users";
-      };
       media = {
         path = "/media/Vault3.1/media";
         browseable = "yes";

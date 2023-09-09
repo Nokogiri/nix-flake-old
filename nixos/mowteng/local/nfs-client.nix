@@ -14,11 +14,6 @@
     })
 
     (commonMountOptions // {
-      what = "10.200.200.1:/Downloads";
-      where = "/media/nfs/Downloads";
-    })
-
-    (commonMountOptions // {
       what = "10.200.200.1:/Vault1.1";
       where = "/media/nfs/Vault1.1";
     })
@@ -32,7 +27,6 @@
 
   in [
     (commonAutoMountOptions // { where = "/media/nfs/Vault3.1"; })
-    (commonAutoMountOptions // { where = "/media/nfs/Downloads"; })
     (commonAutoMountOptions // { where = "/media/nfs/Vault1.1"; })
   ];
 }

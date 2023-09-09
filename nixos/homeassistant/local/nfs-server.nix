@@ -9,11 +9,6 @@
     options = [ "bind" ];
   };
 
-  fileSystems."/export/Downloads" = {
-    device = "/var/lib/transmission/Downloads";
-    options = [ "bind" ];
-  };
-
   services.nfs.server = {
     enable = true;
     lockdPort = 4001;
@@ -30,7 +25,6 @@
   services.nfs.server.exports = ''
     /export            10.200.200.0/24(rw,fsid=0,no_subtree_check) 192.168.178.0/24(rw,fsid=0,no_subtree_check)
     /export/Vault1.1   10.200.200.0/24(rw,nohide,insecure,no_subtree_check) 192.168.178.0/24(rw,nohide,insecure,no_subtree_check)
-    /export/Downloads  10.200.200.0/24(rw,nohide,insecure,no_subtree_check) 192.168.178.0/24(rw,nohide,insecure,no_subtree_check)
     /export/Vault3.1   10.200.200.0/24(rw,nohide,insecure,no_subtree_check) 192.168.178.0/24(rw,nohide,insecure,no_subtree_check)
   '';
 }
