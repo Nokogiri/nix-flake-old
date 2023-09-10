@@ -24,6 +24,7 @@
     fuse-overlayfs
     obsidian
 
+    nss
     xournalpp
 
     # graphics stuff

@@ -16,6 +16,7 @@
             fribidi
             mangohud
             mono
+            nss
             xorg.libXcursor
             xorg.libXi
             xorg.libXinerama

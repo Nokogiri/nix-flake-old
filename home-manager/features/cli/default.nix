@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
   imports = [
     ./bash.nix
     ./bat
@@ -55,7 +55,7 @@
     jq # JSON pretty printer and manipulator
     tealdeer
     #ps_mem
-
+    
     nix-stray-roots
 
   ];
