@@ -19,7 +19,7 @@
       kernelModules = [ "amdgpu" ];
     };
     kernelModules = [ "kvm-amd" "zenpower" ];
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_zen;
     # passive epp
     #kernelParams = [
     #  "amd_pstate=passive"
