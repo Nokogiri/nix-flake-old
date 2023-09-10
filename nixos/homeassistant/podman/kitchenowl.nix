@@ -15,9 +15,9 @@
         PGID = "1000";
       };
       ports = [ "10.200.200.1:8099:80/tcp" ];
-      dependsOn = ["kowl-back"];
+      dependsOn = ["back"];
     };
-    kowl-back = {
+    back = {
       image = "tombursch/kitchenowl:latest";
       autoStart = true;
       #restart = "unless-stopped";
