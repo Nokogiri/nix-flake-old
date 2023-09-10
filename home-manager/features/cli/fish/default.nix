@@ -34,7 +34,7 @@
     shellAbbrs = {
 
       ipa = "ip -color -brief a";
-      ls = "exa";
+      ls = "eza";
       n = "nix";
       nd = "nix develop -c $SHELL";
       ns = "nix shell";

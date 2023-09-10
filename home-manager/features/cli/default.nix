@@ -49,7 +49,6 @@
     dfc # better df
     mediainfo
     gdu
-    exa # Better ls
     ripgrep # Better grep
     fd # Better find
     file
