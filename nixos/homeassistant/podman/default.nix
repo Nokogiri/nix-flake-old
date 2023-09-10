@@ -4,6 +4,7 @@
     #./calibre-web.nix
     ./esphome.nix
     ./homeassistant.nix
+    ./kitchenowl.nix
     ./pihole.nix
   ];
   virtualisation.oci-containers.backend = "podman";
