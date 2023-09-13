@@ -5,6 +5,7 @@
     # general
     gamescope
     mangohud
+    vkbasalt
     #prismlauncher
     heroic
     portmod
