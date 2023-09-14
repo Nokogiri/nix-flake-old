@@ -50,7 +50,6 @@
     amdctl
     lm_sensors
     exfatprogs
-    iwgtk
   ];
 
   hardware = {

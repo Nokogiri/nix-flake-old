@@ -39,6 +39,13 @@
             gst_all_1.gst-plugins-bad
             xdg-user-dirs
             inputs.extest.packages.x86_64-linux.default
+            #STL
+            unixtools.xxd
+            wget
+            xdotool
+            xorg.xprop
+            xorg.xwininfo
+            yad
           ];
         extraProfile = ''
           export GSETTINGS_SCHEMA_DIR="${gsettings-desktop-schemas}/share/gsettings-schemas/${gsettings-desktop-schemas.name}/glib-2.0/schemas/"

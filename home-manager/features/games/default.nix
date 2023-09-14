@@ -16,10 +16,10 @@
     #airshipper # veloren
     arx-libertatis
     #dhewm3
-    eduke32
+    #eduke32
     gzdoom
     openmw
-    sm64ex
+    #sm64ex
     vkquake
     yquake2
     yquake2-all-games
@@ -44,7 +44,7 @@
     libretro.play
     libretro.ppsspp
     libretro.snes9x
-    #pcsx2
+    pcsx2
     ppsspp
     #rpcs3
   ];
