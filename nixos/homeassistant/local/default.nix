@@ -9,6 +9,7 @@
     ./samba.nix
     ./snapserver.nix
     ./systemd-network.nix
+    ./postgresql.nix
     ./rclone.nix
     ./jellyfin.nix
     ./transmission.nix
