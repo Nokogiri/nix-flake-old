@@ -15,19 +15,15 @@
         PGID = "1000";
       };
       ports = [ "10.200.200.1:8099:80/tcp" ];
-      dependsOn = ["back"];
+      dependsOn = [ "back" ];
     };
     back = {
       image = "tombursch/kitchenowl:latest";
       autoStart = true;
       #restart = "unless-stopped";
-      environment = {
-        JWT_SECRET_KEY = "PLEASE_CHANGE_ME";
-      };
-      volumes = [
-        "/var/lib/pods/kitchenowl:/data"
-      ];
-      
+      environment = { JWT_SECRET_KEY = "PLEASE_CHANGE_ME"; };
+      volumes = [ "/var/lib/pods/kitchenowl:/data" ];
+
     };
   };
 }

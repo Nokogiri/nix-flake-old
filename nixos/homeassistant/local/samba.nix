@@ -75,6 +75,7 @@
         "directory mask" = "0755";
         "force user" = "nokogiri";
         "force group" = "users";
-      };    };
+      };
+    };
   };
 }

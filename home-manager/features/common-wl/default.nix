@@ -10,7 +10,14 @@
     ./wvkbd.nix
   ];
 
-  home.packages = with pkgs; [ cliphist imv swayidle wl-clipboard wlr-randr ];
+  home.packages = with pkgs; [
+    cliphist
+    imv
+    rofi-wayland
+    swayidle
+    wl-clipboard
+    wlr-randr
+  ];
 
   home.sessionVariables = {
     BEMENU_BACKEND = "wayland";

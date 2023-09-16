@@ -14,8 +14,8 @@
               cursor_inactive_timeout=0
             }
 
-            #monitor=eDP-1,preferred,auto,1.25
-            monitor=,preferred,auto,1
+            monitor=eDP-1,preferred,auto,1.25
+            #monitor=,preferred,auto,1
 
       	  xwayland {
       	  	force_zero_scaling = true
@@ -112,9 +112,9 @@
             exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
             exec-once = ${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
             exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
-            exec-once = hyprctl keyword monitor "eDP-1,preferred,auto,1.25"
+            #exec-once = hyprctl keyword monitor "eDP-1,preferred,auto,1.25"
 
-            layerrule = blur, launcher
+            #layerrule = blur, launcher
 
             # Mouse binding
             bindm=SUPER,mouse:272,movewindow
@@ -128,7 +128,7 @@
             bind=SUPER,b,exec,firefox
 
             #bind=SUPER,p,exec,pkill -9 wofi || wofi -S drun -x 10 -y 10 -W 25% -H 60%
-            bind=SUPER,p,exec,pkill -9 fuzzel || hyprfuzzel
+            bind=SUPER,p,exec,pkill -9 rofi || rofi -show drun
             bind,XF86HomePage,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
             bind=SUPER,d,exec,pkill -9 hyprfuzzel || hyprfuzzel
             bind=SUPER,i,exec,cliphist list | fuzzel -d -w 96 | cliphist decode | wl-copy

@@ -25,17 +25,17 @@
 , wayland
 , xfce
 , zlib
-#, AppKit
-#, Cocoa
-#, CoreDisplay
-#, CoreVideo
-#, CoreWLAN
-#, DisplayServices
-##, Foundation
-#, IOBluetooth
-#, MediaRemote
-#, OpenCL
-#, moltenvk
+  #, AppKit
+  #, Cocoa
+  #, CoreDisplay
+  #, CoreVideo
+  #, CoreWLAN
+  #, DisplayServices
+  ##, Foundation
+  #, IOBluetooth
+  #, MediaRemote
+  #, OpenCL
+  #, moltenvk
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -78,19 +78,19 @@ stdenv.mkDerivation (finalAttrs: {
     xfce.xfconf
     zlib
   ];
- # ++ lib.optionals stdenv.isDarwin [
- #   AppKit
- #   Cocoa
- #   CoreDisplay
- #   CoreVideo
- #   CoreWLAN
- #   DisplayServices
- #   Foundation
- #   IOBluetooth
- #   MediaRemote
- #   OpenCL
- #   moltenvk
- # ];
+  # ++ lib.optionals stdenv.isDarwin [
+  #   AppKit
+  #   Cocoa
+  #   CoreDisplay
+  #   CoreVideo
+  #   CoreWLAN
+  #   DisplayServices
+  #   Foundation
+  #   IOBluetooth
+  #   MediaRemote
+  #   OpenCL
+  #   moltenvk
+  # ];
 
   cmakeFlags = [
     "-DCMAKE_INSTALL_SYSCONFDIR=${placeholder "out"}/etc"
