@@ -28,6 +28,7 @@
     ../common/optional/zramswap.nix
     ../common/users/nokogiri.nix
 
+    ./nginx
     ./podman
     ./local
   ];

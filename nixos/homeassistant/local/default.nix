@@ -3,9 +3,8 @@
     ./cgit.nix
     ./dave.nix
     ./firewall.nix
-    ./gitea.nix
+    #./gitea.nix
     ./nfs-server.nix
-    ./nginx.nix
     ./nix-serve.nix
     ./samba.nix
     ./snapserver.nix
