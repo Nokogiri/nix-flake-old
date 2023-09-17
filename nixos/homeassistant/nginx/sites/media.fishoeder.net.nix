@@ -1,10 +1,10 @@
 {
   services.nginx = {
-    virtualHosts."haos.fishoeder.net" = {
+    virtualHosts."media.fishoeder.net" = {
       useACMEHost = "fishoeder.net";
       forceSSL = true;
       locations."/" = {
-        proxyPass = "http://192.168.178.57:8123";
+        proxyPass = "http://10.200.200.1:8096";
         extraConfig = "proxy_redirect off;"
           + "proxy_set_header Range $http_range;"
           + "proxy_set_header If-Range $http_if_range;"

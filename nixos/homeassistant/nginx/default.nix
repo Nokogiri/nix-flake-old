@@ -1,5 +1,6 @@
 { config, ... }: {
-  imports = [ ./sites/foodwiki.nix ./sites/cache.nix ./sites/haos.fishoeder.net.nix ];
+  imports =
+    [ ./sites/foodwiki.nix ./sites/cache.nix ./sites/haos.fishoeder.net.nix ./sites/media.fishoeder.net.nix ];
 
   sops.secrets.ovh_dns = {
     sopsFile = ../../common/secrets.yaml;
@@ -86,10 +87,9 @@
       useACMEHost = "fishoeder.net";
       locations."/" = {
         proxyPass = "http://127.0.0.1:8765";
-        extraConfig = "proxy_buffering off;"
-          + "proxy_read_timeout    120s;" + "proxy_connect_timeout 90s;"
-          + "proxy_send_timeout    90s;" + "proxy_redirect        off;"
-          + "proxy_set_header      Host $host;"
+        extraConfig = "proxy_buffering off;" + "proxy_read_timeout    120s;"
+          + "proxy_connect_timeout 90s;" + "proxy_send_timeout    90s;"
+          + "proxy_redirect        off;" + "proxy_set_header      Host $host;"
           + "proxy_set_header      X-Forwarded-For $proxy_add_x_forwarded_for;"
           + "proxy_set_header      X-Forwarded-Proto $scheme;";
       };
