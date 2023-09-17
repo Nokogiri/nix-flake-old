@@ -30,6 +30,7 @@
 
     ./nginx
     ./podman
+    ./services
     ./local
   ];
 
