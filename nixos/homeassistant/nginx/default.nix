@@ -1,9 +1,10 @@
 { config, ... }: {
   imports = [
     ./sites/cache.fishoeder.net.nix
-    ./sites/food.fishoeder.net.nix
     ./sites/dav.fishoeder.net.nix
     ./sites/files.fishoeder.net.nix
+    ./sites/food.fishoeder.net.nix
+    ./sites/git.fishoeder.net.nix
     ./sites/haos.fishoeder.net.nix
     ./sites/media.fishoeder.net.nix
     ./sites/vault.fishoeder.net.nix
@@ -55,10 +56,10 @@
     recommendedGzipSettings = true;
     recommendedOptimisation = true;
 
-    virtualHosts."git.fishoeder.net" = {
-      useACMEHost = "fishoeder.net";
-      forceSSL = true;
-      root = "/srv/www/git";
-    };
+    #virtualHosts."git.fishoeder.net" = {
+    #  useACMEHost = "fishoeder.net";
+    #  forceSSL = true;
+    #  root = "/srv/www/git";
+    #};
   };
 }
