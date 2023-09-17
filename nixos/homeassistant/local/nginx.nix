@@ -1,5 +1,5 @@
 { config, ... }: {
-  imports = [ (./sites/foodwiki.nix) (./sites/cache.nix) (./sites/haos.fishoeder.net) ];
+  imports = [ (./sites/foodwiki.nix) (./sites/cache.nix) (./sites/haos.fishoeder.net.nix) ];
 
   sops.secrets.ovh_dns = {
     sopsFile = ../../common/secrets.yaml;
