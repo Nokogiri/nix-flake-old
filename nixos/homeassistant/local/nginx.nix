@@ -1,5 +1,5 @@
 { config, ... }: {
-  imports = [ (./sites/foodwiki.nix) (./sites/cache.nix) ];
+  imports = [ (./sites/foodwiki.nix) (./sites/cache.nix) (./sites/haos.fishoeder.net) ];
 
   sops.secrets.ovh_dns = {
     sopsFile = ../../common/secrets.yaml;
@@ -49,23 +49,23 @@
     #recommendedProxySettings = true;
     #recommendedTlsSettings = true;
 
-    virtualHosts."haos.fishoeder.net" = {
-      useACMEHost = "fishoeder.net";
-      forceSSL = true;
-      locations."/" = {
-        proxyPass = "http://192.168.178.57:8123";
-        extraConfig = "proxy_redirect off;"
-          + "proxy_set_header Range $http_range;"
-          + "proxy_set_header If-Range $http_if_range;"
-          + "proxy_set_header X-Real-IP $remote_addr;"
-          + "proxy_set_header Host $host;"
-          + "proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;"
-          + "proxy_set_header X-Forwarded-Protocol $scheme;"
-          + "proxy_http_version 1.1;"
-          + "proxy_set_header Upgrade $http_upgrade;"
-          + ''proxy_set_header Connection "upgrade";'';
-      };
-    };
+    #virtualHosts."haos.fishoeder.net" = {
+    #  useACMEHost = "fishoeder.net";
+    #  forceSSL = true;
+    #  locations."/" = {
+    #    proxyPass = "http://192.168.178.57:8123";
+    #    extraConfig = "proxy_redirect off;"
+    #      + "proxy_set_header Range $http_range;"
+    #      + "proxy_set_header If-Range $http_if_range;"
+    #      + "proxy_set_header X-Real-IP $remote_addr;"
+    #      + "proxy_set_header Host $host;"
+    #      + "proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;"
+    #      + "proxy_set_header X-Forwarded-Protocol $scheme;"
+    #      + "proxy_http_version 1.1;"
+    #      + "proxy_set_header Upgrade $http_upgrade;"
+    #      + ''proxy_set_header Connection "upgrade";'';
+    #  };
+    #};
 
     virtualHosts."files.fishoeder.net" = {
       useACMEHost = "fishoeder.net";
