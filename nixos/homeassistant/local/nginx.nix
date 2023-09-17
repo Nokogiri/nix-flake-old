@@ -49,24 +49,6 @@
     #recommendedProxySettings = true;
     #recommendedTlsSettings = true;
 
-    #virtualHosts."haos.fishoeder.net" = {
-    #  useACMEHost = "fishoeder.net";
-    #  forceSSL = true;
-    #  locations."/" = {
-    #    proxyPass = "http://192.168.178.57:8123";
-    #    extraConfig = "proxy_redirect off;"
-    #      + "proxy_set_header Range $http_range;"
-    #      + "proxy_set_header If-Range $http_if_range;"
-    #      + "proxy_set_header X-Real-IP $remote_addr;"
-    #      + "proxy_set_header Host $host;"
-    #      + "proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;"
-    #      + "proxy_set_header X-Forwarded-Protocol $scheme;"
-    #      + "proxy_http_version 1.1;"
-    #      + "proxy_set_header Upgrade $http_upgrade;"
-    #      + ''proxy_set_header Connection "upgrade";'';
-    #  };
-    #};
-
     virtualHosts."files.fishoeder.net" = {
       useACMEHost = "fishoeder.net";
       forceSSL = true;
@@ -105,15 +87,11 @@
       locations."/" = {
         proxyPass = "http://127.0.0.1:8765";
         extraConfig = "proxy_buffering off;"
-          #+ "client_max_body_size  0;"
           + "proxy_read_timeout    120s;" + "proxy_connect_timeout 90s;"
           + "proxy_send_timeout    90s;" + "proxy_redirect        off;"
           + "proxy_set_header      Host $host;"
           + "proxy_set_header      X-Forwarded-For $proxy_add_x_forwarded_for;"
           + "proxy_set_header      X-Forwarded-Proto $scheme;";
-        #+ "proxy_set_header      X-Forwarded-Ssl on;"
-        #+ "proxy_set_header      Connection \"\";"
-        #+ "proxy_pass_header     Date;";
       };
     };
     virtualHosts."media.fishoeder.net" = {
