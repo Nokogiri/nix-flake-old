@@ -2,6 +2,8 @@
   imports = [
     ./sites/foodwiki.nix
     ./sites/cache.nix
+    ./sites/dav.fishoeder.net.nix
+    ./sites/files.fishoeder.net.nix
     ./sites/haos.fishoeder.net.nix
     ./sites/media.fishoeder.net.nix
     ./sites/vault.fishoeder.net.nix
@@ -55,11 +57,11 @@
     #recommendedProxySettings = true;
     #recommendedTlsSettings = true;
 
-    virtualHosts."files.fishoeder.net" = {
-      useACMEHost = "fishoeder.net";
-      forceSSL = true;
-      root = "/srv/www/files";
-    };
+    #virtualHosts."files.fishoeder.net" = {
+    #  useACMEHost = "fishoeder.net";
+    #  forceSSL = true;
+    #  root = "/srv/www/files";
+    #};
 
     virtualHosts."git.fishoeder.net" = {
       useACMEHost = "fishoeder.net";
@@ -87,18 +89,18 @@
     #  };
     #};
 
-    virtualHosts."dav.fishoeder.net" = {
-      forceSSL = true;
-      useACMEHost = "fishoeder.net";
-      locations."/" = {
-        proxyPass = "http://127.0.0.1:8765";
-        extraConfig = "proxy_buffering off;" + "proxy_read_timeout    120s;"
-          + "proxy_connect_timeout 90s;" + "proxy_send_timeout    90s;"
-          + "proxy_redirect        off;" + "proxy_set_header      Host $host;"
-          + "proxy_set_header      X-Forwarded-For $proxy_add_x_forwarded_for;"
-          + "proxy_set_header      X-Forwarded-Proto $scheme;";
-      };
-    };
+    #virtualHosts."dav.fishoeder.net" = {
+    #  forceSSL = true;
+    #  useACMEHost = "fishoeder.net";
+    #  locations."/" = {
+    #    proxyPass = "http://127.0.0.1:8765";
+    #    extraConfig = "proxy_buffering off;" + "proxy_read_timeout    120s;"
+    #      + "proxy_connect_timeout 90s;" + "proxy_send_timeout    90s;"
+    #      + "proxy_redirect        off;" + "proxy_set_header      Host $host;"
+    #      + "proxy_set_header      X-Forwarded-For $proxy_add_x_forwarded_for;"
+    #      + "proxy_set_header      X-Forwarded-Proto $scheme;";
+    #  };
+    #};
     ##virtualHosts."media.fishoeder.net" = {
     #  useACMEHost = "fishoeder.net";
     #  forceSSL = true;
