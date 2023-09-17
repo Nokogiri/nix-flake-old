@@ -1,7 +1,7 @@
 { config, ... }: {
   imports = [
-    ./sites/foodwiki.nix
-    ./sites/cache.nix
+    ./sites/cache.fishoeder.net.nix
+    ./sites/food.fishoeder.net.nix
     ./sites/dav.fishoeder.net.nix
     ./sites/files.fishoeder.net.nix
     ./sites/haos.fishoeder.net.nix
