@@ -1,18 +1,41 @@
-{ lib, stdenv, fetchFromGitHub, chafa, cmake, dbus, dconf, glib, imagemagick
-, libglvnd, libpulseaudio, libxcb, libXrandr, makeBinaryWrapper, networkmanager
-, nix-update-script, ocl-icd, opencl-headers, pciutils, pkg-config, rpm, sqlite
-, testers, vulkan-loader, wayland, xfce, zlib
-#, AppKit
-#, Cocoa
-#, CoreDisplay
-#, CoreVideo
-#, CoreWLAN
-#, DisplayServices
-##, Foundation
-#, IOBluetooth
-#, MediaRemote
-#, OpenCL
-#, moltenvk
+{ lib
+, stdenv
+, fetchFromGitHub
+, chafa
+, cmake
+, dbus
+, dconf
+, glib
+, imagemagick
+, libglvnd
+, libpulseaudio
+, libxcb
+, libXrandr
+, makeBinaryWrapper
+, networkmanager
+, nix-update-script
+, ocl-icd
+, opencl-headers
+, pciutils
+, pkg-config
+, rpm
+, sqlite
+, testers
+, vulkan-loader
+, wayland
+, xfce
+, zlib
+  #, AppKit
+  #, Cocoa
+  #, CoreDisplay
+  #, CoreVideo
+  #, CoreWLAN
+  #, DisplayServices
+  ##, Foundation
+  #, IOBluetooth
+  #, MediaRemote
+  #, OpenCL
+  #, moltenvk
 }:
 
 stdenv.mkDerivation (finalAttrs: {

@@ -1,5 +1,17 @@
-{ lib, stdenv, fetchFromGitHub, fetchYarnDeps, yarn, fixup_yarn_lock, nodejs
-, python3, makeWrapper, electron_25, gogdl, legendary-gl, nile }:
+{ lib
+, stdenv
+, fetchFromGitHub
+, fetchYarnDeps
+, yarn
+, fixup_yarn_lock
+, nodejs
+, python3
+, makeWrapper
+, electron_25
+, gogdl
+, legendary-gl
+, nile
+}:
 
 let appName = "heroic";
 in stdenv.mkDerivation rec {
