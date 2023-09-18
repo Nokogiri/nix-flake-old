@@ -7,7 +7,7 @@
   ];
 
   sops.secrets.ovh_dns = {
-    sopsFile = ../../common/secrets.yaml;
+    sopsFile = ../../../common/secrets.yaml;
     owner = "acme";
   };
 
