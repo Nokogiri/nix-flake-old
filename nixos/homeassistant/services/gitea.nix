@@ -1,21 +1,28 @@
 { pkgs, config, ... }: {
-  sops.secrets.gitea = { sopsFile = ../../common/secrets.yaml; };
+  sops.secrets.forgejo = { sopsFile = ../../common/secrets.yaml; owner = config.services.gitea.user; group = config.services.gitea.group; };
+  sops.secrets.gitea_pg = { sopsFile = ../../common/secrets.yaml; owner = config.services.gitea.user; group = config.services.gitea.group; };
+  
   services.gitea = {
     enable = true;
     package = pkgs.forgejo;
     database = {
       type = "postgres";
       name = "giteadb";
+      passwordFile = config.sops.secrets.gitea_pg.path;
     };
+    mailerPasswordFile = config.sops.secrets.forgejo.path;
     settings = {
-      server = {
+      session = {
         COOKIE_SECURE = true;
+      };
+      server = {
+	DISABLE_REGISTRATION = true;
         DOMAIN = "git.fishoeder.net";
         PROTOCOL = "http+unix";
+	ROOT_URL = "https://git.fishoeder.net";
       };
       mailer = {
         ENABLED = true;
-        MAILER_TYPE = "smtps";
         FROM = "gitea@fishoeder.net";
         SMTP_ADDR = "smtp.gmail.com";
         SMTP_PORT = "465";

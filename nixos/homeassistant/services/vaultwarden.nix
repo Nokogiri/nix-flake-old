@@ -13,7 +13,7 @@
       WEBSOCKET_PORT = 3012;
       ROCKET_PORT = 8812;
       SMTP_HOST = "smtp.gmail.com";
-      SMTP_FROM = "vault@gefjon.org";
+      SMTP_FROM = "vault@fishoeder.net";
       SMTP_FROM_NAME = "Vaultwarden";
       SMTP_PORT = 587;
       SMTP_SSL = true;

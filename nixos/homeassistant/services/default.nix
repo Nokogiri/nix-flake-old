@@ -1,6 +1,6 @@
 {
   imports = [
-    ./cgit.nix
+    #./cgit.nix
     ./dave.nix
     ./gitea.nix
     ./nfs-server.nix
@@ -12,5 +12,6 @@
     ./postgresql.nix
     ./jellyfin.nix
     ./transmission.nix
+    ./vaultwarden.nix
   ];
 }

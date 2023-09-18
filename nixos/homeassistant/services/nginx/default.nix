@@ -3,7 +3,7 @@
     ./sites/cache.fishoeder.net.nix
     ./sites/files.fishoeder.net.nix
     ./sites/food.fishoeder.net.nix
-    ./sites/git.fishoeder.net.nix
+    #./sites/git.fishoeder.net.nix
   ];
 
   sops.secrets.ovh_dns = {
