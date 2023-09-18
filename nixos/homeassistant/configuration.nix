@@ -23,7 +23,6 @@
     ../common/optional/mbpfan.nix
     ../common/optional/podman.nix
     ../common/optional/resolved.nix
-    ../common/optional/vaultwarden.nix
     ../common/optional/wireguard-server.nix
     ../common/optional/zramswap.nix
     ../common/users/nokogiri.nix
