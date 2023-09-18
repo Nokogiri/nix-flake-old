@@ -1,13 +1,4 @@
-{ lib
-, stdenv
-, fetchgit
-, meson
-, pkg-config
-, ninja
-, dbus
-, cmake
-, systemd
-}:
+{ lib, stdenv, fetchgit, meson, pkg-config, ninja, dbus, cmake, systemd }:
 
 stdenv.mkDerivation rec {
   pname = "iio-hyprland";
@@ -23,6 +14,5 @@ stdenv.mkDerivation rec {
   buildInputs = [ dbus systemd ];
 
   nativeBuildInputs = [ ninja meson pkg-config ];
-
 
 }

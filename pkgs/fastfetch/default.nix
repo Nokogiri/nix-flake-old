@@ -1,41 +1,18 @@
-{ lib
-, stdenv
-, fetchFromGitHub
-, chafa
-, cmake
-, dbus
-, dconf
-, glib
-, imagemagick
-, libglvnd
-, libpulseaudio
-, libxcb
-, libXrandr
-, makeBinaryWrapper
-, networkmanager
-, nix-update-script
-, ocl-icd
-, opencl-headers
-, pciutils
-, pkg-config
-, rpm
-, sqlite
-, testers
-, vulkan-loader
-, wayland
-, xfce
-, zlib
-  #, AppKit
-  #, Cocoa
-  #, CoreDisplay
-  #, CoreVideo
-  #, CoreWLAN
-  #, DisplayServices
-  ##, Foundation
-  #, IOBluetooth
-  #, MediaRemote
-  #, OpenCL
-  #, moltenvk
+{ lib, stdenv, fetchFromGitHub, chafa, cmake, dbus, dconf, glib, imagemagick
+, libglvnd, libpulseaudio, libxcb, libXrandr, makeBinaryWrapper, networkmanager
+, nix-update-script, ocl-icd, opencl-headers, pciutils, pkg-config, rpm, sqlite
+, testers, vulkan-loader, wayland, xfce, zlib
+#, AppKit
+#, Cocoa
+#, CoreDisplay
+#, CoreVideo
+#, CoreWLAN
+#, DisplayServices
+##, Foundation
+#, IOBluetooth
+#, MediaRemote
+#, OpenCL
+#, moltenvk
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -49,18 +26,9 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-l9fIm7+dBsOqGoFUYtpYESAjDy3496rDTUDQjbNU4U0=";
   };
 
-  nativeBuildInputs = [
-    cmake
-    makeBinaryWrapper
-    pkg-config
-  ];
+  nativeBuildInputs = [ cmake makeBinaryWrapper pkg-config ];
 
-  buildInputs = [
-    chafa
-    imagemagick
-    sqlite
-  ]
-  ++ lib.optionals stdenv.isLinux [
+  buildInputs = [ chafa imagemagick sqlite ] ++ lib.optionals stdenv.isLinux [
     dbus
     dconf
     glib
@@ -92,9 +60,7 @@ stdenv.mkDerivation (finalAttrs: {
   #   moltenvk
   # ];
 
-  cmakeFlags = [
-    "-DCMAKE_INSTALL_SYSCONFDIR=${placeholder "out"}/etc"
-  ];
+  cmakeFlags = [ "-DCMAKE_INSTALL_SYSCONFDIR=${placeholder "out"}/etc" ];
 
   postInstall = ''
     wrapProgram $out/bin/fastfetch \

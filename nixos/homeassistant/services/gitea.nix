@@ -6,6 +6,6 @@
       type = "postgres";
       name = "giteadb";
     };
-    
+
   };
 }

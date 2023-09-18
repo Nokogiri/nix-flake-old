@@ -1,17 +1,5 @@
-{ lib
-, stdenv
-, fetchFromGitHub
-, fetchYarnDeps
-, yarn
-, fixup_yarn_lock
-, nodejs
-, python3
-, makeWrapper
-, electron_25
-, gogdl
-, legendary-gl
-, nile
-}:
+{ lib, stdenv, fetchFromGitHub, fetchYarnDeps, yarn, fixup_yarn_lock, nodejs
+, python3, makeWrapper, electron_25, gogdl, legendary-gl, nile }:
 
 let appName = "heroic";
 in stdenv.mkDerivation rec {
@@ -30,13 +18,7 @@ in stdenv.mkDerivation rec {
     hash = "sha256-KEzTjtoBcHNJxC/7W/Bft75JZuZUSHieOOAwhbr5d3s=";
   };
 
-  nativeBuildInputs = [
-    yarn
-    fixup_yarn_lock
-    nodejs
-    python3
-    makeWrapper
-  ];
+  nativeBuildInputs = [ yarn fixup_yarn_lock nodejs python3 makeWrapper ];
 
   patches = [
     # Reverts part of upstream PR 2761 so that we don't have to use a non-free Electron fork.
@@ -72,10 +54,8 @@ in stdenv.mkDerivation rec {
   # --disable-gpu-compositing is to work around upstream bug
   # https://github.com/electron/electron/issues/32317
   installPhase =
-    let
-      binPlatform = if stdenv.isDarwin then "darwin" else "linux";
-    in
-    ''
+    let binPlatform = if stdenv.isDarwin then "darwin" else "linux";
+    in ''
       runHook preInstall
 
       mkdir -p $out/share/{applications,${appName}}
@@ -107,12 +87,15 @@ in stdenv.mkDerivation rec {
     '';
 
   meta = with lib; {
-    description = "A Native GOG, Epic, and Amazon Games Launcher for Linux, Windows and Mac";
+    description =
+      "A Native GOG, Epic, and Amazon Games Launcher for Linux, Windows and Mac";
     homepage = "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher";
-    changelog = "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases";
+    changelog =
+      "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases";
     license = licenses.gpl3Only;
     maintainers = with maintainers; [ aidalgol ];
-    platforms = [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
+    platforms =
+      [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
     mainProgram = appName;
   };
 }

@@ -1,6 +1,5 @@
 # This file defines overlays
-{ inputs, ... }:
-{
+{ inputs, ... }: {
   # This one brings our custom packages from the 'pkgs' directory
   additions = final: _prev: import ../pkgs { pkgs = final; };
 
@@ -8,7 +7,7 @@
   # You can change versions, add patches, set compilation flags, anything really.
   # https://nixos.wiki/wiki/Overlays
   modifications = final: prev: {
-     myGTK = prev.catppuccin-gtk.override {
+    myGTK = prev.catppuccin-gtk.override {
       accents = [ "sapphire" ];
       size = "standard";
       tweaks = [ "rimless" ];
@@ -20,14 +19,14 @@
     };
     myFolders = prev.catppuccin-papirus-folders.override {
       accent = "sapphire";
-      flavor = "frappe";      
-    };    
+      flavor = "frappe";
+    };
   };
 
   #master-pkgs = self: super: {
 
-  	#heroic-unwrapped = inputs.masterpkgs.legacyPackages.x86_64-linux.heroic-unwrapped;
-   	#heroic = inputs.masterpkgs.legacyPackages.x86_64-linux.heroic;
-    #tlp = inputs.masterpkgs.legacyPackages.x86_64-linux.tlp;
+  #heroic-unwrapped = inputs.masterpkgs.legacyPackages.x86_64-linux.heroic-unwrapped;
+  #heroic = inputs.masterpkgs.legacyPackages.x86_64-linux.heroic;
+  #tlp = inputs.masterpkgs.legacyPackages.x86_64-linux.tlp;
   #};
 }

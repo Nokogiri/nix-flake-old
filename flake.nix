@@ -21,18 +21,19 @@
     nur.url = "github:nix-community/NUR";
 
     hyprland-git = {
-      url = "github:hyprwm/hyprland"; #/603de16f9a98688b79f19baa24d6e2c0346545f5";
+      url =
+        "github:hyprwm/hyprland"; # /603de16f9a98688b79f19baa24d6e2c0346545f5";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland-nix = { 
+    hyprland-nix = {
       url = "github:spikespaz/hyprland-flake";
       #inputs.hyprland-git.follows = "hyprland-git";
     };
     hyprwm-contrib.url = "github:hyprwm/contrib";
-    
+
     hyprpicker.url = "github:hyprwm/hyprpicker";
 
-    slight = { 
+    slight = {
       url = "github:spikespaz/slight";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -43,10 +44,10 @@
     #joshuto.url = "github:kamiyaa/joshuto";
     #eww = {
     #  url = "github:elkowar/eww";
-#
+    #
     #};
     nix-colors.url = "github:misterio77/nix-colors";
-    
+
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -103,7 +104,7 @@
             ++ (builtins.attrValues nixosModules);
           specialArgs = { inherit inputs outputs; };
         };
-      };      # Standalone home-manager configuration entrypoint
+      }; # Standalone home-manager configuration entrypoint
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
         "nokogiri@mowteng" = home-manager.lib.homeManagerConfiguration {
@@ -128,7 +129,7 @@
           ];
         };
       };
-      
+
       homeConfigurations = {
         "nokogiri@homeassistant" = home-manager.lib.homeManagerConfiguration {
           pkgs =

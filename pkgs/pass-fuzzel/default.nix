@@ -1,18 +1,5 @@
-{ lib
-, pkgs
-, stdenv
-, fetchFromGitHub
-, makeWrapper
-, pass
-, jq
-, fuzzel
-, libnotify
-, wl-clipboard
-, findutils
-, gnused
-, coreutils
-, hyprland
-}:
+{ lib, pkgs, stdenv, fetchFromGitHub, makeWrapper, pass, jq, fuzzel, libnotify
+, wl-clipboard, findutils, gnused, coreutils, hyprland }:
 
 with lib;
 
