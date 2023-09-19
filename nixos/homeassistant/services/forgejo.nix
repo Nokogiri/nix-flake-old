@@ -51,8 +51,8 @@
       "git.fishoeder.net" = {
         forceSSL = true;
         useACMEHost = "fishoeder.net";
-        locations."/_/static/assets/" = {
-          alias = "${config.services.forgejo.package.data}/public";
+        locations."/_/static/asstes/" = {
+          alias = "${config.services.forgejo.package.data}/public/";
         };
         locations."/" = {
           proxyPass =
