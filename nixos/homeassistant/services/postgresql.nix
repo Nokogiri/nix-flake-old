@@ -3,10 +3,10 @@
     enable = true;
     settings = { password_encryption = "scram-sha-256"; };
     #authentication = "	local    giteadb    gitea    scram-sha-256\n";
-    ensureDatabases = [ "giteadb" ];
+    ensureDatabases = [ "forgejodb" ];
     ensureUsers = [{
-      name = "gitea";
-      ensurePermissions = { "DATABASE giteadb" = "ALL PRIVILEGES"; };
+      name = "forgejo";
+      ensurePermissions = { "DATABASE forgejodb" = "ALL PRIVILEGES"; };
     }];
 
   };

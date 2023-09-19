@@ -7,6 +7,7 @@
         "gitlab.com" = { user = "gitolite"; };
         "github.com" = { user = "git"; };
         "codeberg.org" = { user = "git"; };
+        "git.fishoeder.net" = { user = "forgejo"; };
       };
     };
   };

@@ -17,6 +17,8 @@
       };
       server = {
 	DISABLE_REGISTRATION = true;
+      };
+      server = {
         DOMAIN = "git.fishoeder.net";
         PROTOCOL = "http+unix";
 	ROOT_URL = "https://git.fishoeder.net";
