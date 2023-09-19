@@ -23,6 +23,9 @@
         PROTOCOL = "http+unix";
 	ROOT_URL = "https://git.fishoeder.net";
       };
+      repository = {
+        ENABLE_PUSH_CREATE_USER = true;
+      };
       mailer = {
         ENABLED = true;
         FROM = "forgejo@fishoeder.net";

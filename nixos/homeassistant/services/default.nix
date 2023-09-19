@@ -1,6 +1,5 @@
 {
   imports = [
-    #./cgit.nix
     ./dave.nix
     ./forgejo.nix
     ./nfs-server.nix
