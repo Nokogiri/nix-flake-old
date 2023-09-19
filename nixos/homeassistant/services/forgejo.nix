@@ -1,16 +1,16 @@
 { pkgs, config, ... }: {
-  sops.secrets.forgejo = { sopsFile = ../../common/secrets.yaml; owner = config.services.gitea.user; group = config.services.gitea.group; };
-  sops.secrets.gitea_pg = { sopsFile = ../../common/secrets.yaml; owner = config.services.gitea.user; group = config.services.gitea.group; };
+  sops.secrets.forgejo_mail = { sopsFile = ../../common/secrets.yaml; owner = config.services.forgejo.user; group = config.services.forgejo.group; };
+  sops.secrets.forgejo_pg = { sopsFile = ../../common/secrets.yaml; owner = config.services.forgejo.user; group = config.services.forgejo.group; };
   
-  services.gitea = {
+  services.forgejo = {
     enable = true;
     package = pkgs.forgejo;
     database = {
       type = "postgres";
-      name = "giteadb";
-      passwordFile = config.sops.secrets.gitea_pg.path;
+      name = "forgejodb";
+      passwordFile = config.sops.secrets.forgejo_pg.path;
     };
-    mailerPasswordFile = config.sops.secrets.forgejo.path;
+    mailerPasswordFile = config.sops.secrets.forgejo_mail.path;
     settings = {
       session = {
         COOKIE_SECURE = true;
@@ -23,7 +23,7 @@
       };
       mailer = {
         ENABLED = true;
-        FROM = "gitea@fishoeder.net";
+        FROM = "forgejo@fishoeder.net";
         SMTP_ADDR = "smtp.gmail.com";
         SMTP_PORT = "465";
         USER = "nokogiri@gefjon.org";
@@ -36,14 +36,14 @@
   };
   services.nginx = {
     #upstreams = {
-    #  servers = { "gitea" = "unix:${config.services.gitea.settings.server.HTTP_ADDR}"; };
+    #  servers = { "forgejo" = "unix:${config.services.forgejo.settings.server.HTTP_ADDR}"; };
     #};
     virtualHosts = {
       "git.fishoeder.net" = {
         forceSSL = true;
         useACMEHost = "fishoeder.net";
         locations."/" = {
-          proxyPass = "http://unix:/${config.services.gitea.settings.server.HTTP_ADDR}";
+          proxyPass = "http://unix:/${config.services.forgejo.settings.server.HTTP_ADDR}";
           extraConfig = "proxy_set_header Host $host;"
             + "proxy_set_header X-Real-IP $remote_addr;"
             + "proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;"

@@ -2,7 +2,7 @@
   imports = [
     #./cgit.nix
     ./dave.nix
-    ./gitea.nix
+    ./forgejo.nix
     ./nfs-server.nix
     ./nginx
     ./nix-serve.nix
