@@ -19,7 +19,6 @@
     ../common/optional/avahi.nix
     ../common/optional/grub-efi.nix
     ../common/optional/mbpfan.nix
-    #../common/optional/podman.nix
     ../common/optional/resolved.nix
     ../common/optional/wireguard-server.nix
     ../common/optional/zramswap.nix
