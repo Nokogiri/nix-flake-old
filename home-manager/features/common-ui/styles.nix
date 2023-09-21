@@ -28,7 +28,7 @@ in {
     cursorTheme = { name = "Nordzy-cursors-white"; };
     font = {
       name = "Hack Nerd Font Propo";
-      size = 10;
+      size = 12;
     };
     iconTheme = {
       name = "Dracula";

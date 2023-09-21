@@ -5,7 +5,7 @@ in {
   wayland.windowManager.sway = {
     enable = true;
     #package = inputs.nixpkgs-wayland.sway-unwrapped
-    #package = pkgs.swayfx;
+    package = pkgs.swayfx;
     extraSessionCommands = ''
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway
@@ -261,6 +261,6 @@ in {
       for_window [app_id="firefox"] inhibit_idle fullscreen
 
     '';
-    systemdIntegration = true;
+    systemd.enable = true;
   };
 }
