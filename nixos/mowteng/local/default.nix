@@ -9,5 +9,5 @@
     ./firewall.nix
     #./bees.nix
   ];
-  virtualisation.waydroid.enable = true;
+  virtualisation.waydroid.enable = false;
 }

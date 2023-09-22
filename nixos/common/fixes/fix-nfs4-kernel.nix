@@ -3,7 +3,7 @@
 # NFSv4 fix for 6.5.3 and 6.1.53, remove asap
 let
   version = config.boot.kernelPackages.kernel.version;
-  badVersions = [ "6.5.3" "6.1.53" ];
+  badVersions = [ "6.5.3" "6.5.4" "6.1.53" "6.1.54" ];
 in
 
 lib.mkIf (lib.any (v: v == version) badVersions) {
