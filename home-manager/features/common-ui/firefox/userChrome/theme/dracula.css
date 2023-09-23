@@ -235,7 +235,7 @@ body[lwt-sidebar-brighttext][style*="--lwt-sidebar-background-color: rgb(56, 56,
 @-moz-document url-prefix(chrome://devtools/content/) {
     body, .CodeMirror-line {
         font-family: 'Hack' !important;
-        font-size: 13px !important;
+        font-size: 17px !important;
         line-height: 1.3 !important;
         font-weight: normal !important;
     }

@@ -232,7 +232,7 @@
 }
 
 .tabbrowser-tab {
-  font-size: 12px !important;
+  font-size: 16px !important;
   padding-inline: 0 !important;
   overflow-clip-margin: 4px !important;
 }
@@ -419,7 +419,7 @@ toolbarbutton[part="scrollbutton-down"] {
   isolation: isolate;
   margin-inline: -16px -16px !important;
   padding-inline: 32px 24px !important;
-  font-size: 12px;
+  font-size: 16px;
   color: var(--uc-private-browsing-indicator-text, var(--toolbar-bgcolor)) !important;
   --uc-bg-color: var(--uc-private-browsing-indicator, var(--lwt-toolbarbutton-icon-fill-attention, var(--toolbarbutton-icon-fill-attention)));
   --uc-gradient: linear-gradient(to right, transparent, var(--uc-bg-color) 35%);

@@ -20,17 +20,6 @@
 
     nur.url = "github:nix-community/NUR";
 
-    hyprland-git = {
-      url =
-        "github:hyprwm/hyprland"; # /603de16f9a98688b79f19baa24d6e2c0346545f5";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hyprland-nix = {
-      url = "github:spikespaz/hyprland-flake";
-      #inputs.hyprland-git.follows = "hyprland-git";
-    };
-    hyprwm-contrib.url = "github:hyprwm/contrib";
-
     hyprpicker.url = "github:hyprwm/hyprpicker";
 
     slight = {

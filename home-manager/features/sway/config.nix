@@ -103,9 +103,9 @@ in {
       };
       focus = { followMouse = true; };
       fonts = {
-        names = [ "mononoki Nerd Font" ];
+        names = [ "Hack Nerd Font Propo" ];
         style = "Regular";
-        size = 10.0;
+        size = 11.5;
       };
       gaps = {
         inner = 3;
@@ -129,7 +129,7 @@ in {
       keybindings = {
         # Basics apps
         "${cfg.modifier}+Return" = "exec ${cfg.terminal}";
-        "${cfg.modifier}+p" = "exec fuzzel";
+        "${cfg.modifier}+p" = "exec pkill -9 rofi || rofi -show drun";
 
         # basic internals
         "${cfg.modifier}+Shift+q" = "kill";
@@ -257,6 +257,12 @@ in {
 
     };
     extraConfig = ''
+      corner_radius 6
+      blur enable
+      blur_passes 2
+      blur_radius 3
+      shadows enable
+      shadow_blur_radius 9
       for_window [app_id="org.qutebrowser.qutebrowser"] inhibit_idle fullscreen
       for_window [app_id="firefox"] inhibit_idle fullscreen
 
