@@ -9,5 +9,4 @@
     };
     Install = { WantedBy = [ "hyprland-session.target" ]; };
   };
-
 }

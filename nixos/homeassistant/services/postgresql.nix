@@ -8,6 +8,5 @@
       name = "forgejo";
       ensurePermissions = { "DATABASE forgejodb" = "ALL PRIVILEGES"; };
     }];
-
   };
 }

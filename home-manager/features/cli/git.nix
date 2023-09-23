@@ -17,7 +17,6 @@
         index.skipHash = false;
       };
       lfs = { enable = true; };
-
     };
     gitui = {
       enable = false;

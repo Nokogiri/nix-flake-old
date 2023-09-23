@@ -7,7 +7,7 @@
       destination = "/bin/hyprfuzzel";
       executable = true;
       text = ''
-        ${pkgs.fuzzel}/bin/fuzzel --log-level=error -l 10 --layer=overlay -w 30 
+        ${pkgs.fuzzel}/bin/fuzzel --log-level=error -l 10 --layer=overlay -w 30
       '';
     })
   ];
@@ -16,7 +16,7 @@
     # font=monospace
     font=Hack Nerd Font Propo:size=10
     dpi-aware=yes
-    prompt=➟ 
+    prompt=➟
     icon-theme=Dracula
     icons-enabled=yes
     fields=filename,name,generic

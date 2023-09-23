@@ -1,5 +1,4 @@
 { lib, config, ... }:
-
 let
   #hosts = outputs.nixosConfigurations;
   hostname = config.networking.hostName;

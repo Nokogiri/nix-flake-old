@@ -1,11 +1,11 @@
 { pkgs, config, ... }: {
   services.spotifyd = {
     enable = true;
-    package = pkgs.spotifyd.override ({
+    package = pkgs.spotifyd.override {
       withALSA = false;
       withPulseAudio = true;
       withMpris = true;
-    });
+    };
     settings = {
       spotifyd = {
         username = "nokogiri@gefjon.org";

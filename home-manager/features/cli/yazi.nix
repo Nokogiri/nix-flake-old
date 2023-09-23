@@ -17,7 +17,6 @@ lib.mkMerge [
           }];
         };
       };
-
     };
   }
   (lib.mkIf config.machineType.desktop {

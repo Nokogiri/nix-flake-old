@@ -53,7 +53,6 @@ in {
         gtk-enable-event-sounds = false;
         gtk-enable-animations = true;
         gtk-application-prefer-dark-theme = true;
-
       };
     };
   };

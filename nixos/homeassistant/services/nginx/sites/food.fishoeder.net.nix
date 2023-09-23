@@ -1,7 +1,4 @@
-{ pkgs, config, lib, ... }:
-
-{
-
+{ pkgs, config, lib, ... }: {
   services.phpfpm.pools.foodwiki = {
     user = "nokogiri";
     group = "users";
@@ -62,4 +59,3 @@
     };
   };
 }
-

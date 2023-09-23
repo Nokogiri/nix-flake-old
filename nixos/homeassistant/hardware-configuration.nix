@@ -1,7 +1,6 @@
-{ lib, config, pkgs, ...
-}: # This is just an example, you should generate yours with nixos-generate-config and put it in here.
+{ lib, config, pkgs, ... }:
+# This is just an example, you should generate yours with nixos-generate-config and put it in here.
 {
-
   boot = {
     blacklistedKernelModules = [ "b43" "snd_had_intel" ];
     consoleLogLevel = 3;
@@ -111,7 +110,7 @@
   };
 
   #zramSwap = {
-  #  
+  #
   #};
 
   hardware = {

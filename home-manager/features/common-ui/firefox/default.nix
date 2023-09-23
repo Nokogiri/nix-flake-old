@@ -1,7 +1,4 @@
-{ config, pkgs, lib, ... }:
-
-{
-
+{ config, pkgs, lib, ... }: {
   imports = [ ./ff2mpv.json.nix ];
   home.packages = [ pkgs.ff2mpv ];
   home.file.".mozilla/dracula" = {
@@ -89,7 +86,7 @@
         "apz.fling_friction" = 1.5e-2;
         #  hw video decoding
         "gfx.webrender.all" = true;
-        "media.ffmpeg.vaapi.enable" = true;        
+        "media.ffmpeg.vaapi.enable" = true;
         #"browser.uiCustomization.state" = ''
         #  {"placements":{"widget-overflow-fixed-list":["ublock0_raymondhill_net-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","home-button","urlbar-container","downloads-button","library-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button","alltabs-button"],"PersonalToolbar":["import-button","personal-bookmarks"]},"seen":["save-to-pocket-button","developer-button","ublock0_raymondhill_net-browser-action"],"dirtyAreaCache":["nav-bar","PersonalToolbar","toolbar-menubar","TabsToolbar","widget-overflow-fixed-list"],"currentVersion":17,"newElementCount":3}'';
       };

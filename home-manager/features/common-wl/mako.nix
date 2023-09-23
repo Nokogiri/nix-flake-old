@@ -17,4 +17,3 @@ in {
     textColor = "#${colors.base05}dd";
   };
 }
-

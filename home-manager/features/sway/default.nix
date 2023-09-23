@@ -31,5 +31,7 @@ in {
     enable = true;
     target = "sway-session.target";
   };
-  systemd.user.services.swaybg = { Install = { WantedBy = [ "sway-session.target" ]; }; };
+  systemd.user.services.swaybg = {
+    Install = { WantedBy = [ "sway-session.target" ]; };
+  };
 }

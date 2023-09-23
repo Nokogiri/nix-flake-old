@@ -7,6 +7,7 @@
     ./swaylock.nix
     ./swaync.nix
     ./waybar
+    ./wezterm
     ./wvkbd.nix
   ];
 

@@ -1,6 +1,4 @@
-{ config, pkgs, lib, ... }:
-
-{
+{ config, pkgs, lib, ... }: {
   #sops.defaultSopsFile = ../../common/secrets.yaml;
   sops.secrets = {
     "wg/homeassistant" = { };
@@ -58,4 +56,3 @@
     };
   };
 }
-

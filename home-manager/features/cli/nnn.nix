@@ -1,7 +1,7 @@
 { pkgs, config, ... }: {
   programs.nnn = {
     enable = true;
-    package = pkgs.nnn.override ({ withNerdIcons = true; });
+    package = pkgs.nnn.override { withNerdIcons = true; };
     plugins = {
       src = (pkgs.fetchFromGitHub {
         owner = "Nokogiri";

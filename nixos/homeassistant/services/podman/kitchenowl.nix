@@ -23,7 +23,6 @@
       #restart = "unless-stopped";
       environment = { JWT_SECRET_KEY = "PLEASE_CHANGE_ME"; };
       volumes = [ "/var/lib/pods/kitchenowl:/data" ];
-
     };
   };
 }

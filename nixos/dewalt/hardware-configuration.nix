@@ -1,5 +1,4 @@
 { lib, config, modulesPath, pkgs, ... }: {
-
   imports = [
     (modulesPath + "/hardware/network/broadcom-43xx.nix")
     (modulesPath + "/installer/scan/not-detected.nix")
@@ -61,7 +60,6 @@
       device = "/dev/disk/by-uuid/5F66-17ED";
       fsType = "vfat";
     };
-
   };
 
   swapDevices = [{

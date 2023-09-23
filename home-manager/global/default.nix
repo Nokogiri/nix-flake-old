@@ -1,6 +1,5 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
     ./sops.nix
@@ -16,11 +15,10 @@
       outputs.overlays.modifications
       outputs.overlays.additions
       #outputs.overlays.master-pkgs
-
     ];
     config = {
       allowUnfree = true;
-      allowUnfreePredicate = (_: true);
+      allowUnfreePredicate = _: true;
     };
   };
 

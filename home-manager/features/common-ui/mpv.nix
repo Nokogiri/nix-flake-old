@@ -1,5 +1,4 @@
 { pkgs, ... }: {
-
   #nixpkgs.config.packageOverrides = pkgs:
   #  with pkgs; {
   #    mpv = mpv.override { scripts = [ pkgs.mpvScripts.mpris ]; };
@@ -12,5 +11,4 @@
     name = "umpv";
     settings.NoDisplay = "true";
   };
-
 }

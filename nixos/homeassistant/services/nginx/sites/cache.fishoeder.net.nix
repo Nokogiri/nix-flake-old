@@ -1,6 +1,4 @@
-{ pkgs, config, lib, ... }:
-
-{
+{ pkgs, config, lib, ... }: {
   services.nginx = {
     enable = true;
     virtualHosts."cache.fishoeder.net" = {
@@ -16,4 +14,3 @@
     };
   };
 }
-

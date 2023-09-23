@@ -32,7 +32,6 @@
     #}
       ];
     shellAbbrs = {
-
       ipa = "ip -color -brief a";
       ls = "eza";
       n = "nix";
@@ -49,7 +48,6 @@
       snrs = "doas nixos-rebuild --flake . switch";
       hm = "home-manager --flake .";
       hms = "home-manager --flake . switch";
-
     };
     shellAliases = {
       cat = "bat --paging=never --decorations=never";

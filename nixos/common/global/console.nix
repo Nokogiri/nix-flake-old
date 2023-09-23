@@ -1,6 +1,5 @@
 {
   console = {
-
     #colors = [
     #  "1E1E2E"
     #  "F38BA8"

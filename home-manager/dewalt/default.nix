@@ -13,12 +13,9 @@
     #inputs.hyprwm-contrib.overlays.default
   ];
   home.packages = with pkgs; [
-
     handlr-regex
 
     transmission-qt
     obsidian
-
   ];
-
 }

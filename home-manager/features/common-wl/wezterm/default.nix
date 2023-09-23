@@ -6,9 +6,9 @@
       return {
        front_end = "WebGpu",
        color_scheme = "Dracula",
-       font_size = 10.0 ,
+       font_size = 11.5 ,
        font = wezterm.font_with_fallback {
-           'JetBrainsMono Nerd Font Mono',
+           'Hack Nerd Font Mono',
          },
        warn_about_missing_glyphs=false,
        enable_kitty_graphics=true,
@@ -23,4 +23,3 @@
     '';
   };
 }
-

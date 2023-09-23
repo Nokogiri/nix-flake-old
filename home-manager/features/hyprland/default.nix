@@ -12,7 +12,6 @@
     grimblast
     hyprprop
     scratchpad
-
   ];
 
   programs = {

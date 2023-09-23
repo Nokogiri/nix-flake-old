@@ -6,7 +6,6 @@
       type = "nfs";
       mountConfig = { Options = "noatime,nfsvers=4.2"; };
     };
-
   in [
     (commonMountOptions // {
       what = "10.200.200.1:/webdav";
@@ -29,7 +28,6 @@
       wantedBy = [ "multi-user.target" ];
       automountConfig = { TimeoutIdleSec = "600"; };
     };
-
   in [
     (commonAutoMountOptions // { where = "/media/nfs/Obsidian"; })
     (commonAutoMountOptions // { where = "/media/nfs/Downloads"; })

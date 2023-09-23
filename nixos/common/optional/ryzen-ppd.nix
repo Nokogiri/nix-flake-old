@@ -39,5 +39,4 @@
     # ACPI platform profile. Default: low-power
     platform_profile = low-power
   '';
-
 }

@@ -5,5 +5,4 @@
       kitty --class Spotify ${pkgs.spotify-player}/bin/spotify_player
     '')
   ];
-
 }

@@ -1,6 +1,4 @@
-{ pkgs, inputs, ... }:
-
-{
+{ pkgs, inputs, ... }: {
   xdg.configFile."waybar/colors.css".source = ./colors.css;
   home.packages = [ pkgs.wttrbar ];
   programs.waybar = {
@@ -9,7 +7,6 @@
     style = ./style.css;
     settings = {
       mainBar = {
-
         layer = "top";
         position = "top";
         height = 42;
@@ -92,5 +89,4 @@
       };
     };
   };
-
 }

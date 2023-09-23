@@ -1,5 +1,4 @@
 { config, lib, pkgs, ... }: {
-
   systemd.services.wifi-before-sleep = {
     description = "Unload WiFi Module so it doesnt freak out on resume";
     before = [ "suspend.target" ];
@@ -36,5 +35,4 @@
 
     wantedBy = [ "multi-user.target" "suspend.target" ];
   };
-
 }

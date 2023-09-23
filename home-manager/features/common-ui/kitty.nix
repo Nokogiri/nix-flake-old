@@ -106,7 +106,6 @@
         # Opacity settings
         background_opacity = "0.94";
         dim_opacity = "0.4";
-
       };
       keybindings = {
         "kitty_mod+c" = "copy_to_clipboard";

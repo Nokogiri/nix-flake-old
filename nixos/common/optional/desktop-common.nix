@@ -1,5 +1,4 @@
 { pkgs, inputs, ... }: {
-
   security.pam.services = {
     swaylock = {
       name = "swaylock";
@@ -14,7 +13,7 @@
   services.gnome.gnome-keyring.enable = true;
 
   environment.systemPackages = with pkgs; [
-    # themepkgs 
+    # themepkgs
     nordzy-cursor-theme
     dracula-theme
     dracula-icon-theme

@@ -1,5 +1,4 @@
 { config, lib, pkgs, ... }:
-
 let cfg = config.wayland.windowManager.sway.config;
 in {
   wayland.windowManager.sway = {
@@ -36,9 +35,7 @@ in {
           { app_id = "spotify-qt"; }
           { app_id = "dev.alextren.Spot"; }
         ];
-        "8" = [
-
-        ];
+        "8" = [ ];
         "9" = [{ class = "Com.github.johnfactotum.Foliate"; }];
       };
       bars = [ ]; # {
@@ -97,7 +94,6 @@ in {
           }
           #{ app_id = "mpv"; }
           { title = "File Operation Progress"; }
-
         ];
         modifier = "Mod4";
       };
@@ -130,7 +126,8 @@ in {
         # Basics apps
         "${cfg.modifier}+Return" = "exec ${cfg.terminal}";
         "${cfg.modifier}+p" = "exec pkill -9 rofi || rofi -show drun";
-        "${cfg.modifier}+i" = "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
+        "${cfg.modifier}+i" =
+          "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
 
         # basic internals
         "${cfg.modifier}+Shift+q" = "kill";
@@ -182,7 +179,7 @@ in {
         "${cfg.modifier}+8" = "workspace number 8";
         "${cfg.modifier}+9" = "workspace number 9";
 
-        # move containers 
+        # move containers
         "${cfg.modifier}+Shift+1" = "move container to workspace number 1";
         "${cfg.modifier}+Shift+2" = "move container to workspace number 2";
         "${cfg.modifier}+Shift+3" = "move container to workspace number 3";
@@ -249,13 +246,14 @@ in {
         }
         #{ command = "avizo-service"; }
         #{ command = "nm-applet --indicator"; }
-        { command = "wpaperd"; }
+        {
+          command = "wpaperd";
+        }
         #{ command = "swayfader"; }
       ];
       terminal = "kitty";
       window = { border = 1; };
       workspaceAutoBackAndForth = true;
-
     };
     extraConfig = ''
       corner_radius 6
