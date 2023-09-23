@@ -9,7 +9,7 @@
     #prismlauncher
     heroic
     portmod
-
+    protonup-qt
     # native packaged games
 
     #zeroad
