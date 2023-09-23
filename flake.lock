@@ -585,15 +585,15 @@
       "locked": {
         "lastModified": 1680898575,
         "narHash": "sha256-vM6jLB6/eCfgP7T8P0fHZfUZKlgaiVwY5xRrA0ge9Yk=",
-        "owner": "Nokogiri",
-        "repo": "extest",
+        "ref": "refs/heads/main",
         "rev": "052c612e22cf76a59ac2577cfdf99f82560bfe9d",
-        "type": "github"
+        "revCount": 5,
+        "type": "git",
+        "url": "https://git.fishoeder.net/Nokogiri/extest.git"
       },
       "original": {
-        "owner": "Nokogiri",
-        "repo": "extest",
-        "type": "github"
+        "type": "git",
+        "url": "https://git.fishoeder.net/Nokogiri/extest.git"
       }
     },
     "fenix": {
@@ -2410,11 +2410,11 @@
     },
     "masterpkgs": {
       "locked": {
-        "lastModified": 1695483433,
-        "narHash": "sha256-SMT2gptvoo+aXtquSHRnLsHghNEuZdknNxYzSM3mRBU=",
+        "lastModified": 1695484886,
+        "narHash": "sha256-kO5r+8HYTZzop5dsNkmqVMQpm8+EuPDZNdNimftzwp4=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "1fe305df27313fb29dd322835a05932a7116efb2",
+        "rev": "989e88bb41cd7407b54255f46b5caa973c549d63",
         "type": "github"
       },
       "original": {
@@ -3751,11 +3751,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1695480017,
-        "narHash": "sha256-6JjZBLT3XE1P+5NUCbn55SPTwsprftF61POrRC6h56k=",
+        "lastModified": 1695483914,
+        "narHash": "sha256-ddgT3jjzjQtVzcj9G3hzkF0GanUH4gw7eJUmsEowd+k=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "183c9ada52496c852db9a100becd3da9d179ff9a",
+        "rev": "b3a6a28fe92bd51b7bc84564b160a56570e5ecde",
         "type": "github"
       },
       "original": {
