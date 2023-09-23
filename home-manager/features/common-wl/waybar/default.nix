@@ -14,15 +14,15 @@
         position = "top";
         height = 42;
 
-        modules-left = [ "hyprland/workspaces" ];
+        modules-left = [ "sway/workspaces" ];
         modules-center = [ "custom/weather" "clock" ];
         modules-right = [ "tray" "battery" "network" "pulseaudio" ];
 
-        "hyprland/workspaces" = {
+        "sway/workspaces" = {
           format = "{icon}";
           on-click = "activate";
           format-icons = {
-            active = "";
+            focused = "";
             default = "";
             persistant = "◌";
             empty = "◌";
