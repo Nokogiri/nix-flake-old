@@ -1,10 +1,10 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
-    ./global
-    ./features/cli/nix-stuff.nix
-    ./features/common-ui
-    ./features/media
-    ./features/hyprland
+    ../global
+    ../features/cli/nix-stuff.nix
+    ../features/common-ui
+    ../features/media
+    ../features/sway
     inputs.nur.nixosModules.nur
   ];
 
