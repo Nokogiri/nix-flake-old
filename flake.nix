@@ -114,7 +114,7 @@
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
             # > Our main home-manager configuration file <
-            ./home-manager/dewalt.nix
+            ./home-manager/dewalt
           ];
         };
       };
@@ -126,7 +126,7 @@
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
             # > Our main home-manager configuration file <
-            ./home-manager/homeassistant.nix
+            ./home-manager/homeassistant
           ];
         };
       };
