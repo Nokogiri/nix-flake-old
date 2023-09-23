@@ -12,7 +12,7 @@ stdenv.mkDerivation {
   #};
 
   src = fetchgit {
-    url = "https://git.fishoeder.net/dracula-plymouth";
+    url = "https://git.fishoeder.net/Nokogiri/dracula-plymouth";
     rev = "83ba3ff0f490fb64dc225c4d82b0a19edc0db770";
     hash = "sha256-PWnI3OoIlHmQ1HIvcKQk1A+bbb6WsIiWvkWIqJ3CNS8=";
   };
