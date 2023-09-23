@@ -1,12 +1,12 @@
 { inputs, lib, config, pkgs, ... }:
 let cfg = config.wayland.windowManager.sway.config;
 in {
-  imports = [ ./config.nix ../common-wl ../common-ui  ];
+  imports = [ ./config.nix ../common-wl ../common-ui ];
 
   home.packages = with pkgs; [
     swaybg
     inputs.hyprpicker.packages."x86_64-linux".hyprpicker
-    config.nur.repos.misterio.swayfader
+    #config.nur.repos.misterio.swayfader
   ];
 
   programs = {
@@ -31,4 +31,5 @@ in {
     enable = true;
     target = "sway-session.target";
   };
+  systemd.user.services.swaybg = { Install = { WantedBy = [ "hyprland-session.target" ]; }; };
 }

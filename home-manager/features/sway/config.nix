@@ -11,9 +11,9 @@ in {
       export XDG_SESSION_DESKTOP=sway
       export XDG_CURRENT_DESKTOP=sway
 
-      export FADE_TIME=0.5
-      export ALT_FADE_TIME=0.2
-      export CON_INAC=0.8
+      #export FADE_TIME=0.5
+      #export ALT_FADE_TIME=0.2
+      #export CON_INAC=0.8
       #export WLR_RENDERER=vulkan
     '';
     wrapperFeatures = {
@@ -249,7 +249,7 @@ in {
         #{ command = "avizo-service"; }
         #{ command = "nm-applet --indicator"; }
         { command = "wpaperd"; }
-        { command = "swayfader"; }
+        #{ command = "swayfader"; }
       ];
       terminal = "kitty";
       window = { border = 1; };
