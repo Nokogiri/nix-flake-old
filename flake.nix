@@ -31,10 +31,6 @@
     #nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     #joshuto.url = "github:kamiyaa/joshuto";
-    #eww = {
-    #  url = "github:elkowar/eww";
-    #
-    #};
     nix-colors.url = "github:misterio77/nix-colors";
 
     nix-index-database = {
@@ -50,25 +46,17 @@
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [ "x86_64-linux" ];
     in rec {
-      # Your custom packages
-      # Acessible through 'nix build', 'nix shell', etc
       packages = forAllSystems (system:
         let pkgs = nixpkgs.legacyPackages.${system};
         in import ./pkgs { inherit pkgs; });
 
-      # Devshell for bootstrapping
-      # Acessible through 'nix develop' or 'nix-shell' (legacy)
       devShells = forAllSystems (system:
         let pkgs = nixpkgs.legacyPackages.${system};
         in import ./shell.nix { inherit pkgs; });
-
-      # Your custom packages and modifications, exported as overlays
       overlays = import ./overlays { inherit inputs; };
-      # Reusable nixos modules you might want to export
-      # These are usually stuff you would upstream into nixpkgs
+      
       nixosModules = import ./modules/nixos;
-      # Reusable home-manager modules you might want to export
-      # These are usually stuff you would upstream into home-manager
+      
       homeManagerModules = import ./modules/home-manager;
 
       nixosConfigurations = {
@@ -93,15 +81,14 @@
             ++ (builtins.attrValues nixosModules);
           specialArgs = { inherit inputs outputs; };
         };
-      }; # Standalone home-manager configuration entrypoint
-      # Available through 'home-manager --flake .#your-username@your-hostname'
+      };
+      
       homeConfigurations = {
         "nokogiri@mowteng" = home-manager.lib.homeManagerConfiguration {
           pkgs =
-            nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = { inherit inputs outputs; };
+            nixpkgs.legacyPackages.x86_64-linux;
+              extraSpecialArgs = { inherit inputs outputs; };
           modules = [
-            # > Our main home-manager configuration file <
             ./home-manager/mowteng
           ];
         };
@@ -110,10 +97,9 @@
       homeConfigurations = {
         "nokogiri@dewalt" = home-manager.lib.homeManagerConfiguration {
           pkgs =
-            nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+            nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
-            # > Our main home-manager configuration file <
             ./home-manager/dewalt
           ];
         };
@@ -122,10 +108,9 @@
       homeConfigurations = {
         "nokogiri@homeassistant" = home-manager.lib.homeManagerConfiguration {
           pkgs =
-            nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+            nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
-            # > Our main home-manager configuration file <
             ./home-manager/homeassistant
           ];
         };
