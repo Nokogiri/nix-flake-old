@@ -5,12 +5,12 @@ in {
 
   xdg.dataFile."wallpaper.png".source = ./Totoro-Dracula.png;
 
-  systemd.user.services.swaybg = {
-    Unit = { Description = "swaybg"; };
-    Service = {
-      Type = "simple";
-      ExecStart = "${pkgs.swaybg}/bin/swaybg -i ${wallFile} -m fill";
-      Restart = "on-failure";
-    };
-  };
+  #systemd.user.services.swaybg = {
+  #  Unit = { Description = "swaybg"; };
+  #  Service = {
+  #    Type = "simple";
+  #    ExecStart = "${pkgs.swaybg}/bin/swaybg -i ${wallFile} -m fill";
+  #    Restart = "on-failure";
+  #  };
+  #};
 }

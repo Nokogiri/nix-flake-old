@@ -3,17 +3,11 @@ let cfg = config.wayland.windowManager.sway.config;
 in {
   wayland.windowManager.sway = {
     enable = true;
-    #package = inputs.nixpkgs-wayland.sway-unwrapped
     package = pkgs.swayfx;
     extraSessionCommands = ''
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway
       export XDG_CURRENT_DESKTOP=sway
-
-      #export FADE_TIME=0.5
-      #export ALT_FADE_TIME=0.2
-      #export CON_INAC=0.8
-      #export WLR_RENDERER=vulkan
     '';
     wrapperFeatures = {
       base = true;
@@ -21,7 +15,7 @@ in {
     };
     config = {
       assigns = {
-        "1" = [{ app_id = "kitty"; }];
+        "1" = [ { app_id = "kitty"; } { app_id = "org.wezfurlong.wezterm"; } ];
         "2" = [ { app_id = "firefox"; } { app_id = "chromium-browser"; } ];
         "3" = [{ app_id = "mpv"; }];
         "4" = [ { class = "Emacs"; } { app_id = "emacs"; } ];
@@ -227,9 +221,12 @@ in {
       };
       menu = "\${pkgs.wofi}/bin/wofi --show drun";
       modifier = "Mod4";
-      #output = {
-      #  "*" = { bg = "${config.xdg.configHome}/wallpaper/wall-03.png fill"; };
-      #};
+      output = {
+        eDP-1 = {
+          bg = "${config.home.homeDirectory}/.local/share/wallpaper.png fill";
+          scale = "1";
+        };
+      };
       seat = {
         "*" = {
           xcursor_theme = "${config.gtk.cursorTheme.name}";
@@ -251,19 +248,32 @@ in {
         }
         #{ command = "swayfader"; }
       ];
-      terminal = "kitty";
-      window = { border = 1; };
+      terminal = "wezterm";
+      window = {
+        border = 1;
+        commands = [{
+          command = "resize set 1200 900";
+          criteria = { app_id = "pavucontrol-qt"; };
+        }
+        {
+          command = "inhibit_idle fullscreen";
+          criteria = {
+            app_id = "firefox";
+          };
+        }];
+      };
       workspaceAutoBackAndForth = true;
     };
     extraConfig = ''
-      corner_radius 6
+      corner_radius 8
       blur enable
-      blur_passes 2
+      blur_passes 1
       blur_radius 3
       shadows enable
       shadow_blur_radius 9
+      default_dim_inactive 0.3
+
       for_window [app_id="org.qutebrowser.qutebrowser"] inhibit_idle fullscreen
-      for_window [app_id="firefox"] inhibit_idle fullscreen
 
     '';
     systemd.enable = true;
