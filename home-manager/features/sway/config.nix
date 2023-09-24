@@ -251,16 +251,16 @@ in {
       terminal = "wezterm";
       window = {
         border = 1;
-        commands = [{
-          command = "resize set 1200 900";
-          criteria = { app_id = "pavucontrol-qt"; };
-        }
-        {
-          command = "inhibit_idle fullscreen";
-          criteria = {
-            app_id = "firefox";
-          };
-        }];
+        commands = [
+          {
+            command = "resize set 1200 900";
+            criteria = { app_id = "pavucontrol-qt"; };
+          }
+          {
+            command = "inhibit_idle fullscreen";
+            criteria = { app_id = "firefox"; };
+          }
+        ];
       };
       workspaceAutoBackAndForth = true;
     };
