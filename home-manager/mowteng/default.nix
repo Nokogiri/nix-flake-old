@@ -30,6 +30,7 @@
     # graphics stuff
     #gimp
     krita
+    mypaint
   ];
 
   machineType.desktop = true;
