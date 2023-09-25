@@ -1,8 +1,12 @@
-{
-  imports = [ ./paperless-key.nix ];
+{ config, ... }:{
+  #imports = [ ./paperless-key.nix ];
+  sops.secrets.paperless_admin = {
+    owner = config.services.paperless.user;
+  };
   services.paperless = {
     enable = true;
     consumptionDirIsPublic = true;
+    passwordFile = config.sops.secrets.paperless_admin.path;
     extraConfig = {
       PAPERLESS_DBENGINE = "postgresql";
       PAPERLESS_DBHOST = "/run/postgresql";
@@ -30,7 +34,7 @@
             + "proxy_set_header X-Real-IP $remote_addr;"
             + "proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;"
             + "proxy_set_header X-Forwarded-Host $server_name;" + ''
-              add_header Referrer-Policy "strict-origin-when-cross-origin";"'';
+              add_header Referrer-Policy "strict-origin-when-cross-origin";'';
         };
       };
     };
