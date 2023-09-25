@@ -48,7 +48,18 @@
         REPO_INDEXER_INCLUDE = "";
         REPO_INDEXER_EXCLUDE = "resources/bin/**";
       };
+      cache = {
+        ENABLED = true;
+        ADAPTER = "redis";
+        HOST = "unix:///run/redis-forgejo/redis.sock";
+        ITEM_TTL = "24h";
+      };
     };
+  };
+
+  services.redis.servers."forgejo" = {
+    enable = true;
+    user = config.services.forgejo.user;
   };
   services.nginx = {
     #upstreams = {
