@@ -20,6 +20,7 @@
   };
   services.redis.servers."paperless" = {
     enable = true;
+    user = config.services.paperless.user;
     unixSocketPerm = 666;
     #port = 6380;
   };
