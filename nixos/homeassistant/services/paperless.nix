@@ -20,6 +20,7 @@
   };
   services.redis.servers."paperless" = {
     enable = true;
+    unixSocketPerm = 666;
     #port = 6380;
   };
   services.nginx = {
