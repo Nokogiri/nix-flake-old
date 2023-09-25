@@ -14,6 +14,7 @@
         builtins.toJSON [ ".DS_STORE/*" "desktop.ini" ];
       PAPERLESS_OCR_LANGUAGE = "deu+eng";
       PAPERLESS_REDIS = "/run/redis-paperless/redis.sock";
+      PAPERLESS_URL = "paper.fishoeder.net";
     };
   };
   services.redis.servers."paperless" = {
