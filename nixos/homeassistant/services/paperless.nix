@@ -24,6 +24,7 @@
   services.nginx = {
     virtualHosts = {
       "paper.fishoeder.net" = {
+        extraConfig = "client_max_body_size 512M";
         useACMEHost = "fishoeder.net";
         forceSSL = true;
         locations."/" = {
