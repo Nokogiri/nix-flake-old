@@ -25,7 +25,13 @@
         PROVIDER = "redis";
         PROVIDER_CONFIG = "network=unix,addr=/run/redis-forgejo/redis.sock";
       };
-      server = { DISABLE_REGISTRATION = true; };
+      service = { 
+        DISABLE_REGISTRATION = true;
+        REQUIRE_SIGNIN_VIEW = true;
+        ENABLE_TIMETRACKING = false;
+        SHOW_REGISTRATION_BUTTON = false;
+        SHOW_MILESTONES_DASHBOARD_PAGE = false;
+      };
       server = {
         DOMAIN = "git.fishoeder.net";
         PROTOCOL = "http+unix";
