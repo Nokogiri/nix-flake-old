@@ -51,7 +51,7 @@
       cache = {
         ENABLED = true;
         ADAPTER = "redis";
-        HOST = "unix:///run/redis-forgejo/redis.sock";
+        HOST = "network=unix,addr=/run/redis-forgejo/redis.sock";
         ITEM_TTL = "24h";
       };
     };
