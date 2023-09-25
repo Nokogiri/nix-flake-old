@@ -24,7 +24,6 @@
         COOKIE_SECURE = true;
         PROVIDER = "redis";
         PROVIDER_CONFIG = "network=unix,addr=/run/redis-forgejo/redis.sock";
-        DOMAIN = "git.fishoeder.net";
       };
       server = { DISABLE_REGISTRATION = true; };
       server = {
