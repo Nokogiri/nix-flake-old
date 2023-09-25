@@ -36,6 +36,16 @@
         "force user" = "nokogiri";
         "force group" = "users";
       };
+      paperless = {
+        path = "/media/Vault3.1/paperless";
+        browseable = "yes";
+        "read only" = "no";
+        "guest ok" = "yes";
+        "create mask" = "0644";
+        "directory mask" = "0755";
+        "force user" = "paperless";
+        "force group" = "users";
+      };
       personal = {
         path = "/media/Vault3.1/personal";
         browseable = "yes";
