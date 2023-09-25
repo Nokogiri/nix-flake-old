@@ -10,6 +10,7 @@
       nix
       home-manager
       git
+#      git-agecrypt
       sops
       gnupg
       nixpkgs-fmt
