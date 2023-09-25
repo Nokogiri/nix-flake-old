@@ -20,7 +20,7 @@
   };
   services.redis.servers."paperless" = {
     enable = true;
-    port = 0;
+    #port = 0;
   };
   services.nginx = {
     virtualHosts = {
