@@ -7,6 +7,7 @@
     ./console.nix
     ./doas.nix
     ./fish.nix
+    ./git-agecrypt.nix
     ./locale.nix
     ./nix.nix
     ./openssh.nix
@@ -28,6 +29,9 @@
     pathsToLink = [ "/share/nix-direnv" "/share/zsh" "/share/bash-completion" ];
   };
 
+  #overlays = [
+  #  
+  #];
   programs.fuse.userAllowOther = true;
   programs.git.enable = true;
   programs.nix-index-database.comma.enable = true;
