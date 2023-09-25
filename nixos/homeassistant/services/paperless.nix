@@ -1,4 +1,7 @@
 { 
+  imports = [
+    ./paperless-key.nix
+  ];
   services.paperless = { 
     enable = true;
     consumptionDirIsPublic = true;
