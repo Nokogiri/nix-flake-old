@@ -14,7 +14,7 @@
       PAPERLESS_CONSUMER_IGNORE_PATTERN =
         builtins.toJSON [ ".DS_STORE/*" "desktop.ini" ];
       PAPERLESS_OCR_LANGUAGE = "deu+eng";
-      PAPERLESS_REDIS = "redis://127.0.0.1:6380";
+      PAPERLESS_REDIS = "unix:///run/redis-paperless/redis.sock";
       PAPERLESS_URL = "https://paper.fishoeder.net";
     };
   };
