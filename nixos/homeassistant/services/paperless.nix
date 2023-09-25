@@ -14,16 +14,16 @@
       PAPERLESS_CONSUMER_IGNORE_PATTERN =
         builtins.toJSON [ ".DS_STORE/*" "desktop.ini" ];
       PAPERLESS_OCR_LANGUAGE = "deu+eng";
-      #PAPERLESS_REDIS = "unix:///run/redis-paperless/redis.sock";
-      PAPERLESS_REDIS = "redis://localhost:6380";
+      PAPERLESS_REDIS = "unix://run/redis-paperless/redis.sock";
+      #PAPERLESS_REDIS = "redis://localhost:6380";
       PAPERLESS_URL = "https://paper.fishoeder.net";
     };
   };
   services.redis.servers."paperless" = {
     enable = true;
     user = config.services.paperless.user;
-    #unixSocketPerm = 666;
-    port = 6380;
+    unixSocketPerm = 666;
+    #port = 6380;
   };
   services.nginx = {
     virtualHosts = {
