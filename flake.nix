@@ -18,6 +18,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    git-agecrypt = {
+      url = "github:vlaci/git-agecrypt";
+    };
+    
     nur.url = "github:nix-community/NUR";
 
     hyprpicker.url = "github:hyprwm/hyprpicker";
