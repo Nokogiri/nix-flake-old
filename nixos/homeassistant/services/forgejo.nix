@@ -20,7 +20,12 @@
     };
     mailerPasswordFile = config.sops.secrets.forgejo_mail.path;
     settings = {
-      session = { COOKIE_SECURE = true; };
+      session = { 
+        COOKIE_SECURE = true;
+        PROVIDER = "redis";
+        PROVIDER_CONFIG = "network=unix,addr=/run/redis-forgejo/redis.sock";
+        DOMAIN = "git.fishoeder.net";
+      };
       server = { DISABLE_REGISTRATION = true; };
       server = {
         DOMAIN = "git.fishoeder.net";
@@ -53,6 +58,10 @@
         ADAPTER = "redis";
         HOST = "network=unix,addr=/run/redis-forgejo/redis.sock";
         ITEM_TTL = "24h";
+      };
+      "cache.lastcommit" = {
+        ENABLED = true;
+        COMMITS_COUNT = "100";
       };
     };
   };
