@@ -7,7 +7,6 @@
     ./console.nix
     ./doas.nix
     ./fish.nix
-    ./git-agecrypt.nix
     ./locale.nix
     ./nix.nix
     ./openssh.nix
