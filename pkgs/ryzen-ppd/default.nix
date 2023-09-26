@@ -6,7 +6,7 @@ buildPythonApplication rec {
   version = "0.5";
 
   src = fetchgit {
-    url = "https://git.fishoeder.net/Nokogiri/ryzen-ppd.git";
+    url = "https://forge.fishoeder.net/Nokogiri/ryzen-ppd.git";
     rev = "a001bdfb08eb660a0ca3d012174782ca5ece7f8d";
     sha256 = "sha256-w3Nq14QJkI68E4WH0gEiyp9ZQ01mLu8uWH8icy1w6Sc=";
   };
