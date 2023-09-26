@@ -33,9 +33,9 @@
         SHOW_MILESTONES_DASHBOARD_PAGE = false;
       };
       server = {
-        DOMAIN = "git.fishoeder.net";
+        DOMAIN = "forge.fishoeder.net";
         PROTOCOL = "http+unix";
-        ROOT_URL = "https://git.fishoeder.net";
+        ROOT_URL = "https://forge.fishoeder.net";
         STATIC_URL_PREFIX = "/_/static";
       };
       repository = {
@@ -80,7 +80,7 @@
     #  servers = { "forgejo" = "unix:${config.services.forgejo.settings.server.HTTP_ADDR}"; };
     #};
     virtualHosts = {
-      "git.fishoeder.net" = {
+      "forge.fishoeder.net" = {
         forceSSL = true;
         useACMEHost = "fishoeder.net";
         locations."/_/static/assets/" = {
