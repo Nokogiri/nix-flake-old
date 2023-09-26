@@ -27,7 +27,7 @@
       };
       service = { 
         DISABLE_REGISTRATION = true;
-        REQUIRE_SIGNIN_VIEW = true;
+        REQUIRE_SIGNIN_VIEW = false;
         ENABLE_TIMETRACKING = false;
         SHOW_REGISTRATION_BUTTON = false;
         SHOW_MILESTONES_DASHBOARD_PAGE = false;

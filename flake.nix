@@ -42,7 +42,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest.git";#"github:Nokogiri/extest";
+    extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest.git";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
