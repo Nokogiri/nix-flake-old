@@ -39,41 +39,41 @@ in {
       #  mode = "dock";
       #}];
       colors = {
-        background = "#ffffff";
+        background = "#F8F8F2";
         focused = {
-          border = "#cba6f7";
-          background = "#cba6f7";
-          text = "#1d1f21";
-          indicator = "#8abeb7";
-          childBorder = "#cba6f7";
+          border = "#6272A4";
+          background = "#6272A4";
+          text = "#F8F8F2";
+          indicator = "#6262A4";
+          childBorder = "#6262A4";
         };
         focusedInactive = {
-          border = "#282a2e";
-          background = "#282a2e";
-          text = "#c5c8c6";
-          indicator = "#282a2e";
-          childBorder = "#282a2e";
+          border = "#44475A";
+          background = "#44475A";
+          text = "#F8F8F2";
+          indicator = "#44475A";
+          childBorder = "#44475A";
         };
         placeholder = {
-          border = "#1d1f21";
-          background = "#1d1f21";
-          text = "#c5c8c6";
-          indicator = "#1d1f21";
-          childBorder = "#1d1f21";
+          border = "#282A36";
+          background = "#282A36";
+          text = "#F8F8F2";
+          indicator = "#282A36";
+          childBorder = "#282A36";
         };
         unfocused = {
-          border = "#1e1e2e";
-          background = "#1e1e2e";
-          text = "#c5c8c6";
-          indicator = "#282a2e";
-          childBorder = "#282a2e";
+          border = "#282A36";
+          background = "#282A36";
+          text = "#BFBFBF";
+          indicator = "#282A36";
+          childBorder = "#282A36";
         };
         urgent = {
-          border = "#cc6666";
-          background = "#cc6666";
-          text = "#1d1f21";
-          indicator = "#cc6666";
-          childBorder = "#cc6666";
+          border = "#44475A";
+          background = "#FF5555";
+          text = "#F8F8F2";
+          indicator = "#FF5555";
+          childBorder = "#FF5555";
         };
       };
       floating = {
