@@ -7,7 +7,7 @@
     ./nix-serve.nix
     ./samba.nix
     ./snapserver.nix
-    ./paperless.nix
+    #./paperless.nix
     ./podman
     ./postgresql.nix
     ./jellyfin.nix

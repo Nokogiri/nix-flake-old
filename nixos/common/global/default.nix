@@ -20,6 +20,11 @@
     extraSpecialArgs = { inherit inputs; };
   };
 
+  documentation = { 
+  	info.enable = false;
+  	doc.enable = false;
+  	dev.enable = false;
+  };
   environment = {
     #persistence = {
     #  "/persist".directories = [ "/var/lib/systemd" "/var/log" "/srv" ];

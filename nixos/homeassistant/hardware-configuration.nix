@@ -23,7 +23,7 @@
       kernelModules = [ "hid-apple" ];
     };
     kernelModules = [ "kvm-intel" ];
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages;
     kernelParams = [
       "acpi_backlight=video"
       "intremap=off"

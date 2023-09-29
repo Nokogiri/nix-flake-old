@@ -7,7 +7,7 @@
     enable = true;
     consumptionDirIsPublic = true;
     consumptionDir = "/media/Vault3.1/paperless";
-    passwordFile = config.sops.secrets.paperless_admin.path;
+    #passwordFile = config.sops.secrets.paperless_admin.path;
     extraConfig = {
       PAPERLESS_DBENGINE = "postgresql";
       PAPERLESS_DBHOST = "/run/postgresql";
