@@ -51,5 +51,8 @@
     user = "nokogiri";
     recommendedGzipSettings = true;
     recommendedOptimisation = true;
+    appendHttpConfig = ''
+    access_log syslog:server=unix:/dev/log;
+    '';
   };
 }
