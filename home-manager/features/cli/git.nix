@@ -9,7 +9,7 @@
         signByDefault = true;
         key = "3064C39BEA915CE6";
       };
-      diff-so-fancy.enable = true;
+      diff-so-fancy.enable = false;
       ignores = [ "*~" "*.swp" ".direnv" "result" ];
       extraConfig = {
         init.defaultBranch = "main";
@@ -17,6 +17,10 @@
         index.skipHash = false;
       };
       lfs = { enable = true; };
+      delta = {
+        enable = true;
+        
+      };
     };
     gitui = {
       enable = false;
