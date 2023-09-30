@@ -1,9 +1,14 @@
 { config, pkgs, ... }:
-let wallFile = "${config.home.homeDirectory}/.local/share/wallpaper.png";
-in {
+#let wallFile = "${config.home.homeDirectory}/.local/share/wallpaper/default.png";
+#in
+{
   home.packages = [ pkgs.swaybg ];
 
-  xdg.dataFile."wallpaper.png".source = ./FireWatch_1.png;
+  xdg.dataFile."wallpaper" = {
+    source = ./wallpaper;
+    recursive = true;
+  };
+  xdg.dataFile."wallpaper/default.png".source = ./wallpaper/FireWatch_1.png;
 
   #systemd.user.services.swaybg = {
   #  Unit = { Description = "swaybg"; };
