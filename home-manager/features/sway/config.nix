@@ -223,7 +223,7 @@ in {
       modifier = "Mod4";
       output = {
         eDP-1 = {
-          bg = "${config.home.homeDirectory}/.local/share/wallpaper.png fill";
+          bg = "${config.home.homeDirectory}/.local/share/wallpaper/default.png fill";
           scale = "1";
         };
       };
