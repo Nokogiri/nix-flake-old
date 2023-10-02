@@ -83,6 +83,10 @@ in {
           { app_id = "retroarch"; }
           { app_id = ".blueman-manager-wrapped"; }
           { app_id = "nm-connection-editor"; }
+          { 
+            class = "steam";
+            instance = "steamwebhelper";
+          }
           {
             app_id = "org.kde.kdeconnect-indicator";
           }

@@ -2,7 +2,7 @@
 #let wallFile = "${config.home.homeDirectory}/.local/share/wallpaper/default.png";
 #in
 {
-  home.packages = [ pkgs.swaybg ];
+  home.packages = [ pkgs.swaybg pkgs.swww ];
 
   xdg.dataFile."wallpaper" = {
     source = ./wallpaper;
