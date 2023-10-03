@@ -4,7 +4,7 @@
 # Note: The conversions happen *after* config.nu is loaded
 
 # gnupghome is only defined in bash? redefine it
-$env.GNUPGHOME = $'($env.XDG_CONFIG_HOME)/gnupg'
+#$env.GNUPGHOME = $'($env.XDG_CONFIG_HOME)/gnupg'
 
 $env.ENV_CONVERSIONS = {
   "PATH": {

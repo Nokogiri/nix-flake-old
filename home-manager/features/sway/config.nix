@@ -83,7 +83,7 @@ in {
           { app_id = "retroarch"; }
           { app_id = ".blueman-manager-wrapped"; }
           { app_id = "nm-connection-editor"; }
-          { 
+          {
             class = "steam";
             instance = "steamwebhelper";
           }
@@ -227,7 +227,8 @@ in {
       modifier = "Mod4";
       output = {
         eDP-1 = {
-          bg = "${config.home.homeDirectory}/.local/share/wallpaper/default.png fill";
+          bg =
+            "${config.home.homeDirectory}/.local/share/wallpaper/default.png fill";
           scale = "1";
         };
       };

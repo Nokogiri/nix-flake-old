@@ -3,7 +3,8 @@
 
   programs.nushell = {
     enable = true;
-    envFile.source = ./env.nu ;
+    configFile.source = ./config.nu;
+    envFile.source = ./env.nu;
   };
   #home.configFile = {
   #  "nushell/env.nu".text = (concatMapStringsSep "\n" readFile [ ./env.nu ]);
