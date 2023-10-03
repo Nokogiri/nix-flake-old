@@ -9,7 +9,7 @@ in {
   users.users.nokogiri = {
     description = "It'sa Me Nokogiri...a!";
     isNormalUser = true;
-    shell = pkgs.fish;
+    shell = pkgs.nushell;
     extraGroups = [ "wheel" "video" "audio" ] ++ ifTheyExist [
       "network"
       "networkmanager"

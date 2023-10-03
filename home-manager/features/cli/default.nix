@@ -3,6 +3,7 @@
     ./bash.nix
     ./bat
     ./btop.nix
+    ./carapace.nix
     ./eza.nix
     ./fish
     ./fzf.nix

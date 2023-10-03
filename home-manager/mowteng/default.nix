@@ -2,6 +2,7 @@
   imports = [
     ../global
     ../features/cli/nix-stuff.nix
+    ../features/cli/nushell
     ../features/common-ui
     ../features/games
     ../features/helix
