@@ -25,6 +25,8 @@
     fuse-overlayfs
     obsidian
 
+    chromium
+    
     nss
     xournalpp
 

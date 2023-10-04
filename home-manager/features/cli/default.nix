@@ -1,5 +1,6 @@
 { pkgs, config, ... }: {
   imports = [
+    ./atuin.nix
     ./bash.nix
     ./bat
     ./btop.nix

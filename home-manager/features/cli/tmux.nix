@@ -28,6 +28,10 @@
         set -g @dracula-show-powerline true
         set -g @dracula-refresh-rate 10
         set -g @dracula-plugins "cpu-usage ram-usage"
+        set -g allow-passthrough on
+
+        set -ga update-environment TERM
+        set -ga update-environment TERM_PROGRAM
       '';
     }];
     shortcut = "a";
