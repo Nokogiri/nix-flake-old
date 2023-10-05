@@ -20,8 +20,6 @@
 
     nur.url = "github:nix-community/NUR";
 
-    hyprpicker.url = "github:hyprwm/hyprpicker";
-
     slight = {
       url = "github:spikespaz/slight";
       inputs.nixpkgs.follows = "nixpkgs";

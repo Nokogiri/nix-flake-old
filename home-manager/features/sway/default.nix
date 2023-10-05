@@ -3,11 +3,9 @@ let cfg = config.wayland.windowManager.sway.config;
 in {
   imports = [ ./config.nix ../common-wl ../common-ui ];
 
-  home.packages = with pkgs; [
-    swaybg
-    inputs.hyprpicker.packages."x86_64-linux".hyprpicker
-    #config.nur.repos.misterio.swayfader
-  ];
+  #home.packages = with pkgs; [
+  #  swaybg
+  #];
 
   programs = {
     fish.loginShellInit = ''
