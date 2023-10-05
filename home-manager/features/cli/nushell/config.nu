@@ -474,3 +474,5 @@ $env.config = {
 }
 
 source ~/.config/nushell/carapace.nu
+
+#source ~/.config/nushell/completions/imports.nu

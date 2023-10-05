@@ -1,5 +1,7 @@
 { pkgs, ... }: {
   xdg.configFile."fish/themes/Dracula.theme".source = ./Dracula.theme;
+  programs.carapace.enableFishIntegration = true;
+  programs.atuin.enableFishIntegration = true;
   programs.fish = {
     enable = true;
     functions = { fish_greeting = ""; };
@@ -11,26 +13,7 @@
         rev = "f9e2e48a54199fe7c6c846556a12003e75ab798e";
         sha256 = "CqRSkwNqI/vdxPKrShBykh+eHQq9QIiItD6jWdZ/DSM=";
       };
-    }
-    #{
-    #  name = "man";
-    #  src = pkgs.fetchFromGitHub {
-    #    owner = "PatrickF1";
-    #    repo = "colored_man_pages.fish";
-    #    rev = "f885c2507128b70d6c41b043070a8f399988bc7a";
-    #    sha256 = "ii9gdBPlC1/P1N9xJzqomrkyDqIdTg+iCg0mwNVq2EU=";
-    #  };
-    #:}
-    #{
-    #  name = "catppuccin";
-    #  src = pkgs.fetchFromGitHub {
-    #    owner = "catppuccin";
-    #    repo = "fish";
-    #    rev = "b90966686068b5ebc9f80e5b90fdf8c02ee7a0ba";
-    #    sha256 = "wQlYQyqklU/79K2OXRZXg5LvuIugK7vhHgpahpLFaOw=";
-    #  };
-    #}
-      ];
+    }];
     shellAbbrs = {
       ipa = "ip -color -brief a";
       ls = "eza";
