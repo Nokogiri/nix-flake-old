@@ -20,12 +20,12 @@
     };
     mailerPasswordFile = config.sops.secrets.forgejo_mail.path;
     settings = {
-      session = { 
+      session = {
         COOKIE_SECURE = true;
         PROVIDER = "redis";
         PROVIDER_CONFIG = "network=unix,addr=/run/redis-forgejo/redis.sock";
       };
-      service = { 
+      service = {
         DISABLE_REGISTRATION = true;
         REQUIRE_SIGNIN_VIEW = false;
         ENABLE_TIMETRACKING = false;

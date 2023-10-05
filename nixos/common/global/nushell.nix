@@ -1,3 +1,3 @@
-{ pkgs, ... }:{
-  environment.systemPackages = with pkgs; [ nushellFull nu_scripts ];  
+{ pkgs, ... }: {
+  environment.systemPackages = with pkgs; [ nushellFull nu_scripts ];
 }

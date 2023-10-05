@@ -1,8 +1,6 @@
-{ config, ... }:{
+{ config, ... }: {
   #imports = [ ./paperless-key.nix ];
-  sops.secrets.paperless_admin = {
-    owner = config.services.paperless.user;
-  };
+  sops.secrets.paperless_admin = { owner = config.services.paperless.user; };
   services.paperless = {
     enable = true;
     consumptionDirIsPublic = true;
@@ -39,8 +37,8 @@
             + "proxy_set_header Host $host;"
             + "proxy_set_header X-Real-IP $remote_addr;"
             + "proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;"
-            + "proxy_set_header X-Forwarded-Host $server_name;" + ''
-              add_header Referrer-Policy "strict-origin-when-cross-origin";'';
+            + "proxy_set_header X-Forwarded-Host $server_name;"
+            + ''add_header Referrer-Policy "strict-origin-when-cross-origin";'';
         };
       };
     };

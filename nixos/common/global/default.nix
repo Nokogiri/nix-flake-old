@@ -21,10 +21,10 @@
     extraSpecialArgs = { inherit inputs; };
   };
 
-  documentation = { 
-  	info.enable = false;
-  	doc.enable = false;
-  	dev.enable = false;
+  documentation = {
+    info.enable = false;
+    doc.enable = false;
+    dev.enable = false;
   };
   environment = {
     #persistence = {

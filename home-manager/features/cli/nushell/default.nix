@@ -1,6 +1,5 @@
 { pkgs, lib, ... }:
-with lib;
-{
+with lib; {
   programs.starship.enableNushellIntegration = true;
   programs.atuin.enableNushellIntegration = true;
 
@@ -10,6 +9,7 @@ with lib;
     envFile.source = ./env.nu;
   };
   xdg.configFile = {
-    "nushell/carapace.nu".text = (concatMapStringsSep "\n" readFile [ ./carapace.nu ]);
+    "nushell/carapace.nu".text =
+      (concatMapStringsSep "\n" readFile [ ./carapace.nu ]);
   };
 }

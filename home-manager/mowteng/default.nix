@@ -26,7 +26,7 @@
     obsidian
 
     chromium
-    
+
     nss
     xournalpp
 
