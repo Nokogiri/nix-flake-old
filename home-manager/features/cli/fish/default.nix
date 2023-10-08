@@ -2,6 +2,7 @@
   xdg.configFile."fish/themes/Dracula.theme".source = ./Dracula.theme;
   programs.carapace.enableFishIntegration = true;
   programs.atuin.enableFishIntegration = true;
+  programs.zoxide.enableFishIntegration = true;
   programs.fish = {
     enable = true;
     functions = { fish_greeting = ""; };
