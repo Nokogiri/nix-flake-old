@@ -198,14 +198,12 @@ in {
         # Apps
         ###
         # brightness
-        "XF86MonBrightnessDown" = "exec lightctl -";
-        "XF86MonBrightnessUp" = "exec lightctl +";
-        "XF86KbdBrightnessDOwn" = "exec lightctl -D smc::kbd_backlight -";
-        "XF86KbdBrightnessUp" = "exec lightctl -D smc::kbd_backlight +";
+        "XF86MonBrightnessDown" = "exec ${pkgs.swayosd}/bin/swayosd --brightness lower";
+        "XF86MonBrightnessUp" = "exec ${pkgs.swayosd}/bin/swayosd --brightness raise";
 
-        "XF86AudioRaiseVolume" = "exec volumectl +";
-        "XF86AudioLowerVolume" = "exec volumectl -";
-        "XF86AudioMute" = "exec volumectl %";
+        "XF86AudioRaiseVolume" = "exec ${pkgs.swayosd}/bin/swayosd --output-volume raise";
+        "XF86AudioLowerVolume" = "exec ${pkgs.swayosd}/bin/swayosd --output-volume lower";
+        "XF86AudioMute" = "exec ${pkgs.swayosd}/bin/swayosd --output-volume mute-toggle";
 
         # grimshot
         "${cfg.modifier}+m" = "exec grimshot save output";

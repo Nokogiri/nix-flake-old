@@ -6,6 +6,7 @@
     mangohud
     vkbasalt
     #prismlauncher
+    lutris
     heroic
     portmod
     protonup-qt
