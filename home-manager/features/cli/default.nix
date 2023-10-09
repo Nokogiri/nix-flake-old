@@ -1,16 +1,13 @@
 { pkgs, config, ... }: {
   imports = [
     ./atuin.nix
-    ./bash.nix
     ./bat
     ./btop.nix
-    ./carapace.nix
     ./eza.nix
     ./fish
     ./fzf.nix
     ./git.nix
     ./gpg-agent.nix
-    #./lsd.nix
     ./micro
     ./nnn.nix
     ./ranger.nix

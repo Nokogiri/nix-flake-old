@@ -198,12 +198,17 @@ in {
         # Apps
         ###
         # brightness
-        "XF86MonBrightnessDown" = "exec ${pkgs.swayosd}/bin/swayosd --brightness lower";
-        "XF86MonBrightnessUp" = "exec ${pkgs.swayosd}/bin/swayosd --brightness raise";
+        "XF86MonBrightnessDown" =
+          "exec ${pkgs.swayosd}/bin/swayosd --brightness lower";
+        "XF86MonBrightnessUp" =
+          "exec ${pkgs.swayosd}/bin/swayosd --brightness raise";
 
-        "XF86AudioRaiseVolume" = "exec ${pkgs.swayosd}/bin/swayosd --output-volume raise";
-        "XF86AudioLowerVolume" = "exec ${pkgs.swayosd}/bin/swayosd --output-volume lower";
-        "XF86AudioMute" = "exec ${pkgs.swayosd}/bin/swayosd --output-volume mute-toggle";
+        "XF86AudioRaiseVolume" =
+          "exec ${pkgs.swayosd}/bin/swayosd --output-volume raise";
+        "XF86AudioLowerVolume" =
+          "exec ${pkgs.swayosd}/bin/swayosd --output-volume lower";
+        "XF86AudioMute" =
+          "exec ${pkgs.swayosd}/bin/swayosd --output-volume mute-toggle";
 
         # grimshot
         "${cfg.modifier}+m" = "exec grimshot save output";
