@@ -1,6 +1,6 @@
 {
 	services.uptime-kuma = {
-		enable = false;
+		enable = true;
 		settings = {
 			HOST = "10.200.200.1";
 			PORT = "4000";

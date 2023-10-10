@@ -13,7 +13,7 @@
     ./postgresql.nix
     ./jellyfin.nix
     ./transmission.nix
-    #./uptime-kuma.nix
+    ./uptime-kuma.nix
     ./vaultwarden.nix
   ];
 }

@@ -4,7 +4,7 @@
     ./esphome.nix
     ./homeassistant.nix
     ./pihole.nix
-    ./uptime-kuma.nix
+    #./uptime-kuma.nix
   ];
   virtualisation.podman.networkSocket = {
   	enable = false;
