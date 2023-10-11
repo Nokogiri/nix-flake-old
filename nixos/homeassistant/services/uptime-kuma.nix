@@ -6,5 +6,8 @@
 			PORT = "4000";
 		};
 	};
-	systemd.services.uptime-kuma.serviceConfig.Group = "root";
+	systemd.services.uptime-kuma.serviceConfig = {
+		Group = "root";
+		User = "root";
+	};
 }

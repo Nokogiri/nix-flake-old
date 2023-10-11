@@ -4,6 +4,7 @@
     enable = true;
     #extraPackages = [ pkgs.zfs ];
     autoPrune.enable = false;
+    dockerSocket.enable = true;
   };
   virtualisation.containers.storage.settings = {
     storage = {
