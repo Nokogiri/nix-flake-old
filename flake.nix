@@ -42,7 +42,7 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       inherit (self) outputs;
-      forAllSystems = nixpkgs.lib.genAttrs [ "x86_64-linux" ];
+      forAllSystems = nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" ];
     in rec {
       packages = forAllSystems (system:
         let pkgs = nixpkgs.legacyPackages.${system};
