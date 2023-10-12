@@ -18,7 +18,7 @@
 }:
 
 let
-  version = "2.6.2";
+  version = "2.7.0";
 
   src = fetchFromGitLab {
     owner = "portmod";
@@ -31,7 +31,7 @@ let
     inherit src version;
     pname = "portmod-rust";
 
-    cargoHash = "sha256-sAjgGVVjgXaWbmN/eGEvatYjkHeFTZNX1GXFcJqs3GI=";
+    cargoHash = "sha256-OncbC+TUdwqMfHSpZZ0fFYpgQiYzJw6BlVdizkWOcCw=";
     # cargoSha256 = "0000000000000000000000000000000000000000000000000000";
 
     nativeBuildInputs = [ python3Packages.python ];

@@ -7,20 +7,6 @@
   # You can change versions, add patches, set compilation flags, anything really.
   # https://nixos.wiki/wiki/Overlays
   modifications = final: prev: {
-    myGTK = prev.catppuccin-gtk.override {
-      accents = [ "sapphire" ];
-      size = "standard";
-      tweaks = [ "rimless" ];
-      variant = "frappe";
-    };
-    myQT = prev.catppuccin-kvantum.override {
-      accent = "Sapphire";
-      variant = "Frappe";
-    };
-    myFolders = prev.catppuccin-papirus-folders.override {
-      accent = "sapphire";
-      flavor = "frappe";
-    };
   };
 
   #master-pkgs = self: super: {
