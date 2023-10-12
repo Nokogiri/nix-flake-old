@@ -256,7 +256,7 @@ in {
         }
         #{ command = "swayfader"; }
       ];
-      terminal = "wezterm";
+      terminal = "kitty";
       window = {
         border = 1;
         commands = [
