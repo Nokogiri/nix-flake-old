@@ -37,6 +37,21 @@
     };
 
     extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest.git";
+
+    nix-darwin.url = "github:LnL7/nix-darwin";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
+
+    treefmt-nix.url = "github:numtide/treefmt-nix";
+    treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
+
+    fast-flake-update.url = "github:Mic92/fast-flake-update";
+    fast-flake-update.inputs.nixpkgs.follows = "nixpkgs";
+    fast-flake-update.inputs.flake-parts.follows = "flake-parts";
+    fast-flake-update.inputs.treefmt-nix.follows = "treefmt-nix";
+
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -52,9 +67,9 @@
         let pkgs = nixpkgs.legacyPackages.${system};
         in import ./shell.nix { inherit pkgs; });
       overlays = import ./overlays { inherit inputs; };
-      
+
       nixosModules = import ./modules/nixos;
-      
+
       homeManagerModules = import ./modules/home-manager;
 
       nixosConfigurations = {
@@ -80,37 +95,28 @@
           specialArgs = { inherit inputs outputs; };
         };
       };
-      
+
       homeConfigurations = {
         "nokogiri@mowteng" = home-manager.lib.homeManagerConfiguration {
-          pkgs =
-            nixpkgs.legacyPackages.x86_64-linux;
-              extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            ./home-manager/mowteng
-          ];
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [ ./home-manager/mowteng ];
         };
       };
 
       homeConfigurations = {
         "nokogiri@dewalt" = home-manager.lib.homeManagerConfiguration {
-          pkgs =
-            nixpkgs.legacyPackages.x86_64-linux;
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            ./home-manager/dewalt
-          ];
+          modules = [ ./home-manager/dewalt ];
         };
       };
 
       homeConfigurations = {
         "nokogiri@homeassistant" = home-manager.lib.homeManagerConfiguration {
-          pkgs =
-            nixpkgs.legacyPackages.x86_64-linux;
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            ./home-manager/homeassistant
-          ];
+          modules = [ ./home-manager/homeassistant ];
         };
       };
     };
