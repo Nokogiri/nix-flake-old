@@ -1,6 +1,7 @@
 { config, pkgs, ... }: {
   imports = [
     #./avizo.nix
+    ./foot.nix
     ./fuzzel.nix
     ./gammastep.nix
     #./obs-studio.nix
@@ -8,7 +9,7 @@
     ./swaync.nix
     ./swayosd.nix
     ./waybar
-    #./wezterm
+    ./wezterm
     ./wvkbd.nix
   ];
 
