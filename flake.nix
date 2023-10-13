@@ -88,13 +88,13 @@
         };
       };
 
-      nixosConfigurations = {
-        dewalt = nixpkgs.lib.nixosSystem {
-          modules = [ ./nixos/dewalt/configuration.nix ]
-            ++ (builtins.attrValues nixosModules);
-          specialArgs = { inherit inputs outputs; };
-        };
-      };
+      #nixosConfigurations = {
+      #  dewalt = nixpkgs.lib.nixosSystem {
+      #    modules = [ ./nixos/dewalt/configuration.nix ]
+      #      ++ (builtins.attrValues nixosModules);
+      #    specialArgs = { inherit inputs outputs; };
+      #  };
+      #};
 
       homeConfigurations = {
         "nokogiri@mowteng" = home-manager.lib.homeManagerConfiguration {
@@ -104,13 +104,13 @@
         };
       };
 
-      homeConfigurations = {
-        "nokogiri@dewalt" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./home-manager/dewalt ];
-        };
-      };
+      #homeConfigurations = {
+      #  "nokogiri@dewalt" = home-manager.lib.homeManagerConfiguration {
+      #    pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      #    extraSpecialArgs = { inherit inputs outputs; };
+      #    modules = [ ./home-manager/dewalt ];
+      #  };
+      #};
 
       homeConfigurations = {
         "nokogiri@homeassistant" = home-manager.lib.homeManagerConfiguration {
