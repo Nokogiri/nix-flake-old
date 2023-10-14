@@ -41,16 +41,16 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
+    #flake-parts.url = "github:hercules-ci/flake-parts";
+    #flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
 
-    treefmt-nix.url = "github:numtide/treefmt-nix";
-    treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
+    #treefmt-nix.url = "github:numtide/treefmt-nix";
+    #treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
 
-    fast-flake-update.url = "github:Mic92/fast-flake-update";
-    fast-flake-update.inputs.nixpkgs.follows = "nixpkgs";
-    fast-flake-update.inputs.flake-parts.follows = "flake-parts";
-    fast-flake-update.inputs.treefmt-nix.follows = "treefmt-nix";
+    #fast-flake-update.url = "github:Mic92/fast-flake-update";
+    #fast-flake-update.inputs.nixpkgs.follows = "nixpkgs";
+    #fast-flake-update.inputs.flake-parts.follows = "flake-parts";
+    #fast-flake-update.inputs.treefmt-nix.follows = "treefmt-nix";
 
   };
 
