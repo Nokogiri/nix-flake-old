@@ -8,7 +8,6 @@
     inputs.nix-colors.homeManagerModules.default
     inputs.sops-nix.homeManagerModules.sops
     inputs.nix-index-database.hmModules.nix-index
-    outputs.homeManagerModules.machineType
   ];
   nixpkgs = {
     overlays = [

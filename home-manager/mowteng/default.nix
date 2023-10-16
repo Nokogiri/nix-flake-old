@@ -36,5 +36,4 @@
     mypaint
   ];
 
-  machineType.desktop = true;
 }

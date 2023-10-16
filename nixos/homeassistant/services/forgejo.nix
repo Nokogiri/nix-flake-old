@@ -59,9 +59,7 @@
         REPO_INDEXER_INCLUDE = "";
         REPO_INDEXER_EXCLUDE = "resources/bin/**";
       };
-      federation = {
-      	ENABLED = true;
-      };
+      federation = { ENABLED = true; };
       cache = {
         ENABLED = true;
         ADAPTER = "redis";
