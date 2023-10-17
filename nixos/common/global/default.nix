@@ -9,7 +9,6 @@
     ./fish.nix
     ./locale.nix
     ./nix.nix
-    ./nushell.nix
     ./openssh.nix
     ./sops.nix
 
