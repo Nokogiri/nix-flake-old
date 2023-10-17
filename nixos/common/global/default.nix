@@ -34,14 +34,13 @@
     pathsToLink = [ "/share/nix-direnv" "/share/zsh" "/share/bash-completion" ];
   };
 
-  #overlays = [
-  #  
-  #];
-  programs.fuse.userAllowOther = true;
-  programs.git.enable = true;
-  programs.nix-index-database.comma.enable = true;
-  programs.nix-index.enableZshIntegration = false;
-  programs.nix-index.enableBashIntegration = false;
+  programs = {
+    fuse.userAllowOther = true;
+    git.enable = true;
+    nix-index-database.comma.enable = true;
+    nix-index.enableZshIntegration = false;
+    nix-index.enableBashIntegration = false;
+  };
   hardware.enableRedistributableFirmware = true;
 
   # Increase open file limit for sudoers
