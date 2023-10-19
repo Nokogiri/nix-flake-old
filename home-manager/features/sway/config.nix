@@ -23,7 +23,7 @@ in {
           { app_id = "org.pwmt.zathura"; }
           { app_id = "com.github.maoschanz.drawing"; }
         ];
-        "6" = [{ class = "Steam"; }];
+        "6" = [{ class = "steam"; }];
         "7" = [
           { class = "Spotify"; }
           { app_id = "spotify-qt"; }
