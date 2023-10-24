@@ -8,7 +8,7 @@
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
   pass-wofi = pkgs.callPackage ./pass-wofi { };
-  #openmw = pkgs.callPackage ./openmw { };
+  openmw = pkgs.libsForQt5.callPackage ./openmw { };
   patool = pkgs.python310Packages.callPackage ./patool { };
   portmod = pkgs.callPackage ./portmod { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
