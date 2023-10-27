@@ -16,6 +16,11 @@
     #inputs.hyprwm-contrib.overlays.default
     inputs.slight.overlays.default
   ];
+  
+              nixpkgs.config.permittedInsecurePackages = [
+                "electron-24.8.6"
+              ];
+            
   home.packages = with pkgs; [
     handlr-regex
 
@@ -23,7 +28,7 @@
     snapcast
     dwarfs
     fuse-overlayfs
-    obsidian
+    joplin-desktop
 
     chromium
 

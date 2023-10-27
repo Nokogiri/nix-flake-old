@@ -1,5 +1,5 @@
-{ lib, fetchgit, python3Packages, ryzenadj }:
-with python3Packages;
+{ lib, fetchgit, python310Packages, ryzenadj }:
+with python310Packages;
 
 buildPythonApplication rec {
   pname = "ryzen-ppd";
@@ -12,10 +12,10 @@ buildPythonApplication rec {
   };
 
   propagatedBuildInputs = [
-    python3Packages.dbus-python
-    python3Packages.pygobject3
-    python3Packages.setuptools
-    python3Packages.dbus-next
+    python310Packages.dbus-python
+    python310Packages.pygobject3
+    python310Packages.setuptools
+    python310Packages.dbus-next
     ryzenadj
   ];
   buildInputs = [ ryzenadj ];
