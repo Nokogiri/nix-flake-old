@@ -25,12 +25,12 @@
     handlr-regex
 
     transmission-qt
-    snapcast
-    dwarfs
-    fuse-overlayfs
+    #snapcast
+    #dwarfs
+    #fuse-overlayfs
     joplin-desktop
 
-    chromium
+    #chromium
 
     nss
     xournalpp

@@ -6,7 +6,7 @@
     mangohud
     vkbasalt
     #prismlauncher
-    lutris
+    #lutris
     heroic
     portmod
     protonup-qt
@@ -20,9 +20,9 @@
     gzdoom
     openmw
     #sm64ex
-    vkquake
-    yquake2
-    yquake2-all-games
+    #vkquake
+    #yquake2
+    #yquake2-all-games
 
     # emulation
     cemu
@@ -33,9 +33,9 @@
     dolphinEmuMaster
     retroarch
     libretro.beetle-pce-fast
-    libretro.beetle-psx
+    #libretro.beetle-psx
     libretro.beetle-psx-hw
-    libretro.beetle-supergrafx
+    #libretro.beetle-supergrafx
     libretro.dolphin
     libretro.flycast
     libretro.mgba
