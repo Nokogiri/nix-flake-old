@@ -30,7 +30,7 @@
     #yuzu
     #yuzu-early-access
     #ryujinx
-    dolphinEmuMaster
+    #dolphinEmuMaster
     retroarch
     libretro.beetle-pce-fast
     #libretro.beetle-psx
