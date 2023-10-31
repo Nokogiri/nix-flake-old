@@ -29,7 +29,8 @@
     #dwarfs
     #fuse-overlayfs
     joplin-desktop
-
+    obsidian
+    logseq
     #chromium
 
     nss
