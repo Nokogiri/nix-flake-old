@@ -2,7 +2,7 @@
 , fetchurl
 , lib
 , makeWrapper
-, electron_25
+, electron_24
 , makeDesktopItem
 , imagemagick
 , writeScript
@@ -50,7 +50,7 @@ let
     installPhase = ''
       runHook preInstall
       mkdir -p $out/bin
-      makeWrapper ${electron_25}/bin/electron $out/bin/obsidian \
+      makeWrapper ${electron_24}/bin/electron $out/bin/obsidian \
         --add-flags --disable-gpu-blacklist \
         --add-flags $out/share/obsidian/app.asar \
         --add-flags "\''${NIXOS_OZONE_WL:+\''${WAYLAND_DISPLAY:+--ozone-platform=wayland}}"
