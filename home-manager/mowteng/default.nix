@@ -31,7 +31,7 @@
     joplin-desktop
     obsidian
     logseq
-    #chromium
+    chromium
 
     nss
     xournalpp

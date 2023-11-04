@@ -19,7 +19,7 @@
       kernelModules = [ "amdgpu" ];
     };
     kernelModules = [ "kvm-amd" "zenpower" ];
-    kernelPackages = pkgs.linuxPackages_lqx;
+    kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
       "amd_pstate=passive"
       "mitigations=off"
@@ -29,6 +29,18 @@
     supportedFilesystems = [ "btrfs" ];
     tmp.cleanOnBoot = true;
   };
+  boot.kernelPatches = let
+      inherit (lib.kernel) yes;
+    in [
+      {
+        name = "264832";
+        patch = null;
+        extraStructuredConfig = {
+          FRAMEBUFFER_CONSOLE_DETECT_PRIMARY = yes;
+          DRM_FBDEV_EMULATION = yes;
+        };
+      }
+    ];
 
   fileSystems = {
     "/" = {
