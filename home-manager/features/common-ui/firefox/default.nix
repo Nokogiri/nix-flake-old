@@ -1,5 +1,6 @@
 { config, pkgs, lib, ... }: {
-  imports = [ ./ff2mpv.json.nix ];
+  #programs.firefox.nativeMessagingHosts.ff2mpv = true;
+  imports = [ ./ff2mpv.json.nix ./ff2mpv.py.nix ];
   home.packages = [ pkgs.ff2mpv ];
   home.file.".mozilla/dracula" = {
     recursive = true;

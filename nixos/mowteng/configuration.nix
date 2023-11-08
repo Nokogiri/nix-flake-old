@@ -61,6 +61,7 @@
     powertop.enable = false;
   };
 
+  programs.firefox.nativeMessagingHosts.ff2mpv = true;
   programs = {
     light.enable = true;
     mtr.enable = true;

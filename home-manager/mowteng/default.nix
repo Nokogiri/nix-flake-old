@@ -16,11 +16,9 @@
     #inputs.hyprwm-contrib.overlays.default
     inputs.slight.overlays.default
   ];
-  
-              nixpkgs.config.permittedInsecurePackages = [
-                "electron-24.8.6"
-              ];
-            
+
+  nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" ];
+
   home.packages = with pkgs; [
     handlr-regex
 
@@ -28,14 +26,14 @@
     #snapcast
     #dwarfs
     #fuse-overlayfs
-    joplin-desktop
+    #joplin-desktop
     obsidian
-    logseq
+    #logseq
     chromium
 
     nss
     xournalpp
-
+    #python3
     # graphics stuff
     #gimp
     krita
