@@ -21,6 +21,7 @@
     ../common/optional/sane.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/xdg-portal.nix
+    ../common/optional/waydroid.nix
     ../common/optional/zramswap.nix
 
     ../common/users/nokogiri.nix
