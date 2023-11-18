@@ -25,12 +25,6 @@
            inactive_opacity=0.8
            fullscreen_opacity=1.0
            rounding=6
-           #blur=true
-           #blur_size=3
-           #blur_passes=1
-           #blur_new_optimizations=true
-           #blur_ignore_opacity=false
-           #blur_xray=false
            drop_shadow=true
 
            shadow_range=24
@@ -82,8 +76,8 @@
 
          debug {
            overlay=false
-           disable_logs=false
-           enable_stdout_logs=true
+           disable_logs=true
+           enable_stdout_logs=false
          }
          binds {
            workspace_back_and_forth = true
@@ -112,7 +106,6 @@
          exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
          exec-once = ${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
          exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
-         #exec-once = hyprctl keyword monitor "eDP-1,preferred,auto,1.25"
 
          #layerrule = blur, launcher
 

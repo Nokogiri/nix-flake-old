@@ -2,13 +2,13 @@
   imports = [
     ../common-ui
     ../common-wl
-    inputs.hyprland-git.homeManagerModules.default
+    inputs.hyprland.homeManagerModules.default
     ./config.nix
     ./iio-hyprland.nix
   ];
 
   home.packages = with pkgs; [
-    inputs.hyprpicker.packages."x86_64-linux".hyprpicker
+    #inputs.hyprpicker.packages."x86_64-linux".hyprpicker
     grimblast
     hyprprop
     scratchpad

@@ -7,13 +7,14 @@
     ../features/games
     ../features/helix
     ../features/media
-    ../features/sway
+    ../features/hyprland
+    #../features/sway
     inputs.nur.nixosModules.nur
   ];
 
   nixpkgs.overlays = [
-    #inputs.hyprland-git.overlays.hyprland-extras
-    #inputs.hyprwm-contrib.overlays.default
+    inputs.hyprland.overlays.hyprland-extras
+    inputs.hyprland-contrib.overlays.default
     inputs.slight.overlays.default
   ];
 

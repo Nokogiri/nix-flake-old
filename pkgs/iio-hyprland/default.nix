@@ -6,7 +6,7 @@ stdenv.mkDerivation rec {
 
   #src = ./src;
   src = fetchgit {
-    url = "https://git.fishoeder.net/iio-hyprland";
+    url = "https://forge.fishoeder.net/Nokogiri/iio-hyprland";
     rev = "b9f2f5b4f7402df8bca9705a8845b1aebe70e7c0";
     hash = "sha256-4/tSfLBOMCCJqVupQDxFljr0VAcConSJEHuEvcFA9wk=";
   };
