@@ -12,7 +12,7 @@
     ./openssh.nix
     ./sops.nix
 
-    ../fixes/fix-nfs4-kernel.nix
+    #../fixes/fix-nfs4-kernel.nix
   ];
 
   home-manager = {
