@@ -26,15 +26,15 @@
     };
     spicetify-nix = { url = "github:the-argus/spicetify-nix"; };
 
-    hyprland = {
-      url = "github:hyprwm/hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #hyprland = {
+    #  url = "github:hyprwm/hyprland";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
-    hyprland-contrib = {
-      url = "github:hyprwm/contrib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #hyprland-contrib = {
+    #  url = "github:hyprwm/contrib";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     #nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     #joshuto.url = "github:kamiyaa/joshuto";
