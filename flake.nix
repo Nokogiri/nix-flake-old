@@ -26,17 +26,6 @@
     };
     spicetify-nix = { url = "github:the-argus/spicetify-nix"; };
 
-    #hyprland = {
-    #  url = "github:hyprwm/hyprland";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-
-    #hyprland-contrib = {
-    #  url = "github:hyprwm/contrib";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    #nix-minecraft.url = "github:Infinidoge/nix-minecraft";
-
     #joshuto.url = "github:kamiyaa/joshuto";
     nix-colors.url = "github:misterio77/nix-colors";
 
@@ -47,10 +36,7 @@
 
     extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest.git";
 
-    nix-darwin.url = "github:LnL7/nix-darwin";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-
-   };
+    };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
