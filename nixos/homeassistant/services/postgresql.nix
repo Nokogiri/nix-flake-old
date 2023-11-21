@@ -3,7 +3,7 @@
     enable = true;
     settings = { password_encryption = "scram-sha-256"; };
     #authentication = "	local    giteadb    gitea    scram-sha-256\n";
-    ensureDatabases = [ "forgejodb" "paperless" ];
+    ensureDatabases = [ "forgejodb" "forgejo" "paperless" ];
     ensureUsers = [
       {
         name = "forgejo";
