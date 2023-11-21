@@ -17,6 +17,7 @@
       type = "postgres";
       name = "forgejodb";
       passwordFile = config.sops.secrets.forgejo_pg.path;
+      createDatabase = false;
     };
     mailerPasswordFile = config.sops.secrets.forgejo_mail.path;
     settings = {
