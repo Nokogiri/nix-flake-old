@@ -31,7 +31,8 @@
     obsidian
     #logseq
     chromium
-
+    vivaldi
+    vivaldi-ffmpeg-codecs
     nss
     xournalpp
     #python3
