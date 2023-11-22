@@ -15,7 +15,7 @@
     package = pkgs.forgejo;
     database = {
       type = "postgres";
-      name = "forgejodb";
+      name = "forgejo";
       passwordFile = config.sops.secrets.forgejo_pg.path;
       createDatabase = false;
     };

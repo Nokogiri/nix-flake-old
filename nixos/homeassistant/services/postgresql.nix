@@ -10,10 +10,10 @@
         #ensurePermissions = { "DATABASE forgejodb" = "ALL PRIVILEGES"; };
         ensureDBOwnership = true;
       }
-      {
-        name = "paperless";
-        ensurePermissions = { "DATABASE paperless" = "ALL PRIVILEGES"; };
-      }
+      #{
+      #  name = "paperless";
+      #  ensurePermissions = { "DATABASE paperless" = "ALL PRIVILEGES"; };
+      #}
     ];
   };
 }
