@@ -5,7 +5,7 @@
     ./forgejo.nix
     ./nfs-server.nix
     ./nginx
-    ./nix-serve.nix
+    #./nix-serve.nix
     ./samba.nix
     ./snapserver.nix
     #./paperless.nix
