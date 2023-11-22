@@ -13,19 +13,19 @@
   services.forgejo = {
     enable = true;
     package = pkgs.forgejo;
-    database = {
-      type = "postgres";
-      name = "forgejo";
+    #database = {
+    #  type = "postgres";
+    #  name = "forgejo";
       #passwordFile = config.sops.secrets.forgejo_pg.path;
-      createDatabase = false;
-    };
+    #  createDatabase = false;
+    #};
     mailerPasswordFile = config.sops.secrets.forgejo_mail.path;
     settings = {
-      session = {
-        COOKIE_SECURE = true;
-        PROVIDER = "redis";
-        PROVIDER_CONFIG = "network=unix,addr=/run/redis-forgejo/redis.sock";
-      };
+      #session = {
+      #  COOKIE_SECURE = true;
+      #  PROVIDER = "redis";
+      #  PROVIDER_CONFIG = "network=unix,addr=/run/redis-forgejo/redis.sock";
+      #};
       service = {
         DISABLE_REGISTRATION = true;
         REQUIRE_SIGNIN_VIEW = false;
