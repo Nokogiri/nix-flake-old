@@ -7,7 +7,8 @@
     ensureUsers = [
       {
         name = "forgejo";
-        ensurePermissions = { "DATABASE forgejodb" = "ALL PRIVILEGES"; };
+        #ensurePermissions = { "DATABASE forgejodb" = "ALL PRIVILEGES"; };
+        ensureDBOwnership = true;
       }
       {
         name = "paperless";
