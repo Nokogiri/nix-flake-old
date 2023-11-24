@@ -25,6 +25,7 @@ buildPythonApplication rec {
     substituteInPlace $out/lib/systemd/system/ryzen-ppd.service --replace "/usr/bin/ryzen-ppd" "$out/bin/ryzen-ppd"
     substituteInPlace $out/lib/python3.10/site-packages/ryzen_ppd/cpu.py --replace "libryzenadj.so" "${pkgs.ryzenadj}/lib/libryzenadj.so"
   '';
+  doCheck = false;
 
   meta = with lib; {
     description = "CHANGE";

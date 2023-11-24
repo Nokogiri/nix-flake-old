@@ -49,11 +49,11 @@
         "rev": "5f64f814f127da42f4a79ffc66b15019793f2cae",
         "revCount": 6,
         "type": "git",
-        "url": "https://forge.fishoeder.net/Nokogiri/extest.git"
+        "url": "https://forge.fishoeder.net/Nokogiri/extest"
       },
       "original": {
         "type": "git",
-        "url": "https://forge.fishoeder.net/Nokogiri/extest.git"
+        "url": "https://forge.fishoeder.net/Nokogiri/extest"
       }
     },
     "fenix": {
@@ -195,11 +195,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1700553346,
-        "narHash": "sha256-kW7uWsCv/lxuA824Ng6EYD9hlVYRyjuFn0xBbYltAeQ=",
+        "lastModified": 1700847865,
+        "narHash": "sha256-uWaOIemGl9LF813MW0AEgCBpKwFo2t1Wv3BZc6e5Frw=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "1aabb0a31b25ad83cfaa37c3fe29053417cd9a0f",
+        "rev": "8cedd63eede4c22deb192f1721dd67e7460e1ebe",
         "type": "github"
       },
       "original": {
@@ -210,11 +210,11 @@
     },
     "masterpkgs": {
       "locked": {
-        "lastModified": 1700641131,
-        "narHash": "sha256-M3bsoVMQM2PcuBWb6n1KDNeMX87svcSj/4qlBcVqs3k=",
+        "lastModified": 1700855253,
+        "narHash": "sha256-5T2Gzpl79g+S+B2pqzZVEfMJbjSGb6k7HAEjv8DecKA=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "da41de71f62bf7fb989a04e39629b8adbf8aa8b5",
+        "rev": "14caf2eb45eebce6a8b6289882546bea6beba321",
         "type": "github"
       },
       "original": {
@@ -400,11 +400,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1700390070,
-        "narHash": "sha256-de9KYi8rSJpqvBfNwscWdalIJXPo8NjdIZcEJum1mH0=",
+        "lastModified": 1700612854,
+        "narHash": "sha256-yrQ8osMD+vDLGFX7pcwsY/Qr5PUd6OmDMYJZzZi0+zc=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "e4ad989506ec7d71f7302cc3067abd82730a4beb",
+        "rev": "19cbff58383a4ae384dea4d1d0c823d72b49d614",
         "type": "github"
       },
       "original": {
@@ -464,11 +464,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1700640955,
-        "narHash": "sha256-SCC/M0oeb0vL5v4nEUKQ/443pVYjfiVXXlfs3CWeq6E=",
+        "lastModified": 1700855055,
+        "narHash": "sha256-QKjcrEntfghcXBsrenDE46OxaF/4YQVStAQfyDOQcPA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "86dc8be032c2f36df24cee3d9eab2b7b7e6497cb",
+        "rev": "ebf2c68214f10ee5b9372ae4960a7b54af514bd3",
         "type": "github"
       },
       "original": {

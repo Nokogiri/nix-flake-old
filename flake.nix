@@ -34,7 +34,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest.git";
+    extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest";
 
     };
 
