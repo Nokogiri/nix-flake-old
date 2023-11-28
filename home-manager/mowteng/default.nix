@@ -13,8 +13,8 @@
   ];
 
   nixpkgs.overlays = [
-    #inputs.hyprland.overlays.hyprland-extras
-    #inputs.hyprland-contrib.overlays.default
+    inputs.hyprland.overlays.hyprland-extras
+    inputs.hyprland-contrib.overlays.default
     inputs.slight.overlays.default
   ];
 
@@ -30,7 +30,8 @@
     #joplin-desktop
     obsidian
     #logseq
-    chromium
+    #chromium
+    inputs.unstable-small.legacyPackages.x86_64-linux.chromium
     vivaldi
     vivaldi-ffmpeg-codecs
     nss

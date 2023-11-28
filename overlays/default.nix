@@ -9,6 +9,9 @@
   modifications = final: prev: {
   };
 
+  unstable-smallish = self: super: {
+    chromium = inputs.unstable-small.legacyPackages.x86_64-linux.chromium;
+  };
   #master-pkgs = self: super: {
 
   #heroic-unwrapped = inputs.masterpkgs.legacyPackages.x86_64-linux.heroic-unwrapped;
