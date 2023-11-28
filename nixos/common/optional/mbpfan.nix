@@ -6,7 +6,7 @@
       high_temp = 60;
       max_temp = 85;
       polling_interval = 2;
-      min_fan1_speed = 2000;
+      min_fan1_speed = 2800;
     };
   };
 }
