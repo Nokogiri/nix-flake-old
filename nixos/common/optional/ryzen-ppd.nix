@@ -16,8 +16,8 @@
     limits = ["stapm_limit", "fast_limit", "slow_limit", "apu_slow_limit", "tctl_temp", "apu_skin_temp_limit"]
     monitor = fast_limit
     [profiles]
-    battery     = [ 8000,  8000,  8000, 12000, 60, 45 ]
-    low-power   = [ 14000,  13900,  13900, 13500, 60, 45 ]
+    battery     = [ 11000,  8800,  8800, 12000, 70, 45 ]
+    low-power   = [ 11000,  9900,  9900, 13500, 70, 45 ]
     balanced    = [ 20000, 20000, 15000, 15000, 70, 45 ]
     performance = [ 44000, 44000, 37000, 30000, 84, 64 ]
     #custom      = [ 30000, 30000, 28000, 17000, 96, 64 ]

@@ -24,14 +24,9 @@
     handlr-regex
 
     transmission-qt
-    #snapcast
-    #dwarfs
-    #fuse-overlayfs
-    #joplin-desktop
     obsidian
-    #logseq
-    #chromium
-    inputs.unstable-small.legacyPackages.x86_64-linux.chromium
+    chromium
+    #inputs.unstable-small.legacyPackages.x86_64-linux.chromium
     vivaldi
     vivaldi-ffmpeg-codecs
     nss
