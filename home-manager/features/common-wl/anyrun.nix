@@ -1,11 +1,7 @@
-{ pkgs, inputs, ... }: 
-  let 
-  anypkg = inputs.anyrun.packages.${pkgs.system};
-  in
-  {
-  imports = [
-    inputs.anyrun.homeManagerModules.default
-  ];
+{ pkgs, inputs, ... }:
+let anypkg = inputs.anyrun.packages.${pkgs.system};
+in {
+  imports = [ inputs.anyrun.homeManagerModules.default ];
 
   programs.anyrun = {
     enable = true;
@@ -16,11 +12,11 @@
         anypkg.symbols
         anypkg.shell
         anypkg.rink
-    ];
+      ];
       width = { fraction = 0.3; };
       # = "top";
       #verticalOffset = { absolute = 0; };
-      
+
       hideIcons = false;
       ignoreExclusiveZones = false;
       layer = "overlay";
@@ -31,7 +27,7 @@
     };
     extraCss = ''
       #window {
-        background-color: rgba(0, 0, 0, 100);
+        background-color: rgba(0, 0, 0, 0.5);
 
       }
     '';

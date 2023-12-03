@@ -14,7 +14,7 @@
     ./ssh.nix
     ./starship.nix
     ./tmux.nix
-    ./zoxide.nix
+    #./zoxide.nix
   ];
 
   home.sessionVariables = {

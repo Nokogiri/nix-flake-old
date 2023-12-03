@@ -4,12 +4,13 @@
   amdctl = pkgs.callPackage ./amdctl { };
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
   fastfetch = pkgs.callPackage ./fastfetch { };
+  floorp = pkgs.callPackage ./floorp { };
   iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
   pass-wofi = pkgs.callPackage ./pass-wofi { };
   obsidian = pkgs.callPackage ./obsidian { };
-  openmw = pkgs.libsForQt5.callPackage ./openmw { };
+  #openmw = pkgs.libsForQt5.callPackage ./openmw { };
   patool = pkgs.python310Packages.callPackage ./patool { };
   portmod = pkgs.callPackage ./portmod { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };

@@ -1,7 +1,7 @@
 { inputs, lib, config, pkgs, ... }:
 let cfg = config.wayland.windowManager.sway.config;
 in {
-  imports = [ ./config.nix ../common-wl ../common-ui ../common-wl/anyrun.nix];
+  imports = [ ./config.nix ../common-wl ../common-ui ../common-wl/anyrun.nix ];
 
   #home.packages = with pkgs; [
   #  swaybg

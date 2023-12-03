@@ -6,6 +6,7 @@
 
     masterpkgs.url = "github:nixos/nixpkgs/master";
     unstable-small.url = "github:nixos/nixpkgs/nixos-unstable-small";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -37,17 +38,6 @@
     };
 
     extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest";
-
-    hyprland = {
-      url = "github:hyprwm/hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    hyprland-contrib = {
-      url = "github:hyprwm/contrib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
 
     anyrun = {
       url = "github:Kirottu/anyrun";
