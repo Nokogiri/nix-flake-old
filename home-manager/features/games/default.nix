@@ -9,7 +9,7 @@
     #lutris
     heroic
     portmod
-    protonup-qt
+    #protonup-qt
     # native packaged games
 
     #zeroad
@@ -18,7 +18,7 @@
     #dhewm3
     #eduke32
     gzdoom
-    openmw
+    #openmw
     #sm64ex
     #vkquake
     #yquake2

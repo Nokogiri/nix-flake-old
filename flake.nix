@@ -3,7 +3,9 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
+    #nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+    
+    
     masterpkgs.url = "github:nixos/nixpkgs/master";
     unstable-small.url = "github:nixos/nixpkgs/nixos-unstable-small";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";

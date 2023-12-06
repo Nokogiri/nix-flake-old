@@ -19,7 +19,7 @@
     handlr-regex
 
     transmission-qt
-    obsidian
+    #obsidian
     chromium
     nss
     xournalpp

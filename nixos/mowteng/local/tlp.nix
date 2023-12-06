@@ -14,8 +14,8 @@
       CPU_SCALING_MAX_FREQ_ON_BAT = "1600000";
       CPU_BOOST_ON_AC = "0";
       CPU_BOOST_ON_BAT = "0";
-      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+      CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
       NMI_WATCHDOG = "0";
       #SATA_LINKPWR_ON_AC = "med_power_with_dipm max_performance";
       #SATA_LINKPWR_ON_BAT = "med_power_with_dipm min_power";
