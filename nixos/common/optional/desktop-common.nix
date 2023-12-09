@@ -38,7 +38,7 @@
       packages = [ pkgs.gcr ];
     };
     flatpak.enable = true;
-    gvfs.enable = true;
+    #gvfs.enable = true;
     printing.enable = true;
     udisks2.enable = true;
     upower.enable = true;
