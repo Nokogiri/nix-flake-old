@@ -45,7 +45,12 @@
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
-  environment.systemPackages = with pkgs; [ amdctl lm_sensors exfatprogs doas-sudo-shim ];
+  environment.systemPackages = with pkgs; [
+    amdctl
+    lm_sensors
+    exfatprogs
+    #doas-sudo-shim
+  ];
 
   hardware = {
     opengl = {

@@ -25,10 +25,10 @@
     doc.enable = false;
     dev.enable = false;
   };
-  
+
   environment = {
     enableAllTerminfo = false;
-    pathsToLink = [ "/share/nix-direnv" "/share/zsh" "/share/bash-completion" ];
+    pathsToLink = [ "/share/nix-direnv" "/share/bash-completion" ];
   };
 
   nix = {
@@ -36,11 +36,9 @@
       substituters = [
         "https://nix-community.cachix.org"
         "https://cache.nixos.org"
-        #"https://cache.fishoeder.net"
       ];
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-        #"cache.fishoeder.net:8LJqtsUc2Sdbvucf7HCakDEetd1b2rGLFmVaDF1POdc="
       ];
       trusted-users = [ "root" "@wheel" "nokogiri" ];
       auto-optimise-store = lib.mkDefault true;
@@ -62,7 +60,7 @@
     nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}")
       config.nix.registry;
   };
-  
+
   programs = {
     fuse.userAllowOther = true;
     git.enable = true;

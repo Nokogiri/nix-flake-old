@@ -8,7 +8,7 @@
     #prismlauncher
     #lutris
     heroic
-    portmod
+    #portmod
     #protonup-qt
     # native packaged games
 

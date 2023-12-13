@@ -30,9 +30,7 @@
     nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}")
       config.nix.registry;
   };
-  
-              nixpkgs.config.permittedInsecurePackages = [
-                "electron-24.8.6"
-              ];
-            
+
+  nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" ];
+
 }

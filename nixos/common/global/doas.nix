@@ -1,8 +1,8 @@
 {
   security = {
-    sudo.enable = false;
+    sudo-rs.enable = true;
     doas = {
-      enable = true;
+      enable = false;
       wheelNeedsPassword = true;
       extraRules = [
         {
