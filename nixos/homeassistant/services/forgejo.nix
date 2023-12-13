@@ -87,7 +87,7 @@
         forceSSL = true;
         useACMEHost = "fishoeder.net";
         locations."/_/static/assets/" = {
-          alias = "${config.services.forgejo.package.data}/public/";
+          alias = "${config.services.forgejo.package.data}/public/assets/";
         };
         locations."/" = {
           proxyPass =
