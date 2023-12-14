@@ -8,7 +8,7 @@
     ./hardware-configuration.nix
 
     ../common/global
-    ../common/optional/avahi.nix
+    #../common/optional/avahi.nix
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
     ../common/optional/fonts.nix

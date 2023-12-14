@@ -2,7 +2,6 @@
   imports = [
     ../global
     ../features/cli/nix-stuff.nix
-    ../features/cli/nushell
     ../features/common-ui
     ../features/games
     ../features/helix
@@ -13,7 +12,7 @@
 
   nixpkgs.overlays = [ inputs.slight.overlays.default ];
 
-  nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" ];
+  #nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" ];
 
   home.packages = with pkgs; [
     handlr-regex
