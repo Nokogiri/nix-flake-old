@@ -8,7 +8,6 @@
     ./hardware-configuration.nix
 
     ../common/global
-    #../common/optional/avahi.nix
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
     ../common/optional/fonts.nix
@@ -21,12 +20,13 @@
     ../common/optional/sane.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/xdg-portal.nix
-    #../common/optional/waydroid.nix
     ../common/optional/zramswap.nix
 
     ../common/users/nokogiri.nix
 
-    ./local
+    ./firewall.nix
+    ./nfs.nix
+    ./power.nix
   ];
 
   nixpkgs = {
@@ -42,7 +42,12 @@
     hostName = "mowteng";
     hostId = "05fc191c";
   };
-
+  
+  boot.kernel.sysctl = {
+    # maximum possible
+    "vm.max_map_count" = 2147483642; # 524288;
+  };
+  
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
   environment.systemPackages = with pkgs; [
@@ -82,6 +87,8 @@
   services.logind.extraConfig = ''
     RuntimeDirectorySize=8G
   '';
+
+  systemd.tmpfiles.rules = [ "D /tmp/.X11-unix 1777 nokogiri root" ];
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.05";
 }
