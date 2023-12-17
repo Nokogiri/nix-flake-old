@@ -30,7 +30,9 @@
 
   qt.style = "Kvantum-Dark";
 
-  programs = { dconf.enable = true; };
+  programs = { 
+    dconf.enable = true;
+  };
 
   services = {
     dbus = {
@@ -38,7 +40,6 @@
       packages = [ pkgs.gcr ];
     };
     flatpak.enable = true;
-    #gvfs.enable = true;
     printing.enable = true;
     udisks2.enable = true;
     upower.enable = true;

@@ -32,31 +32,4 @@
       };
     }];
   };
-
-  #systemd.network.networks."90-wireguard" = {
-  #  matchConfig.Name = "calvin";
-  #  address = [ "10.200.200.2/24" ];
-  #  dns = [ "10.200.200.1" ];
-  # routes = [{
-  #    routeConfig = {
-  #      Destination = "10.200.200.0/24";
-  #      Scope = "link";
-  #    };
-  #  }];
-  #};
-  # networking.wireguard.interfaces = {
-  #   wg0 = {
-  #     ips = [ "10.200.200.3/24" ];
-  #     listenPort = 51872;
-  #     privateKeyFile = config.sops.secrets."wg_private/mowteng".path;
-  #
-  #     peers = [{
-  #      publicKey = "IqYGE/5SPmMPEs0us6ZkH5RlePZ2KJDpGxBgjCBnQno=";
-  #      allowedIPs = [ "10.200.200.0/24" ];
-  #      endpoint = "46.38.240.252:51871";
-  #      presharedKeyFile = config.sops.secrets."wg_psk/mowteng".path;
-  #      persistentKeepalive = 25;
-  #    }];
-  #  };
-  #};
 }
