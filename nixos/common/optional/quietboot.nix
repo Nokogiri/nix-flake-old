@@ -4,11 +4,6 @@
       enable = true;
       theme = "dracula";
       themePackages = [ pkgs.dracula-plymouth ];
-      # [
-      #  (pkgs.plymouth-catppuccin-frappe.override {
-      #    inherit (config.boot.plymouth) logo;
-      #  })
-      #];
     };
     loader.timeout = 0;
     kernelParams = [
