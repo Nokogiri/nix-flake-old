@@ -5,14 +5,11 @@
     inputs.nix-index-database.nixosModules.nix-index
 
     ./console.nix
-    ./doas.nix
     ./fish.nix
     ./locale.nix
-    #./nix.nix
     ./openssh.nix
     ./sops.nix
-
-    #../fixes/fix-nfs4-kernel.nix
+    ./sudo.nix
   ];
 
   home-manager = {
