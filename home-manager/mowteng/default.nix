@@ -6,11 +6,12 @@
     ../features/games
     ../features/helix
     ../features/media
-    ../features/sway
+    #../features/sway
+    ../features/hyprland
     inputs.nur.nixosModules.nur
   ];
 
-  nixpkgs.overlays = [ inputs.slight.overlays.default ];
+  nixpkgs.overlays = [ inputs.slight.overlays.default inputs.hyprland-contrib.overlays.default ];
 
   #nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" ];
 

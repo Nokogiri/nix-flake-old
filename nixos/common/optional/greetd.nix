@@ -6,7 +6,7 @@ in {
     settings = {
       default_session = {
         command =
-          "${pkgs.greetd.tuigreet}/bin/tuigreet --time -r --cmd '$SHELL -l'";
+          "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd '$SHELL -l'";
         user = "greeter";
       };
     };

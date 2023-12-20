@@ -155,9 +155,9 @@
          bind=ALT,XF86AudioPlay,exec,systemctl --user restart playerctld
          bind=SUPER,XF86AudioPlay,exec,$TERMINAL $SHELL -ic lyrics
 
-         bind=,XF86AudioRaiseVolume,exec,volumectl +
-         bind=,XF86AudioLowerVolume,exec,volumectl -
-         bind=,XF86AudioMute,exec,volumectl %
+         bind=,XF86AudioRaiseVolume,exec,${pkgs.swayosd}/bin/swayosd --output-volume raise
+         bind=,XF86AudioLowerVolume,exec,${pkgs.swayosd}/bin/swayosd --output-volume lower
+         bind=,XF86AudioMute,exec,${pkgs.swayosd}/bin/swayosd --output-volume mute-toggle
 
          bind=SHIFT,XF86AudioMute,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle
          bind=,XF86AudioMicMute,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle
