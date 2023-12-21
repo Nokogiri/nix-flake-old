@@ -143,8 +143,8 @@
          bind=ALT,Print,exec,grimblast --notify copy area
 
          # Keyboard controls (brightness, media, sound, etc)
-         bind=,XF86MonBrightnessUp,exec,lightctl +
-         bind=,XF86MonBrightnessDown,exec,lightctl -
+         bind=,XF86MonBrightnessUp,exec,${pkgs.swayosd}/bin/swayosd --brightness raise
+         bind=,XF86MonBrightnessDown,exec,${pkgs.swayosd}/bin/swayosd --brightness lower
 
          bind=ALT,XF86AudioRaiseVolume,exec,playerctl next
          bind=ALT,XF86AudioLowerVolume,exec,playerctl previous
@@ -277,8 +277,6 @@
          windowrulev2 = workspace 7 silent,title:^(Spotify)$
          windowrulev2 = fullscreen,opaque,noblur,class:^(gamescope)$
          layerrule=blur, gtk-layer-shell
-         #blurls=waybar
-         #blurls=wofi
 
          # Center Stuff
          windowrulev2 = center,class:^(heroic)$,title:^(Exit)$

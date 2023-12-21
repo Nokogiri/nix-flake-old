@@ -6,7 +6,7 @@
     ./swaylock.nix
     ./swaync.nix
     ./swayosd.nix
-    ./waybar
+    #./waybar
     ./wvkbd.nix
   ];
 

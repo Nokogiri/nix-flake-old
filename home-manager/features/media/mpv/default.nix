@@ -51,6 +51,9 @@
       cache = true;
       demuxer-max-bytes = "400MiB";
       demuxer-max-back-bytes = "300MiB";
+
+      cursor-autohide-fs-only = true;
+      cursor-autohide = "20";
     };
     scriptOpts = { ytdl_hook = { ytdl_path = "${pkgs.yt-dlp}/bin/yt-dlp"; }; };
     scripts = with pkgs; [
@@ -60,4 +63,6 @@
       mpvScripts.sponsorblock
     ];
   };
+  xdg.configFile."mpv/script-opts/uosc.conf".source = ./uosc.conf;
+  
 }

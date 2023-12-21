@@ -5,12 +5,16 @@
     inputs.hyprland.homeManagerModules.default
     ./config.nix
     ./iio-hyprland.nix
+    ./waybar
   ];
 
+  nixpkgs.overlays = [ inputs.hyprland-contrib.overlays.default ];
+
   home.packages = with pkgs; [
-    #inputs.hyprpicker.packages."x86_64-linux".hyprpicker
+    hyprpicker
+    hyprpaper
     grimblast
-    inputs.hyprland-contrib.packages.${pkgs.system}.hyprprop
+    hyprprop
     scratchpad
   ];
 

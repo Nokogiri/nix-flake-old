@@ -17,7 +17,7 @@
 
   home.packages = with pkgs; [
     handlr-regex
-
+    
     transmission-qt
     #obsidian
     chromium
