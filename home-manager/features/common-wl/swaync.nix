@@ -7,6 +7,5 @@
       ExecStart = "${pkgs.swaynotificationcenter}/bin/swaync";
       Restart = "on-failure";
     };
-    Install = { WantedBy = [ "hyprland-session.target" ]; };
   };
 }

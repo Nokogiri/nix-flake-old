@@ -4,15 +4,13 @@
       substituters = [
         "https://nix-community.cachix.org"
         "https://cache.nixos.org"
-        #"https://cache.fishoeder.net"
       ];
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-        #"cache.fishoeder.net:8LJqtsUc2Sdbvucf7HCakDEetd1b2rGLFmVaDF1POdc="
       ];
       trusted-users = [ "root" "@wheel" "nokogiri" ];
       auto-optimise-store = lib.mkDefault true;
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = [ "nix-command" "flakes" "auto-allocate-uids" "impure-env" ];
       warn-dirty = false;
     };
     package = pkgs.nixUnstable;

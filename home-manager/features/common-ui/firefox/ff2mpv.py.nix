@@ -20,7 +20,7 @@
             message = get_message()
             url = message.get("url")
             #args = ["${pkgs.mpv}/bin/mpv", "--no-terminal", "--", url]
-            args = [ "/etc/profiles/per-user/nokogiri/bin/mpv", "--no-terminal", "--", url]
+            args = [ "/home/nokogiri/.nix-profile/bin/mpv", "--no-terminal", "--", url]
             kwargs = {}
             subprocess.Popen(args, **kwargs)
 

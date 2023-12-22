@@ -2,6 +2,7 @@
   imports = [
     ../common-ui
     ../common-wl
+    ./hyprpaper.nix
     inputs.hyprland.homeManagerModules.default
     ./config.nix
     ./iio-hyprland.nix
@@ -48,7 +49,7 @@
     swaynotificationcenter = {
       Install = { WantedBy = [ "hyprland-session.target" ]; };
     };
-    swaybg = { Install = { WantedBy = [ "hyprland-session.target" ]; }; };
+    hyprpaper = { Install = { WantedBy = [ "hyprland-session.target" ]; }; };
   };
 
   wayland.windowManager.hyprland = {

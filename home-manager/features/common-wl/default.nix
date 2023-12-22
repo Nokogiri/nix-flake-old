@@ -1,5 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
+    ./anyrun.nix
     ./fuzzel.nix
     ./gammastep.nix
     #./obs-studio.nix

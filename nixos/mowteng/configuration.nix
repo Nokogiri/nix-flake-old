@@ -83,7 +83,7 @@
     longitude = 11.03283;
   };
 
-  services.fwupd.enable = true;
+  services.fwupd.enable = false;
   services.logind.extraConfig = ''
     RuntimeDirectorySize=8G
   '';

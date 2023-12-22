@@ -3,7 +3,7 @@
     {
       "name": "ff2mpv",
       "description": "ff2mpv's external manifest",
-      "path": "/etc/profiles/per-user/${config.home.username}/bin/ff2mpv.py3",
+      "path": "/home/${config.home.username}/.nix-profile/bin/ff2mpv.py3",
       "type": "stdio",
       "allowed_extensions": ["ff2mpv@yossarian.net"]
     }
