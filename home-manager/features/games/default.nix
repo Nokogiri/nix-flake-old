@@ -5,24 +5,24 @@
     gamescope
     mangohud
     vkbasalt
-    #prismlauncher
+    prismlauncher
     #lutris
     heroic
     #portmod
-    #protonup-qt
+    protonup-qt
     # native packaged games
 
     #zeroad
-    #airshipper # veloren
+    airshipper # veloren
     arx-libertatis
-    #dhewm3
-    #eduke32
+    dhewm3
+    eduke32
     gzdoom
-    #openmw
-    #sm64ex
-    #vkquake
-    #yquake2
-    #yquake2-all-games
+    openmw
+    sm64ex
+    vkquake
+    yquake2
+    yquake2-all-games
 
     # emulation
     cemu
@@ -30,7 +30,7 @@
     #yuzu
     #yuzu-early-access
     #ryujinx
-    #dolphinEmuMaster
+    dolphinEmuMaster
     retroarch
     libretro.beetle-pce-fast
     #libretro.beetle-psx

@@ -10,7 +10,8 @@
       ];
       trusted-users = [ "root" "@wheel" "nokogiri" ];
       auto-optimise-store = lib.mkDefault true;
-      experimental-features = [ "nix-command" "flakes" "auto-allocate-uids" "impure-env" ];
+      experimental-features = [ "nix-command" "flakes" "auto-allocate-uids" "configurable-impure-env" ];
+      extra-experimental-features = [ "auto-allocate-uids" "configurable-impure-env" ];
       warn-dirty = false;
     };
     package = pkgs.nixUnstable;

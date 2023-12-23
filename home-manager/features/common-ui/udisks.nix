@@ -21,7 +21,7 @@
     };
     Service = {
       Type = "simple";
-      ExecStart = "/home/${config.home.username}/.nix-profile/bin/udisksd";
+      ExecStart = "/etc/profiles/per-user/${config.home.username}/bin/udisksd";
       Restart = "on-failure";
     };
     Install = { WantedBy = [ "default.target" ]; };

@@ -14,7 +14,7 @@
            cursor_inactive_timeout=0
          }
 
-         monitor=eDP-1,preferred,auto,1
+         monitor=eDP-1,1920x1200@47.999,auto,1
          #monitor=,preferred,auto,1
 
       xwayland {

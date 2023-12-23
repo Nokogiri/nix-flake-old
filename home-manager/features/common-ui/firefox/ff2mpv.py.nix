@@ -1,5 +1,4 @@
-{ pkgs, ... }: {
-  #home.file.".local/bin/ff2mpv.py" = {
+{ pkgs, config, ... }: {
   home.packages = [
     (pkgs.writeTextFile {
       name = "ff2mpv.py";
@@ -7,7 +6,6 @@
       executable = true;
       text = ''
         #!${pkgs.python39}/bin/python
-        #!/usr/bin/env python3
 
         import json
         import os
@@ -20,7 +18,7 @@
             message = get_message()
             url = message.get("url")
             #args = ["${pkgs.mpv}/bin/mpv", "--no-terminal", "--", url]
-            args = [ "/home/nokogiri/.nix-profile/bin/mpv", "--no-terminal", "--", url]
+            args = [ "/etc/profiles/per-user/${config.home.username}/bin/mpv", "--no-terminal", "--", url]
             kwargs = {}
             subprocess.Popen(args, **kwargs)
 
