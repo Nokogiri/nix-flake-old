@@ -9,7 +9,7 @@
   '';
 
   systemd.user.timers = {
-    wall1 = {
+    morning-wp = {
       Timer = {
         OnCalendar = "*-*-* 6:00:00";
         Persistent = true;
@@ -17,11 +17,19 @@
     };
   };
   systemd.user.services = {
-    wall1 = {
-      Unit = { Description = "hyprpaper"; };
+    hyprpaper = {
+      Unit = { Description = "Hyprpaper"; };
+      Service = {
+        Type = "simple";
+        ExecStart = "${pkgs.hyprpaper}/bin/hyprpaper";
+        Restart = "on-failure";
+      };
+    };
+    morning-wp = {
+      Unit = { Description = "Wallpaper Morning"; };
       Service = { 
         Type = "oneshot";
-        ExecStart = "hyprctl hyprpaper wallpaper \"eDP-1,~/.local/share/wallpaper/FireWatch.png\"";
+        ExecStart = "${pkgs.hyprland}/bin/hyprctl hyprpaper wallpaper \"eDP-1,~/.local/share/wallpaper/FireWatch.png\"";
         Restart = "on-failure";
       };
     };
