@@ -10,7 +10,6 @@
     ../common/global
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
-    #../common/optional/fonts.nix
     ../common/optional/fprintd.nix
     ../common/optional/greetd.nix
     ../common/optional/networkmanager.nix
@@ -19,7 +18,6 @@
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
     ../common/optional/systemd-boot.nix
-    #../common/optional/xdg-portal.nix
     ../common/optional/zramswap.nix
 
     ../common/users/nokogiri.nix
