@@ -2,7 +2,7 @@
   imports = [
     ../common-ui
     ../common-wl
-    ./hyprpaper.nix
+    ./hyprpaper
     inputs.hyprland.homeManagerModules.default
     ./config.nix
     ./iio-hyprland.nix
