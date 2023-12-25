@@ -14,6 +14,7 @@
         OnCalendar = "*-*-* 6:00:00";
         Persistent = true;
       };
+      Install = { WantedBy = [ "hyprland-session.target" ]; };
     };
   };
   systemd.user.services = {
