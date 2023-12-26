@@ -12,7 +12,7 @@
     #extraConfig = ''
     #  disallow-other-stacks=yes
     #'';
-    nssmdns = true;
+    nssmdns4 = true;
     openFirewall = true;
     publish = {
       enable = true;
