@@ -85,6 +85,9 @@
   services.logind.extraConfig = ''
     RuntimeDirectorySize=8G
   '';
+  services.udev.extraRules = ''
+      ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
+    '';
 
   systemd.tmpfiles.rules = [ "D /tmp/.X11-unix 1777 nokogiri root" ];
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
