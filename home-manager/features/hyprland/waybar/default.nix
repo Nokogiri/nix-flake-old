@@ -14,7 +14,7 @@
         modules-center = [ "custom/weather" "clock" ];
         modules-right = [ "tray" "battery" "network" "pulseaudio" ];
 
-        "sway/workspaces" = {
+        "hyprland/workspaces" = {
           format = "{icon}";
           on-click = "activate";
           format-icons = {
