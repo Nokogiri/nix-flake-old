@@ -18,11 +18,11 @@
     dhewm3
     eduke32
     gzdoom
-    openmw
+    #openmw
     sm64ex
-    vkquake
-    yquake2
-    yquake2-all-games
+    #vkquake
+    #yquake2
+    #yquake2-all-games
 
     # emulation
     cemu

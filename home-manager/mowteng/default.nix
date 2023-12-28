@@ -19,14 +19,11 @@
     handlr-regex
     
     transmission-qt
-    #obsidian
     chromium
     nss
     xournalpp
-    #python3
 
     # graphics stuff
-    #gimp
     krita
     mypaint
   ];
