@@ -14,10 +14,11 @@
 
     #zeroad
     airshipper # veloren
-    arx-libertatis
-    dhewm3
+    #arx-libertatis
+    #dhewm3
     eduke32
     gzdoom
+    openjk
     #openmw
     sm64ex
     #vkquake

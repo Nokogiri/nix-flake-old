@@ -14,7 +14,8 @@
            cursor_inactive_timeout=0
          }
 
-         monitor=eDP-1,1920x1200@47.999,auto,1
+         monitor=eDP-1,1920x1200,auto,1
+         #@47.999,auto,1
          #monitor=,preferred,auto,1
 
       xwayland {
@@ -271,7 +272,7 @@
          windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam)$
          windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$
 
-
+         windowrulev2 = float,title:^(Select EXE to Run)$
          windowrulev2 = float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$
          windowrulev2 = fullscreen,opaque,noblur,forceinput,class:^(.gamescope-wrapped)$
          windowrulev2 = workspace 7 silent,title:^(Spotify)$
