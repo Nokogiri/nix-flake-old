@@ -23,7 +23,7 @@
       kernelModules = [ "hid-apple" ];
     };
     kernelModules = [ "kvm-intel" ];
-    kernelPackages = pkgs.linuxPackages;
+    kernelPackages = pkgs.linuxPackages_5_15;
     kernelParams = [
       "acpi_backlight=video"
       "intremap=off"
@@ -43,8 +43,7 @@
       "tsx_async_abort=off"
       "mitigations=off"
       "sdhci.debug_quirks2=4"
-      "mitigations=off"
-      "zfs.zfs_arc_max=2147483648"
+      "mitigations=off"      
     ];
     supportedFilesystems = [ "btrfs" ];
   };

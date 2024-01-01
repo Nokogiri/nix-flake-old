@@ -1,1 +1,1 @@
-{ imports = [ ./firewall.nix ./systemd-network.nix ./rclone.nix ]; }
+{ imports = [ ./firewall.nix ./systemd-network.nix ./rclone.nix ./tlp.nix ]; }
