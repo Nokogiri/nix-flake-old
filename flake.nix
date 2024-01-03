@@ -48,6 +48,11 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland-contrib.url = "github:hyprwm/contrib";
+
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

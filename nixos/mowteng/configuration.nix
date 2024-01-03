@@ -50,6 +50,8 @@
 
   environment.systemPackages = with pkgs; [
     amdctl
+    gparted
+    xorg.xhost
     lm_sensors
     exfatprogs
     #doas-sudo-shim
@@ -81,7 +83,9 @@
     longitude = 11.03283;
   };
 
-  services.fwupd.enable = false;
+  services.acpid.enable = true;
+  services.acpid.logEvents = true;
+  services.fwupd.enable = true;
   services.logind.extraConfig = ''
     RuntimeDirectorySize=8G
   '';

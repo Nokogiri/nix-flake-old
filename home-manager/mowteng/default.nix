@@ -16,6 +16,8 @@
   #nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" ];
 
   home.packages = with pkgs; [
+    distrobox
+    
     handlr-regex
     
     transmission-qt

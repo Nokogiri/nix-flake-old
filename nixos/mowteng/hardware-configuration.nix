@@ -29,15 +29,6 @@
     supportedFilesystems = [ "btrfs" ];
     tmp.cleanOnBoot = true;
   };
-  #boot.kernelPatches = let inherit (lib.kernel) yes;
-  #in [{
-  #  name = "264832";
-  #  patch = null;
-  #  extraStructuredConfig = {
-  #    FRAMEBUFFER_CONSOLE_DETECT_PRIMARY = yes;
-  #    DRM_FBDEV_EMULATION = yes;
-  #  };
-  #}];
 
   fileSystems = {
     "/" = {

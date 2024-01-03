@@ -1,6 +1,13 @@
-{ pkgs, config, ... }: {
-  imports = [ ./steam.nix ./wine.nix ];
+{ pkgs, config, inputs, ... }: {
+  imports = [  ./steam.nix ./wine.nix ];
+  nixpkgs.overlays = [ inputs.aagl.overlays.default ];
   home.packages = with pkgs; [
+    # aagl
+    anime-game-launcher
+    anime-borb-launcher
+    honkers-railway-launcher
+    honkers-launcher
+    
     # general
     gamescope
     mangohud

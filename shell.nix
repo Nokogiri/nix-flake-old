@@ -15,12 +15,12 @@
       gnupg
       nixpkgs-fmt
       nix-universal-prefetch
-      yarn2nix
-      onefetch
-      jdk
-      tes3cmd
-      fribidi
-      python310
+      #yarn2nix
+      #onefetch
+      #jdk
+      #tes3cmd
+      #fribidi
+      #python310
     ];
   };
 }

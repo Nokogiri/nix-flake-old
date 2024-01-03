@@ -33,18 +33,22 @@
       substituters = [
         "https://nix-community.cachix.org"
         "https://cache.nixos.org"
+        "https://ezkea.cachix.org"
       ];
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+        "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
       ];
       trusted-users = [ "root" "@wheel" "nokogiri" ];
       auto-optimise-store = lib.mkDefault true;
-      experimental-features = [ "nix-command" "flakes" "auto-allocate-uids" "configurable-impure-env" ];
+      experimental-features = [ "nix-command" "flakes" "auto-allocate-uids" ];
       warn-dirty = false;
+      keep-outputs = false;
+      keep-derivations = true;
     };
-    package = pkgs.nixUnstable;
+    #package = pkgs.nixUnstable;
     gc = {
-      automatic = lib.mkDefault false;
+      automatic = lib.mkDefault true;
       dates = "monthly";
     };
 
