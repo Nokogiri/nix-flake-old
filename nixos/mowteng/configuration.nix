@@ -14,6 +14,7 @@
     ../common/optional/greetd.nix
     ../common/optional/networkmanager.nix
     ../common/optional/pipewire.nix
+    #../common/optional/podman.nix
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
@@ -40,6 +41,28 @@
     hostName = "mowteng";
     hostId = "05fc191c";
   };
+
+  # aagl
+  networking.hosts = {
+      "0.0.0.0" = [
+        "overseauspider.yuanshen.com"
+        "log-upload-os.hoyoverse.com"
+        "log-upload-os.mihoyo.com"
+        "dump.gamesafe.qq.com"
+
+        "log-upload.mihoyo.com"
+        "devlog-upload.mihoyo.com"
+        "uspider.yuanshen.com"
+        "sg-public-data-api.hoyoverse.com"
+        "public-data-api.mihoyo.com"
+
+        "prd-lender.cdp.internal.unity3d.com"
+        "thind-prd-knob.data.ie.unity3d.com"
+        "thind-gke-usc.prd.data.corp.unity3d.com"
+        "cdp.cloud.unity3d.com"
+        "remote-config-proxy-prd.uca.cloud.unity3d.com"
+      ];
+    };
   
   boot.kernel.sysctl = {
     # maximum possible

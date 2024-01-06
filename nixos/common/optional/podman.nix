@@ -2,7 +2,7 @@
   virtualisation.oci-containers.backend = "podman";
   virtualisation.podman = {
     enable = true;
-    autoPrune.enable = false;
+    autoPrune.enable = true;
     dockerSocket.enable = true;
   };
   virtualisation.containers.storage.settings = {

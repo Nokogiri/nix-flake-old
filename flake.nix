@@ -31,7 +31,7 @@
     
     spicetify-nix = { url = "github:the-argus/spicetify-nix"; };
 
-    #joshuto.url = "github:kamiyaa/joshuto";
+    joshuto.url = "github:kamiyaa/joshuto";
     nix-colors.url = "github:misterio77/nix-colors";
 
     nix-index-database = {
@@ -49,10 +49,10 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland-contrib.url = "github:hyprwm/contrib";
 
-    aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #aagl = {
+    #  url = "github:ezKEa/aagl-gtk-on-nix";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

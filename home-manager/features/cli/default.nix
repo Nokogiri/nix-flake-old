@@ -42,6 +42,8 @@
     ponymix
     sshfs-fuse
 
+    joshuto
+    trash-cli 
     fastfetch
     bc # Calculator
     #btop # same

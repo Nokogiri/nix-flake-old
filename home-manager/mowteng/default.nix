@@ -13,11 +13,11 @@
 
   nixpkgs.overlays = [ inputs.slight.overlays.default inputs.hyprland-contrib.overlays.default ];
 
-  #nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" ];
-
+  services.mpris-proxy.enable = true;
+  nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" "electron-25.9.0" ];
   home.packages = with pkgs; [
-    distrobox
-    
+    #distrobox
+    obsidian    
     handlr-regex
     
     transmission-qt

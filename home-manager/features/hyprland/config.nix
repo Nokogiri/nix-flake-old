@@ -150,15 +150,16 @@
          bind=ALT,XF86AudioRaiseVolume,exec,playerctl next
          bind=ALT,XF86AudioLowerVolume,exec,playerctl previous
          bind=,XF86AudioPlay,exec,playerctl play-pause
+         bind=,CF86AudioPause,exec,playerctl play-pause
          bind=,XF86AudioStop,exec,playerctl stop
          bind=ALT,XF86AudioNext,exec,playerctld shift
          bind=ALT,XF86AudioPrev,exec,playerctld unshift
          bind=ALT,XF86AudioPlay,exec,systemctl --user restart playerctld
          bind=SUPER,XF86AudioPlay,exec,$TERMINAL $SHELL -ic lyrics
 
-         bind=,XF86AudioRaiseVolume,exec,${pkgs.swayosd}/bin/swayosd --output-volume raise
-         bind=,XF86AudioLowerVolume,exec,${pkgs.swayosd}/bin/swayosd --output-volume lower
-         bind=,XF86AudioMute,exec,${pkgs.swayosd}/bin/swayosd --output-volume mute-toggle
+         bind=,XF86AudioRaiseVolume,exec,${pkgs.swayosd}/bin/swayosd-client --output-volume raise
+         bind=,XF86AudioLowerVolume,exec,${pkgs.swayosd}/bin/swayosd-client --output-volume lower
+         bind=,XF86AudioMute,exec,${pkgs.swayosd}/bin/swayosd-client --output-volume mute-toggle
 
          bind=SHIFT,XF86AudioMute,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle
          bind=,XF86AudioMicMute,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle
