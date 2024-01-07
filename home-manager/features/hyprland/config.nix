@@ -144,8 +144,8 @@
          bind=ALT,Print,exec,grimblast --notify copy area
 
          # Keyboard controls (brightness, media, sound, etc)
-         bind=,XF86MonBrightnessUp,exec,${pkgs.swayosd}/bin/swayosd --brightness raise
-         bind=,XF86MonBrightnessDown,exec,${pkgs.swayosd}/bin/swayosd --brightness lower
+         bind=,XF86MonBrightnessUp,exec,${pkgs.swayosd}/bin/swayosd-client --brightness raise
+         bind=,XF86MonBrightnessDown,exec,${pkgs.swayosd}/bin/swayosd-client --brightness lower
 
          bind=ALT,XF86AudioRaiseVolume,exec,playerctl next
          bind=ALT,XF86AudioLowerVolume,exec,playerctl previous

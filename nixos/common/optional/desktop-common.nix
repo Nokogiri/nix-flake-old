@@ -65,7 +65,7 @@
   ];
 
   environment.pathsToLink =
-    [ "/share/Kvantum" "/share/kservicetypes5" "/share/kservices5" ];
+    [ "/share/Kvantum" "/share/kservicetypes5" "/share/kservices5" "/share/wayland-sessions" ];
 
   gtk.iconCache.enable = true;
 
