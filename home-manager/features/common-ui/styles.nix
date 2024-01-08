@@ -58,8 +58,7 @@ in {
   };
   #home.file.".config/gtk-4.0/gtk.css".source =
   #  "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk.css";
-  home.file.".config/gtk-4.0/gtk-dark.css".source =
-    "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk-dark.css";
+  home.file.".config/gtk-4.0/gtk-dark.css".source = "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk-dark.css";
 
   # for flatpaks
   home.file.".themes/Dracula" = {

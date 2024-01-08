@@ -4,7 +4,7 @@
     calibre
     ffmpegthumbnailer
     fontforge
-    haskellPackages.pandoc-cli.out
+    #haskellPackages.pandoc-cli.out
     odt2txt
     patool
     poppler_utils

@@ -17,9 +17,9 @@
   nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" "electron-25.9.0" ];
   home.packages = with pkgs; [
     #distrobox
-    obsidian    
+    obsidian
     handlr-regex
-    
+
     transmission-qt
     chromium
     nss

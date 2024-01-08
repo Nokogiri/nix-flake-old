@@ -64,5 +64,5 @@
     ];
   };
   xdg.configFile."mpv/script-opts/uosc.conf".source = ./uosc.conf;
-  
+
 }

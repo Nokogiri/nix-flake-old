@@ -19,16 +19,9 @@ in {
         "2" = [ { app_id = "firefox"; } { app_id = "chromium-browser"; } ];
         "3" = [{ app_id = "mpv"; }];
         "4" = [ { class = "Emacs"; } { app_id = "emacs"; } ];
-        "5" = [
-          { app_id = "org.pwmt.zathura"; }
-          { app_id = "com.github.maoschanz.drawing"; }
-        ];
+        "5" = [ { app_id = "org.pwmt.zathura"; } { app_id = "com.github.maoschanz.drawing"; } ];
         "6" = [{ class = "steam"; }];
-        "7" = [
-          { class = "Spotify"; }
-          { app_id = "spotify-qt"; }
-          { app_id = "dev.alextren.Spot"; }
-        ];
+        "7" = [ { class = "Spotify"; } { app_id = "spotify-qt"; } { app_id = "dev.alextren.Spot"; } ];
         "8" = [ ];
         "9" = [{ class = "Com.github.johnfactotum.Foliate"; }];
       };
@@ -124,8 +117,7 @@ in {
         # Basics apps
         "${cfg.modifier}+Return" = "exec ${cfg.terminal}";
         "${cfg.modifier}+p" = "exec pkill -9 rofi || rofi -show drun";
-        "${cfg.modifier}+i" =
-          "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
+        "${cfg.modifier}+i" = "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
 
         # basic internals
         "${cfg.modifier}+Shift+q" = "kill";
@@ -198,17 +190,12 @@ in {
         # Apps
         ###
         # brightness
-        "XF86MonBrightnessDown" =
-          "exec ${pkgs.swayosd}/bin/swayosd --brightness lower";
-        "XF86MonBrightnessUp" =
-          "exec ${pkgs.swayosd}/bin/swayosd --brightness raise";
+        "XF86MonBrightnessDown" = "exec ${pkgs.swayosd}/bin/swayosd --brightness lower";
+        "XF86MonBrightnessUp" = "exec ${pkgs.swayosd}/bin/swayosd --brightness raise";
 
-        "XF86AudioRaiseVolume" =
-          "exec ${pkgs.swayosd}/bin/swayosd --output-volume raise";
-        "XF86AudioLowerVolume" =
-          "exec ${pkgs.swayosd}/bin/swayosd --output-volume lower";
-        "XF86AudioMute" =
-          "exec ${pkgs.swayosd}/bin/swayosd --output-volume mute-toggle";
+        "XF86AudioRaiseVolume" = "exec ${pkgs.swayosd}/bin/swayosd --output-volume raise";
+        "XF86AudioLowerVolume" = "exec ${pkgs.swayosd}/bin/swayosd --output-volume lower";
+        "XF86AudioMute" = "exec ${pkgs.swayosd}/bin/swayosd --output-volume mute-toggle";
 
         # grimshot
         "${cfg.modifier}+m" = "exec grimshot save output";
@@ -217,21 +204,16 @@ in {
         "${cfg.modifier}+Ctrl+m" = "exec grimshot save window";
 
         # mylock
-        "${cfg.modifier}+l" =
-          "exec ${config.home.homeDirectory}/.local/bin/mylock";
-        "${cfg.modifier}+Shift+l" =
-          "exec ${config.home.homeDirectory}/.local/bin/mylock at-home-mode";
-        "${cfg.modifier}+Ctrl+l" =
-          "exec ${config.home.homeDirectory}/.local/bin/mylock safe-mode";
-        "${cfg.modifier}+Shift+Ctrl+l" =
-          "exec ${config.home.homeDirectory}/.local/bin/mylock lock-now";
+        "${cfg.modifier}+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock";
+        "${cfg.modifier}+Shift+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock at-home-mode";
+        "${cfg.modifier}+Ctrl+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock safe-mode";
+        "${cfg.modifier}+Shift+Ctrl+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock lock-now";
       };
       menu = "\${pkgs.wofi}/bin/wofi --show drun";
       modifier = "Mod4";
       output = {
         eDP-1 = {
-          bg =
-            "${config.home.homeDirectory}/.local/share/wallpaper/default.png fill";
+          bg = "${config.home.homeDirectory}/.local/share/wallpaper/default.png fill";
           scale = "1";
         };
       };

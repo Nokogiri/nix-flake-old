@@ -1,10 +1,10 @@
 { pkgs, config, inputs, ... }: {
-  imports = [  ./steam.nix ./wine.nix ];
+  imports = [ ./steam.nix ./wine.nix ];
   #nixpkgs.overlays = [ inputs.aagl.overlays.default ];
   home.packages = with pkgs; [
     # aagl
     #anime-game-launcher
-        
+
     # general
     gamescope
     mangohud

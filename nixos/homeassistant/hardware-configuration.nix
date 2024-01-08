@@ -43,7 +43,7 @@
       "tsx_async_abort=off"
       "mitigations=off"
       "sdhci.debug_quirks2=4"
-      "mitigations=off"      
+      "mitigations=off"
     ];
     supportedFilesystems = [ "btrfs" ];
   };

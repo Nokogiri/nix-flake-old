@@ -1,6 +1,5 @@
 { pkgs, ... }: {
-  programs.starship = let
-    flavour = "macchiato"; # One of `latte`, `frappe`, `macchiato`, or `mocha`
+  programs.starship = let flavour = "macchiato"; # One of `latte`, `frappe`, `macchiato`, or `mocha`
   in {
     enable = true;
     enableZshIntegration = true;

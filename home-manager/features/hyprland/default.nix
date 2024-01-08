@@ -11,13 +11,7 @@
 
   nixpkgs.overlays = [ inputs.hyprland-contrib.overlays.default ];
 
-  home.packages = with pkgs; [
-    hyprpicker
-    hyprpaper
-    grimblast
-    hyprprop
-    scratchpad
-  ];
+  home.packages = with pkgs; [ hyprpicker hyprpaper grimblast hyprprop scratchpad ];
 
   programs = {
     fish.loginShellInit = ''
@@ -46,9 +40,7 @@
 
   systemd.user.services = {
     wvkbd = { Install = { WantedBy = [ "hyprland-session.target" ]; }; };
-    swaynotificationcenter = {
-      Install = { WantedBy = [ "hyprland-session.target" ]; };
-    };
+    swaynotificationcenter = { Install = { WantedBy = [ "hyprland-session.target" ]; }; };
     hyprpaper = { Install = { WantedBy = [ "hyprland-session.target" ]; }; };
   };
 

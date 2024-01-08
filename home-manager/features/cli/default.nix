@@ -43,7 +43,7 @@
     sshfs-fuse
 
     joshuto
-    trash-cli 
+    trash-cli
     fastfetch
     bc # Calculator
     #btop # same

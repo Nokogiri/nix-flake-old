@@ -8,8 +8,5 @@ with lib; {
     configFile.source = ./config.nu;
     envFile.source = ./env.nu;
   };
-  xdg.configFile = {
-    "nushell/carapace.nu".text =
-      (concatMapStringsSep "\n" readFile [ ./carapace.nu ]);
-  };
+  xdg.configFile = { "nushell/carapace.nu".text = (concatMapStringsSep "\n" readFile [ ./carapace.nu ]); };
 }

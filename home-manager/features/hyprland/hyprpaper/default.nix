@@ -1,4 +1,4 @@
-{ pkgs, config, ...}:{
+{ pkgs, config, ... }: {
 
   xdg.configFile."hypr/hyprpaper.conf".text = ''
     preload = ~/.local/share/wallpaper/FireWatch_1.png
@@ -28,9 +28,9 @@
     };
     morning-wp = {
       Unit = { Description = "Wallpaper Morning"; };
-      Service = { 
+      Service = {
         Type = "oneshot";
-        ExecStart = "${pkgs.hyprland}/bin/hyprctl hyprpaper wallpaper \"eDP-1,~/.local/share/wallpaper/FireWatch.png\"";
+        ExecStart = ''${pkgs.hyprland}/bin/hyprctl hyprpaper wallpaper "eDP-1,~/.local/share/wallpaper/FireWatch.png"'';
         Restart = "on-failure";
       };
     };

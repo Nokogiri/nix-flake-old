@@ -43,11 +43,11 @@
     };
   };
 
-
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = false;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland ];
+    extraPortals =
+      [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland ];
     config.common.default = "*";
   };
 
@@ -64,16 +64,18 @@
     qt6Packages.qtstyleplugin-kvantum
   ];
 
-  environment.pathsToLink =
-    [ "/share/Kvantum" "/share/kservicetypes5" "/share/kservices5" "/share/wayland-sessions" ];
+  environment.pathsToLink = [
+    "/share/Kvantum"
+    "/share/kservicetypes5"
+    "/share/kservices5"
+    "/share/wayland-sessions"
+  ];
 
   gtk.iconCache.enable = true;
 
   qt.style = "Kvantum-Dark";
 
-  programs = { 
-    dconf.enable = true;
-  };
+  programs = { dconf.enable = true; };
 
   services = {
     dbus = {

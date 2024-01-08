@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:{
+{ config, pkgs, ... }: {
   home.packages = [ pkgs.swaybg pkgs.swww ];
 
   xdg.dataFile."wallpaper" = {
