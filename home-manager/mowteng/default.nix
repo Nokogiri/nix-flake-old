@@ -20,6 +20,8 @@
     obsidian
     handlr-regex
 
+    floorp
+
     transmission-qt
     chromium
     nss

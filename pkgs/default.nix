@@ -4,7 +4,6 @@
   amdctl = pkgs.callPackage ./amdctl { };
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
   fastfetch = pkgs.callPackage ./fastfetch { };
-  floorp = pkgs.callPackage ./floorp { };
   iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
