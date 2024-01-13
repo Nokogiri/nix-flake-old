@@ -3,7 +3,13 @@
   #nixpkgs.overlays = [ inputs.aagl.overlays.default ];
   home.packages = with pkgs; [
     # aagl
+
     #anime-game-launcher
+
+    dwarfs
+    fuse-overlayfs
+    psmisc
+    bubblewrap
 
     # general
     gamescope

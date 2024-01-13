@@ -190,12 +190,12 @@ in {
         # Apps
         ###
         # brightness
-        "XF86MonBrightnessDown" = "exec ${pkgs.swayosd}/bin/swayosd --brightness lower";
-        "XF86MonBrightnessUp" = "exec ${pkgs.swayosd}/bin/swayosd --brightness raise";
+        "XF86MonBrightnessDown" = "exec ${pkgs.swayosd}/bin/swayosd-client --brightness lower";
+        "XF86MonBrightnessUp" = "exec ${pkgs.swayosd}/bin/swayosd-client --brightness raise";
 
-        "XF86AudioRaiseVolume" = "exec ${pkgs.swayosd}/bin/swayosd --output-volume raise";
-        "XF86AudioLowerVolume" = "exec ${pkgs.swayosd}/bin/swayosd --output-volume lower";
-        "XF86AudioMute" = "exec ${pkgs.swayosd}/bin/swayosd --output-volume mute-toggle";
+        "XF86AudioRaiseVolume" = "exec ${pkgs.swayosd}/bin/swayosd-client --output-volume raise";
+        "XF86AudioLowerVolume" = "exec ${pkgs.swayosd}/bin/swayosd-client --output-volume lower";
+        "XF86AudioMute" = "exec ${pkgs.swayosd}/bin/swayosd-client --output-volume mute-toggle";
 
         # grimshot
         "${cfg.modifier}+m" = "exec grimshot save output";
@@ -213,7 +213,7 @@ in {
       modifier = "Mod4";
       output = {
         eDP-1 = {
-          bg = "${config.home.homeDirectory}/.local/share/wallpaper/default.png fill";
+          bg = "${config.home.homeDirectory}/.local/share/wallpaper/FireWatch.png fill";
           scale = "1";
         };
       };
@@ -228,15 +228,9 @@ in {
           command = "configure-gtk";
           always = true;
         }
-        {
-          command = "wl-paste --watch cliphist store";
-        }
-        #{ command = "avizo-service"; }
-        #{ command = "nm-applet --indicator"; }
-        {
-          command = "wpaperd";
-        }
-        #{ command = "swayfader"; }
+        { command = "wl-paste --watch cliphist store"; }
+        { command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"; }
+        { command = "wpaperd"; }
       ];
       terminal = "kitty";
       window = {

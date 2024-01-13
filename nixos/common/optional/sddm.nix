@@ -1,5 +1,4 @@
 { pkgs, ... }: {
-  #environment.systemPackages = [ pkgs.hyprland ];
   services.xserver.enable = true;
   services.xserver.displayManager.sddm = {
     enable = true;
@@ -17,7 +16,8 @@
     };
   };
   environment.systemPackages = [
-    pkgs.hyprland
+    #pkgs.hyprland
+    pkgs.swayfx
     (pkgs.where-is-my-sddm-theme.override {
       themeConfig.General = {
         background =
