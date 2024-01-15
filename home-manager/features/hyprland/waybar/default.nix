@@ -11,7 +11,7 @@
         height = 42;
 
         modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ "custom/weather" "clock" ];
+        modules-center = [ "clock" ];
         modules-right = [ "tray" "battery" "network" "pulseaudio" ];
 
         "hyprland/workspaces" = {
@@ -56,8 +56,9 @@
         "pulseaudio" = {
           scroll-step = 2.5;
           tooltip-format = "{volume}% {icon} {desc}";
+          ignored-sinks = [ "EQ Ambience" ];
           format = "{volume}% {icon}";
-          format-bluetooth = "{volume}%  ";
+          format-bluetooth = "{icon}  {volume}%";
           format-bluetooth-muted = "  ";
           format-muted = " ";
           format-source = "{volume}%  ";

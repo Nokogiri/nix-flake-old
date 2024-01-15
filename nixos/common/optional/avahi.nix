@@ -6,9 +6,7 @@
     ipv4 = true;
     allowInterfaces = [ "wlan0" ];
     hostName = "${config.networking.hostName}";
-    extraServiceFiles = {
-      ssh = "${pkgs.avahi}/etc/avahi/services/ssh.service";
-    };
+    extraServiceFiles = { ssh = "${pkgs.avahi}/etc/avahi/services/ssh.service"; };
     #extraConfig = ''
     #  disallow-other-stacks=yes
     #'';

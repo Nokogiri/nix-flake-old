@@ -1,6 +1,6 @@
 { pkgs, config, inputs, ... }: {
-  imports = [ ./steam.nix ./wine.nix ];
-  #nixpkgs.overlays = [ inputs.aagl.overlays.default ];
+  imports = [ ./steam.nix ./wine.nix ./stable.nix ];
+
   home.packages = with pkgs; [
     # aagl
 

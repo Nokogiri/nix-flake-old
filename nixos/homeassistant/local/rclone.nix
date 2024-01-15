@@ -3,8 +3,7 @@
   systemd.services = {
     rclone-nokogiri = {
       enable = true;
-      description =
-        "rclone: Remote FUSE filesystem for cloud storage config nokogiri";
+      description = "rclone: Remote FUSE filesystem for cloud storage config nokogiri";
       documentation = [ "man:rclone(1)" ];
       after = [ "network-online.target" ];
       wants = [ "network-online.target" ];
@@ -33,8 +32,7 @@
 
     rclone-lyria = {
       enable = true;
-      description =
-        "rclone: Remote FUSE filesystem for cloud storage config lyria";
+      description = "rclone: Remote FUSE filesystem for cloud storage config lyria";
       documentation = [ "man:rclone(1)" ];
       after = [ "network-online.target" ];
       wants = [ "network-online.target" ];
@@ -64,8 +62,7 @@
 
     rclone-guntheria = {
       enable = true;
-      description =
-        "rclone: Remote FUSE filesystem for cloud storage config guntheria";
+      description = "rclone: Remote FUSE filesystem for cloud storage config guntheria";
       documentation = [ "man:rclone(1)" ];
       after = [ "network-online.target" ];
       wants = [ "network-online.target" ];
@@ -88,16 +85,14 @@
                     --gid 989 \
                     guntheria:Media /media/cloud/Media/guntheria
         '';
-        ExecStop =
-          "/run/wrappers/bin/fusermount -u /media/cloud/Media/guntheria";
+        ExecStop = "/run/wrappers/bin/fusermount -u /media/cloud/Media/guntheria";
         Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
       };
     };
 
     rclone-markus = {
       enable = true;
-      description =
-        "rclone: Remote FUSE filesystem for cloud storage config markus";
+      description = "rclone: Remote FUSE filesystem for cloud storage config markus";
       documentation = [ "man:rclone(1)" ];
       after = [ "network-online.target" ];
       wants = [ "network-online.target" ];
@@ -126,8 +121,7 @@
     };
     rclone-kenny = {
       enable = true;
-      description =
-        "rclone: Remote FUSE filesystem for cloud storage config kenny";
+      description = "rclone: Remote FUSE filesystem for cloud storage config kenny";
       documentation = [ "man:rclone(1)" ];
       after = [ "network-online.target" ];
       wants = [ "network-online.target" ];

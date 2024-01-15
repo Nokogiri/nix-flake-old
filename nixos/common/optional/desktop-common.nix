@@ -12,8 +12,7 @@
 
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
-      nerdfonts =
-        nerdfonts.override { fonts = [ "Hack" "NerdFontsSymbolsOnly" ]; };
+      nerdfonts = nerdfonts.override { fonts = [ "Hack" "NerdFontsSymbolsOnly" ]; };
     };
 
   fonts.packages = with pkgs; [
@@ -46,8 +45,7 @@
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = false;
-    extraPortals =
-      [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland ];
     config.common.default = "*";
   };
 
@@ -64,12 +62,7 @@
     qt6Packages.qtstyleplugin-kvantum
   ];
 
-  environment.pathsToLink = [
-    "/share/Kvantum"
-    "/share/kservicetypes5"
-    "/share/kservices5"
-    "/share/wayland-sessions"
-  ];
+  environment.pathsToLink = [ "/share/Kvantum" "/share/kservicetypes5" "/share/kservices5" "/share/wayland-sessions" ];
 
   gtk.iconCache.enable = true;
 

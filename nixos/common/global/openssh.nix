@@ -36,4 +36,5 @@ in {
 
   # Passwordless sudo when SSH'ing with keys
   security.pam.sshAgentAuth.enable = true;
+  security.pam.sshAgentAuth.authorizedKeysFiles = [ "/etc/ssh/authorized_keys.d/%u" ];
 }

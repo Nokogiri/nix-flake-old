@@ -6,11 +6,9 @@
   fastfetch = pkgs.callPackage ./fastfetch { };
   Imaginarium = pkgs.callPackage ./Imaginarium { };
   iio-hyprland = pkgs.callPackage ./iio-hyprland { };
-  mySDDM = pkgs.libsForQt5.callPackage ./mySDDM { };
-  nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
+    nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
   pass-wofi = pkgs.callPackage ./pass-wofi { };
-  #obsidian = pkgs.callPackage ./obsidian { };
   openmw = pkgs.libsForQt5.callPackage ./openmw { };
   patool = pkgs.python310Packages.callPackage ./patool { };
   #portmod = pkgs.callPackage ./portmod { };

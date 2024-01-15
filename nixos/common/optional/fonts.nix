@@ -1,8 +1,7 @@
 { pkgs, ... }: {
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
-      nerdfonts =
-        nerdfonts.override { fonts = [ "Hack" "NerdFontsSymbolsOnly" ]; };
+      nerdfonts = nerdfonts.override { fonts = [ "Hack" "NerdFontsSymbolsOnly" ]; };
     };
 
   fonts.packages = with pkgs; [

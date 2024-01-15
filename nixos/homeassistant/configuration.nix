@@ -38,13 +38,7 @@
 
   boot = { tmp.cleanOnBoot = true; };
 
-  environment.systemPackages = with pkgs; [
-    brightnessctl
-    lm_sensors
-    rclone
-    sshfs-fuse
-    podman-compose
-  ];
+  environment.systemPackages = with pkgs; [ brightnessctl lm_sensors rclone sshfs-fuse podman-compose ];
 
   hardware.opengl = {
     enable = true;

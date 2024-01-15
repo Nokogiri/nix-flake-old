@@ -10,21 +10,15 @@
       options iwlwifi power_save=true power_level=1 uapsd_disable=0
       #options iwlmvm power_scheme=3
     '';
-    extraModulePackages = with config.boot.kernelPackages; [
-      cpupower
-      zenpower
-    ];
+    extraModulePackages = with config.boot.kernelPackages; [ cpupower zenpower ];
     initrd = {
       availableKernelModules = [ "nvme" "xhci_pci" "ahci" ];
       kernelModules = [ "amdgpu" ];
     };
     kernelModules = [ "kvm-amd" "zenpower" ];
-    kernelPackages = pkgs.linuxPackages_latest;
-    kernelParams = [
-      "amd_pstate=passive"
-      "mitigations=off"
-      "cpufreq.default_governor=ondemand"
-    ];
+    #kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_xanmod_latest;
+    kernelParams = [ "amd_pstate=passive" "mitigations=off" "cpufreq.default_governor=ondemand" ];
     loader.efi.efiSysMountPoint = "/boot";
     supportedFilesystems = [ "btrfs" ];
     tmp.cleanOnBoot = true;
@@ -64,14 +58,7 @@
     "/boot" = {
       device = "/dev/disk/by-uuid/8C9D-013B";
       fsType = "vfat";
-      options = [
-        "fmask=0022"
-        "dmask=0022"
-        "codepage=437"
-        "iocharset=ascii"
-        "shortname=mixed"
-        "utf8"
-      ];
+      options = [ "fmask=0022" "dmask=0022" "codepage=437" "iocharset=ascii" "shortname=mixed" "utf8" ];
     };
   };
 

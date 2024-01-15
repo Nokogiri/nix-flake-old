@@ -16,8 +16,8 @@
       bitwarden
       auto-tab-discard
       darkreader
+      faststream
       dracula-dark-colorscheme
-      gesturefy
       sidebery
       sponsorblock
     ];
@@ -722,6 +722,8 @@
       ff2mpv
       sidebery
       sponsorblock
+      faststream
+      dracula-dark-colorscheme
     ];
     profiles.private = {
       name = "private";
