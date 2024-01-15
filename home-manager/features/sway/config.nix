@@ -70,7 +70,7 @@ in {
         };
       };
       floating = {
-        border = 1;
+        border = 0;
         criteria = [
           { app_id = "pavucontrol"; }
           { app_id = "retroarch"; }
@@ -97,7 +97,7 @@ in {
       gaps = {
         inner = 3;
         outer = 6;
-        smartBorders = "on";
+        smartBorders = "off";
         smartGaps = false;
       };
       input = {
@@ -234,7 +234,7 @@ in {
       ];
       terminal = "kitty";
       window = {
-        border = 1;
+        border = 0;
         commands = [
           {
             command = "resize set 1200 900";
@@ -253,11 +253,15 @@ in {
       blur enable
       blur_passes 1
       blur_radius 3
+      titlebar_separator disable
       shadows enable
-      shadow_blur_radius 9
+      shadow_offset 2 4
+      shadow_blur_radius 2
       default_dim_inactive 0.3
+      shadows_on_csd disable
+      
 
-      for_window [app_id="org.qutebrowser.qutebrowser"] inhibit_idle fullscreen
+    #  for_window [app_id="org.qutebrowser.qutebrowser"] inhibit_idle fullscreen
 
     '';
     systemd.enable = true;

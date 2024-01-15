@@ -11,22 +11,19 @@
     inputs.nur.nixosModules.nur
   ];
 
-  nixpkgs.overlays = [ inputs.slight.overlays.default inputs.hyprland-contrib.overlays.default ];
-  services.mpris-proxy.enable = true;
+  #nixpkgs.overlays = [  ];
+  
   nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" "electron-25.9.0" ];
   home.packages = with pkgs; [
     #distrobox
     obsidian
     handlr-regex
 
-    floorp
-
     transmission-qt
     chromium
     nss
     xournalpp
 
-    vscode
     # graphics stuff
     krita
     mypaint

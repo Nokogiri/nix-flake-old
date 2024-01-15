@@ -59,7 +59,9 @@ in {
   #home.file.".config/gtk-4.0/gtk.css".source =
   #  "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk.css";
   home.file.".config/gtk-4.0/gtk-dark.css".source = "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk-dark.css";
-
+  home.file.".config/gtk-3.0/gtk.css".text = ''
+    .window-frame {box-shadow: none;}
+    '';
   # for flatpaks
   home.file.".themes/Dracula" = {
     recursive = true;

@@ -25,8 +25,8 @@
     dhewm3
     eduke32
     gzdoom
-    openjk
-    sm64ex
+    #openjk
+    #sm64ex
 
     # emulation
     cemu
@@ -37,8 +37,8 @@
     libretro.dolphin
     libretro.flycast
     libretro.mgba
-    libretro.mupen64plus
-    libretro.parallel-n64
+    #libretro.mupen64plus
+    #libretro.parallel-n64
     libretro.play
     libretro.ppsspp
     libretro.snes9x

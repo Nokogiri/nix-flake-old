@@ -4,7 +4,9 @@
   amdctl = pkgs.callPackage ./amdctl { };
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
   fastfetch = pkgs.callPackage ./fastfetch { };
+  Imaginarium = pkgs.callPackage ./Imaginarium { };
   iio-hyprland = pkgs.callPackage ./iio-hyprland { };
+  mySDDM = pkgs.libsForQt5.callPackage ./mySDDM { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
   pass-wofi = pkgs.callPackage ./pass-wofi { };
@@ -13,4 +15,5 @@
   patool = pkgs.python310Packages.callPackage ./patool { };
   #portmod = pkgs.callPackage ./portmod { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
+  swayfx-unwrapped = pkgs.callPackage ./swayfx { };
 }

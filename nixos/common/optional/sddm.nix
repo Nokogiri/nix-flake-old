@@ -6,7 +6,6 @@
     settings = {
       General = { InputMethod = "qtvirtualkeyboard"; };
       Wayland = {
-        #CompositorCommand = "${pkgs.cage}/bin/cage -s ";
         SessionDir = "/run/current-system/sw/share/wayland-sessions";
       };
       Theme = {
@@ -17,14 +16,16 @@
   };
   environment.systemPackages = [
     #pkgs.hyprland
-    pkgs.swayfx
-    (pkgs.where-is-my-sddm-theme.override {
+    #pkgs.mySDDM
+        (pkgs.where-is-my-sddm-theme.override {
       themeConfig.General = {
         background =
-          "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-        backgroundMode = "none";
+          #"${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+          "${pkgs.Imaginarium}/share/Imaginarium/wallpaper/FireWatch.png";
+        backgroundMode = "aspect";
       };
     })
+    pkgs.swayfx
   ];
   environment.pathsToLink = [ "/share/sddm/themes" ];
 }

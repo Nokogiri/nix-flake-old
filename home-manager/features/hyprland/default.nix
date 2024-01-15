@@ -9,7 +9,7 @@
     ./waybar
   ];
 
-  nixpkgs.overlays = [ inputs.hyprland-contrib.overlays.default ];
+  nixpkgs.overlays = [ inputs.hyprland-contrib.overlays.default  ];
 
   home.packages = with pkgs; [ hyprpicker hyprpaper grimblast hyprprop scratchpad ];
 

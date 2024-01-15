@@ -3,7 +3,7 @@
     ./anyrun.nix
     ./fuzzel.nix
     ./gammastep.nix
-    #./obs-studio.nix
+    ./obs-studio.nix
     ./swaylock.nix
     ./swaync.nix
     ./swayosd.nix
