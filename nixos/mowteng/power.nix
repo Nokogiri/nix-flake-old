@@ -15,14 +15,14 @@
       CPU_BOOST_ON_AC = "0";
       CPU_BOOST_ON_BAT = "0";
       CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance";
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
       NMI_WATCHDOG = "0";
       AHCI_RUNTIME_PM_ON_AC = "on";
       AHCI_RUNTIME_PM_ON_BAT = "auto";
       RADEON_DPM_PERF_LEVEL_ON_AC = "auto";
       RADEON_DPM_PERF_LEVEL_ON_BAT = "auto";
       RADEON_DPM_STATE_ON_AC = "performance";
-      RADEON_DPM_STATE_ON_BAT = "battery";
+      RADEON_DPM_STATE_ON_BAT = "auto";
       WIFI_PWR_ON_AC = "on";
       WIFI_PWR_ON_BAT = "on";
       WOL_DISABLE = "Y";

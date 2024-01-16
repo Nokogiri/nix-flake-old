@@ -8,6 +8,7 @@
     ./fish.nix
     ./locale.nix
     ./openssh.nix
+    ./please.nix
     ./sops.nix
     ./sudo.nix
   ];

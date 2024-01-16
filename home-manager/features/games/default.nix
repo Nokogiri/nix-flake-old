@@ -40,7 +40,7 @@
     #libretro.mupen64plus
     #libretro.parallel-n64
     libretro.play
-    libretro.ppsspp
+    #libretro.ppsspp
     libretro.snes9x
     pcsx2
     ppsspp

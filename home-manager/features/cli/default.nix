@@ -10,6 +10,7 @@
     ./gpg-agent.nix
     ./micro
     ./nnn.nix
+    ./nushell
     ./ranger.nix
     ./ssh.nix
     ./starship.nix
