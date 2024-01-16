@@ -7,7 +7,7 @@
     ./nginx
     #./nix-serve.nix
     ./samba.nix
-    ./snapserver.nix
+    #./snapserver.nix
     #./paperless.nix
     ./podman
     ./postgresql.nix
