@@ -6,7 +6,7 @@
   fastfetch = pkgs.callPackage ./fastfetch { };
   Imaginarium = pkgs.callPackage ./Imaginarium { };
   iio-hyprland = pkgs.callPackage ./iio-hyprland { };
-    nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
+  nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
   pass-wofi = pkgs.callPackage ./pass-wofi { };
   openmw = pkgs.libsForQt5.callPackage ./openmw { };

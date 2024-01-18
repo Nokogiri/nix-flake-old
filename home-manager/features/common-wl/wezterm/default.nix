@@ -12,7 +12,7 @@
          },
        warn_about_missing_glyphs=false,
        enable_kitty_graphics=true,
-       enable_wayland = true,
+       enable_wayland = false,
        default_cursor_style = "BlinkingUnderline",
        window_background_opacity = 0.95,
        hide_tab_bar_if_only_one_tab = true,

@@ -53,7 +53,7 @@
         tab_bar_margin_height = "0.0 0.0";
         tab_bar_margin_width = "0.0";
         tab_bar_align = "left";
-        tab_bar_style = "custom";
+        #tab_bar_style = "custom";
         tab_bar_min_tabs = 1;
         tab_switch_strategy = "previous";
         tab_fade = "0.25 0.5 0.75 1";
@@ -62,16 +62,16 @@
         tab_powerline_style = "angled";
         active_tab_font_style = "bold";
         inactive_tab_font_style = "normal";
-        tab_title_template = ''
-          "{f'{title[:30]}…' if title.rindex(title[-1]) + 1 > 30 else (title.center(6) if (title.rindex(title[-1]) + 1) % 2 == 0 else title.center(5))}"'';
+        #tab_title_template = ''
+        #  "{f'{title[:30]}…' if title.rindex(title[-1]) + 1 > 30 else (title.center(6) if (title.rindex(title[-1]) + 1) % 2 == 0 else title.center(5))}"'';
 
         # Misc settings
         disable_ligatures = "cursor";
         #symbol_map = "U+F000-U+F0FF Weather Icons";
         adjust_line_height = 0;
         adjust_column_width = 0;
-        repaint_delay = 8;
-        input_delay = 3;
+        #repaint_delay = 8;
+        #input_delay = 3;
         sync_to_monitor = true;
         shell = ".";
         editor = ".";

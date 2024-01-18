@@ -10,8 +10,8 @@ stdenvNoCC.mkDerivation rec {
   src = ./src;
 
   installPhase = ''
-    mkdir -p $out/share/
-    cp -r Imaginarium $out/share
+    mkdir -p $out/
+    cp -r Imaginarium/* $out/
   '';
   
   meta = with lib; {
