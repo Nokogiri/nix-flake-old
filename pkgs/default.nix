@@ -11,6 +11,7 @@
   pass-wofi = pkgs.callPackage ./pass-wofi { };
   openmw = pkgs.libsForQt5.callPackage ./openmw { };
   patool = pkgs.python310Packages.callPackage ./patool { };
+  pcsx2 = pkgs.qt6Packages.callPackage ./pcsx2 { };
   #portmod = pkgs.callPackage ./portmod { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
   swayfx-unwrapped = pkgs.callPackage ./swayfx { };
