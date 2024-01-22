@@ -26,7 +26,7 @@
     eduke32
     gzdoom
     #openjk
-    #sm64ex
+    sm64ex
 
     # emulation
     cemu

@@ -2,13 +2,12 @@
 
   
   xdg.configFile."hypr/hyprpaper.conf".text = ''
-    #preload = ~/.local/share/wallpaper/FireWatch_1.png
     preload = ${pkgs.Imaginarium}/wallpaper/FireWatch.png
     preload = ${pkgs.Imaginarium}/wallpaper/FireWatch_1.png
     preload = ${pkgs.Imaginarium}/wallpaper/FireWatch_2.png
-    #preload = ~/.local/share/wallpaper/FireWatch_2.png
-    #preload = ~/.local/share/wallpaper/FireWatch.png
 
+    splash = false
+    
     wallpaper = eDP-1,${pkgs.Imaginarium}/wallpaper/FireWatch.png
   '';
 
