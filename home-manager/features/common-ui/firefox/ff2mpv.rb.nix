@@ -3,11 +3,11 @@
   home.packages = [
     pkgs.ruby
     (pkgs.writeTextFile {
-      name = "ff2mpv.py";
-      destination = "/bin/ff2mpv.rb";
+      name = "ff2mpv";
+      destination = "/bin/ff2mpv";
       executable = true;
       text = ''
-        #!/usr/bin/env ruby
+        #!${pkgs.ruby}/bin/ruby
         # frozen_string_literal: true
 
         require "json"
@@ -17,15 +17,6 @@
         url = data["url"]
 
         args = %w[--no-terminal]
-
-        # HACK(ww): On macOS, graphical applications inherit their path from `launchd`
-        # rather than the default path list in `/etc/paths`. `launchd` doesn't include
-        # `/usr/local/bin` in its default list, which means that any installations
-        # of MPV and/or youtube-dl under that prefix aren't visible when spawning
-        # from, say, Firefox. The real fix is to modify `launchd.conf`, but that's
-        # invasive and maybe not what users want in the general case.
-        # Hence this nasty hack.
-        ENV["PATH"] = "/usr/local/bin:#{ENV['PATH']}" if RUBY_PLATFORM =~ /darwin/
 
         pid = spawn "mpv", *args, "--", url, in: :close, out: "/dev/null", err: "/dev/null"
 

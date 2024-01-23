@@ -1,5 +1,5 @@
 { config, pkgs, lib, inputs, ... }: {
-  imports = [ ./ff2mpv.json.nix ./ff2mpv.py.nix ];
+  imports = [ ./ff2mpv.json.nix ./ff2mpv.rb.nix ];
   home.packages = [ pkgs.ff2mpv ];
   home.file.".mozilla/dracula" = {
     recursive = true;
@@ -12,11 +12,12 @@
       ublock-origin
       onetab
       ff2mpv
-      enhancer-for-youtube
+      #enhancer-for-youtube
+      improved-tube
       bitwarden
-      auto-tab-discard
+      #auto-tab-discard
       darkreader
-      faststream
+      #faststream
       dracula-dark-colorscheme
       sidebery
       sponsorblock
