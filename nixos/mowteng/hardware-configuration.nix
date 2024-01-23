@@ -6,7 +6,7 @@
       options hid_xpadneo ff_connect_notify=0 quirks=e4:17:d8:45:f4:77:7,16
       blacklist pcspkr
       options usb-storage quirks=090c:1000:,152d:0578:u,0bc2:2322:u
-      options iwlwifi bt_coex_active=true
+      #options iwlwifi bt_coex_active=true
       options iwlwifi power_save=true power_level=1 uapsd_disable=0
       #options iwlmvm power_scheme=3
     '';

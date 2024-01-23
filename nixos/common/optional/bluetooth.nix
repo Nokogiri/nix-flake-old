@@ -8,6 +8,11 @@
         FastConnectable = true;
         Experimental = true;
       };
+      LE = {
+        MinConnectionInterval=7;
+        MaxConnectionInterval=9;
+        ConnectionLatency=0;
+      };
       Policy = { AutoEnable = true; };
     };
   };
