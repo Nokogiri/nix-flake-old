@@ -1,5 +1,6 @@
 { pkgs, config, inputs, ... }: {
-  imports = [ ./steam.nix ./wine.nix ./stable.nix ];
+  imports = [ ./steam.nix #./wine.nix
+             ./stable.nix ];
 
   home.packages = with pkgs; [
     # aagl
@@ -15,12 +16,12 @@
     gamescope
     mangohud
     vkbasalt
-    prismlauncher
+    #prismlauncher
     heroic
     protonup-qt
 
     # native packaged games
-    airshipper # veloren
+    #airshipper # veloren
     arx-libertatis
     dhewm3
     eduke32
