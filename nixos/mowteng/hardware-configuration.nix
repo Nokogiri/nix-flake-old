@@ -7,7 +7,8 @@
       blacklist pcspkr
       options usb-storage quirks=090c:1000:,152d:0578:u,0bc2:2322:u
       #options iwlwifi bt_coex_active=true
-      options iwlwifi power_save=true power_level=1 uapsd_disable=0
+      #options iwlwifi power_save=true power_level=1 uapsd_disable=0
+      options iwlwifi 11n_disable=8 power_save=0
       #options iwlmvm power_scheme=3
     '';
     extraModulePackages = with config.boot.kernelPackages; [ cpupower zenpower ];
