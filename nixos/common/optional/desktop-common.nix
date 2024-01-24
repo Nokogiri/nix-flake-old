@@ -7,17 +7,18 @@
         auth            sufficient      pam_fprintd.so
       '';
     };
-    greetd = { enableGnomeKeyring = true; };
+    #greetd = { enableGnomeKeyring = true; };
   };
 
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
-      nerdfonts = nerdfonts.override { fonts = [ "Hack" "NerdFontsSymbolsOnly" ]; };
+      nerdfonts = nerdfonts.override { fonts = [ "Hack" "JetBrainsMono" "NerdFontsSymbolsOnly" ]; };
     };
 
   fonts.packages = with pkgs; [
     dejavu_fonts
     hack-font
+    jetbrains-mono
     nerdfonts
     noto-fonts
     noto-fonts-emoji
@@ -34,9 +35,9 @@
       enable = true;
       antialias = true;
       defaultFonts = {
-        serif = [ "Hack Nerd Font Propo" ];
-        sansSerif = [ "Hack Nerd Font Propo" ];
-        monospace = [ "Hack Nerd Font Mono" ];
+        serif = [ " JetBrainsMono Nerd Font Propo" ];
+        sansSerif = [ " JetBrainsMono Nerd Font Propo" ];
+        monospace = [ "JetBrainsMono Nerd Font" ];
         emoji = [ "Noto Color Emoji" ];
       };
     };

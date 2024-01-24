@@ -3,7 +3,7 @@
 * {
     border: none;
     /*background: none;*/
-    font-family: 'Hack', 'Symbols Nerd Font';
+    font-family: 'JetBrainsMono Nerd Font Propo', 'Hack', 'Symbols Nerd Font';
     font-size:18px;
     font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
@@ -96,7 +96,7 @@ window#waybar.hidden {
 }
 /* 1st block */
 #custom-weather {
-    font-family: "Hack Nerd Font Propo";
+    font-family: " JetBrainsMono Nerd Font";
     font-size: 18px;
     background-color: transparent;
     color: @foreground;

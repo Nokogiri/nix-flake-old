@@ -9,7 +9,7 @@
       format = "$all";
       add_newline = false;
       character = {
-        success_symbol = "[[♥](green) ❯](maroon)";
+        success_symbol = "[[󰄴 ](green) ❯](maroon)";
         error_symbol = "[❯](red)";
         vicmd_symbol = "[❮](green)";
       };

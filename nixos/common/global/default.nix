@@ -4,6 +4,7 @@
     inputs.home-manager.nixosModules.home-manager
     inputs.nix-index-database.nixosModules.nix-index
 
+    ./applications.nix
     ./console.nix
     ./fish.nix
     ./locale.nix

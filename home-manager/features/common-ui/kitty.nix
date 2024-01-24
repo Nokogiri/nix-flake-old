@@ -5,7 +5,7 @@
       enable = true;
       font = {
         #name = "JetBrainsMono Nerd Font Mono";
-        name = "Hack Nerd Font Mono";
+        name = "JetBrains Mono";
         size = 11.5;
       };
       theme = "Dracula";

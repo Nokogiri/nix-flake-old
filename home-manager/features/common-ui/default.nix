@@ -7,9 +7,8 @@
     ./playerctl.nix
     ./rbw.nix
     ./styles.nix
-    ./thunderbird.nix
+    #./thunderbird.nix
     ./udisks.nix
-    ./wallpaper
     ./zathura.nix
   ];
 
