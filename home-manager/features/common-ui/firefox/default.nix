@@ -1,10 +1,11 @@
 { config, pkgs, lib, inputs, ... }: {
-  imports = [ ./ff2mpv.json.nix ./ff2mpv.rb.nix ];
-  home.packages = [ pkgs.ff2mpv ];
+
   home.file.".mozilla/dracula" = {
     recursive = true;
     source = ./userChrome;
   };
+
+  programs.firefox.nativeMessagingHosts = [ pkgs.ff2mpv-rust ];
   programs.firefox = {
     enable = true;
     profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons; [

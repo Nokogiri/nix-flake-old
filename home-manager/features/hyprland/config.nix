@@ -21,7 +21,17 @@
       xwayland {
       	force_zero_scaling = true
       }
-         decoration {
+
+      gestures {
+        workspace_swipe = true
+        workspace_swipe_fingers = 3
+        workspace_swipe_distance = 130
+        workspace_swipe_cancel_ratio = 0.5
+        workspace_swipe_min_speed_to_force = 20
+        workspace_swipe_create_new = false 
+      }
+      
+      decoration {
            active_opacity=1.0
            inactive_opacity=0.8
            fullscreen_opacity=1.0
