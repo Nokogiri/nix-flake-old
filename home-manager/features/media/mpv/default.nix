@@ -36,7 +36,7 @@
       osc = false;
       osd-bar = false;
       osd-font = "sans";
-      osd-font-size =20;
+      osd-font-size = 28;
       osd-level = 1;
       border = false;
       force-window = "immediate";

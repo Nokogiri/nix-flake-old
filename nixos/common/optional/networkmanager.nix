@@ -4,6 +4,7 @@
     wifi.powersave = true;
     enable = true;
     logLevel = "ERR";
+    plugins = [ ];
   };
   environment.systemPackages = [ pkgs.networkmanagerapplet ];
 }

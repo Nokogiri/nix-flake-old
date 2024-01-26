@@ -1,9 +1,11 @@
-{
+{ pkgs, inputs, ... }:{
   xdg.configFile."wezterm/colors/dracula.toml".source = ./dracula.toml;
   programs.wezterm = {
+    #package = inputs.wezterm.packages.x86_64-linux.default;
     enable = true;
     extraConfig = ''
       return {
+       check_for_updates = false,
        front_end = "WebGpu",
        color_scheme = "Dracula",
        font_size = 11.5 ,
@@ -12,7 +14,7 @@
          },
        warn_about_missing_glyphs=false,
        enable_kitty_graphics=true,
-       enable_wayland = false,
+       enable_wayland = true,
        default_cursor_style = "BlinkingUnderline",
        window_background_opacity = 0.95,
        hide_tab_bar_if_only_one_tab = true,

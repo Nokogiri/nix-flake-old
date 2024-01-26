@@ -49,6 +49,10 @@
     };
     hyprland-contrib.url = "github:hyprwm/contrib";
 
+    #wezterm = {
+    #  url = "github:Nokogiri/wezterm?dir=nix";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     #aagl = {
     #  url = "github:ezKEa/aagl-gtk-on-nix";
     #  inputs.nixpkgs.follows = "nixpkgs";

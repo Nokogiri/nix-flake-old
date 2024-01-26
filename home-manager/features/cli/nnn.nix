@@ -4,10 +4,10 @@
     package = pkgs.nnn.override { withNerdIcons = true; };
     plugins = {
       src = (pkgs.fetchFromGitHub {
-        owner = "Nokogiri";
+        owner = "jarun";
         repo = "nnn";
-        rev = "c992716cbb2f8d1df3ebdc6444a66fe20d3e625f"; # 01.09.2023
-        sha256 = "sha256-8YXWSniPu7RJTcf5nzXpgQTWXldWFujgHYmQTdvfb3M=";
+        rev = "5602d46660c45f24254790b21eca8aff52f56e83"; # 15.12.2023
+        sha256 = "sha256-AEsohKPyzAupN+ga75LTSpMWdA1cppvXJ7BtZ8Z3cAc=";
       }) + "/plugins";
       mappings = { p = "preview-tui"; };
     };

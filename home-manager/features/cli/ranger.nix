@@ -1,9 +1,9 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     ranger
-    calibre
+    #calibre
     ffmpegthumbnailer
-    fontforge
+    #fontforge
     #haskellPackages.pandoc-cli.out
     odt2txt
     patool

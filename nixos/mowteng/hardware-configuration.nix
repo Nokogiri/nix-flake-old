@@ -18,8 +18,7 @@
     };
     kernelModules = [ "kvm-amd" "zenpower" ];
     kernelPackages = pkgs.linuxPackages_latest;
-    #kernelPackages = pkgs.linuxPackages_xanmod_latest;
-    kernelParams = [ "amd_pstate=passive" "mitigations=off" "cpufreq.default_governor=ondemand" "nosmt" ];
+    kernelParams = [ "amd_pstate=active" "mitigations=off" "cpufreq.default_governor=powersave" ];
     loader.efi.efiSysMountPoint = "/boot";
     supportedFilesystems = [ "btrfs" ];
     tmp.cleanOnBoot = true;

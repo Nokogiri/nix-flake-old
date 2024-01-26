@@ -15,5 +15,5 @@
   #portmod = pkgs.callPackage ./portmod { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
   swayfx-unwrapped = pkgs.callPackage ./swayfx { };
-  #wezterm = pkgs.callPackage ./wezterm { };
+  wezterm = pkgs.callPackage ./wezterm { };
 }

@@ -30,7 +30,7 @@
         workspace_swipe_min_speed_to_force = 20
         workspace_swipe_create_new = false 
       }
-      
+
       decoration {
            active_opacity=1.0
            inactive_opacity=0.8

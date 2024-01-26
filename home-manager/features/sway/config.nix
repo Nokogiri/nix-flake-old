@@ -249,19 +249,19 @@ in {
       workspaceAutoBackAndForth = true;
     };
     extraConfig = ''
-      corner_radius 8
-      blur enable
-      blur_passes 1
-      blur_radius 3
-      titlebar_separator disable
-      shadows enable
-      shadow_offset 2 4
-      shadow_blur_radius 2
-      default_dim_inactive 0.3
-      shadows_on_csd disable
-      
+        corner_radius 8
+        blur enable
+        blur_passes 1
+        blur_radius 3
+        titlebar_separator disable
+        shadows enable
+        shadow_offset 2 4
+        shadow_blur_radius 2
+        default_dim_inactive 0.3
+        shadows_on_csd disable
+        
 
-    #  for_window [app_id="org.qutebrowser.qutebrowser"] inhibit_idle fullscreen
+      #  for_window [app_id="org.qutebrowser.qutebrowser"] inhibit_idle fullscreen
 
     '';
     systemd.enable = true;
