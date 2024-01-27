@@ -32,7 +32,8 @@
     sm64ex
 
     # emulation
-    cemu
+    inputs.nixpkgs-stable.legacyPackages.x86_64-linux.cemu
+    #cemu
     dolphinEmuMaster
     retroarch
     libretro.beetle-pce-fast
