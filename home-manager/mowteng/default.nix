@@ -6,8 +6,8 @@
     ../features/games
     ../features/helix
     ../features/media
-    #../features/sway
-    ../features/hyprland
+    ../features/sway
+    #../features/hyprland
     inputs.nur.nixosModules.nur
   ];
 
@@ -26,6 +26,7 @@
     nss
     xournalpp
 
+    inputs.nixpkgs-wayland.packages.${system}.wayprompt
     # graphics stuff
     krita
     mypaint

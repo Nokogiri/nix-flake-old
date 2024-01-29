@@ -46,7 +46,7 @@
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = false;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr ];
     config.common.default = "*";
   };
 
@@ -69,7 +69,16 @@
 
   qt.style = "Kvantum-Dark";
 
-  programs = { dconf.enable = true; };
+  programs = { 
+    dconf.enable = true;
+    gamemode = {
+      enable = true;
+      enableRenice = true;
+    };
+  };
+
+  # better for steam proton games
+  systemd.extraConfig = "DefaultLimitNOFILE=1048576";
 
   services = {
     dbus = {

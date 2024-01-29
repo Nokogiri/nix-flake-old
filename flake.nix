@@ -6,12 +6,7 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs-old.url = "github:nixos/nixpkgs/nixos-23.05";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
-    
-    
-    #masterpkgs.url = "github:nixos/nixpkgs/master";
-    #unstable-small.url = "github:nixos/nixpkgs/nixos-unstable-small";
-    #nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
-
+  
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -43,21 +38,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixpkgs-wayland = {
+      url = "github:nix-community/nixpkgs-wayland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland-contrib.url = "github:hyprwm/contrib";
-
-    #wezterm = {
-    #  url = "github:Nokogiri/wezterm?dir=nix";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    #aagl = {
-    #  url = "github:ezKEa/aagl-gtk-on-nix";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    };
+  };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let

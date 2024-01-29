@@ -113,6 +113,7 @@ in {
         "1386:18888:Wacom_HID_49C8_Finger" = { map_to_output = "eDP-1"; };
         "1386:18888:Wacom_HID_49C8_Pen" = { map_to_output = "eDP-1"; };
       };
+      
       keybindings = {
         # Basics apps
         "${cfg.modifier}+Return" = "exec ${cfg.terminal}";
@@ -213,7 +214,8 @@ in {
       modifier = "Mod4";
       output = {
         eDP-1 = {
-          bg = "${config.home.homeDirectory}/.local/share/wallpaper/FireWatch.png fill";
+          #bg = "${config.home.homeDirectory}/.local/share/wallpaper/FireWatch.png fill";
+          bg = "${pkgs.Imaginarium}/wallpaper/FireWatch.png fill";
           scale = "1";
         };
       };
@@ -249,6 +251,9 @@ in {
       workspaceAutoBackAndForth = true;
     };
     extraConfig = ''
+        bindgesture swipe:3:right workspace prev
+        bindgesture swipe:3:left workspace next
+        
         corner_radius 8
         blur enable
         blur_passes 1

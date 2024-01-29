@@ -13,6 +13,7 @@
     overlays = [
       outputs.overlays.modifications
       outputs.overlays.additions
+      #inputs.nixpkgs-wayland.overlay
       #outputs.overlays.master-pkgs
     ];
     config = {

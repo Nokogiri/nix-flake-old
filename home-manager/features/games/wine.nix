@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    wineWowPackages.stableFull
-    winetricks
+    #wineWowPackages.stableFull
+    #winetricks
     bottles
     attr
     gst_all_1.gst-vaapi

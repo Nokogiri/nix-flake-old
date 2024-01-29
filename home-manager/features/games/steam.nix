@@ -12,6 +12,7 @@
             gst_all_1.gst-libav
             libgdiplus
             gamescope
+            gamemode
             fribidi
             mangohud
             mono

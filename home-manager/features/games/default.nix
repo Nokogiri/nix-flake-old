@@ -1,8 +1,10 @@
 { pkgs, config, inputs, ... }: {
   imports = [
-    ./steam.nix # ./wine.nix
+    ./steam.nix ./wine.nix
     ./stable.nix
   ];
+
+  home.sessionVariables.WINEDEBUG = "-all";
 
   home.packages = with pkgs; [
     # aagl
