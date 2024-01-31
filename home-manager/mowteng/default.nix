@@ -26,7 +26,6 @@
     nss
     xournalpp
 
-    inputs.nixpkgs-wayland.packages.${system}.wayprompt
     # graphics stuff
     krita
     mypaint

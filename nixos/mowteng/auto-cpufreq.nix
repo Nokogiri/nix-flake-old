@@ -1,0 +1,19 @@
+{
+  services.auto-cpufreq = {
+    enable = true;
+    settings ={
+      charger = {
+        governor = "powersave";
+        energy_performance_preference = "balance_performance";
+        scaling_min_freq = "400000";
+        scaling_max_freq = "3000000";
+      };
+      battery = {
+        governor = "powersave";
+        energy_performance_preference = "power";
+        scaling_min_freq = "400000";
+        scaling_max_freq = "2200000";
+      };
+    };
+  };
+}

@@ -2,7 +2,7 @@
   services = {
     gpg-agent = {
       enable = true;
-      pinentryFlavor = lib.mkDefault "curses";
+      #pinentryFlavor = lib.mkDefault "curses";
       enableSshSupport = false;
       enableZshIntegration = false;
       defaultCacheTtl = 60480000;

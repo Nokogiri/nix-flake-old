@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ inputs, pkgs, ... }: {
   home.packages = with pkgs; [
     rofi-rbw
     pinentry
@@ -9,7 +9,7 @@
     settings = {
       email = "m.pappe@gefjon.org";
       base_url = "https://vault.fishoeder.net";
-      pinentry = "gnome3";
+      pinentry = "qt";
     };
   };
 }

@@ -11,9 +11,27 @@
         height = 42;
 
         modules-left = [ "sway/workspaces" ];
-        modules-center = [ "clock" ];
+        modules-center = [ "clock" "wlr/taskbar" ];
         modules-right = [ "tray" "battery" "network" "pulseaudio" ];
 
+        "wlr/taskbar" = {
+          format = "{icon}";
+          icon-size = 16;
+          #icon-theme = "Dracula";
+          tooltip-format = "{title}";
+          on-click = "activate";
+          on-click-middle = "close";
+          ignore-list = [
+             "Alacritty"
+          ];
+          app_ids-mapping = {
+            "firefoxdeveloperedition" = "firefox-developer-edition";
+          };
+          #rewrite = {
+          #  "Firefox Web Browser" = "Firefox";
+          #  "Foot Server" = "Terminal";
+          #};
+        };
         "sway/workspaces" = {
           format = "{icon}";
           on-click = "activate";

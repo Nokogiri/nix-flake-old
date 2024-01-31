@@ -21,9 +21,10 @@
 
     ../common/users/nokogiri.nix
 
+    ./auto-cpufreq.nix
     ./firewall.nix
     ./nfs.nix
-    ./power.nix
+    #./power.nix
   ];
 
   nixpkgs = {

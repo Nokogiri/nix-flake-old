@@ -38,15 +38,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs-wayland = {
-      url = "github:nix-community/nixpkgs-wayland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #nixpkgs-wayland = {
+    #  url = "github:nix-community/nixpkgs-wayland";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #hyprland = {
+    #  url = "github:hyprwm/Hyprland";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     hyprland-contrib.url = "github:hyprwm/contrib";
   };
 

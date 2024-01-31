@@ -1,4 +1,4 @@
-{
+{inputs, lib, config, pkgs, ...}:{
   services = {
     gnome-keyring = {
       enable = true;
@@ -6,7 +6,7 @@
     };
     gpg-agent = {
       enable = true;
-      pinentryFlavor = "gnome3";
+      pinentryFlavor = "qt";
     };
   };
 }

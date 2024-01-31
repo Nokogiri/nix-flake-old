@@ -234,7 +234,7 @@ in {
         { command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"; }
         { command = "wpaperd"; }
       ];
-      terminal = "kitty";
+      terminal = "${pkgs.wezterm}/bin/wezterm";
       window = {
         border = 0;
         commands = [

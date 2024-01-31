@@ -63,7 +63,7 @@
     qt6Packages.qtstyleplugin-kvantum
   ];
 
-  environment.pathsToLink = [ "/share/Kvantum" "/share/kservicetypes5" "/share/kservices5" "/share/wayland-sessions" ];
+  environment.pathsToLink = [ "/share/Kvantum" "/share/kservicetypes5" "/share/kservices5" ];
 
   gtk.iconCache.enable = true;
 
