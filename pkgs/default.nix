@@ -5,7 +5,6 @@
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
   fastfetch = pkgs.callPackage ./fastfetch { };
   Imaginarium = pkgs.callPackage ./Imaginarium { };
-  iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
   pass-wofi = pkgs.callPackage ./pass-wofi { };
@@ -15,5 +14,4 @@
   #portmod = pkgs.callPackage ./portmod { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
   swayfx-unwrapped = pkgs.callPackage ./swayfx { };
-  #wezterm = pkgs.callPackage ./wezterm { };
 }
