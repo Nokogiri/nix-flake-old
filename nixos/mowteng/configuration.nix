@@ -106,9 +106,13 @@
   services.acpid.enable = true;
   services.acpid.logEvents = true;
   services.fwupd.enable = true;
-  services.logind.extraConfig = ''
-    RuntimeDirectorySize=8G
-  '';
+  services.logind = {
+    extraConfig = ''
+      RuntimeDirectorySize=8G
+    '';
+    powerKey = "ignore";
+    powerKeyLongPress = "poweroff";
+  };
   services.udev.extraRules = ''
     ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
   '';

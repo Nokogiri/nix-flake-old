@@ -5,16 +5,16 @@
     extraConfig = ''
       return {
        check_for_updates = false,
-       front_end = "WebGpu",
+       -- front_end = "WebGpu",
        color_scheme = "Dracula",
-       font_size = 11.5 ,
+       font_size = 12 ,
        font = wezterm.font_with_fallback {
            'JetBrainsMono Nerd Font Propo',
          },
        warn_about_missing_glyphs=false,
        enable_kitty_graphics=true,
        enable_wayland = true,
-       default_cursor_style = "BlinkingUnderline",
+       -- default_cursor_style = "BlinkingUnderline",
        window_background_opacity = 0.9,
        hide_tab_bar_if_only_one_tab = true,
        tab_bar_at_bottom = true,

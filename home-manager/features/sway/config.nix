@@ -92,7 +92,7 @@ in {
       fonts = {
         names = [ "Hack Nerd Font Propo" ];
         style = "Regular";
-        size = 11.5;
+        size = 12.0;
       };
       gaps = {
         inner = 3;
@@ -232,7 +232,6 @@ in {
         }
         { command = "wl-paste --watch cliphist store"; }
         { command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"; }
-        { command = "wpaperd"; }
       ];
       terminal = "${pkgs.wezterm}/bin/wezterm";
       window = {

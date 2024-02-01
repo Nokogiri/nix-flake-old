@@ -11,7 +11,7 @@
         height = 42;
 
         modules-left = [ "sway/workspaces" ];
-        modules-center = [ "clock" "wlr/taskbar" ];
+        modules-center = [ "clock" ];
         modules-right = [ "tray" "battery" "network" "pulseaudio" ];
 
         "wlr/taskbar" = {
