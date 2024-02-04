@@ -198,6 +198,8 @@ in {
         "XF86AudioLowerVolume" = "exec ${pkgs.swayosd}/bin/swayosd-client --output-volume lower";
         "XF86AudioMute" = "exec ${pkgs.swayosd}/bin/swayosd-client --output-volume mute-toggle";
 
+        # powermenu 
+        "XF86PowerOff" = "exec pkill -9 wlogout || ${pkgs.wlogout}/bin/wlogout -p layer-shell";
         # grimshot
         "${cfg.modifier}+m" = "exec grimshot save output";
         "${cfg.modifier}+Shift+m" = "exec grimshot save active";
@@ -233,7 +235,7 @@ in {
         { command = "wl-paste --watch cliphist store"; }
         { command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"; }
       ];
-      terminal = "${pkgs.wezterm}/bin/wezterm";
+      terminal = "${pkgs.kitty}/bin/kitty";
       window = {
         border = 0;
         commands = [

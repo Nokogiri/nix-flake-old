@@ -49,19 +49,24 @@
         command_on_bell = "none";
 
         # Tab settings
+        inactive_tab_background = "#282a36";
         tab_bar_edge = "bottom";
-        tab_bar_margin_height = "0.0 0.0";
-        tab_bar_margin_width = "0.0";
+        tab_bar_margin_height = "7.0 0.0";
+        tab_bar_margin_width = "2.0";
         tab_bar_align = "left";
-        #tab_bar_style = "custom";
+        tab_bar_style = "separator";
+        tab_separator = " ";
         tab_bar_min_tabs = 1;
         tab_switch_strategy = "previous";
         tab_fade = "0.25 0.5 0.75 1";
         #tab_separator = "";
         tab_activity_symbol = "none";
-        tab_powerline_style = "angled";
+        
+        #tab_powerline_style = "angled";
         active_tab_font_style = "bold";
         inactive_tab_font_style = "normal";
+        tab_title_template = ''{fmt.fg._5c6370}{fmt.bg.default}{fmt.fg._abb2bf}{fmt.bg._5c6370} {title[:15] + (title[15:] and '…')} ⌘ {index} {fmt.fg._5c6370}{fmt.bg.default}'';
+        active_tab_title_template = ''{fmt.fg._f0f0f0}{fmt.bg.default}{fmt.fg._282c34}{fmt.bg._f0f0f0} {fmt.noitalic}{title[:40] + (title[40:] and '…')} ⌘ {index} {fmt.fg._f0f0f0}{fmt.bg.default}'';
         #tab_title_template = ''
         #  "{f'{title[:30]}…' if title.rindex(title[-1]) + 1 > 30 else (title.center(6) if (title.rindex(title[-1]) + 1) % 2 == 0 else title.center(5))}"'';
 

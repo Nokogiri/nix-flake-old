@@ -9,6 +9,7 @@
     ./swayosd.nix
     #./waybar
     ./wezterm
+    ./wlogout.nix
     ./wvkbd.nix
   ];
 
