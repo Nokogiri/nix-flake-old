@@ -109,6 +109,7 @@ in {
         "type:touchpad" = {
           events = "enabled";
           tap = "enabled";
+          dwt = "disable";
         };
         "1386:18888:Wacom_HID_49C8_Finger" = { map_to_output = "eDP-1"; };
         "1386:18888:Wacom_HID_49C8_Pen" = { map_to_output = "eDP-1"; };

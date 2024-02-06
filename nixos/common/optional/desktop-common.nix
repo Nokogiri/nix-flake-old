@@ -67,7 +67,7 @@
 
   gtk.iconCache.enable = true;
 
-  qt.style = "Kvantum-Dark";
+  qt.style = "kvantum";
 
   programs = { 
     dconf.enable = true;

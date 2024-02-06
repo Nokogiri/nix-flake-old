@@ -5,7 +5,7 @@
     ./hyprpaper
     inputs.hyprland.homeManagerModules.default
     ./config.nix
-    ./iio-hyprland.nix
+    #./iio-hyprland.nix
     ./waybar
   ];
 

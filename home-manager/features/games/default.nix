@@ -29,9 +29,9 @@
     # native packaged games
     #airshipper # veloren
     #arx-libertatis
-    dhewm3
-    eduke32
-    gzdoom
+    #dhewm3
+    #eduke32
+    #gzdoom
     #openjk
     sm64ex
     #config.nur.repos.kira-bruneau.pokemmo-installer
