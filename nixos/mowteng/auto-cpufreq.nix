@@ -1,7 +1,7 @@
 {
   services.auto-cpufreq = {
     enable = true;
-    settings ={
+    settings = {
       charger = {
         governor = "powersave";
         energy_performance_preference = "balance_performance";

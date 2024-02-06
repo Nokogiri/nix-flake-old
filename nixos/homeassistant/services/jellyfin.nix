@@ -1,5 +1,5 @@
 { pkgs, inputs, ... }: {
-  environment.systemPackages =  [ inputs.nixpkgs-stable.legacyPackages.x86_64-linux.jellyfin-ffmpeg ];
+  environment.systemPackages = [ inputs.nixpkgs-stable.legacyPackages.x86_64-linux.jellyfin-ffmpeg ];
   services.jellyfin.enable = true;
   services.jellyfin.package = inputs.nixpkgs-stable.legacyPackages.x86_64-linux.jellyfin;
   services.nginx = {

@@ -69,7 +69,7 @@
 
   qt.style = "kvantum";
 
-  programs = { 
+  programs = {
     dconf.enable = true;
     gamemode = {
       enable = true;

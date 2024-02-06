@@ -28,10 +28,7 @@
   ];
 
   nixpkgs = {
-    overlays = [
-      outputs.overlays.additions
-      outputs.overlays.modifications
-    ];
+    overlays = [ outputs.overlays.additions outputs.overlays.modifications ];
     config = { allowUnfree = true; };
   };
 
@@ -47,13 +44,7 @@
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
-  environment.systemPackages = with pkgs; [
-    amdctl
-    gparted
-    xorg.xhost
-    exfatprogs
-    Imaginarium
-  ];
+  environment.systemPackages = with pkgs; [ amdctl gparted xorg.xhost exfatprogs Imaginarium ];
 
   hardware = {
     opengl = {

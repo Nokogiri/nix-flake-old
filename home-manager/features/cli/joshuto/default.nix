@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:{
+{ pkgs, lib, ... }: {
   programs.joshuto = {
     enable = true;
     settings = {

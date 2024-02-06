@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:{
+{ pkgs, inputs, ... }: {
   xdg.configFile."wezterm/colors/dracula.toml".source = ./dracula.toml;
   programs.wezterm = {
     enable = true;

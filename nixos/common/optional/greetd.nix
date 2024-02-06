@@ -14,10 +14,6 @@ in {
   };
   programs.regreet = {
     enable = true;
-    settings = {
-      background = {
-        path = "${pkgs.Imaginarium}/wallpaper/FireWatch.png";
-      };
-    };
+    settings = { background = { path = "${pkgs.Imaginarium}/wallpaper/FireWatch.png"; }; };
   };
 }

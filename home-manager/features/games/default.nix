@@ -1,8 +1,5 @@
 { pkgs, config, inputs, ... }: {
-  imports = [
-    ./steam.nix ./wine.nix
-    ./stable.nix
-  ];
+  imports = [ ./steam.nix ./wine.nix ./stable.nix ];
 
   home.sessionVariables.WINEDEBUG = "-all";
 

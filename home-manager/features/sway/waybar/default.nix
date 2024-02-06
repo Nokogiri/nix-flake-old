@@ -21,12 +21,8 @@
           tooltip-format = "{title}";
           on-click = "activate";
           on-click-middle = "close";
-          ignore-list = [
-             "Alacritty"
-          ];
-          app_ids-mapping = {
-            "firefoxdeveloperedition" = "firefox-developer-edition";
-          };
+          ignore-list = [ "Alacritty" ];
+          app_ids-mapping = { "firefoxdeveloperedition" = "firefox-developer-edition"; };
           #rewrite = {
           #  "Firefox Web Browser" = "Firefox";
           #  "Foot Server" = "Terminal";

@@ -17,8 +17,8 @@
     (pkgs.where-is-my-sddm-theme.override {
       themeConfig.General = {
         #background =
-          #"${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-          #"${pkgs.Imaginarium}/share/Imaginarium/wallpaper/FireWatch.png";
+        #"${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+        #"${pkgs.Imaginarium}/share/Imaginarium/wallpaper/FireWatch.png";
         #backgroundMode = "aspect";
         backgroundFill = "#282a36";
         passwordFontSize = "36";
