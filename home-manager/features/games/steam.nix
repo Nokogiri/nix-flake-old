@@ -10,6 +10,7 @@
             gst_all_1.gst-plugins-bad
             gst_all_1.gst-plugins-ugly
             gst_all_1.gst-libav
+            gperftools
             libgdiplus
             gamescope
             gamemode
@@ -34,10 +35,6 @@
             SDL2
             libkrb5
             keyutils
-            gst_all_1.gst-plugins-base
-            gst_all_1.gst-plugins-good
-            gst_all_1.gst-plugins-ugly
-            gst_all_1.gst-plugins-bad
             xdg-user-dirs
             inputs.extest.packages.x86_64-linux.default
             #STL

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ inputs, pkgs, ... }: {
   home.packages = with pkgs; [
     #wineWowPackages.stableFull
     #winetricks
@@ -10,7 +10,6 @@
     gst_all_1.gst-plugins-ugly
     gst_all_1.gst-libav
     libgdiplus
-    gamescope
     fribidi
     mangohud
     mono
