@@ -24,7 +24,7 @@
     moonlight-qt
 
     # native packaged games
-    airshipper # veloren
+    #airshipper # veloren
     #arx-libertatis
     #dhewm3
     #eduke32

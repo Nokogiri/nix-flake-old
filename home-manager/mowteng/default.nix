@@ -27,6 +27,7 @@
     xournalpp
 
     # graphics stuff
+    gimp
     krita
     mypaint
   ];
