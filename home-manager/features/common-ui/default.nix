@@ -9,6 +9,7 @@
     ./styles.nix
     #./thunderbird.nix
     ./udisks.nix
+    ./vscode.nix
     ./zathura.nix
   ];
 

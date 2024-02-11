@@ -1,5 +1,5 @@
 { pkgs, config, inputs, ... }: {
-  imports = [ ./steam.nix ./wine.nix ./stable.nix ];
+  imports = [ ./steam.nix  ];
 
   home.sessionVariables.WINEDEBUG = "-all";
 
@@ -24,18 +24,18 @@
     moonlight-qt
 
     # native packaged games
-    #airshipper # veloren
+    airshipper # veloren
     #arx-libertatis
     #dhewm3
     #eduke32
-    #gzdoom
+    gzdoom
     #openjk
-    sm64ex
+    #sm64ex
     #config.nur.repos.kira-bruneau.pokemmo-installer
 
     # emulation
-    inputs.nixpkgs-stable.legacyPackages.x86_64-linux.cemu
-    #cemu
+    #inputs.nixpkgs-stable.legacyPackages.x86_64-linux.cemu
+    cemu
     dolphinEmuMaster
     #retroarch
     #libretro.beetle-pce-fast

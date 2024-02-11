@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }: {
   home.packages = with pkgs; [
-    #wineWowPackages.stableFull
+    wineWowPackages.stableFull
     #winetricks
     bottles
     attr

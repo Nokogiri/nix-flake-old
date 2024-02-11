@@ -76,6 +76,7 @@ in {
           { app_id = "retroarch"; }
           { app_id = ".blueman-manager-wrapped"; }
           { app_id = "nm-connection-editor"; }
+          { app_id = "org.kde.polkit-kde-authentication-agent-1"; }
           {
             class = "steam";
             instance = "steamwebhelper";

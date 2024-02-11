@@ -35,9 +35,9 @@
       enable = true;
       antialias = true;
       defaultFonts = {
-        serif = [ " JetBrainsMono Nerd Font Propo" ];
-        sansSerif = [ " JetBrainsMono Nerd Font Propo" ];
-        monospace = [ "JetBrainsMono Nerd Font" ];
+        serif = [ "Hack Nerd Font Propo" ];
+        sansSerif = [ "Hack Nerd Font Propo" ];
+        monospace = [ "Hack Nerd Font Mono" ];
         emoji = [ "Noto Color Emoji" ];
       };
     };

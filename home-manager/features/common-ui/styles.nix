@@ -27,7 +27,7 @@ in {
     enable = true;
     cursorTheme = { name = "Nordzy-cursors-white"; };
     font = {
-      name = "JetBrainsMono Nerd Font Propo";
+      name = "Hack Nerd Font Propo";
       size = 11.5;
     };
     iconTheme = {
