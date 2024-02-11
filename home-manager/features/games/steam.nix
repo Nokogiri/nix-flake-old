@@ -4,29 +4,15 @@
       steam = steam.override {
         extraPkgs = pkgs:
           with pkgs; [
-            attr
             gst_all_1.gst-vaapi
             gst_all_1.gst-plugins-good
             gst_all_1.gst-plugins-bad
             gst_all_1.gst-plugins-ugly
             gst_all_1.gst-libav
-            gperftools
-            libgdiplus
             gamescope
             gamemode
             fribidi
             mangohud
-            mono
-            nss
-            xorg.libXcursor
-            xorg.libXi
-            xorg.libXinerama
-            xorg.libXScrnSaver
-            xorg.libXdmcp
-            xorg.libXau
-            libpng
-            gtk3
-            gtk3-x11
             libgdiplus
             zlib
             libpulseaudio
@@ -37,12 +23,7 @@
             keyutils
             xdg-user-dirs
             inputs.extest.packages.x86_64-linux.default
-            #STL
-            unixtools.xxd
             wget
-            xdotool
-            xorg.xprop
-            xorg.xwininfo
             yad
           ];
         extraProfile = ''
