@@ -21,6 +21,9 @@
     #prismlauncher
     heroic
     protonup-qt
+    protontricks
+    gnome.zenity
+    kbfs
     moonlight-qt
 
     # native packaged games

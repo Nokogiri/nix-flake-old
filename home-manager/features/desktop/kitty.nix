@@ -1,5 +1,4 @@
 {
-  xdg.configFile."kitty/tab_bar.py".source = ./kitty-tab_bar.py;
   programs = {
     kitty = {
       enable = true;

@@ -2,12 +2,11 @@
   imports = [
     ../global
     ../features/cli/nix-stuff.nix
-    ../features/common-ui
+    ../features/desktop
+    ../features/desktop/sway
     ../features/games
     ../features/helix
     ../features/media
-    ../features/sway
-    #../features/hyprland
     inputs.nur.nixosModules.nur
   ];
 
