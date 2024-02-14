@@ -4,11 +4,8 @@
     #./fuzzel.nix
     ./gammastep.nix
     #./obs-studio.nix
-    ./swaylock.nix
     ./swaync.nix
     ./swayosd.nix
-    #./waybar
-    #./wezterm
     ./wlogout.nix
     ./wvkbd.nix
   ];

@@ -17,13 +17,13 @@ in {
       assigns = {
         "1" = [ { app_id = "kitty"; } { app_id = "org.wezfurlong.wezterm"; } ];
         "2" = [ { app_id = "firefox"; } { app_id = "chromium-browser"; } ];
-        "3" = [{ app_id = "mpv"; }];
+        "3" = [ { app_id = "mpv"; } ];
         "4" = [ { class = "Emacs"; } { app_id = "emacs"; } ];
         "5" = [ { app_id = "org.pwmt.zathura"; } { app_id = "com.github.maoschanz.drawing"; } ];
-        "6" = [{ class = "steam"; }];
+        "6" = [ { class = "steam"; } { app_id = "heroic"; } ];
         "7" = [ { class = "Spotify"; } { app_id = "spotify-qt"; } { app_id = "dev.alextren.Spot"; } ];
-        "8" = [ ];
-        "9" = [{ class = "Com.github.johnfactotum.Foliate"; }];
+        "8" = [ { app_id = "transmission-qt"; } { app_id = "com.usebottles.bottles"; } ];
+        "9" = [ { class = "Com.github.johnfactotum.Foliate"; } ];
       };
       bars = [ ]; # {
       #  id = "1";
@@ -221,6 +221,7 @@ in {
           #bg = "${config.home.homeDirectory}/.local/share/wallpaper/FireWatch.png fill";
           bg = "${pkgs.Imaginarium}/wallpaper/FireWatch.png fill";
           scale = "1";
+          resolution = "1920x1200@47.999Hz";
         };
       };
       seat = {

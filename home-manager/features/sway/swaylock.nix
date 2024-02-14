@@ -5,9 +5,9 @@
     settings = {
       hide-keyboard-layout = true;
 
-      image = "~/.local/share/wallpaper.png";
+      image = "${pkgs.Imaginarium}/wallpaper/FireWatch.png";
       indicator-radius = 192;
-      font = "FiraCode Nerd Font";
+      font = "Hack Nerd Font Propo";
       font-size = "32";
       color = "282a36";
       inside-color = "1F202A33";
@@ -40,7 +40,7 @@
       effect-blur = "4x3";
       clock = true;
       indicator-idle-visible = true;
-      screenshots = true;
+      screenshots = false;
       timestr = "%H:%M";
     };
   };

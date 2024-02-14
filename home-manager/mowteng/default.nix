@@ -21,6 +21,7 @@
     logseq
     handlr-regex
 
+    appimage-run
     transmission-qt
     chromium
     nss
