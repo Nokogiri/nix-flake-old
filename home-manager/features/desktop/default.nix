@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:{
+{ config, pkgs, ... }: {
 
   imports = [
     ./firefox
 
-    ./gammastep.nix    
+    ./gammastep.nix
     ./gpg-agent.nix
     ./kitty.nix
     ./nnn.nix
@@ -16,9 +16,9 @@
     ./wofi.nix
     ./zathura.nix
   ];
-  
+
   home.packages = with pkgs; [ cliphist imv rofi-wayland swayidle wl-clipboard xdg_utils ];
-  
+
   home.sessionVariables = {
     BROWSER = "${pkgs.firefox}/bin/firefox";
     NO_AT_BRIDGE = "1";

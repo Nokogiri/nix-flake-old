@@ -8,7 +8,8 @@
     settings.NoDisplay = "true";
   };
   xdg.desktopEntries."com.github.iwalton3.jellyfin-media-player" = {
-    exec = "env env QT_WAYLAND_DISABLE_WINDOWDECORATION=0 ${pkgs.jellyfin-media-player}/bin/jellyfinmediaplayer";
+    exec =
+      "env env QT_WAYLAND_DISABLE_WINDOWDECORATION=0 ${pkgs.jellyfin-media-player}/bin/jellyfinmediaplayer";
     name = "Jellyfin Media Player";
     icon = "com.github.iwalton3.jellyfin-media-player";
     terminal = false;

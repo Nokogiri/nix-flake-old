@@ -697,7 +697,8 @@
       userChrome = ''
         @import url("${
           builtins.fetchurl {
-            url = "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/hide_tabs_toolbar.css";
+            url =
+              "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/hide_tabs_toolbar.css";
             sha256 = "sha256-60fv8C7+nj7mUTAfMnfGTcEcdba2XUXfPnvzYluKzaw=";
           }
         }");
@@ -759,7 +760,8 @@
       userChrome = ''
         @import url("${
           builtins.fetchurl {
-            url = "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/hide_tabs_toolbar.css";
+            url =
+              "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/hide_tabs_toolbar.css";
             sha256 = "sha256-60fv8C7+nj7mUTAfMnfGTcEcdba2XUXfPnvzYluKzaw=";
           }
         }");

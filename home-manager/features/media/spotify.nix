@@ -17,6 +17,11 @@ in {
     enable = true;
     theme = spicePkgs.themes.Dracula;
     enabledCustomApps = with spicePkgs.apps; [ lyrics-plus ];
-    enabledExtensions = with spicePkgs.extensions; [ shuffle popupLyrics hidePodcasts fullAppDisplayMod ];
+    enabledExtensions = with spicePkgs.extensions; [
+      shuffle
+      popupLyrics
+      hidePodcasts
+      fullAppDisplayMod
+    ];
   };
 }

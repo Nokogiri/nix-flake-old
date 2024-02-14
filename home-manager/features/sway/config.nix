@@ -17,13 +17,14 @@ in {
       assigns = {
         "1" = [ { app_id = "kitty"; } { app_id = "org.wezfurlong.wezterm"; } ];
         "2" = [ { app_id = "firefox"; } { app_id = "chromium-browser"; } ];
-        "3" = [ { app_id = "mpv"; } ];
+        "3" = [{ app_id = "mpv"; }];
         "4" = [ { class = "Emacs"; } { app_id = "emacs"; } ];
         "5" = [ { app_id = "org.pwmt.zathura"; } { app_id = "com.github.maoschanz.drawing"; } ];
         "6" = [ { class = "steam"; } { app_id = "heroic"; } ];
-        "7" = [ { class = "Spotify"; } { app_id = "spotify-qt"; } { app_id = "dev.alextren.Spot"; } ];
+        "7" =
+          [ { class = "Spotify"; } { app_id = "spotify-qt"; } { app_id = "dev.alextren.Spot"; } ];
         "8" = [ { app_id = "transmission-qt"; } { app_id = "com.usebottles.bottles"; } ];
-        "9" = [ { class = "Com.github.johnfactotum.Foliate"; } ];
+        "9" = [{ class = "Com.github.johnfactotum.Foliate"; }];
       };
       bars = [ ]; # {
       #  id = "1";
@@ -120,7 +121,8 @@ in {
         # Basics apps
         "${cfg.modifier}+Return" = "exec ${cfg.terminal}";
         "${cfg.modifier}+p" = "exec pkill -9 rofi || rofi -show drun";
-        "${cfg.modifier}+i" = "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
+        "${cfg.modifier}+i" =
+          "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
 
         # basic internals
         "${cfg.modifier}+Shift+q" = "kill";
@@ -210,9 +212,11 @@ in {
 
         # mylock
         "${cfg.modifier}+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock";
-        "${cfg.modifier}+Shift+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock at-home-mode";
+        "${cfg.modifier}+Shift+l" =
+          "exec ${config.home.homeDirectory}/.local/bin/mylock at-home-mode";
         "${cfg.modifier}+Ctrl+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock safe-mode";
-        "${cfg.modifier}+Shift+Ctrl+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock lock-now";
+        "${cfg.modifier}+Shift+Ctrl+l" =
+          "exec ${config.home.homeDirectory}/.local/bin/mylock lock-now";
       };
       menu = "\${pkgs.wofi}/bin/wofi --show drun";
       modifier = "Mod4";
@@ -236,7 +240,9 @@ in {
           always = true;
         }
         { command = "wl-paste --watch cliphist store"; }
-        { command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"; }
+        {
+          command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
+        }
       ];
       terminal = "${pkgs.kitty}/bin/kitty";
       window = {

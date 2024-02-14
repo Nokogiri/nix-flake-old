@@ -1,12 +1,15 @@
 { inputs, lib, config, pkgs, ... }:
 let cfg = config.wayland.windowManager.sway.config;
 in {
-  imports = [ ./config.nix ./swaync.nix ./swayosd.nix ./user-services.nix ./waybar ./wlogout.nix ];
-
-  #home.packages = with pkgs; [
-  #  swaybg
-  #vulkan-validation-layers
-  #];
+  imports = [
+    ./config.nix
+    ./swaylock.nix
+    ./swaync.nix
+    ./swayosd.nix
+    ./user-services.nix
+    ./waybar
+    ./wlogout.nix
+  ];
 
   programs = {
     fish.loginShellInit = ''
@@ -26,16 +29,6 @@ in {
     '';
   };
 
-  #
-  # systemd.user.services.rot8 = {
-  #    Unit = { Description = "Rot8 Screen"; };
-  #    Service = {
-  #      Type = "simple";
-  #      ExecStart = "${pkgs.rot8}/bin/rot8 --display eDP-1 --touchscreen 1386:18888:Wacom_HID_49C8_Finger --normalization-factor 1e1 --threshold 0.7";
-  #      Restart = "on-failure";
-  #    };
-  #    Install = { WantedBy = [ "sway-session.target" ]; };
-  #  };
   programs.waybar.systemd = {
     enable = true;
     target = "sway-session.target";

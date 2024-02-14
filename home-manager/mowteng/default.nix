@@ -3,10 +3,10 @@
     ../global
     ../features/cli/nix-stuff.nix
     ../features/desktop
-    ../features/desktop/sway
     ../features/games
     ../features/helix
     ../features/media
+    ../features/sway
     inputs.nur.nixosModules.nur
   ];
 

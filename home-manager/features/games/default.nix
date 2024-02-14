@@ -1,5 +1,5 @@
 { pkgs, config, inputs, ... }: {
-  imports = [ ./steam.nix  ];
+  imports = [ ./steam.nix ];
 
   home.sessionVariables.WINEDEBUG = "-all";
 
