@@ -37,8 +37,8 @@
     #config.nur.repos.kira-bruneau.pokemmo-installer
 
     # emulation
-    #inputs.nixpkgs-stable.legacyPackages.x86_64-linux.cemu
-    cemu
+    inputs.nixpkgs-stable.legacyPackages.x86_64-linux.cemu
+    #cemu
     dolphinEmuMaster
     #retroarch
     #libretro.beetle-pce-fast
