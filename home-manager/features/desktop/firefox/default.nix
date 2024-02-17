@@ -22,6 +22,7 @@
       dracula-dark-colorscheme
       sidebery
       sponsorblock
+      iina-open-in-mpv
     ];
     profiles.nokogiri = {
       name = "nokogiri";
@@ -727,6 +728,7 @@
       sponsorblock
       faststream
       dracula-dark-colorscheme
+      iina-open-in-mpv
     ];
     profiles.private = {
       name = "private";

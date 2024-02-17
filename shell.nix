@@ -10,17 +10,10 @@
       nix
       home-manager
       git
-#      git-agecrypt
       sops
       gnupg
       nixpkgs-fmt
       nix-universal-prefetch
-      #yarn2nix
-      #onefetch
-      #jdk
-      #tes3cmd
-      #fribidi
-      #python310
     ];
   };
 }

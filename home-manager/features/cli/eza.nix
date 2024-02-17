@@ -1,7 +1,7 @@
 {
   programs.eza = {
     enable = true;
-    enableAliases = false;
+    enableAliases = true;
     git = true;
     icons = true;
   };

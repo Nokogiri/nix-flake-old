@@ -61,9 +61,10 @@
       mpvScripts.uosc
       #mpvScripts.thumbfast
       mpvScripts.sponsorblock
-      mpvScripts.simple-mpv-webui
+      #mpvScripts.simple-mpv-webui
     ];
   };
   xdg.configFile."mpv/script-opts/uosc.conf".source = ./uosc.conf;
 
+  home.packages = with pkgs; [ celluloid open-in-mpv ];
 }

@@ -18,16 +18,14 @@
     gamescope
     mangohud
     vkbasalt
-    #prismlauncher
+    prismlauncher
     heroic
     protonup-qt
     protontricks
-    gnome.zenity
-    kbfs
     moonlight-qt
 
     # native packaged games
-    #airshipper # veloren
+    airshipper # veloren
     #arx-libertatis
     #dhewm3
     #eduke32
