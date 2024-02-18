@@ -1,7 +1,4 @@
-{ lib
-, formats
-, stdenvNoCC
-}:
+{ lib, formats, stdenvNoCC }:
 
 stdenvNoCC.mkDerivation rec {
   pname = "Imaginarium";
@@ -13,7 +10,7 @@ stdenvNoCC.mkDerivation rec {
     mkdir -p $out/
     cp -r Imaginarium/* $out/
   '';
-  
+
   meta = with lib; {
     description = "just images";
     homepage = "https://none.com";

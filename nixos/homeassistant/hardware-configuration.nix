@@ -10,8 +10,16 @@
     #  options usb-storage quirks=090c:1000:,152d:0578:u,0bc2:2322:u
     #'';
     initrd = {
-      availableKernelModules =
-        [ "xhci_pci" "ehci_pci" "ahci" "firewire_ohci" "usb_storage" "usbhid" "sd_mod" "sdhci_pci" ];
+      availableKernelModules = [
+        "xhci_pci"
+        "ehci_pci"
+        "ahci"
+        "firewire_ohci"
+        "usb_storage"
+        "usbhid"
+        "sd_mod"
+        "sdhci_pci"
+      ];
       kernelModules = [ "hid-apple" ];
     };
     kernelModules = [ "kvm-intel" ];
@@ -85,7 +93,8 @@
   fileSystems."/boot/efi" = {
     device = "/dev/disk/by-uuid/67E3-17ED";
     fsType = "vfat";
-    options = [ "fmask=0022" "dmask=0022" "codepage=437" "iocharset=ascii" "shortname=mixed" "utf8" ];
+    options =
+      [ "fmask=0022" "dmask=0022" "codepage=437" "iocharset=ascii" "shortname=mixed" "utf8" ];
   };
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/6e0db31b-59b0-48e4-ae1e-acf978c22a66";

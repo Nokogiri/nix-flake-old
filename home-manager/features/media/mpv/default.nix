@@ -54,6 +54,7 @@
 
       cursor-autohide-fs-only = true;
       cursor-autohide = "20";
+      input-ipc-server = "/tmp/mpvsocket";
     };
     scriptOpts = { ytdl_hook = { ytdl_path = "${pkgs.yt-dlp}/bin/yt-dlp"; }; };
     scripts = with pkgs; [
@@ -66,5 +67,5 @@
   };
   xdg.configFile."mpv/script-opts/uosc.conf".source = ./uosc.conf;
 
-  home.packages = with pkgs; [ celluloid open-in-mpv ];
+  home.packages = with pkgs; [ open-in-mpv ];
 }

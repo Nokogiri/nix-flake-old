@@ -27,7 +27,8 @@
         forceSSL = true;
         useACMEHost = "fishoeder.net";
         locations."/" = {
-          proxyPass = "http://127.0.0.1:8812"; # changed the default rocket port due to some conflict
+          proxyPass =
+            "http://127.0.0.1:8812"; # changed the default rocket port due to some conflict
           proxyWebsockets = true;
         };
         locations."/notifications/hub" = {

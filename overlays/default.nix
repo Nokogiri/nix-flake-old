@@ -6,8 +6,7 @@
   # This one contains whatever you want to overlay
   # You can change versions, add patches, set compilation flags, anything really.
   # https://nixos.wiki/wiki/Overlays
-  modifications = final: prev: {
-  };
+  modifications = final: prev: { };
 
   #unstable-smallish = self: super: {
   #  chromium = inputs.unstable-small.legacyPackages.x86_64-linux.chromium;

@@ -11,6 +11,7 @@
     ./playerctl.nix
     ./rbw.nix
     ./style.nix
+    ./udisks.nix
     ./vscode.nix
     ./youtube.nix
     ./wofi.nix

@@ -118,17 +118,12 @@ in {
       "${cfg.theme.name}.kvconfig"
     ];
     newThemePath = "${cfg.theme.name}#/${cfg.theme.name}#.kvconfig";
-    oldTheme = lib.pipe
-      (pkgs.runCommandLocal "convert-kvantum-${cfg.theme.name}-to-json" { } ''
-        mkdir $out
-        cat '${oldThemePath}' \
-          | '${lib.getExe pkgs.jc}' --ini \
-          > "$out/${cfg.theme.name}.json"
-      '') [
-        (drv: "${drv}/${cfg.theme.name}.json")
-        builtins.readFile
-        builtins.fromJSON
-      ];
+    oldTheme = lib.pipe (pkgs.runCommandLocal "convert-kvantum-${cfg.theme.name}-to-json" { } ''
+      mkdir $out
+      cat '${oldThemePath}' \
+        | '${lib.getExe pkgs.jc}' --ini \
+        > "$out/${cfg.theme.name}.json"
+    '') [ (drv: "${drv}/${cfg.theme.name}.json") builtins.readFile builtins.fromJSON ];
     newTheme = lib.recursiveUpdate oldTheme cfg.theme.overrides;
   in lib.mkMerge [
     (lib.mkIf cfg.enable {
@@ -140,8 +135,7 @@ in {
       # todo: fix incorrect casing on some keys,
       # jc does not respect this when the INI parser is used.
       # <https://github.com/kellyjonbrazil/jc/issues/285>
-      xdg.configFile."Kvantum/${newThemePath}".text =
-        generators.toINI { } newTheme;
+      xdg.configFile."Kvantum/${newThemePath}".text = generators.toINI { } newTheme;
     })
     (lib.mkIf cfg.qt5ct.enable {
       home.packages = [ cfg.qt5ct.package ];

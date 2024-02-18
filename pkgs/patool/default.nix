@@ -1,44 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, fetchpatch
-, pytestCheckHook
-, p7zip
-, cabextract
-, zip
-, lzip
-, zpaq
-, gnutar
-, gnugrep
-, diffutils
-, file
-, gzip
-, bzip2
-, xz
-, zstd
-}:
+{ lib, buildPythonPackage, fetchFromGitHub, fetchpatch, pytestCheckHook, p7zip, cabextract, zip
+, lzip, zpaq, gnutar, gnugrep, diffutils, file, gzip, bzip2, xz, zstd }:
 
 # unrar is unfree, as well as 7z with unrar support, not including it (patool doesn't support unar)
 # it will still use unrar if present in the path
 
 let
-  compression-utilities = [
-    p7zip
-    gnutar
-    cabextract
-    zip
-    lzip
-    zpaq
-    gzip
-    gnugrep
-    diffutils
-    bzip2
-    file
-    xz
-    zstd
-  ];
-in
-buildPythonPackage rec {
+  compression-utilities =
+    [ p7zip gnutar cabextract zip lzip zpaq gzip gnugrep diffutils bzip2 file xz zstd ];
+in buildPythonPackage rec {
   pname = "patool";
   version = "1.13";
   format = "setuptools";

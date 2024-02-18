@@ -4,7 +4,10 @@
       image = "tombursch/kitchenowl-web:latest";
       autoStart = true;
       #restart = "unless-stopped";
-      volumes = [ "/var/lib/pods/calibre-web/calibre-data:/config" "/var/lib/pods/calibre-web/books:/books" ];
+      volumes = [
+        "/var/lib/pods/calibre-web/calibre-data:/config"
+        "/var/lib/pods/calibre-web/books:/books"
+      ];
       environment = {
         TZ = "Europe/Berlin";
         DOCKER_MODS = "linuxserver/mods:universal-calibre";

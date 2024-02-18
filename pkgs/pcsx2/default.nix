@@ -1,35 +1,7 @@
-{ cmake
-, fetchFromGitHub
-, lib
-, llvmPackages_17
-, cubeb
-, curl
-, extra-cmake-modules
-, ffmpeg
-, libaio
-, libbacktrace
-, libpcap
-, libwebp
-, libXrandr
-, libzip
-, lz4
-, makeWrapper
-, pkg-config
-, qtbase
-, qtsvg
-, qttools
-, qtwayland
-, SDL2
-, soundtouch
-, strip-nondeterminism
-, vulkan-headers
-, vulkan-loader
-, wayland
-, wrapQtAppsHook
-, xz
-, zip
-, zstd
-}:
+{ cmake, fetchFromGitHub, lib, llvmPackages_17, cubeb, curl, extra-cmake-modules, ffmpeg, libaio
+, libbacktrace, libpcap, libwebp, libXrandr, libzip, lz4, makeWrapper, pkg-config, qtbase, qtsvg
+, qttools, qtwayland, SDL2, soundtouch, strip-nondeterminism, vulkan-headers, vulkan-loader, wayland
+, wrapQtAppsHook, xz, zip, zstd }:
 
 let
   # The pre-zipped files in releases don't have a versioned link, we need to zip them ourselves
@@ -39,8 +11,7 @@ let
     rev = "619e75bb8db50325b44863f2ccf3c39470c3d5a3";
     sha256 = "sha256-2KE0W3WwBJCLe8DosyDVsFtEofKgBsChpQEQe+3O+Hg=";
   };
-in
-llvmPackages_17.stdenv.mkDerivation rec {
+in llvmPackages_17.stdenv.mkDerivation rec {
   pname = "pcsx2";
   version = "1.7.5474";
 
@@ -52,24 +23,13 @@ llvmPackages_17.stdenv.mkDerivation rec {
     sha256 = "sha256-9Zorm+rTXZwiBeFf0OfhAJuP4ebT/HnIx9F6H+pxj8M=";
   };
 
-  patches = [
-    ./define-rev.patch
-  ];
+  patches = [ ./define-rev.patch ];
 
-  cmakeFlags = [
-    "-DDISABLE_ADVANCE_SIMD=ON"
-    "-DUSE_LINKED_FFMPEG=ON"
-    "-DPCSX2_GIT_REV=v${version}"
-  ];
+  cmakeFlags =
+    [ "-DDISABLE_ADVANCE_SIMD=ON" "-DUSE_LINKED_FFMPEG=ON" "-DPCSX2_GIT_REV=v${version}" ];
 
-  nativeBuildInputs = [
-    cmake
-    extra-cmake-modules
-    pkg-config
-    strip-nondeterminism
-    wrapQtAppsHook
-    zip
-  ];
+  nativeBuildInputs =
+    [ cmake extra-cmake-modules pkg-config strip-nondeterminism wrapQtAppsHook zip ];
 
   buildInputs = [
     curl
@@ -91,8 +51,7 @@ llvmPackages_17.stdenv.mkDerivation rec {
     wayland
     xz
     zstd
-  ]
-  ++ cubeb.passthru.backendLibs;
+  ] ++ cubeb.passthru.backendLibs;
 
   installPhase = ''
     mkdir -p $out/bin
@@ -105,14 +64,8 @@ llvmPackages_17.stdenv.mkDerivation rec {
     strip-nondeterminism $out/bin/resources/patches.zip
   '';
 
-  qtWrapperArgs =
-    let
-      libs = lib.makeLibraryPath ([
-        vulkan-loader
-      ] ++ cubeb.passthru.backendLibs);
-    in [
-      "--prefix LD_LIBRARY_PATH : ${libs}"
-    ];
+  qtWrapperArgs = let libs = lib.makeLibraryPath ([ vulkan-loader ] ++ cubeb.passthru.backendLibs);
+  in [ "--prefix LD_LIBRARY_PATH : ${libs}" ];
 
   # https://github.com/PCSX2/pcsx2/pull/10200
   # Can't avoid the double wrapping, the binary wrapper from qtWrapperArgs doesn't support --run

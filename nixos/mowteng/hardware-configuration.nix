@@ -56,7 +56,8 @@
     "/boot" = {
       device = "/dev/disk/by-uuid/8C9D-013B";
       fsType = "vfat";
-      options = [ "fmask=0022" "dmask=0022" "codepage=437" "iocharset=ascii" "shortname=mixed" "utf8" ];
+      options =
+        [ "fmask=0022" "dmask=0022" "codepage=437" "iocharset=ascii" "shortname=mixed" "utf8" ];
     };
   };
 

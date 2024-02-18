@@ -1,36 +1,10 @@
-{ lib, stdenv, fetchFromGitHub
-, fetchpatch
-, addOpenGLRunpath
-, wrapGAppsHook
-, cmake
-, glslang
-, nasm
+{ lib, stdenv, fetchFromGitHub, fetchpatch, addOpenGLRunpath, wrapGAppsHook, cmake, glslang, nasm
 , pkg-config
 
-, SDL2
-, boost
-, cubeb
-, curl
-, fmt_9
-, glm
-, gtk3
-, hidapi
-, imgui
-, libpng
-, libusb1
-, libzip
-, libXrender
-, pugixml
-, rapidjson
-, vulkan-headers
-, wayland
-, wxGTK32
-, zarchive
-, gamemode
-, vulkan-loader
+, SDL2, boost, cubeb, curl, fmt_9, glm, gtk3, hidapi, imgui, libpng, libusb1, libzip, libXrender
+, pugixml, rapidjson, vulkan-headers, wayland, wxGTK32, zarchive, gamemode, vulkan-loader
 
-, nix-update-script
-}:
+, nix-update-script }:
 
 stdenv.mkDerivation rec {
   pname = "cemu";
@@ -51,19 +25,13 @@ stdenv.mkDerivation rec {
     # Remove on next release
     # https://github.com/cemu-project/Cemu/pull/1076
     (fetchpatch {
-      url = "https://github.com/cemu-project/Cemu/commit/72aacbdcecc064ea7c3b158c433e4803496ac296.patch";
+      url =
+        "https://github.com/cemu-project/Cemu/commit/72aacbdcecc064ea7c3b158c433e4803496ac296.patch";
       hash = "sha256-x+ZVqXgGRSv0VYwJAX35C1p7PnmCHS7iEO+4k8j0/ug=";
     })
   ];
 
-  nativeBuildInputs = [
-    addOpenGLRunpath
-    wrapGAppsHook
-    cmake
-    glslang
-    nasm
-    pkg-config
-  ];
+  nativeBuildInputs = [ addOpenGLRunpath wrapGAppsHook cmake glslang nasm pkg-config ];
 
   buildInputs = [
     SDL2
@@ -98,14 +66,14 @@ stdenv.mkDerivation rec {
     "-DPORTABLE=OFF"
   ];
 
-  preConfigure = with lib; let
-    tag = last (splitString "-" version);
-  in ''
-    rm -rf dependencies/imgui
-    ln -s ${imgui}/include/imgui dependencies/imgui
-    substituteInPlace src/Common/version.h --replace " (experimental)" "-${tag} (experimental)"
-    substituteInPlace dependencies/gamemode/lib/gamemode_client.h --replace "libgamemode.so.0" "${gamemode.lib}/lib/libgamemode.so.0"
-  '';
+  preConfigure = with lib;
+    let tag = last (splitString "-" version);
+    in ''
+      rm -rf dependencies/imgui
+      ln -s ${imgui}/include/imgui dependencies/imgui
+      substituteInPlace src/Common/version.h --replace " (experimental)" "-${tag} (experimental)"
+      substituteInPlace dependencies/gamemode/lib/gamemode_client.h --replace "libgamemode.so.0" "${gamemode.lib}/lib/libgamemode.so.0"
+    '';
 
   installPhase = ''
     runHook preInstall
@@ -123,8 +91,7 @@ stdenv.mkDerivation rec {
     runHook postInstall
   '';
 
-  preFixup = let
-    libs = [ vulkan-loader ] ++ cubeb.passthru.backendLibs;
+  preFixup = let libs = [ vulkan-loader ] ++ cubeb.passthru.backendLibs;
   in ''
     gappsWrapperArgs+=(
       --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath libs}"

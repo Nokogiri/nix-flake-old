@@ -1,5 +1,6 @@
 { pkgs, config, lib, inputs, outputs, ... }:
-let ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
+let
+  ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in {
   #  imports = [ inputs.home-manager.nixosModules.home-manager ];
 
@@ -28,8 +29,9 @@ in {
       "webdav"
     ];
 
-    openssh.authorizedKeys.keys =
-      [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExoigGlfblca2iJPTcyRc/bL5hqHuDlXmbBf/9PhVKZ nokogiri@frankenbook" ];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExoigGlfblca2iJPTcyRc/bL5hqHuDlXmbBf/9PhVKZ nokogiri@frankenbook"
+    ];
     #passwordFile = config.sops.secrets.nokogiri-password.path;
     packages = [ pkgs.home-manager ];
   };

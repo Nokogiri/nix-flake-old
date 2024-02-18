@@ -1,27 +1,9 @@
-{ lib
-, stdenv
-, fetchFromGitLab
-, fetchpatch
-, cmake
-, pkg-config
-, wrapQtAppsHook
-, SDL2
+{ lib, stdenv, fetchFromGitLab, fetchpatch, cmake, pkg-config, wrapQtAppsHook, SDL2
 #, CoreMedia
 #, VideoToolbox
 #, VideoDecodeAcceleration
-, boost
-, bullet
-, ffmpeg
-, libXt
-, luajit
-, lz4
-, mygui
-, openal
-, openscenegraph
-, recastnavigation
-, unshield
-, yaml-cpp
-}:
+, boost, bullet, ffmpeg, libXt, luajit, lz4, mygui, openal, openscenegraph, recastnavigation
+, unshield, yaml-cpp }:
 
 let
   GL = "GLVND"; # or "LEGACY";
@@ -31,7 +13,8 @@ let
       (fetchpatch {
         # Darwin: Without this patch, OSG won't build osgdb_png.so, which is required by OpenMW.
         name = "darwin-osg-plugins-fix.patch";
-        url = "https://gitlab.com/OpenMW/openmw-dep/-/raw/0abe3c9c3858211028d881d7706813d606335f72/macos/osg.patch";
+        url =
+          "https://gitlab.com/OpenMW/openmw-dep/-/raw/0abe3c9c3858211028d881d7706813d606335f72/macos/osg.patch";
         sha256 = "sha256-/CLRZofZHot8juH78VG1/qhTHPhy5DoPMN+oH8hC58U=";
       })
     ];
@@ -40,7 +23,16 @@ let
       "-DOpenGL_GL_PREFERENCE=${GL}"
       "-DBUILD_OSG_PLUGINS_BY_DEFAULT=0"
       "-DBUILD_OSG_DEPRECATED_SERIALIZERS=0"
-    ] ++ (map (e: "-DBUILD_OSG_PLUGIN_${e}=1") [ "BMP" "DAE" "DDS" "FREETYPE" "JPEG" "OSG" "PNG" "TGA" ]);
+    ] ++ (map (e: "-DBUILD_OSG_PLUGIN_${e}=1") [
+      "BMP"
+      "DAE"
+      "DDS"
+      "FREETYPE"
+      "JPEG"
+      "OSG"
+      "PNG"
+      "TGA"
+    ]);
   });
 
   bullet' = bullet.overrideDerivation (old: {
@@ -52,8 +44,7 @@ let
     ];
   });
 
-in
-stdenv.mkDerivation rec {
+in stdenv.mkDerivation rec {
   pname = "openmw";
   version = "0.48.0";
 
@@ -90,18 +81,14 @@ stdenv.mkDerivation rec {
     recastnavigation
     unshield
     yaml-cpp
-#  ] ++ lib.optionals stdenv.isDarwin [
-#    CoreMedia
-#    VideoDecodeAcceleration
-#    VideoToolbox
+    #  ] ++ lib.optionals stdenv.isDarwin [
+    #    CoreMedia
+    #    VideoDecodeAcceleration
+    #    VideoToolbox
   ];
 
-  cmakeFlags = [
-    "-DOpenGL_GL_PREFERENCE=${GL}"
-    "-DOPENMW_USE_SYSTEM_RECASTNAVIGATION=1"
-  ] ++ lib.optionals stdenv.isDarwin [
-    "-DOPENMW_OSX_DEPLOYMENT=ON"
-  ];
+  cmakeFlags = [ "-DOpenGL_GL_PREFERENCE=${GL}" "-DOPENMW_USE_SYSTEM_RECASTNAVIGATION=1" ]
+    ++ lib.optionals stdenv.isDarwin [ "-DOPENMW_OSX_DEPLOYMENT=ON" ];
 
   meta = with lib; {
     description = "An unofficial open source engine reimplementation of the game Morrowind";

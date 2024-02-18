@@ -1,17 +1,5 @@
-{ lib
-, pkgs
-, stdenv
-, fetchFromGitHub
-, makeWrapper
-, pass
-, jq
-, wofi
-, libnotify
-, wl-clipboard
-, findutils
-, gnused
-, coreutils
-}:
+{ lib, pkgs, stdenv, fetchFromGitHub, makeWrapper, pass, jq, wofi, libnotify, wl-clipboard
+, findutils, gnused, coreutils }:
 
 with lib;
 
@@ -29,18 +17,7 @@ stdenv.mkDerivation {
   installPhase = ''
     install -Dm 0755 $src $out/bin/pass-wofi
     wrapProgram $out/bin/pass-wofi --set PATH \
-      "${
-        makeBinPath [
-          pass
-          jq
-          wofi
-          libnotify
-          wl-clipboard
-          findutils
-          gnused
-          coreutils
-        ]
-      }"
+      "${makeBinPath [ pass jq wofi libnotify wl-clipboard findutils gnused coreutils ]}"
   '';
 
   meta = {

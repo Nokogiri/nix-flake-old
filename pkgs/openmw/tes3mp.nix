@@ -1,12 +1,4 @@
-{ lib
-, stdenv
-, cmake
-, openmw
-, fetchFromGitHub
-, luajit
-, makeWrapper
-, symlinkJoin
-}:
+{ lib, stdenv, cmake, openmw, fetchFromGitHub, luajit, makeWrapper, symlinkJoin }:
 
 # revisions are taken from https://github.com/GrimKriegor/TES3MP-deploy
 
@@ -121,8 +113,7 @@ let
     fi
   '';
 
-in
-symlinkJoin {
+in symlinkJoin {
   name = "openmw-tes3mp-${unwrapped.version}";
   inherit (unwrapped) version meta;
 

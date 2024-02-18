@@ -6,7 +6,7 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs-old.url = "github:nixos/nixpkgs/nixos-23.05";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
-  
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -55,9 +55,8 @@
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" ];
     in rec {
-      packages = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./pkgs { inherit pkgs; });
+      packages = forAllSystems
+        (system: let pkgs = nixpkgs.legacyPackages.${system}; in import ./pkgs { inherit pkgs; });
 
       devShells = forAllSystems (system:
         let pkgs = nixpkgs.legacyPackages.${system};
@@ -70,8 +69,7 @@
 
       nixosConfigurations = {
         mowteng = nixpkgs.lib.nixosSystem {
-          modules = [ ./nixos/mowteng/configuration.nix ]
-            ++ (builtins.attrValues nixosModules);
+          modules = [ ./nixos/mowteng/configuration.nix ] ++ (builtins.attrValues nixosModules);
           specialArgs = { inherit inputs outputs; };
         };
       };

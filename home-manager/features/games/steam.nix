@@ -47,11 +47,5 @@
       icon = "steam";
       type = "Application";
     };
-    "steamscope" = {
-      exec = "gamescope -W 1920 -H 1200 -F fsr -e -- steam-extest";
-      name = "Steamscope";
-      icon = "steam";
-      type = "Application";
-    };
   };
 }

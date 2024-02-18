@@ -3,7 +3,10 @@
     calibre-web = {
       image = "ghcr.io/linuxserver/calibre-web";
       autoStart = true;
-      volumes = [ "/var/lib/pods/calibre-web/calibre-data:/config" "/var/lib/pods/calibre-web/books:/books" ];
+      volumes = [
+        "/var/lib/pods/calibre-web/calibre-data:/config"
+        "/var/lib/pods/calibre-web/books:/books"
+      ];
       environment = {
         TZ = "Europe/Berlin";
         DOCKER_MODS = "linuxserver/mods:universal-calibre";
