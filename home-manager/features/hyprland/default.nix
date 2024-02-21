@@ -1,17 +1,19 @@
 { lib, inputs, pkgs, config, ... }: {
   imports = [
-    ../common-ui
-    ../common-wl
     ./hyprpaper
     inputs.hyprland.homeManagerModules.default
     ./config.nix
-    #./iio-hyprland.nix
+    ./swaylock.nix
+    ./swaync.nix
+    ./swayosd.nix
+    ./user-services.nix
     ./waybar
+    ./wlogout.nix
   ];
 
   nixpkgs.overlays = [ inputs.hyprland-contrib.overlays.default ];
 
-  home.packages = with pkgs; [ hyprpicker hyprpaper grimblast hyprprop scratchpad ];
+  home.packages = with pkgs; [ hyprpicker hyprpaper grimblast hyprprop iio-hyprland scratchpad ];
 
   programs = {
     fish.loginShellInit = ''
@@ -36,12 +38,6 @@
       enable = true;
       target = "hyprland-session.target";
     };
-  };
-
-  systemd.user.services = {
-    wvkbd = { Install = { WantedBy = [ "hyprland-session.target" ]; }; };
-    swaynotificationcenter = { Install = { WantedBy = [ "hyprland-session.target" ]; }; };
-    hyprpaper = { Install = { WantedBy = [ "hyprland-session.target" ]; }; };
   };
 
   wayland.windowManager.hyprland = {

@@ -16,7 +16,7 @@
       executable = true;
     };
     "joshuto/on_preview_shown" = {
-      source = ./on_preview_shown2;
+      source = ./on_preview_shown;
       executable = true;
     };
     "joshuto/on_preview_removed" = {

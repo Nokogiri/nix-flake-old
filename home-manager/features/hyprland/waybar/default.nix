@@ -56,7 +56,7 @@
         "pulseaudio" = {
           scroll-step = 2.5;
           tooltip-format = "{volume}% {icon} {desc}";
-          ignored-sinks = [ "EQ Ambience" "Easy Effects Sink" "Ambience" ];
+          ignored-sinks = [ "Ambience" ];
           format = "{volume}% {icon}";
           format-bluetooth = "{icon}  {volume}%";
           format-bluetooth-muted = "  ";

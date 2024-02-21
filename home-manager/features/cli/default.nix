@@ -8,6 +8,7 @@
     ./fzf.nix
     ./git.nix
     ./gpg-agent.nix
+    ./joshuto
     ./micro
     ./nnn.nix
     ./nushell
@@ -43,7 +44,6 @@
     ponymix
     sshfs-fuse
 
-    joshuto
     trash-cli
     fastfetch
     bc # Calculator

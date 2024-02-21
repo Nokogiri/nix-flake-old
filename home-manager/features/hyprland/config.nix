@@ -14,7 +14,7 @@
            cursor_inactive_timeout=0
          }
 
-         monitor=eDP-1,1920x1200,auto,1
+         monitor=eDP-1,1920x1200@47.999,auto,1
          #@47.999,auto,1
          #monitor=,preferred,auto,1
 
@@ -107,10 +107,10 @@
              output=eDP-1
            }
          }
-         device:wacom-hid-49c8-pen {
-           output=eDP-1
-           enabled=true
-         }
+         #device:wacom-hid-49c8-pen {
+         #  output=eDP-1
+         #  enabled=true
+         #}
 
 
          # Startup
@@ -133,7 +133,7 @@
 
          #bind=SUPER,p,exec,pkill -9 wofi || wofi -S drun -x 10 -y 10 -W 25% -H 60%
          bind=SUPER,p,exec,pkill -9 rofi || rofi -show drun
-         bind,XF86HomePage,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
+         bind=,XF86HomePage,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
          bind=SUPER,d,exec,pkill -9 hyprfuzzel || hyprfuzzel
          bind=SUPER,i,exec,cliphist list | fuzzel -d -w 96 | cliphist decode | wl-copy
          bind=,Scroll_Lock,exec,pass-wofi # fn+k
