@@ -1,24 +1,15 @@
 { pkgs, inputs, ... }: {
-  security.pam.services = {
-    swaylock = {
-      name = "swaylock";
-      text = ''
-        auth            sufficient      pam_unix.so try_first_pass likeauth nullok
-        auth            sufficient      pam_fprintd.so
-      '';
-    };
-    #greetd = { enableGnomeKeyring = true; };
-  };
+
+  security.pam.services.swaylock.fprintAuth = true;
 
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
-      nerdfonts = nerdfonts.override { fonts = [ "Hack" "JetBrainsMono" "NerdFontsSymbolsOnly" ]; };
+      nerdfonts = nerdfonts.override { fonts = [ "Hack" "NerdFontsSymbolsOnly" ]; };
     };
 
   fonts.packages = with pkgs; [
     dejavu_fonts
     hack-font
-    jetbrains-mono
     nerdfonts
     noto-fonts
     noto-fonts-emoji

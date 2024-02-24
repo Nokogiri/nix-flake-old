@@ -12,6 +12,10 @@ stdenv.mkDerivation rec {
     hash = "sha256-P+m2OIVS8QSQmeVYVIgt2A6Q/I3zZX3bK9UNLyQtNOg=";
   };
 
+  patches = [
+    ./test.patch  
+  ];
+  
   buildInputs = [ dbus systemd ];
 
   nativeBuildInputs = [ ninja meson pkg-config ];

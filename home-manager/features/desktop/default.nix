@@ -6,7 +6,7 @@
     ./gammastep.nix
     ./gpg-agent.nix
     ./kitty.nix
-    ./nnn.nix
+    #./nnn.nix
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix

@@ -5,11 +5,11 @@ file="$1"
 
 case $(file -b --mime-type "${file}") in
 	text/* | application/json)
-		cat "${file}"
+		bat --decorations never "${file}"
 		exit 0
 		;;
 	application/x-mach-binary | application/zip)
-		ls -lha "${file}"
+		eza -lha --group-directories-first "${file}"
 		exit 0
 		;;
 	*)

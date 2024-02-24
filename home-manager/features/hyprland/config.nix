@@ -103,14 +103,20 @@
              disable_while_typing = false
              natural_scroll = false
            }
-           touchdevice {
-             output=eDP-1
-           }
+           #touchdevice {
+           #  output=eDP-1
+           #}
          }
-         #device:wacom-hid-49c8-pen {
-         #  output=eDP-1
-         #  enabled=true
-         #}
+        device {
+          name = wacom-hid-49c8-finger
+          output = eDP-1
+          enabled = true
+        }
+        device {
+           name = wacom-hid-49c8-pen
+           output=eDP-1
+           enabled=true
+         }
 
 
          # Startup

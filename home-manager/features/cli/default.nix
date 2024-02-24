@@ -8,11 +8,11 @@
     ./fzf.nix
     ./git.nix
     ./gpg-agent.nix
-    ./joshuto
+    #./joshuto
     ./micro
-    ./nnn.nix
-    ./nushell
-    ./ranger.nix
+    #./nnn.nix
+    #./nushell
+    #./ranger.nix
     ./ssh.nix
     ./starship.nix
     ./tmux.nix
@@ -57,8 +57,8 @@
     jq # JSON pretty printer and manipulator
     tealdeer
     patool
-    #ps_mem
-
+    ps_mem
+    yazi
     nix-stray-roots
   ];
 }
