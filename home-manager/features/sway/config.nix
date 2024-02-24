@@ -15,7 +15,7 @@ in {
     };
     config = {
       assigns = {
-        "1" = [ { app_id = "kitty"; } { app_id = "org.wezfurlong.wezterm"; } ];
+        "1" = [ { app_id = "kitty"; } { app_id = "org.wezfurlong.wezterm"; } { app_id = "foot"; } ];
         "2" = [ { app_id = "firefox"; } { app_id = "chromium-browser"; } ];
         "3" = [{ app_id = "mpv"; }];
         "4" = [ { class = "Emacs"; } { app_id = "emacs"; } ];
@@ -244,10 +244,14 @@ in {
           command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
         }
       ];
-      terminal = "${pkgs.kitty}/bin/kitty";
+      terminal = "${pkgs.foot}/bin/foot";
       window = {
         border = 0;
         commands = [
+          {
+            command = "layout tabbed";
+            criteria = { app_id = "foot"; };
+          }
           {
             command = "resize set 1200 900";
             criteria = { app_id = "pavucontrol-qt"; };

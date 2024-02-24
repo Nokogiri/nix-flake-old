@@ -60,5 +60,6 @@
     ps_mem
     yazi
     nix-stray-roots
+    ueberzugpp
   ];
 }

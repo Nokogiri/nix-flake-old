@@ -17,6 +17,7 @@
   home.packages = with pkgs; [
     #distrobox
 
+    chafa
     ueberzugpp
     #obsidian
     logseq

@@ -2,10 +2,11 @@
 
   imports = [
     ./firefox
-
+    ./foot.nix
+    ./fuzzel.nix
     ./gammastep.nix
     ./gpg-agent.nix
-    ./kitty.nix
+    #./kitty.nix
     #./nnn.nix
     ./pavucontrol.nix
     ./playerctl.nix
