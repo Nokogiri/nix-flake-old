@@ -2,7 +2,7 @@
 # You can build them using 'nix build .#example' or (legacy) 'nix-build -A example'
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   amdctl = pkgs.callPackage ./amdctl { };
-  #cemu = pkgs.callPackage ./cemu { };
+  cemu = pkgs.callPackage ./cemu { };
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
   #fastfetch = pkgs.callPackage ./fastfetch { };
   #heroic-unwrapped = pkgs.callPackage ./heroic { };

@@ -11,23 +11,23 @@
     bubblewrap
 
     # general
-    cartridges
+    #cartridges
     gamescope
     mangohud
     vkbasalt
-    prismlauncher
+    #prismlauncher
     heroic
     protonup-qt
-    protontricks
-    moonlight-qt
+    #protontricks
+    #moonlight-qt
 
     # native packaged games
     #airshipper # veloren
     gzdoom
 
     # emulation
-    inputs.nixpkgs-stable.legacyPackages.x86_64-linux.cemu
-    #cemu
+    #inputs.nixpkgs-stable.legacyPackages.x86_64-linux.cemu
+    cemu
     dolphinEmuMaster
     retroarch
     #libretro.beetle-pce-fast

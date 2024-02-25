@@ -120,7 +120,7 @@ in {
       keybindings = {
         # Basics apps
         "${cfg.modifier}+Return" = "exec ${cfg.terminal}";
-        "${cfg.modifier}+p" = "exec pkill -9 rofi || rofi -show drun";
+        "${cfg.modifier}+p" = "exec pkill -9 fuzzel || fuzzel";
         "${cfg.modifier}+i" =
           "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
 
@@ -218,7 +218,7 @@ in {
         "${cfg.modifier}+Shift+Ctrl+l" =
           "exec ${config.home.homeDirectory}/.local/bin/mylock lock-now";
       };
-      menu = "\${pkgs.wofi}/bin/wofi --show drun";
+      menu = "\${pkgs.fuzzel}/bin/fuzzel";
       modifier = "Mod4";
       output = {
         eDP-1 = {

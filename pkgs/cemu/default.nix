@@ -6,6 +6,19 @@
 
 , nix-update-script }:
 
+let
+  #cemu 2.0-65 doesn't build with imgui 1.90.2 or newer
+  imgui' = imgui.overrideAttrs {
+    version = "1.90.1";
+    src = fetchFromGitHub {
+      owner = "ocornut";
+      repo = "imgui";
+      rev = "v1.90.1";
+      sha256 = "sha256-gf47uLeNiXQic43buB5ZnMqiotlUfIyAsP+3H7yJuFg=";
+    };
+  };
+
+in
 stdenv.mkDerivation rec {
   pname = "cemu";
   version = "2.0-65";
@@ -42,7 +55,7 @@ stdenv.mkDerivation rec {
     glm
     gtk3
     hidapi
-    imgui
+    imgui'
     libpng
     libusb1
     libzip
@@ -70,7 +83,7 @@ stdenv.mkDerivation rec {
     let tag = last (splitString "-" version);
     in ''
       rm -rf dependencies/imgui
-      ln -s ${imgui}/include/imgui dependencies/imgui
+      ln -s ${imgui'}/include/imgui dependencies/imgui
       substituteInPlace src/Common/version.h --replace " (experimental)" "-${tag} (experimental)"
       substituteInPlace dependencies/gamemode/lib/gamemode_client.h --replace "libgamemode.so.0" "${gamemode.lib}/lib/libgamemode.so.0"
     '';
