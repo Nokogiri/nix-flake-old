@@ -31,7 +31,7 @@
         outline-style: none;
       }
       #lock {
-        background-image: image(url("${pkgs.Imaginarium}/wlogout/logout.png"));
+        background-image: image(url("${pkgs.Imaginarium}/wlogout/lock.png"));
       }
       #logout {
         background-image: image(url("${pkgs.Imaginarium}/wlogout/logout.png"));

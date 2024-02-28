@@ -11,15 +11,16 @@
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix
+    ./rofi
     ./style.nix
     ./udisks.nix
     ./vscode.nix
     ./youtube.nix
-    ./wofi.nix
+    ./wofi
     ./zathura.nix
   ];
 
-  home.packages = with pkgs; [ cliphist swayimg rofi-wayland swayidle wl-clipboard xdg_utils ];
+  home.packages = with pkgs; [ cliphist swayimg swayidle wl-clipboard xdg_utils ];
 
   home.sessionVariables = {
     BROWSER = "${pkgs.firefox}/bin/firefox";

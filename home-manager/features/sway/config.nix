@@ -120,7 +120,7 @@ in {
       keybindings = {
         # Basics apps
         "${cfg.modifier}+Return" = "exec ${cfg.terminal}";
-        "${cfg.modifier}+p" = "exec pkill -9 fuzzel || fuzzel";
+        "${cfg.modifier}+p" = "exec pkill -9 rofi || rofi -show drun";
         "${cfg.modifier}+i" =
           "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
 
@@ -203,7 +203,7 @@ in {
         "XF86AudioMute" = "exec ${pkgs.swayosd}/bin/swayosd-client --output-volume mute-toggle";
 
         # powermenu 
-        "XF86PowerOff" = "exec pkill -9 wlogout || ${pkgs.wlogout}/bin/wlogout -p layer-shell";
+        #"XF86PowerOff" = "exec pkill -9 wlogout || ${pkgs.wlogout}/bin/wlogout -p layer-shell";
         # grimshot
         "${cfg.modifier}+m" = "exec grimshot save output";
         "${cfg.modifier}+Shift+m" = "exec grimshot save active";

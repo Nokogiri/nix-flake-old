@@ -25,7 +25,7 @@ in {
 
   gtk = {
     enable = true;
-    cursorTheme = { name = "Nordzy-cursors-white"; };
+    cursorTheme = { name = "Dracula-cursors"; };
     font = {
       name = "Hack Nerd Font Propo";
       size = 11.5;
@@ -73,7 +73,7 @@ in {
     x11.enable = true;
     gtk.enable = true;
     size = 24;
-    name = "Nordzy-cursors-white";
+    name = "Dracula-cursors";
     package = pkgs.nordzy-cursor-theme;
     x11.defaultCursor = "left_ptr";
   };
