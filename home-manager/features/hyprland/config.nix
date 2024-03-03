@@ -131,7 +131,7 @@
          bindm=SUPER,mouse:273,resizewindow
 
          # Program bindings
-         bind=SUPER,Return,exec,${pkgs.kitty}/bin/kitty
+         bind=SUPER,Return,exec,${pkgs.foot}/bin/foot
          bind=SUPER,w,exec,makoctl dismiss
          bind=SUPER,v,exec,$TERMINAL $SHELL -ic nvim
          bind=SUPER,m,exec,$TERMINAL $SHELL -ic neomutt

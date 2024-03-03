@@ -12,7 +12,7 @@
     extraModulePackages = with config.boot.kernelPackages; [ cpupower zenpower ];
     initrd = {
       availableKernelModules = [ "nvme" "xhci_pci" "ahci" ];
-      kernelModules = [ "amdgpu" ];
+      kernelModules = [ "amdgpu" "amd_pmf" "amdtee" ];
     };
     kernelModules = [ "kvm-amd" "zenpower" ];
     kernelPackages = pkgs.linuxPackages_latest;

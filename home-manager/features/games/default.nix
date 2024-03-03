@@ -24,6 +24,9 @@
     # native packaged games
     #airshipper # veloren
     gzdoom
+    vkquake
+    yquake2
+    yquake2-all-games
 
     # emulation
     #inputs.nixpkgs-stable.legacyPackages.x86_64-linux.cemu

@@ -24,7 +24,7 @@
     #./auto-cpufreq.nix
     ./firewall.nix
     ./nfs.nix
-    #./power.nix
+    ./power.nix
   ];
 
   nixpkgs = {
@@ -75,15 +75,20 @@
   services.acpid.enable = true;
   services.acpid.logEvents = true;
   services.fwupd.enable = true;
+
+  #services.xserver.enable = true;
+  #services.xserver.displayManager.sddm.enable = true;
+  #services.xserver.displayManager.sddm.wayland.enable = true;
+  #services.xserver.desktopManager.plasma6.enable = true;
   services.logind = {
     extraConfig = ''
       RuntimeDirectorySize=8G
     '';
-    #powerKey = "ignore";
-    #powerKeyLongPress = "poweroff";
-    #lidSwitchDocked = "suspend";
+    powerKey = "ignore";
+    powerKeyLongPress = "poweroff";
+    lidSwitchDocked = "suspend";
   };
-  services.power-profiles-daemon.enable = true;
+  #services.power-profiles-daemon.enable = true;
   services.udev.extraRules = ''
     ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
   '';

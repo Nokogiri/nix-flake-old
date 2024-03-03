@@ -9,6 +9,7 @@
   iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   Imaginarium = pkgs.callPackage ./Imaginarium { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
+  nwg-drawer = pkgs.callPackage ./nwg-drawer { };
   pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
   pass-wofi = pkgs.callPackage ./pass-wofi { };
   #openmw = pkgs.libsForQt5.callPackage ./openmw { };

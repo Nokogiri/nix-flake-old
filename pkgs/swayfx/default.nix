@@ -1,11 +1,19 @@
-{ lib, fetchFromGitHub, sway-unwrapped, stdenv, systemd,
+{ lib,
+  fetchFromGitHub, 
+  sway-unwrapped, 
+  stdenv, 
+  systemd,
+  wlroots_0_16,
 # Used by the NixOS module:
-isNixOS ? false, enableXWayland ? true
-, systemdSupport ? lib.meta.availableOn stdenv.hostPlatform systemd, trayEnabled ? systemdSupport,
+  isNixOS ? false, 
+  enableXWayland ? true, 
+  systemdSupport ? lib.meta.availableOn stdenv.hostPlatform systemd, 
+  trayEnabled ? systemdSupport,
 }:
 
 (sway-unwrapped.override {
   inherit isNixOS enableXWayland systemdSupport trayEnabled;
+  wlroots = wlroots_0_16;
 }).overrideAttrs (oldAttrs: rec {
   pname = "swayfx-unwrapped";
   version = "0.3.2g";

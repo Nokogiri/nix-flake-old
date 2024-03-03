@@ -16,7 +16,7 @@ in {
     config = {
       assigns = {
         "1" = [ { app_id = "kitty"; } { app_id = "org.wezfurlong.wezterm"; } { app_id = "foot"; } ];
-        "2" = [ { app_id = "firefox"; } { app_id = "chromium-browser"; } ];
+        "2" = [ { app_id = "firefox"; } { app_id = "chromium-browser"; } { class = "Chromium-browser"; } ];
         "3" = [{ app_id = "mpv"; }];
         "4" = [ { class = "Emacs"; } { app_id = "emacs"; } ];
         "5" = [ { app_id = "org.pwmt.zathura"; } { app_id = "com.github.maoschanz.drawing"; } ];
