@@ -1,6 +1,11 @@
 { pkgs, ... }:{
-  home.packages = [ pkgs.foot ];
+  #home.packages = [ pkgs.foot ];
   programs.foot = {
+    #package = pkgs.foot.overrideAttrs (oa: {
+    #  patches = (oa.patches or [ ]) ++ [
+    #    ./transparency.patch
+    #  ];
+    #});
     enable = true;
     server.enable = false;
     settings = {

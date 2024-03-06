@@ -12,7 +12,7 @@
     ./wlogout.nix
   ];
 
-  nixpkgs.overlays = [ inputs.hyprland-contrib.overlays.default ];
+  nixpkgs.overlays = [ inputs.hyprland-contrib.overlays.default inputs.hyprlock.overlays.default ];
 
   home.packages = with pkgs; [ hyprpicker hyprpaper grimblast hyprprop iio-hyprland scratchpad ];
 

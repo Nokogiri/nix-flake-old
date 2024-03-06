@@ -6,7 +6,6 @@
     ./fuzzel.nix
     ./gammastep.nix
     ./gpg-agent.nix
-    #./kitty.nix
     #./nnn.nix
     ./nwg/drawer.nix
     ./pavucontrol.nix

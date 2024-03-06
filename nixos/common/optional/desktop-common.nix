@@ -2,6 +2,7 @@
 
   security.pam.services.swaylock.fprintAuth = true;
 
+  security.pam.services.hyprlock = {};
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
       nerdfonts = nerdfonts.override { fonts = [ "Hack" "NerdFontsSymbolsOnly" ]; };
