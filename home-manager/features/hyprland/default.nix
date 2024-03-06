@@ -3,6 +3,7 @@
     ./hyprpaper
     inputs.hyprland.homeManagerModules.default
     ./config.nix
+    ./hyprlock.nix
     ./swaylock.nix
     ./swaync.nix
     ./swayosd.nix
