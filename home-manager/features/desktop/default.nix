@@ -8,6 +8,7 @@
     ./gpg-agent.nix
     #./nnn.nix
     ./nwg/drawer.nix
+    ./obs-studio.nix
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix
@@ -17,6 +18,7 @@
     ./vscode.nix
     ./youtube.nix
     ./wofi
+    ./xdg-portal.nix
     ./zathura.nix
   ];
 

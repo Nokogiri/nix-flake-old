@@ -1,23 +1,18 @@
 { lib, config, inputs, pkgs, ... }: {
   wayland.windowManager.hyprland = {
     extraConfig = ''
-         general {
-           #layout=hy3
+      general {
+        gaps_in=7
+        gaps_out=10
+        border_size=0
+        col.active_border=0xffAAAAAA
+        col.inactive_border=0xff666666
+        no_cursor_warps=true
+        no_border_on_floating=true
+        cursor_inactive_timeout=0
+      }
 
-           gaps_in=7
-           gaps_out=10
-           border_size=0
-           col.active_border=0xffAAAAAA
-           col.inactive_border=0xff666666
-           no_cursor_warps=true
-           no_border_on_floating=true
-           cursor_inactive_timeout=0
-         }
-
-         monitor=eDP-1,1920x1200@47.999,auto,1
-         #@47.999,auto,1
-         #monitor=,preferred,auto,1
-
+      monitor=eDP-1,1920x1200@47.999,auto,1
       xwayland {
       	force_zero_scaling = true
       }
@@ -32,121 +27,98 @@
       }
 
       decoration {
-           active_opacity=1.0
-           inactive_opacity=0.8
-           fullscreen_opacity=1.0
-           rounding=6
-           drop_shadow=true
-
-           shadow_range=24
-           shadow_offset=3 3
-           col.shadow=0x44000000
-           col.shadow_inactive=0x66000000
-
-           blur {
-             size = 3
-             passes = 1
-             #new_optimizations = true
-           }
-         }
-
-         animations {
-           enabled=true
-
-           bezier=easein,0.11, 0, 0.5, 0
-           bezier=easeout,0.5, 1, 0.89, 1
-           bezier=easeinout,0.45, 0, 0.55, 1
-
-           #animation=windowsIn,1,3,easeout,slide
-           #animation=windowsOut,1,3,easein,slide
-           #animation=windowsMove,1,3,easeout
-
-           bezier = myBezier, 0.05, 0.9, 0.1, 1.05
-           animation = windows, 1, 3, myBezier
-           animation = windowsOut, 1, 3, default, popin 10%
-           animation = border, 1, 5, default
-           animation = borderangle, 1, 4, default
-           animation = fade, 1, 3, default
-           animation = workspaces, 1, 2, default
-
-           #animation=fadeIn,1,3,easeout
-           #animation=fadeOut,1,3,easein
-           #animation=fadeSwitch,1,3,easeout
-           #animation=fadeShadow,1,3,easeout
-           #animation=fadeDim,1,3,easeout
-           #animation=border,1,3,easeout
-
-           #animation=workspaces,1,2,easeout,slide
-         }
-
-         misc {
-           disable_hyprland_logo=true
-           disable_splash_rendering=true
-           vfr=true
-         }
-
-         debug {
-           overlay=false
-           disable_logs=true
-           enable_stdout_logs=false
-         }
-         binds {
-           workspace_back_and_forth = true
-         }
-         input {
-           kb_layout=us,de
-           kb_variant=altgr-intl,
-           kb_options=grp:alt_space_toggle
-
-           follow_mouse=1
-           touchpad {
-             disable_while_typing = false
-             natural_scroll = false
-           }
-           #touchdevice {
-           #  output=eDP-1
-           #}
-         }
-        device {
-          name = wacom-hid-49c8-finger
-          output = eDP-1
-          enabled = true
+         active_opacity=1.0
+         inactive_opacity=0.8
+         fullscreen_opacity=1.0
+         rounding=6
+         drop_shadow=true
+         shadow_range=24
+         shadow_offset=3 3
+         col.shadow=0x44000000
+         col.shadow_inactive=0x66000000
+         blur {
+           size = 3
+           passes = 1
         }
-        device {
-           name = wacom-hid-49c8-pen
-           output=eDP-1
-           enabled=true
-         }
+      }
 
+      animations {
+        enabled=true
 
-         # Startup
-         exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
-         exec-once = ${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
-         exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
+        bezier=easein,0.11, 0, 0.5, 0
+        bezier=easeout,0.5, 1, 0.89, 1
+        bezier=easeinout,0.45, 0, 0.55, 1
 
-         #layerrule = blur, launcher
+        bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+        animation = windows, 1, 3, myBezier
+        animation = windowsOut, 1, 3, default, popin 10%
+        animation = border, 1, 5, default
+        animation = borderangle, 1, 4, default
+        animation = fade, 1, 3, default
+        animation = workspaces, 1, 2, default
+      }
 
-         # Mouse binding
-         bindm=SUPER,mouse:272,movewindow
-         bindm=SUPER,mouse:273,resizewindow
+      misc {
+        disable_hyprland_logo=true
+        disable_splash_rendering=true
+        vfr=true
+      }
 
-         # Program bindings
-         bind=SUPER,Return,exec,${pkgs.foot}/bin/foot
-         bind=SUPER,w,exec,makoctl dismiss
-         bind=SUPER,v,exec,$TERMINAL $SHELL -ic nvim
-         bind=SUPER,m,exec,$TERMINAL $SHELL -ic neomutt
-         bind=SUPER,b,exec,firefox
+      debug {
+        overlay=false
+        disable_logs=false
+        enable_stdout_logs=false
+      }
+      binds {
+        workspace_back_and_forth = true
+      }
+      input {
+        kb_layout=us,de
+        kb_variant=altgr-intl,
+        kb_options=grp:alt_space_toggle
+        follow_mouse=1
+        touchpad {
+          disable_while_typing = false
+          natural_scroll = false
+        }
+      }
+      device {
+        name = wacom-hid-49c8-finger
+        output = eDP-1
+        enabled = true
+      }
+      device {
+         name = wacom-hid-49c8-pen
+         output=eDP-1
+         enabled=true
+      }
 
-         #bind=SUPER,p,exec,pkill -9 wofi || wofi -S drun -x 10 -y 10 -W 25% -H 60%
-         bind=SUPER,p,exec,pkill -9 rofi || rofi -show drun
-         bind=,XF86HomePage,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
-         bind=SUPER,d,exec,pkill -9 hyprfuzzel || hyprfuzzel
-         bind=SUPER,i,exec,cliphist list | fuzzel -d -w 96 | cliphist decode | wl-copy
-         bind=,Scroll_Lock,exec,pass-wofi # fn+k
-         bind=,XF86Calculator,exec,pass-wofi # fn+f12
+      # Startup
+      exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
+      exec-once = ${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
+      exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
 
-         # Toggle waybar
-         bind=,XF86Tools,exec,pkill -USR1 waybar # profile button
+      # Mouse binding
+      bindm=SUPER,mouse:272,movewindow
+      bindm=SUPER,mouse:273,resizewindow
+
+      # Program bindings
+      bind=SUPER,Return,exec,${pkgs.foot}/bin/foot
+      bind=SUPER,w,exec,makoctl dismiss
+      bind=SUPER,v,exec,$TERMINAL $SHELL -ic nvim
+      bind=SUPER,m,exec,$TERMINAL $SHELL -ic neomutt
+      bind=SUPER,b,exec,firefox
+
+      #bind=SUPER,p,exec,pkill -9 wofi || wofi -S drun -x 10 -y 10 -W 25% -H 60%
+      bind=SUPER,p,exec,pkill -9 rofi || rofi -show drun
+      bind=,XF86HomePage,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
+      bind=SUPER,d,exec,pkill -9 hyprfuzzel || hyprfuzzel
+      bind=SUPER,i,exec,cliphist list | fuzzel -d -w 96 | cliphist decode | wl-copy
+      bind=,Scroll_Lock,exec,pass-wofi # fn+k
+      bind=,XF86Calculator,exec,pass-wofi # fn+f12
+
+      # Toggle waybar
+      bind=,XF86Tools,exec,pkill -USR1 waybar # profile button
 
          # Lock screen
          bind=,XF86Launch5,exec,swaylock -S

@@ -15,7 +15,7 @@
       kernelModules = [ "amdgpu" "amd_pmf" "amdtee" ];
     };
     kernelModules = [ "kvm-amd" "zenpower" ];
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages;
     kernelParams = [ "amd_pstate=active" "mitigations=off" "cpufreq.default_governor=powersave" ];
     loader.efi.efiSysMountPoint = "/boot";
     supportedFilesystems = [ "btrfs" ];

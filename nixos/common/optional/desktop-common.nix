@@ -3,11 +3,12 @@
   security.pam.services.swaylock.fprintAuth = true;
 
   security.pam.services.hyprlock = {};
+  
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
       nerdfonts = nerdfonts.override { fonts = [ "Hack" "NerdFontsSymbolsOnly" ]; };
     };
-
+  nixpkgs.overlays = [ inputs.hyprland.overlays.default ];
   fonts.packages = with pkgs; [
     dejavu_fonts
     hack-font
@@ -15,7 +16,7 @@
     noto-fonts
     noto-fonts-emoji
     noto-fonts-cjk-sans
-    twemoji-color-font
+    #twemoji-color-font
     weather-icons
   ];
 
@@ -35,13 +36,13 @@
     };
   };
 
-  xdg.portal = {
-    enable = true;
-    xdgOpenUsePortal = false;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr ];
-    config.common.default = "*";
-  };
-
+  #xdg.portal = {
+  #  enable = true;
+  #  xdgOpenUsePortal = false;
+  #  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  #  config.common.default = "*";
+  #};
+    
   services.gnome.gnome-keyring.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -67,6 +68,7 @@
       enable = true;
       enableRenice = true;
     };
+    hyprland.enable = true;
   };
 
   # better for steam proton games

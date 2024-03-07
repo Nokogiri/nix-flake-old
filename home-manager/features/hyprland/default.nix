@@ -4,7 +4,7 @@
     inputs.hyprland.homeManagerModules.default
     ./config.nix
     ./hyprlock.nix
-    ./swaylock.nix
+    #./swaylock.nix
     ./swaync.nix
     ./swayosd.nix
     ./user-services.nix
@@ -12,7 +12,7 @@
     ./wlogout.nix
   ];
 
-  nixpkgs.overlays = [ inputs.hyprland-contrib.overlays.default inputs.hyprlock.overlays.default ];
+  nixpkgs.overlays = [ inputs.hyprland.overlays.default inputs.hyprland-contrib.overlays.default inputs.hyprlock.overlays.default ];
 
   home.packages = with pkgs; [ hyprpicker hyprpaper grimblast hyprprop iio-hyprland scratchpad ];
 

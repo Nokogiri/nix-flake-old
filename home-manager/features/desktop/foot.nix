@@ -1,18 +1,15 @@
 { pkgs, ... }:{
-  #home.packages = [ pkgs.foot ];
   programs.foot = {
-    #package = pkgs.foot.overrideAttrs (oa: {
-    #  patches = (oa.patches or [ ]) ++ [
-    #    ./transparency.patch
-    #  ];
-    #});
     enable = true;
-    server.enable = false;
     settings = {
       main = {
         font = "Hack Nerd Font Mono:size=12";
         dpi-aware = "no";
         pad = "15x15";
+      };
+      scrollback = {
+        indicator-position = "fixed";
+        indicator-format = "percentage";
       };
       colors = {
         alpha = "0.9";
