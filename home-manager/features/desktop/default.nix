@@ -22,7 +22,7 @@
     ./zathura.nix
   ];
 
-  home.packages = with pkgs; [ cliphist swayimg swayidle wl-clipboard xdg_utils ];
+  home.packages = with pkgs; [ cliphist swayimg wl-clipboard xdg_utils lxqt.pcmanfm-qt ];
 
   home.sessionVariables = {
     BROWSER = "${pkgs.firefox}/bin/firefox";
