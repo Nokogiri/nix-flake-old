@@ -18,6 +18,7 @@
     ./vscode.nix
     ./youtube.nix
     ./wofi
+    ./wvkbd.nix
     ./xdg-portal.nix
     ./zathura.nix
   ];

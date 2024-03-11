@@ -8,7 +8,6 @@
     with pkgs; {
       nerdfonts = nerdfonts.override { fonts = [ "Hack" "NerdFontsSymbolsOnly" ]; };
     };
-  nixpkgs.overlays = [ inputs.hyprland.overlays.default ];
   fonts.packages = with pkgs; [
     dejavu_fonts
     hack-font
@@ -16,7 +15,6 @@
     noto-fonts
     noto-fonts-emoji
     noto-fonts-cjk-sans
-    #twemoji-color-font
     weather-icons
   ];
 
@@ -35,14 +33,7 @@
       };
     };
   };
-
-  #xdg.portal = {
-  #  enable = true;
-  #  xdgOpenUsePortal = false;
-  #  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  #  config.common.default = "*";
-  #};
-    
+  
   services.gnome.gnome-keyring.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -74,6 +65,8 @@
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
 
+  #xdg.portal.enable = true;
+  
   services = {
     dbus = {
       enable = true;

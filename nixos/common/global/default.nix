@@ -3,7 +3,7 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     inputs.nix-index-database.nixosModules.nix-index
-    inputs.hyprland.nixosModules.default
+    #inputs.hyprland.nixosModules.default
     ./applications.nix
     ./console.nix
     ./fish.nix

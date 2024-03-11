@@ -4,9 +4,9 @@
     settings = {
       MAX_LOST_WORK_SECS_ON_AC = "15";
       MAX_LOST_WORK_SECS_ON_BAT = "60";
-      CPU_DRIVER_OPMODE_ON_AC = "passive";
+      CPU_DRIVER_OPMODE_ON_AC = "active";
       CPU_DRIVER_OPMODE_ON_BAT = "active";
-      CPU_SCALING_GOVERNOR_ON_AC = "ondemand";
+      CPU_SCALING_GOVERNOR_ON_AC = "powersave";
       CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
       CPU_SCALING_MIN_FREQ_ON_AC = "40000";
       CPU_SCALING_MAX_FREQ_ON_AC = "3000000";
