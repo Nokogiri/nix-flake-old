@@ -103,11 +103,11 @@
       bindm=SUPER,mouse:273,resizewindow
 
       # Program bindings
-      bind=SUPER,Return,exec,${pkgs.foot}/bin/foot
-      bind=SUPER,w,exec,makoctl dismiss
-      bind=SUPER,v,exec,$TERMINAL $SHELL -ic nvim
-      bind=SUPER,m,exec,$TERMINAL $SHELL -ic neomutt
-      bind=SUPER,b,exec,firefox
+      bind=SUPER,Return,exec,${pkgs.wezterm}/bin/wezterm
+      bind=SUPER,w,exec,swaync-client -t
+      #bind=SUPER,v,exec,$TERMINAL $SHELL -ic nvim
+      #bind=SUPER,m,exec,$TERMINAL $SHELL -ic neomutt
+      #bind=SUPER,b,exec,firefox
 
       bind=SUPER,p,exec,pkill -9 rofi || ${pkgs.rofi-wayland}/bin/rofi -show drun
       bind=SUPER,i,exec,cliphist list | ${pkgs.rofi-wayland}/bin/rofi -dmenu | cliphist decode | wl-copy
@@ -255,6 +255,7 @@
       windowrulev2 = workspace 3 silent,class:^(mpv)$
       windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam)$
       windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$
+      windowrulev2 = pseudo,class:^(steam)$,title:^(Steam Big Picture Mode)$
 
       windowrulev2 = float,title:^(Select EXE to Run)$
       windowrulev2 = float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$

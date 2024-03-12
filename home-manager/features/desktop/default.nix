@@ -17,6 +17,7 @@
     ./udisks.nix
     ./vscode.nix
     ./youtube.nix
+    ./wezterm
     ./wofi
     ./wvkbd.nix
     ./xdg-portal.nix
