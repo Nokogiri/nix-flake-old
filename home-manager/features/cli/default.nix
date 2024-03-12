@@ -8,11 +8,7 @@
     ./fzf.nix
     ./git.nix
     ./gpg-agent.nix
-    #./joshuto
     ./micro
-    #./nnn.nix
-    #./nushell
-    #./ranger.nix
     ./ssh.nix
     ./starship.nix
     ./tmux.nix

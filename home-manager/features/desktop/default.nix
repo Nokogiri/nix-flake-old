@@ -6,7 +6,6 @@
     ./fuzzel.nix
     ./gammastep.nix
     ./gpg-agent.nix
-    #./nnn.nix
     ./nwg/drawer.nix
     ./obs-studio.nix
     ./pavucontrol.nix
@@ -17,7 +16,6 @@
     ./udisks.nix
     ./vscode.nix
     ./youtube.nix
-    ./wezterm
     ./wofi
     ./wvkbd.nix
     ./xdg-portal.nix

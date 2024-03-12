@@ -16,7 +16,6 @@ in {
     # Automatically remove stale sockets
     extraConfig = ''
       StreamLocalBindUnlink yes
-      AcceptEnv COLORTERM WEZTERM_REMOTE_PANE
     '';
     # Allow forwarding ports to everywhere
     #gatewayPorts = "clientspecified";

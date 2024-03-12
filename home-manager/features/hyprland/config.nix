@@ -103,7 +103,7 @@
       bindm=SUPER,mouse:273,resizewindow
 
       # Program bindings
-      bind=SUPER,Return,exec,${pkgs.wezterm}/bin/wezterm
+      bind=SUPER,Return,exec,${pkgs.foot}/bin/foot
       bind=SUPER,w,exec,swaync-client -t
       #bind=SUPER,v,exec,$TERMINAL $SHELL -ic nvim
       #bind=SUPER,m,exec,$TERMINAL $SHELL -ic neomutt
