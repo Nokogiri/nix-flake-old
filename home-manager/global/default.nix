@@ -4,7 +4,6 @@
   imports = [
     ./sops.nix
     ../features/cli
-    ../colors
     inputs.nix-colors.homeManagerModules.default
     inputs.sops-nix.homeManagerModules.sops
     inputs.nix-index-database.hmModules.nix-index
@@ -13,8 +12,6 @@
     overlays = [
       outputs.overlays.modifications
       outputs.overlays.additions
-      #inputs.nixpkgs-wayland.overlay
-      #outputs.overlays.master-pkgs
     ];
     config = {
       allowUnfree = true;

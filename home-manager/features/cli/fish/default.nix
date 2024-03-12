@@ -48,7 +48,7 @@
       # Get ip
       getip = "curl ifconfig.me";
       # SSH with kitty terminfo
-      kssh = "kitty +kitten ssh";
+      #kssh = "kitty +kitten ssh";
       # Clear screen and scrollback
       clear = "printf '\\033[2J\\033[3J\\033[1;1H'";
     };
@@ -56,10 +56,6 @@
       fish_config theme choose Dracula
       any-nix-shell fish --info-right | source
       fzf_configure_bindings --history=\cr
-      set --global KITTY_INSTALLATION_DIR "${pkgs.kitty}/lib/kitty"
-      set --global KITTY_SHELL_INTEGRATION enabled
-      source "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish"
-      set --prepend fish_complete_path "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_completions.d"
     '';
   };
 }

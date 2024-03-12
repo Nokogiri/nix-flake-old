@@ -1,10 +1,12 @@
 {
   programs.fzf = {
     enable = true;
-    #enableFishIntegration = true;
+    enableFishIntegration = true;
     colors = {
-      fg = "#f8f8f2";
-      bg = "#282a36";
+      #fg = "#f8f8f2";
+      #bg = "#282a36";
+      fg = "-1";
+      bg = "-1";
       hl = "#bd93f9";
       "fg+" = "#f8f8f2";
       "bg+" = "#44475a";
@@ -16,5 +18,11 @@
       spinner = "#ffb86c";
       header = "#6272a4";
     };
+    defaultOptions = [
+      "--preview-window='border-rounded'"
+      "--prompt=' '"
+      "--marker='󰄳'"
+      "--pointer='🠶'"
+    ];
   };
 }
