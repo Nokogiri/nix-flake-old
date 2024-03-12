@@ -7,7 +7,8 @@
 , gtk-layer-shell
 , pkg-config
 , wrapGAppsHook
-, xdg-utils }:
+, xdg-utils
+}:
 
 buildGoModule rec {
   pname = "nwg-drawer";
@@ -23,7 +24,7 @@ buildGoModule rec {
   vendorHash = "sha256-w27zoC0BwTkiKyGVfNWG0k4tyTm5IIAthKqOyIMYBZQ=";
 
   #patches = [ ./nwg-drawer-power-icons.diff ];
-  
+
 
   buildInputs = [ cairo gtk3 gtk-layer-shell ];
   nativeBuildInputs = [ pkg-config wrapGAppsHook gobject-introspection ];

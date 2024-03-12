@@ -1,10 +1,38 @@
-{ lib, stdenv, fetchFromGitHub, fetchpatch, addOpenGLRunpath, wrapGAppsHook, cmake, glslang, nasm
+{ lib
+, stdenv
+, fetchFromGitHub
+, fetchpatch
+, addOpenGLRunpath
+, wrapGAppsHook
+, cmake
+, glslang
+, nasm
 , pkg-config
 
-, SDL2, boost, cubeb, curl, fmt_9, glm, gtk3, hidapi, imgui, libpng, libusb1, libzip, libXrender
-, pugixml, rapidjson, vulkan-headers, wayland, wxGTK32, zarchive, gamemode, vulkan-loader
+, SDL2
+, boost
+, cubeb
+, curl
+, fmt_9
+, glm
+, gtk3
+, hidapi
+, imgui
+, libpng
+, libusb1
+, libzip
+, libXrender
+, pugixml
+, rapidjson
+, vulkan-headers
+, wayland
+, wxGTK32
+, zarchive
+, gamemode
+, vulkan-loader
 
-, nix-update-script }:
+, nix-update-script
+}:
 
 let
   #cemu 2.0-65 doesn't build with imgui 1.90.2 or newer
@@ -104,12 +132,13 @@ stdenv.mkDerivation rec {
     runHook postInstall
   '';
 
-  preFixup = let libs = [ vulkan-loader ] ++ cubeb.passthru.backendLibs;
-  in ''
-    gappsWrapperArgs+=(
-      --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath libs}"
-    )
-  '';
+  preFixup =
+    let libs = [ vulkan-loader ] ++ cubeb.passthru.backendLibs;
+    in ''
+      gappsWrapperArgs+=(
+        --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath libs}"
+      )
+    '';
 
   passthru.updateScript = nix-update-script { };
 

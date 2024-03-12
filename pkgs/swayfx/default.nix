@@ -1,14 +1,15 @@
-{ lib,
-  fetchFromGitHub, 
-  sway-unwrapped, 
-  stdenv, 
-  systemd,
-  wlroots_0_16,
-# Used by the NixOS module:
-  isNixOS ? false, 
-  enableXWayland ? true, 
-  systemdSupport ? lib.meta.availableOn stdenv.hostPlatform systemd, 
-  trayEnabled ? systemdSupport,
+{ lib
+, fetchFromGitHub
+, sway-unwrapped
+, stdenv
+, systemd
+, wlroots_0_16
+, # Used by the NixOS module:
+  isNixOS ? false
+, enableXWayland ? true
+, systemdSupport ? lib.meta.availableOn stdenv.hostPlatform systemd
+, trayEnabled ? systemdSupport
+,
 }:
 
 (sway-unwrapped.override {
@@ -27,9 +28,10 @@
 
   # This patch was backported into SwayFX
   # remove when next release is rebased on Sway 1.9
-  patches = let removePatches = [ "LIBINPUT_CONFIG_ACCEL_PROFILE_CUSTOM.patch" ];
-  in builtins.filter (patch: !builtins.elem (patch.name or null) removePatches)
-  (oldAttrs.patches or [ ]);
+  patches =
+    let removePatches = [ "LIBINPUT_CONFIG_ACCEL_PROFILE_CUSTOM.patch" ];
+    in builtins.filter (patch: !builtins.elem (patch.name or null) removePatches)
+      (oldAttrs.patches or [ ]);
 
   meta = with lib; {
     description = "Sway, but with eye candy!";

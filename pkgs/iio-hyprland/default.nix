@@ -13,9 +13,9 @@ stdenv.mkDerivation rec {
   };
 
   patches = [
-    ./test.patch  
+    ./test.patch
   ];
-  
+
   buildInputs = [ dbus systemd ];
 
   nativeBuildInputs = [ ninja meson pkg-config ];

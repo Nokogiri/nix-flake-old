@@ -1,9 +1,27 @@
-{ lib, stdenv, fetchFromGitLab, fetchpatch, cmake, pkg-config, wrapQtAppsHook, SDL2
-#, CoreMedia
-#, VideoToolbox
-#, VideoDecodeAcceleration
-, boost, bullet, ffmpeg, libXt, luajit, lz4, mygui, openal, openscenegraph, recastnavigation
-, unshield, yaml-cpp }:
+{ lib
+, stdenv
+, fetchFromGitLab
+, fetchpatch
+, cmake
+, pkg-config
+, wrapQtAppsHook
+, SDL2
+  #, CoreMedia
+  #, VideoToolbox
+  #, VideoDecodeAcceleration
+, boost
+, bullet
+, ffmpeg
+, libXt
+, luajit
+, lz4
+, mygui
+, openal
+, openscenegraph
+, recastnavigation
+, unshield
+, yaml-cpp
+}:
 
 let
   GL = "GLVND"; # or "LEGACY";
@@ -44,7 +62,8 @@ let
     ];
   });
 
-in stdenv.mkDerivation rec {
+in
+stdenv.mkDerivation rec {
   pname = "openmw";
   version = "0.48.0";
 
