@@ -2,8 +2,6 @@
 
   imports = [
     ./firefox
-    ./foot.nix
-    ./fuzzel.nix
     ./gammastep.nix
     ./gpg-agent.nix
     ./nwg/drawer.nix
