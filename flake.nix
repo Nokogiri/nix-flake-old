@@ -23,7 +23,6 @@
 
     spicetify-nix = { url = "github:the-argus/spicetify-nix"; };
 
-    #joshuto.url = "github:kamiyaa/joshuto";
     nix-colors.url = "github:misterio77/nix-colors";
 
     nix-index-database = {
@@ -32,16 +31,6 @@
     };
 
     extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest";
-
-    #anyrun = {
-    #  url = "github:Kirottu/anyrun";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-
-    #nixpkgs-wayland = {
-    #  url = "github:nix-community/nixpkgs-wayland";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
 
     #hyprland = {
     #  url = "github:hyprwm/Hyprland";

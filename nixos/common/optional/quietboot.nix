@@ -1,7 +1,7 @@
 { pkgs, config, ... }: {
   boot = {
     plymouth = {
-      enable = false;
+      enable = true;
       theme = "dracula";
       themePackages = [ pkgs.dracula-plymouth ];
     };
@@ -13,9 +13,9 @@
       "rd.systemd.show_status=false"
       "rd.udev.log_level=3"
       "udev.log_priority=3"
-      #"quiet"
-      #"splash"
-      #"vt.global_cursor_default=0"
+      "quiet"
+      "splash"
+      "vt.global_cursor_default=0"
     ];
     consoleLogLevel = 0;
     initrd.verbose = false;

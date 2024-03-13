@@ -29,7 +29,6 @@
     home-manager.enable = true;
     git.enable = true;
     gpg.enable = true;
-    neovim.enable = true;
   };
 
   # Nicely reload system units when changing configs
