@@ -7,7 +7,7 @@
 
     splash = false
 
-    wallpaper = eDP-1,${pkgs.Imaginarium}/wallpaper/FireWatch.png
+    wallpaper = eDP-1,${pkgs.Imaginarium}/wallpaper/FireWatch_2.png
   '';
 
   #systemd.user.timers = {

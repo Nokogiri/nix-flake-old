@@ -12,9 +12,9 @@ in {
       ${pkgs.glib.bin}/bin/gsettings set $gnome_schema icon-theme '${config.gtk.iconTheme.name}'
       ${pkgs.glib.bin}/bin/gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
     '')
-    #dracula-theme
-    #dracula-icon-theme
-    #nordzy-icon-theme
+    dracula-theme
+    dracula-icon-theme
+    
     libsForQt5.qt5ct
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
