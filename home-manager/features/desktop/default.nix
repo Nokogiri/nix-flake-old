@@ -5,7 +5,7 @@
     ./gammastep.nix
     ./gpg-agent.nix
     ./nwg/drawer.nix
-    ./obs-studio.nix
+    #./obs-studio.nix
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix

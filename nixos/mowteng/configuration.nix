@@ -20,11 +20,11 @@
     ../common/optional/zramswap.nix
 
     ../common/users/nokogiri.nix
-
-    #./auto-cpufreq.nix
+    
     ./firewall.nix
     ./nfs.nix
-    ./power.nix
+    #./power.nix
+    ./auto-cpufreq.nix
   ];
 
   nixpkgs = {
@@ -61,7 +61,6 @@
     powertop.enable = false;
   };
 
-  programs.firefox.nativeMessagingHosts.ff2mpv = true;
   programs = {
     light.enable = true;
     mtr.enable = true;
@@ -76,10 +75,6 @@
   services.acpid.logEvents = true;
   services.fwupd.enable = true;
 
-  #services.xserver.enable = true;
-  #services.xserver.displayManager.sddm.enable = true;
-  #services.xserver.displayManager.sddm.wayland.enable = true;
-  #services.xserver.desktopManager.plasma6.enable = true;
   services.logind = {
     extraConfig = ''
       RuntimeDirectorySize=8G

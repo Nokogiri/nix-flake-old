@@ -34,20 +34,7 @@
     };
   };
   
-  services.gnome.gnome-keyring.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    # themepkgs
-    #nordzy-cursor-theme
-    #dracula-theme
-    #dracula-icon-theme
-    libsForQt5.qt5ct
-    qt6Packages.qt6ct
-    libsForQt5.qtstyleplugin-kvantum
-    qt6Packages.qtstyleplugin-kvantum
-  ];
-
-  environment.pathsToLink = [ "/share/Kvantum" "/share/kservicetypes5" "/share/kservices5" ];
+  #services.gnome.gnome-keyring.enable = true;
 
   gtk.iconCache.enable = true;
 
@@ -64,8 +51,6 @@
 
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
-
-  #xdg.portal.enable = true;
   
   services = {
     dbus = {

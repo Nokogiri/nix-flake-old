@@ -8,7 +8,7 @@
     settings = {
       email = "m.pappe@gefjon.org";
       base_url = "https://vault.fishoeder.net";
-      pinentry = "qt";
+      pinentry = pkgs.pinentry-rofi;
     };
   };
 }

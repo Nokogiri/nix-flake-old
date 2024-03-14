@@ -10,7 +10,7 @@
           'Hack Nerd Font Mono',
         },
         warn_about_missing_glyphs=false,
-        -- animation_fps = 1,
+        animation_fps = 1,
         enable_kitty_graphics=true,
         enable_wayland = true,
         default_cursor_style = "BlinkingUnderline",
