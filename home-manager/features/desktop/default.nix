@@ -5,6 +5,7 @@
     ./foot.nix
     ./gammastep.nix
     ./gpg-agent.nix
+    ./kitty.nix
     ./nwg/drawer.nix
     #./obs-studio.nix
     ./pavucontrol.nix
@@ -22,7 +23,7 @@
     ./zathura.nix
   ];
 
-  home.packages = with pkgs; [ cliphist swayimg wl-clipboard xdg_utils lxqt.pcmanfm-qt  ];
+  home.packages = with pkgs; [ bemenu bemoji cliphist swayimg wl-clipboard xdg_utils lxqt.pcmanfm-qt  ];
 
   home.sessionVariables = {
     BROWSER = "${pkgs.firefox}/bin/firefox";
