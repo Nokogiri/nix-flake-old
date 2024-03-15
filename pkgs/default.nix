@@ -5,13 +5,12 @@
   cemu = pkgs.callPackage ./cemu { };
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
   #fastfetch = pkgs.callPackage ./fastfetch { };
-  #heroic-unwrapped = pkgs.callPackage ./heroic { };
   iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   Imaginarium = pkgs.callPackage ./Imaginarium { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   nwg-drawer = pkgs.callPackage ./nwg-drawer { };
-  pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
-  pass-wofi = pkgs.callPackage ./pass-wofi { };
+  #pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
+  #pass-wofi = pkgs.callPackage ./pass-wofi { };
   #openmw = pkgs.libsForQt5.callPackage ./openmw { };
   patool = pkgs.python310Packages.callPackage ./patool { };
   #pcsx2 = pkgs.qt6Packages.callPackage ./pcsx2 { };

@@ -3,87 +3,135 @@
 , fetchFromGitHub
 , chafa
 , cmake
+, darwin
 , dbus
 , dconf
+, ddcutil
 , glib
 , imagemagick
+#, imagemagick6
+, libXrandr
 , libglvnd
 , libpulseaudio
+, libselinux
+, libsepol
 , libxcb
-, libXrandr
 , makeBinaryWrapper
 , networkmanager
 , nix-update-script
 , ocl-icd
 , opencl-headers
 , pciutils
+, pcre
+, pcre2
 , pkg-config
+, python3
 , rpm
 , sqlite
 , testers
+, util-linux
 , vulkan-loader
 , wayland
 , xfce
+, xorg
+, yyjson
 , zlib
-  #, AppKit
-  #, Cocoa
-  #, CoreDisplay
-  #, CoreVideo
-  #, CoreWLAN
-  #, DisplayServices
-  ##, Foundation
-  #, IOBluetooth
-  #, MediaRemote
-  #, OpenCL
-  #, moltenvk
+, rpmSupport ? false
+, vulkanSupport ? true
+, waylandSupport ? true
+, x11Support ? true
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "fastfetch";
-  version = "1.12.2";
+  version = "2.8.8";
 
   src = fetchFromGitHub {
     owner = "fastfetch-cli";
     repo = "fastfetch";
     rev = finalAttrs.version;
-    hash = "sha256-l9fIm7+dBsOqGoFUYtpYESAjDy3496rDTUDQjbNU4U0=";
+    hash = "sha256-IvAUlCDtrtBiaKZbhAiXqQXbpKiqIaKwMVC3NxaAqtw=";
   };
 
-  nativeBuildInputs = [ cmake makeBinaryWrapper pkg-config ];
+  outputs = [ "out" "man" ];
 
-  buildInputs = [ chafa imagemagick sqlite ] ++ lib.optionals stdenv.isLinux [
+  nativeBuildInputs = [
+    cmake
+    makeBinaryWrapper
+    pkg-config
+    python3
+  ];
+
+  buildInputs = [
+    chafa
+    imagemagick
+    #imagemagick6
+    pcre
+    pcre2
+    sqlite
+    yyjson
+  ] ++ lib.optionals stdenv.isLinux [
     dbus
     dconf
+    ddcutil
     glib
-    libglvnd
     libpulseaudio
-    libxcb
-    libXrandr
+    libselinux
+    libsepol
     networkmanager
     ocl-icd
     opencl-headers
     pciutils
-    rpm
-    vulkan-loader
-    wayland
-    xfce.xfconf
+    util-linux
     zlib
-  ];
-  # ++ lib.optionals stdenv.isDarwin [
-  #   AppKit
-  #   Cocoa
-  #   CoreDisplay
-  #   CoreVideo
-  #   CoreWLAN
-  #   DisplayServices
-  #   Foundation
-  #   IOBluetooth
-  #   MediaRemote
-  #   OpenCL
-  #   moltenvk
-  # ];
+  ] ++ lib.optionals rpmSupport [
+    rpm
+  ] ++ lib.optionals vulkanSupport [
+    vulkan-loader
+  ] ++ lib.optionals waylandSupport [
+    wayland
+  ] ++ lib.optionals x11Support [
+    libXrandr
+    libglvnd
+    libxcb
+    xorg.libXau
+    xorg.libXdmcp
+    xorg.libXext
+  ] ++ lib.optionals (x11Support && (!stdenv.isDarwin)) [
+    xfce.xfconf
+  ] ++ lib.optionals stdenv.isDarwin (with darwin.apple_sdk_11_0.frameworks; [
+    Apple80211
+    AppKit
+    AVFoundation
+    Cocoa
+    CoreDisplay
+    CoreVideo
+    CoreWLAN
+    DisplayServices
+    IOBluetooth
+    MediaRemote
+    OpenCL
+    SystemConfiguration
+    darwin.moltenvk
+  ]);
 
-  cmakeFlags = [ "-DCMAKE_INSTALL_SYSCONFDIR=${placeholder "out"}/etc" ];
+  cmakeFlags = [
+    (lib.cmakeOptionType "filepath" "CMAKE_INSTALL_SYSCONFDIR" "${placeholder "out"}/etc")
+    (lib.cmakeBool "ENABLE_DIRECTX_HEADERS" false)
+    (lib.cmakeBool "ENABLE_DRM" false)
+    (lib.cmakeBool "ENABLE_IMAGEMAGICK7" true)
+    (lib.cmakeBool "ENABLE_OSMESA" false)
+    (lib.cmakeBool "ENABLE_SYSTEM_YYJSON" true)
+    (lib.cmakeBool "ENABLE_GLX" x11Support)
+    (lib.cmakeBool "ENABLE_RPM" rpmSupport)
+    (lib.cmakeBool "ENABLE_VULKAN" x11Support)
+    (lib.cmakeBool "ENABLE_WAYLAND" waylandSupport)
+    (lib.cmakeBool "ENABLE_X11" x11Support)
+    (lib.cmakeBool "ENABLE_XCB" x11Support)
+    (lib.cmakeBool "ENABLE_XCB_RANDR" x11Support)
+    (lib.cmakeBool "ENABLE_XFCONF" (x11Support && (!stdenv.isDarwin)))
+    (lib.cmakeBool "ENABLE_XRANDR" x11Support)
+  ];
 
   postInstall = ''
     wrapProgram $out/bin/fastfetch \
@@ -103,11 +151,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     description = "Like neofetch, but much faster because written in C";
-    inherit (finalAttrs.src.meta) homepage;
+    homepage = "https://github.com/fastfetch-cli/fastfetch";
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [ gerg-l khaneliman ];
     platforms = lib.platforms.all;
     mainProgram = "fastfetch";
   };
 })
-

@@ -8,6 +8,7 @@
     ./user-services.nix
     ./waybar
     ./wlogout.nix
+    inputs.hyprland.homeManagerModules.default
   ];
 
   nixpkgs.overlays = [ inputs.hyprland-contrib.overlays.default inputs.hyprlock.overlays.default ];

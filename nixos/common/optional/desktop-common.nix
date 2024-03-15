@@ -46,7 +46,7 @@
       enable = true;
       enableRenice = true;
     };
-    hyprland.enable = true;
+    #hyprland.enable = true;
   };
 
   # better for steam proton games
@@ -62,4 +62,13 @@
     udisks2.enable = true;
     upower.enable = true;
   };
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.config = {
+      common = {
+        default = [
+          "gtk"
+        ];
+      };
+    };
 }

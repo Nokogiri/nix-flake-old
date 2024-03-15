@@ -1,5 +1,5 @@
 { lib
-, buildGoModule
+, buildGo122Module
 , fetchFromGitHub
 , cairo
 , gobject-introspection
@@ -10,18 +10,18 @@
 , xdg-utils
 }:
 
-buildGoModule rec {
+buildGo122Module rec {
   pname = "nwg-drawer";
-  version = "0.4.6";
+  version = "0.4.7";
 
   src = fetchFromGitHub {
     owner = "nwg-piotr";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-BxYd40imGFgdSc4+JSYUMJ3/jHz1UyAy72DmzXU4UzA=";
+    sha256 = "sha256-rBb2ArjllCBO2+9hx3f/c+uUQD1nCZzzfQGz1Wovy/0=";
   };
 
-  vendorHash = "sha256-w27zoC0BwTkiKyGVfNWG0k4tyTm5IIAthKqOyIMYBZQ=";
+  vendorHash = "sha256-L8gdJd5cPfQrcSXLxFx6BAVWOXC8HRuk5fFQ7MsKpIc=";
 
   #patches = [ ./nwg-drawer-power-icons.diff ];
 

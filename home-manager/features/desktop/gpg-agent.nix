@@ -6,8 +6,7 @@
     };
     gpg-agent = {
       enable = true;
-      pinentryPackage = pkgs.pinentry-rofi;
-      #pinentryFlavor = "qt";
+        pinentryPackage = pkgs.pinentry-qt;
     };
   };
 }
