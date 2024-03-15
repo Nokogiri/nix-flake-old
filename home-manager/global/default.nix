@@ -4,7 +4,6 @@
   imports = [
     ./sops.nix
     ../features/cli
-    inputs.nix-colors.homeManagerModules.default
     inputs.sops-nix.homeManagerModules.sops
     inputs.nix-index-database.hmModules.nix-index
   ];

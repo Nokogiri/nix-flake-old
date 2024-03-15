@@ -23,7 +23,7 @@
 
     spicetify-nix = { url = "github:the-argus/spicetify-nix"; };
 
-    nix-colors.url = "github:misterio77/nix-colors";
+    #nix-colors.url = "github:misterio77/nix-colors";
 
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
@@ -32,10 +32,6 @@
 
     extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest";
 
-    #hyprland = {
-    #  url = "github:hyprwm/Hyprland";
-      #inputs.nixpkgs.follows = "nixpkgs";
-    #};
     hyprland.url = "github:hyprwm/Hyprland";
     hypridle.url = "github:hyprwm/hypridle";
     hyprlock.url = "github:hyprwm/hyprlock";

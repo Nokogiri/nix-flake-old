@@ -3,7 +3,6 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     inputs.nix-index-database.nixosModules.nix-index
-    #inputs.hyprland.nixosModules.default
     ./applications.nix
     ./console.nix
     ./fish.nix
@@ -34,15 +33,11 @@
     settings = {
       substituters = [
         "https://nix-community.cachix.org"
-        #"https://ezkea.cachix.org"
-        #"https://anyrun.cachix.org"
         "https://hyprland.cachix.org"
       ];
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-        "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
-        "anyrun.cachix.org-1:pqBobmOjI7nKlsUMV25u9QHa9btJK65/C8vnO3p346s="
       ];
       trusted-users = [ "root" "@wheel" "nokogiri" ];
       auto-optimise-store = lib.mkDefault true;
@@ -51,7 +46,6 @@
       keep-outputs = false;
       keep-derivations = true;
     };
-    #package = pkgs.nixUnstable;
     gc = {
       automatic = lib.mkDefault true;
       dates = "monthly";
