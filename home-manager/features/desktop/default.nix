@@ -2,6 +2,7 @@
 
   imports = [
     ./firefox
+    ./foot.nix
     ./gammastep.nix
     ./gpg-agent.nix
     ./nwg/drawer.nix
@@ -17,10 +18,11 @@
     ./wofi
     ./wvkbd.nix
     ./xdg-portal.nix
+    ./ydotool.nix
     ./zathura.nix
   ];
 
-  home.packages = with pkgs; [ cliphist swayimg wl-clipboard xdg_utils lxqt.pcmanfm-qt ];
+  home.packages = with pkgs; [ cliphist swayimg wl-clipboard xdg_utils lxqt.pcmanfm-qt  ];
 
   home.sessionVariables = {
     BROWSER = "${pkgs.firefox}/bin/firefox";
