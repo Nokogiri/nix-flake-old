@@ -41,9 +41,8 @@
     sshfs-fuse
 
     trash-cli
-    fastfetch
+    pfetch
     bc # Calculator
-    #btop # same
     dfc # better df
     mediainfo
     gdu
@@ -56,6 +55,6 @@
     ps_mem
     yazi
     nix-stray-roots
-    ueberzugpp
+    #ueberzugpp
   ];
 }

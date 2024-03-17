@@ -57,7 +57,10 @@
   };
 
   powerManagement = {
-    cpuFreqGovernor = "ondemand";
+    cpuFreqGovernor = "powersave";
+    cpufreq = {
+      max = 2500000;
+    };
     powertop.enable = false;
   };
 
