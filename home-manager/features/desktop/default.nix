@@ -5,6 +5,7 @@
     ./foot.nix
     ./gammastep.nix
     ./gpg-agent.nix
+    ./kitty.nix
     ./nwg/drawer.nix
     #./obs-studio.nix
     ./pavucontrol.nix
