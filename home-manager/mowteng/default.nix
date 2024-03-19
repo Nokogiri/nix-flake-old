@@ -18,7 +18,7 @@
   nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" "electron-25.9.0" ];
   home.packages = with pkgs; [
     #distrobox
-    kdePackages.qtvirtualkeyboard
+    (opera.override { proprietaryCodecs = true; })
     chafa
     ueberzugpp
     #obsidian

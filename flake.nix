@@ -37,6 +37,10 @@
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprland-contrib.url = "github:hyprwm/contrib";
     hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
+    hy3 = {
+      url = "github:outfoxxed/hy3";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

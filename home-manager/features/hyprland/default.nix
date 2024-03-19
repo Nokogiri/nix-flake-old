@@ -2,7 +2,9 @@
   imports = [
     ./hyprpaper
     ./config.nix
+    ./environment.nix
     ./hyprlock.nix
+    ./plugins
     ./swaync.nix
     ./swayosd.nix
     ./user-services.nix

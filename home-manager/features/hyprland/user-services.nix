@@ -13,7 +13,7 @@
       Unit = { Description = "Auth Agent"; };
       Service = {
         Type = "simple";
-        ExecStart = "${pkgs.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
+        ExecStart = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
         Restart = "on-failure";
       };
       Install = { WantedBy = [ "sway-session.target" ]; };

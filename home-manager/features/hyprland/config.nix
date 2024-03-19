@@ -95,7 +95,6 @@
 
       # Startup
       exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
-      exec-once = ${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
       exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
 
       # Mouse binding
@@ -103,7 +102,7 @@
       bindm=SUPER,mouse:273,resizewindow
 
       # Program bindings
-      bind=SUPER,Return,exec,${pkgs.foot}/bin/foot
+      bind=SUPER,Return,exec,${pkgs.kitty}/bin/kitty
       bind=SUPER,w,exec,swaync-client -t
       #bind=SUPER,v,exec,$TERMINAL $SHELL -ic nvim
       #bind=SUPER,m,exec,$TERMINAL $SHELL -ic neomutt
