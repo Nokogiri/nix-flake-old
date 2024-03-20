@@ -3,6 +3,7 @@
   home.packages = [ pkgs.wttrbar ];
   programs.waybar = {
     enable = true;
+    package = inputs.nixpkgs-master.legacyPackages.x86_64-linux.waybar;
     style = ./style.css;
     settings = {
       mainBar = {
