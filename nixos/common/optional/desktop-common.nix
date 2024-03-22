@@ -8,6 +8,9 @@
     with pkgs; {
       nerdfonts = nerdfonts.override { fonts = [ "Hack" "NerdFontsSymbolsOnly" ]; };
     };
+
+  environment.systemPackages = with pkgs; [ dracula-theme dracula-icon-theme ];
+  
   fonts.packages = with pkgs; [
     dejavu_fonts
     hack-font
@@ -34,8 +37,6 @@
     };
   };
   
-  #services.gnome.gnome-keyring.enable = true;
-
   gtk.iconCache.enable = true;
 
   qt.style = "kvantum";
@@ -46,7 +47,6 @@
       enable = true;
       enableRenice = true;
     };
-    #hyprland.enable = true;
   };
 
   # better for steam proton games
