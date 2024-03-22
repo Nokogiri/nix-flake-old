@@ -36,7 +36,7 @@ in {
         background = "#F8F8F2";
         focused = {
           border = "#6272A4";
-          background = "#6272A4";
+          background = "#6272A4d9";
           text = "#F8F8F2";
           indicator = "#6262A4";
           childBorder = "#6262A4";
@@ -57,7 +57,7 @@ in {
         };
         unfocused = {
           border = "#282A36";
-          background = "#282A36";
+          background = "#282A36cc";
           text = "#BFBFBF";
           indicator = "#282A36";
           childBorder = "#282A36";
@@ -244,7 +244,7 @@ in {
           command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
         }
       ];
-      terminal = "${pkgs.foot}/bin/foot";
+      terminal = "${pkgs.wezterm}/bin/wezterm";
       window = {
         border = 0;
         commands = [
@@ -268,16 +268,16 @@ in {
         bindgesture swipe:3:right workspace prev
         bindgesture swipe:3:left workspace next
         
-        corner_radius 8
-        blur enable
-        blur_passes 1
-        blur_radius 3
-        titlebar_separator disable
-        shadows enable
-        shadow_offset 2 4
-        shadow_blur_radius 2
-        default_dim_inactive 0.3
-        shadows_on_csd disable
+        #corner_radius 8
+        #blur enable
+        #blur_passes 1
+        #blur_radius 3
+        #titlebar_separator disable
+        #shadows enable
+        #shadow_offset 2 4
+        #shadow_blur_radius 2
+        #default_dim_inactive 0.6
+        #shadows_on_csd disable
         
 
       #  for_window [app_id="org.qutebrowser.qutebrowser"] inhibit_idle fullscreen

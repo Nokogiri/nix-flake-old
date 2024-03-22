@@ -2,9 +2,10 @@
 
   imports = [
     ./firefox
+    ./foot.nix
     ./gammastep.nix
     ./gpg-agent.nix
-    ./kitty.nix
+    #./kitty.nix
     ./nwg/drawer.nix
     ./pavucontrol.nix
     ./playerctl.nix
@@ -13,6 +14,7 @@
     ./style.nix
     ./udisks.nix
     ./vscode.nix
+    ./wezterm
     ./wofi
     ./wvkbd.nix
     ./xdg-portal.nix

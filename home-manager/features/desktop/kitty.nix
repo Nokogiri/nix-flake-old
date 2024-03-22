@@ -108,7 +108,7 @@
         resize_draw_strategy = "scale";
 
         # Opacity settings
-        background_opacity = "0.94";
+        background_opacity = "0.85";
         dim_opacity = "0.4";
       };
       keybindings = {

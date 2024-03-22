@@ -1,0 +1,13 @@
+diff --git a/src/Hy3Node.hpp b/src/Hy3Node.hpp
+index f892efb..759feaf 100644
+--- a/src/Hy3Node.hpp
++++ b/src/Hy3Node.hpp
+@@ -6,7 +6,7 @@ enum class Hy3GroupLayout;
+ 
+ #include <list>
+ 
+-#include <hyprland/src/Window.hpp>
++#include <hyprland/src/desktop/Window.hpp>
+ 
+ #include "Hy3Layout.hpp"
+ #include "TabGroup.hpp"

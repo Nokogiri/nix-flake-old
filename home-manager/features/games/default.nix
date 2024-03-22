@@ -17,6 +17,7 @@
     vkbasalt
     #prismlauncher
     heroic
+    gogdl
     protonup-qt
     #protontricks
     #moonlight-qt

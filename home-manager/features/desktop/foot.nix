@@ -18,8 +18,8 @@
         indicator-format = "percentage";
       };
       colors = {
-        alpha = "0.85";
-        background = "282a36";
+        alpha = "0.75";
+        background = "282A36";
         foreground = "f8f8f2";
         
         ## Normal/regular colors (color palette 0-7)

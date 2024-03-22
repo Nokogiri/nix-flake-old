@@ -7,15 +7,13 @@
         border_size=0
         col.active_border=0xffAAAAAA
         col.inactive_border=0xff666666
+        layout = hy3
         no_cursor_warps=true
         no_border_on_floating=true
         cursor_inactive_timeout=0
       }
 
       monitor=eDP-1,1920x1200@47.999,auto,1
-      xwayland {
-      	force_zero_scaling = true
-      }
 
       gestures {
         workspace_swipe = true
@@ -102,7 +100,7 @@
       bindm=SUPER,mouse:273,resizewindow
 
       # Program bindings
-      bind=SUPER,Return,exec,${pkgs.kitty}/bin/kitty
+      bind=SUPER,Return,exec,${pkgs.foot}/bin/foot --app-id=mFoot
       bind=SUPER,w,exec,swaync-client -t
       #bind=SUPER,v,exec,$TERMINAL $SHELL -ic nvim
       #bind=SUPER,m,exec,$TERMINAL $SHELL -ic neomutt
@@ -245,6 +243,9 @@
       bind=SUPERSHIFT,8,movetoworkspacesilent,08
       bind=SUPERSHIFT,9,movetoworkspacesilent,09
       windowrulev2 = workspace 2 silent,class:^(firefox)$
+
+
+      windowrule = group set,^(mFoot)$
 
       windowrulev2 = size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
       windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
