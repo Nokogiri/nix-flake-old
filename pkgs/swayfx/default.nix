@@ -22,8 +22,8 @@
   src = fetchFromGitHub {
     owner = "WillPower3309";
     repo = "swayfx";
-    rev = "f0ecffe593574593ec99c104fa12e4bfd593b0f2";
-    sha256 = "sha256-vGc23vf8C1WIdaUgEs3XqvCU1ag5soQKZnytUsCRpEw=";
+    rev = "2bd366f3372d6f94f6633e62b7f7b06fcf316943";
+    sha256 = "sha256-kRWXQnUkMm5HjlDX9rBq8lowygvbK9+ScAOhiySR3KY=";
   };
 
   # This patch was backported into SwayFX

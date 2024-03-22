@@ -14,7 +14,7 @@
     ./style.nix
     ./udisks.nix
     ./vscode.nix
-    ./wezterm
+    #./wezterm
     ./wofi
     ./wvkbd.nix
     ./xdg-portal.nix

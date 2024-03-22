@@ -3,7 +3,7 @@ let cfg = config.wayland.windowManager.sway.config;
 in {
   wayland.windowManager.sway = {
     enable = true;
-    package = pkgs.swayfx;
+    #package = pkgs.swayfx;
     extraSessionCommands = ''
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway
@@ -244,7 +244,7 @@ in {
           command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
         }
       ];
-      terminal = "${pkgs.wezterm}/bin/wezterm";
+      terminal = "${pkgs.foot}/bin/foot";
       window = {
         border = 0;
         commands = [
@@ -272,7 +272,7 @@ in {
         #blur enable
         #blur_passes 1
         #blur_radius 3
-        #titlebar_separator disable
+        #titlebar_separator enable
         #shadows enable
         #shadow_offset 2 4
         #shadow_blur_radius 2
