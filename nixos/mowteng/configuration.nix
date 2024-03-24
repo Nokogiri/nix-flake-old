@@ -76,7 +76,7 @@
 
   services.acpid.enable = true;
   services.acpid.logEvents = true;
-  services.fwupd.enable = true;
+  #services.fwupd.enable = true;
 
   services.logind = {
     extraConfig = ''

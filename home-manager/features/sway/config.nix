@@ -36,7 +36,7 @@ in {
         background = "#F8F8F2";
         focused = {
           border = "#6272A4";
-          background = "#6272A4d9";
+          background = "#6272A4e6";
           text = "#F8F8F2";
           indicator = "#6262A4";
           childBorder = "#6262A4";
@@ -57,7 +57,7 @@ in {
         };
         unfocused = {
           border = "#282A36";
-          background = "#282A36cc";
+          background = "#282A36e6";
           text = "#BFBFBF";
           indicator = "#282A36";
           childBorder = "#282A36";
@@ -223,7 +223,7 @@ in {
       output = {
         eDP-1 = {
           #bg = "${config.home.homeDirectory}/.local/share/wallpaper/FireWatch.png fill";
-          bg = "${pkgs.Imaginarium}/wallpaper/FireWatch.png fill";
+          bg = "${pkgs.Imaginarium}/wallpaper/FireWatch_2.png fill";
           scale = "1";
           resolution = "1920x1200@47.999Hz";
         };
@@ -244,7 +244,7 @@ in {
           command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
         }
       ];
-      terminal = "${pkgs.foot}/bin/foot";
+      terminal = "${pkgs.wezterm}/bin/wezterm";
       window = {
         border = 0;
         commands = [
