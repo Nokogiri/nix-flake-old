@@ -23,8 +23,6 @@
 
     spicetify-nix = { url = "github:the-argus/spicetify-nix"; };
 
-    #nix-colors.url = "github:misterio77/nix-colors";
-
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,15 +30,15 @@
 
     extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest";
 
-    #hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland";
     hypridle.url = "github:hyprwm/hypridle";
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprland-contrib.url = "github:hyprwm/contrib";
-    #hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
-    #hy3 = {
-    #  url = "github:outfoxxed/hy3";
-    #  inputs.hyprland.follows = "hyprland";
-    #};
+    hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
+    hy3 = {
+      url = "github:outfoxxed/hy3";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

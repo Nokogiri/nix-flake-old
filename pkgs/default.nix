@@ -5,7 +5,7 @@
   #cemu = pkgs.callPackage ./cemu { };
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
   #fastfetch = pkgs.callPackage ./fastfetch { };
-  #iio-hyprland = pkgs.callPackage ./iio-hyprland { };
+  iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   Imaginarium = pkgs.callPackage ./Imaginarium { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   nwg-drawer = pkgs.callPackage ./nwg-drawer { };

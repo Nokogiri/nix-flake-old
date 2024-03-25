@@ -11,6 +11,7 @@ in {
     ./wlogout.nix
   ];
 
+  home.packages = with pkgs; [ squeekboard ];
   programs = {
     fish.loginShellInit = ''
       if test (tty) = "/dev/tty1"
