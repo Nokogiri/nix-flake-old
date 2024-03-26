@@ -2,11 +2,8 @@
 
   imports = [
     ./firefox
-    ./foot.nix
     ./gammastep.nix
     ./gpg-agent.nix
-    #./kitty.nix
-    ./nwg/drawer.nix
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix

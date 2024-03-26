@@ -65,6 +65,7 @@
   };
 
   programs = {
+    gamemode.enable = true;
     light.enable = true;
     mtr.enable = true;
   };

@@ -25,7 +25,7 @@
 
     appimage-run
     transmission-qt
-    chromium
+    #chromium
     nss
     xournalpp
 

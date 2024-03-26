@@ -120,7 +120,7 @@ in {
       keybindings = {
         # Basics apps
         "${cfg.modifier}+Return" = "exec ${cfg.terminal}";
-        "${cfg.modifier}+p" = "exec pkill -9 nwg-drawer || nwg-drawer -pbexit 'swaymsg exit' --pbsleep 'systemctl suspend' --pbpoweroff 'systemctl poweroff' --pbreboot 'systemctl reboot' -term wezterm";
+        "${cfg.modifier}+p" = "exec pkill -9 wofi || wofi --show drun --height 66% --width 50%  --prompt \"Applications ➨\"";
         "${cfg.modifier}+i" =
           "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
 
@@ -246,7 +246,7 @@ in {
       ];
       terminal = "${pkgs.wezterm}/bin/wezterm";
       window = {
-        border = 0;
+        border = 1;
         commands = [
           {
             command = "layout tabbed";
