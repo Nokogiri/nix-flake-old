@@ -15,10 +15,10 @@
 
   #programs.zsh.enable = true;
   services.mpris-proxy.enable = true;
-  nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" "electron-25.9.0" ];
+  #nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" "electron-25.9.0" ];
   home.packages = with pkgs; [
     #distrobox
-    ueberzugpp
+    #ueberzugpp
     #obsidian
     logseq
     handlr-regex
@@ -26,7 +26,7 @@
     appimage-run
     transmission-qt
     #chromium
-    nss
+    #nss
     xournalpp
 
     # graphics stuff
