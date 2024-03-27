@@ -7,6 +7,7 @@ in {
     isNormalUser = true;
     shell = pkgs.fish;
     extraGroups = [ "wheel" "video" "audio" ] ++ ifTheyExist [
+      "gamemode"
       "network"
       "networkmanager"
       "wireshark"

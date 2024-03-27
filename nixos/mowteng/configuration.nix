@@ -44,7 +44,7 @@
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
-  environment.systemPackages = with pkgs; [ amdctl gparted xorg.xhost exfatprogs Imaginarium ];
+  environment.systemPackages = with pkgs; [ amdctl exfatprogs Imaginarium ];
 
   hardware = {
     opengl = {
@@ -65,7 +65,6 @@
   };
 
   programs = {
-    gamemode.enable = true;
     light.enable = true;
     mtr.enable = true;
   };
@@ -76,8 +75,7 @@
   };
 
   services.acpid.enable = true;
-  services.acpid.logEvents = true;
-  #services.fwupd.enable = true;
+  services.acpid.logEvents = false;
 
   services.logind = {
     extraConfig = ''
