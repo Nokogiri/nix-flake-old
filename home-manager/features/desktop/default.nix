@@ -7,7 +7,6 @@
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix
-    ./rofi
     ./style.nix
     ./udisks.nix
     ./vscode.nix
@@ -19,7 +18,7 @@
     ./zathura.nix
   ];
 
-  home.packages = with pkgs; [ bemoji cliphist swayimg wl-clipboard xdg_utils lxqt.pcmanfm-qt  ];
+  home.packages = with pkgs; [ cliphist swayimg wl-clipboard xdg_utils lxqt.pcmanfm-qt  ];
 
   home.sessionVariables = {
     BROWSER = "${pkgs.firefox}/bin/firefox";
