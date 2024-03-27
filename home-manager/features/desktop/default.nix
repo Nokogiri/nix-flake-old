@@ -7,6 +7,7 @@
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix
+    ./rofi
     ./style.nix
     ./udisks.nix
     ./vscode.nix

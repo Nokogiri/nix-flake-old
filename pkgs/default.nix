@@ -15,6 +15,7 @@
   #patool = pkgs.python310Packages.callPackage ./patool { };
   #pcsx2 = pkgs.qt6Packages.callPackage ./pcsx2 { };
   #portmod = pkgs.callPackage ./portmod { };
+  rofi-emoji = pkgs.callPackage ./rofi-emoji { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
   swayfx-unwrapped = pkgs.callPackage ./swayfx { };
 }
