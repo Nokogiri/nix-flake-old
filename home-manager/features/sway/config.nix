@@ -26,12 +26,7 @@ in {
         "8" = [ { app_id = "transmission-qt"; } { app_id = "com.usebottles.bottles"; } ];
         "9" = [{ class = "Com.github.johnfactotum.Foliate"; }];
       };
-      bars = [ ]; # {
-      #  id = "1";
-      #  command = "${pkgs.waybar-hyprland}/bin/waybar";
-      #  position = "top";
-      #  mode = "dock";
-      #}];
+      bars = [ ];
       colors = {
         background = "#F8F8F2";
         focused = {
@@ -71,17 +66,17 @@ in {
         };
       };
       floating = {
-        border = 0;
+        border = 3;
         criteria = [
           { app_id = "pavucontrol"; }
           { app_id = "retroarch"; }
           { app_id = ".blueman-manager-wrapped"; }
           { app_id = "nm-connection-editor"; }
           { app_id = "org.kde.polkit-kde-authentication-agent-1"; }
-          {
-            class = "steam";
-            instance = "steamwebhelper";
-          }
+          #{
+          #  class = "steam";
+          #  instance = "steamwebhelper";
+          #}
           {
             app_id = "org.kde.kdeconnect-indicator";
           }
@@ -246,7 +241,7 @@ in {
       ];
       terminal = "${pkgs.wezterm}/bin/wezterm";
       window = {
-        border = 1;
+        border = 2;
         commands = [
           {
             command = "layout tabbed";
