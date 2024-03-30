@@ -9,14 +9,21 @@
       options iwlwifi 11n_disable=8 
       #power_save=0
     '';
-    extraModulePackages = with config.boot.kernelPackages; [ cpupower zenpower ];
+    extraModulePackages = with config.boot.kernelPackages; [
+      cpupower
+      zenpower
+    ];
     initrd = {
       availableKernelModules = [ "nvme" "xhci_pci" "ahci" ];
       kernelModules = [ "amdgpu" "amd_pmf" "amdtee" ];
     };
     kernelModules = [ "kvm-amd" "zenpower" ];
     kernelPackages = pkgs.linuxPackages;
-    kernelParams = [ "amd_pstate=active" "mitigations=off" "cpufreq.default_governor=powersave" ];
+    kernelParams = [
+      "amd_pstate=active"
+      "mitigations=off"
+      "cpufreq.default_governor=powersave"
+    ];
     loader.efi.efiSysMountPoint = "/boot";
     supportedFilesystems = [ "btrfs" ];
     tmp.cleanOnBoot = true;
@@ -56,8 +63,14 @@
     "/boot" = {
       device = "/dev/disk/by-uuid/8C9D-013B";
       fsType = "vfat";
-      options =
-        [ "fmask=0022" "dmask=0022" "codepage=437" "iocharset=ascii" "shortname=mixed" "utf8" ];
+      options = [
+        "fmask=0022"
+        "dmask=0022"
+        "codepage=437"
+        "iocharset=ascii"
+        "shortname=mixed"
+        "utf8"
+      ];
     };
   };
 

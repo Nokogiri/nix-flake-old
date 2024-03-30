@@ -20,7 +20,7 @@
     ../common/optional/zramswap.nix
 
     ../common/users/nokogiri.nix
-    
+
     ./firewall.nix
     ./nfs.nix
     #./power.nix
@@ -58,9 +58,7 @@
 
   powerManagement = {
     cpuFreqGovernor = "powersave";
-    cpufreq = {
-      max = 2500000;
-    };
+    cpufreq = { max = 2500000; };
     powertop.enable = false;
   };
 
