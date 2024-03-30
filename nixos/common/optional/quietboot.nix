@@ -3,7 +3,8 @@
     plymouth = {
       enable = true;
       theme = "dracula";
-      themePackages = [ pkgs.dracula-plymouth ];
+      themePackages =
+        [ pkgs.dracula-plymouth ];
     };
     loader.timeout = 0;
     kernelParams = [

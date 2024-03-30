@@ -26,7 +26,9 @@
 
         "~ ^/data/" = { extraConfig = "internal;"; };
 
-        "~ ^/lib.*.(js|css|gif|png|ico|jpg|jpeg)$" = { extraConfig = "expires 365d;"; };
+        "~ ^/lib.*.(js|css|gif|png|ico|jpg|jpeg)$" = {
+          extraConfig = "expires 365d;";
+        };
 
         "/" = {
           priority = 1;

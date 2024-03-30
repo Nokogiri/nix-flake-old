@@ -1,16 +1,17 @@
 { config, pkgs, lib, inputs, ... }: {
 
+  imports = [ ./psd.nix ];
   home.file.".mozilla/dracula" = {
     recursive = true;
     source = ./userChrome;
   };
 
-  #programs.firefox.nativeMessagingHosts = [ pkgs.ff2mpv-rust ];
   programs.firefox = {
     enable = true;
     profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons; [
       vimium
-      ublock-origin
+      tridactyl
+      ublock-origin-lite
       onetab
       improved-tube
       bitwarden
@@ -75,7 +76,7 @@
 
     profiles.private.extensions = with config.nur.repos.rycee.firefox-addons; [
       vimium
-      ublock-origin
+      ublock-origin-lite
       onetab
 
       sidebery

@@ -88,13 +88,20 @@
     fsType = "btrfs";
     options = [ "compress=zstd:6" "noatime" "nofail" ];
   };
-  swapDevices = [{ device = "/dev/disk/by-uuid/0cd7afe0-c1e1-4d9f-8172-48f677434826"; }];
+  swapDevices =
+    [{ device = "/dev/disk/by-uuid/0cd7afe0-c1e1-4d9f-8172-48f677434826"; }];
 
   fileSystems."/boot/efi" = {
     device = "/dev/disk/by-uuid/67E3-17ED";
     fsType = "vfat";
-    options =
-      [ "fmask=0022" "dmask=0022" "codepage=437" "iocharset=ascii" "shortname=mixed" "utf8" ];
+    options = [
+      "fmask=0022"
+      "dmask=0022"
+      "codepage=437"
+      "iocharset=ascii"
+      "shortname=mixed"
+      "utf8"
+    ];
   };
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/6e0db31b-59b0-48e4-ae1e-acf978c22a66";
@@ -106,7 +113,8 @@
   #};
 
   hardware = {
-    cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+    cpu.intel.updateMicrocode =
+      lib.mkDefault config.hardware.enableRedistributableFirmware;
     enableRedistributableFirmware = true;
     bluetooth.enable = false;
   };

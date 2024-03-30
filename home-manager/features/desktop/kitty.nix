@@ -4,8 +4,8 @@
       enable = true;
       font = {
         #name = "JetBrainsMono Nerd Font Mono";
-        name = "Hack Nerd Font Mono";
-        size = 12.5;
+        name = "Hack Nerd Font";
+        size = 11.5;
       };
       theme = "Dracula";
       settings = {

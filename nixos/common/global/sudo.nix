@@ -1,16 +1,15 @@
-{ pkgs, ...}:{
+{ pkgs, ... }: {
   security = {
     sudo-rs = {
       enable = true;
       wheelNeedsPassword = false;
-      extraRules = [
-        {
-          users = [ "nokogiri" ];
-          commands = [ { command = ''${pkgs.linuxPackages.cpupower}/bin/cpupower ""'' ;
+      extraRules = [{
+        users = [ "nokogiri" ];
+        commands = [{
+          command = ''${pkgs.linuxPackages.cpupower}/bin/cpupower ""'';
           options = [ "NOPASSWD" ];
-          } ];
-        }
-      ];
+        }];
+      }];
     };
     doas = {
       enable = false;
@@ -28,7 +27,7 @@
           keepEnv = true;
           persist = true;
         }
-          
+
       ];
     };
   };

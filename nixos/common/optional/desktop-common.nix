@@ -2,15 +2,19 @@
 
   security.pam.services.swaylock.fprintAuth = true;
 
-  security.pam.services.hyprlock = {};
-  
+  security.pam.services.hyprlock = { };
+
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
-      nerdfonts = nerdfonts.override { fonts = [ "Hack" "NerdFontsSymbolsOnly" ]; };
+      nerdfonts =
+        nerdfonts.override { fonts = [ "Hack" "NerdFontsSymbolsOnly" ]; };
     };
 
-  environment.systemPackages = with pkgs; [ dracula-theme dracula-icon-theme ];
-  
+  environment.systemPackages = with pkgs; [
+    dracula-theme
+    dracula-icon-theme
+  ];
+
   fonts.packages = with pkgs; [
     dejavu_fonts
     hack-font
@@ -31,12 +35,12 @@
       defaultFonts = {
         serif = [ "Hack Nerd Font Propo" ];
         sansSerif = [ "Hack Nerd Font Propo" ];
-        monospace = [ "Hack Nerd Font Mono" ];
+        monospace = [ "Hack Nerd Font" ];
         emoji = [ "Noto Color Emoji" ];
       };
     };
   };
-  
+
   gtk.iconCache.enable = true;
 
   qt.style = "kvantum";
@@ -51,7 +55,7 @@
 
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
-  
+
   services = {
     dbus = {
       enable = true;
@@ -64,11 +68,5 @@
   };
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  xdg.portal.config = {
-      common = {
-        default = [
-          "gtk"
-        ];
-      };
-    };
+  xdg.portal.config = { common = { default = [ "gtk" ]; }; };
 }

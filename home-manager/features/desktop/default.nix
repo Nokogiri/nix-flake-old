@@ -4,6 +4,7 @@
     ./firefox
     ./gammastep.nix
     ./gpg-agent.nix
+    ./kitty.nix
     ./lite-xl
     ./pavucontrol.nix
     ./playerctl.nix
@@ -12,7 +13,6 @@
     ./style.nix
     ./udisks.nix
     ./vscode.nix
-    ./wezterm
     ./wofi
     ./wvkbd.nix
     ./xdg-portal.nix

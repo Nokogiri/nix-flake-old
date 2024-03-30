@@ -66,7 +66,7 @@ in {
         };
       };
       floating = {
-        border = 3;
+        border = 2;
         criteria = [
           { app_id = "pavucontrol"; }
           { app_id = "retroarch"; }
@@ -115,7 +115,7 @@ in {
       keybindings = {
         # Basics apps
         "${cfg.modifier}+Return" = "exec ${cfg.terminal}";
-        "${cfg.modifier}+p" = "exec pkill -9 wofi || wofi --show drun --height 66% --width 50%  --prompt \"Applications ➨\"";
+        "${cfg.modifier}+p" = "exec pkill -9 rofi || rofi -show drun";
         "${cfg.modifier}+i" =
           "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
 
@@ -239,7 +239,7 @@ in {
           command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
         }
       ];
-      terminal = "${pkgs.wezterm}/bin/wezterm";
+      terminal = "${pkgs.kitty}/bin/kitty";
       window = {
         border = 2;
         commands = [

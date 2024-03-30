@@ -14,7 +14,6 @@ in {
     '')
     dracula-theme
     dracula-icon-theme
-    
     libsForQt5.qt5ct
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
