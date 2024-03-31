@@ -5,7 +5,9 @@
     recursive = true;
     source = ./userChrome;
   };
-
+  home.file.".mozilla/native-messaging-hosts/tridactyl.json".source = "${pkgs.tridactyl-native}/lib/mozilla/native-messaging-hosts/tridactyl.json";
+  
+  home.packages = [ pkgs.tridactyl-native ];
   programs.firefox = {
     enable = true;
     profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons; [
