@@ -5,7 +5,8 @@
 * {
     font: " Hack Nerd Font Propo 12";
     foreground: #f8f8f2;
-    background-color: #282a36;
+    background-color: rgba(40, 42, 54, 90%);
+    /*background-color: #282a36;*/
     active-background: #6272a4;
     urgent-background: #ff5555;
     urgent-foreground: #282a36;
@@ -21,15 +22,19 @@
     border:           0px 2px 0px 0px;
     border-radius:    0;
     border-color:     @bordercolor;
-    height:           90%;
+    height:           60%;
     width:            35em;
-    location:         west;
+    location:         center;
     anchor:           west;
     padding:          15;
 }
 #mainbox {
+    background-color: transparent;
     border:  0;
     padding: 0;
+}
+#tabcontent {
+    background-color: transparent;
 }
 #message {
     border:       0px;
@@ -46,13 +51,14 @@
     spacing:      2px ;
     scrollbar:    false;
     padding:      2px 0px 0px ;
+    background-color: transparent;
 }
 #element {
     border:  0;
     padding: 3px ;
 }
 #element.normal.normal {
-    background-color: @background-color;
+    background-color: transparent;
     text-color:       @foreground;
 }
 #element.normal.urgent {
@@ -60,7 +66,7 @@
     text-color:       @urgent-foreground;
 }
 #element.normal.active {
-    background-color: @active-background;
+    background-color: transparent;
     text-color:       @foreground;
 }
 #element.selected.normal {
@@ -76,7 +82,7 @@
     text-color:       @foreground;
 }
 #element.alternate.normal {
-    background-color: @background-color;
+    background-color: transparent;
     text-color:       @foreground;
 }
 #element.alternate.urgent {

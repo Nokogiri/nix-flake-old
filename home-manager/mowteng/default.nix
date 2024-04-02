@@ -6,8 +6,8 @@
     ../features/games
     ../features/helix
     ../features/media
-    ../features/sway
-    #../features/hyprland
+    #../features/sway
+    ../features/hyprland
     inputs.nur.nixosModules.nur
   ];
 
