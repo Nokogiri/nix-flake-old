@@ -5,6 +5,7 @@
       bbenoist.nix
       bodil.file-browser
       catppuccin.catppuccin-vsc
+      asvetliakov.vscode-neovim 
     ];
   };
 }
