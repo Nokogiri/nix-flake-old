@@ -1,5 +1,6 @@
-{ pkgs, ... }: {
+{ inputs, pkgs, ... }: {
   wayland.windowManager.hyprland = {
+    plugins = [ inputs.hy3.packages.x86_64-linux.hy3 ];
     extraConfig = ''
       general {
         gaps_in=7
@@ -7,6 +8,7 @@
         border_size=0
         col.active_border=0xffAAAAAA
         col.inactive_border=0xff666666
+        layout = hy3
         no_cursor_warps=true
         no_border_on_floating=true
         cursor_inactive_timeout=0
@@ -89,7 +91,12 @@
          output=eDP-1
          enabled=true
       }
-
+      
+      #plugin {
+      #  hy3 {
+      #  
+      #  }
+      #}
       # Startup
       exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
       exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
@@ -150,7 +157,7 @@
       bind=SUPERSHIFT,q,killactive
       bind=SUPERSHIFT,e,exit
 
-      #bind=SUPER,t,hy3:makegroup,tab
+      bind=SUPER,t,hy3:makegroup,tab
       bind=SUPER,s,togglesplit
       bind=SUPER,f,fullscreen,1
       bind=SUPERSHIFT,f,fullscreen,0
@@ -166,19 +173,19 @@
       bind=SUPER,apostrophe,changegroupactive,f
       bind=SUPERSHIFT,apostrophe,changegroupactive,b
 
-      bind=SUPER,left,movefocus,l
-      bind=SUPER,right,movefocus,r
-      bind=SUPER,up,movefocus,u
-      bind=SUPER,down,movefocus,d
+      bind=SUPER,left,hy3:movefocus,l
+      bind=SUPER,right,hy3:movefocus,r
+      bind=SUPER,up,hy3:movefocus,u
+      bind=SUPER,down,hy3:movefocus,d
       bind=SUPER,h,movefocus,l
       bind=SUPER,l,movefocus,r
       bind=SUPER,k,movefocus,u
       bind=SUPER,j,movefocus,d
 
-      bind=SUPERSHIFT,left,movewindow,l
-      bind=SUPERSHIFT,right,movewindow,r
-      bind=SUPERSHIFT,up,movewindow,u
-      bind=SUPERSHIFT,down,movewindow,d
+      bind=SUPERSHIFT,left,hy3:movewindow,l
+      bind=SUPERSHIFT,right,hy3:movewindow,r
+      bind=SUPERSHIFT,up,hy3:movewindow,u
+      bind=SUPERSHIFT,down,hy3:movewindow,d
       bind=SUPERSHIFT,h,movewindow,l
       bind=SUPERSHIFT,l,movewindow,r
       bind=SUPERSHIFT,k,movewindow,u

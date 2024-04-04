@@ -11,7 +11,6 @@
   programs.firefox = {
     enable = true;
     profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons; [
-      vimium
       tridactyl
       ublock-origin-lite
       onetab
@@ -77,10 +76,9 @@
     };
 
     profiles.private.extensions = with config.nur.repos.rycee.firefox-addons; [
-      vimium
       ublock-origin-lite
       onetab
-
+      tridactyl
       sidebery
       sponsorblock
 

@@ -1,7 +1,8 @@
-{ lib, inputs, pkgs, config, ... }: {
+{ inputs, pkgs, ... }: {
   imports = [
     ./hyprpaper
-    ./config.nix
+    #./config.nix
+    ./hy3land.nix
     ./environment.nix
     ./hyprlock.nix
     ./plugins
