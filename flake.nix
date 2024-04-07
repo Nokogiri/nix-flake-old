@@ -30,7 +30,7 @@
 
     extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest";
 
-    hyprland.url = "github:hyprwm/Hyprland/v0.38.0";
+    hyprland.url = "github:hyprwm/Hyprland/v0.38.1";
     hypridle.url = "github:hyprwm/hypridle";
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprland-contrib.url = "github:hyprwm/contrib";
