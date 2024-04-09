@@ -5,6 +5,7 @@
     ./hy3land.nix
     ./environment.nix
     ./hyprlock.nix
+    ./hypridle.nix
     ./plugins
     ./swaync.nix
     ./swayosd.nix

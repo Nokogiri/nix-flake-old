@@ -1,8 +1,8 @@
-{ lib, formats, stdenvNoCC }:
+{ lib, stdenvNoCC }:
 
-stdenvNoCC.mkDerivation rec {
+stdenvNoCC.mkDerivation {
   pname = "Imaginarium";
-  version = "9.9.9";
+  version = "9.9.10";
 
   src = ./src;
 

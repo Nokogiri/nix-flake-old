@@ -265,6 +265,10 @@
       windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam)$
       windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$
       windowrulev2 = pseudo,class:^(steam)$,title:^(Steam Big Picture Mode)$
+      
+      windowrulev2 = float,class:^(pavucontrol-qt)$
+      windowrulev2 = center,class:^(pavucontrol-qt)$
+      windowrulev2 = size 66%,class:^(pavucontrol-qt)$
 
       windowrulev2 = float,title:^(Select EXE to Run)$
       

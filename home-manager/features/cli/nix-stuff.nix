@@ -1,11 +1,10 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    #rnix-lsp
-    nixfmt
-    #nix-diff
+    nixfmt-classic
+    nix-diff
     nix-direnv
-    #nix-top
+    nix-top
     nix-tree
-    #nix-pin
+    nix-pin
   ];
 }

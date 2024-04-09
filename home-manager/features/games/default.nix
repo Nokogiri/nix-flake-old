@@ -24,7 +24,10 @@
 
     # native packaged games
     #airshipper # veloren
+    dhewm3
+    rbdoom-3-bfg
     gzdoom
+    sm64ex
     vkquake
     yquake2
     yquake2-all-games

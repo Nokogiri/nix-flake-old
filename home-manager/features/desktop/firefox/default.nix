@@ -12,7 +12,7 @@
     enable = true;
     profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons; [
       tridactyl
-      ublock-origin-lite
+      ublock-origin
       onetab
       improved-tube
       bitwarden
@@ -76,7 +76,7 @@
     };
 
     profiles.private.extensions = with config.nur.repos.rycee.firefox-addons; [
-      ublock-origin-lite
+      ublock-origin
       onetab
       tridactyl
       sidebery

@@ -1,6 +1,7 @@
 { pkgs, config, ... }: {
 
   xdg.configFile."hypr/hyprpaper.conf".text = ''
+    preload = ${pkgs.Imaginarium}/wallpaper/Hildi.webp
     preload = ${pkgs.Imaginarium}/wallpaper/FireWatch.png
     preload = ${pkgs.Imaginarium}/wallpaper/FireWatch_1.png
     preload = ${pkgs.Imaginarium}/wallpaper/FireWatch_2.png

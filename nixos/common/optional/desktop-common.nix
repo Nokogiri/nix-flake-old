@@ -2,7 +2,9 @@
 
   security.pam.services.swaylock.fprintAuth = true;
 
-  security.pam.services.hyprlock = { };
+  security.pam.services.hyprlock = {
+    text = "auth include login";
+    };
 
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
