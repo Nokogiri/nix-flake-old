@@ -1,6 +1,14 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   imports = [
     inputs.hardware.nixosModules.common-cpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
@@ -28,8 +36,13 @@
   ];
 
   nixpkgs = {
-    overlays = [ outputs.overlays.additions outputs.overlays.modifications ];
-    config = { allowUnfree = true; };
+    overlays = [
+      outputs.overlays.additions
+      outputs.overlays.modifications
+    ];
+    config = {
+      allowUnfree = true;
+    };
   };
 
   networking = {
@@ -44,7 +57,11 @@
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
-  environment.systemPackages = with pkgs; [ amdctl exfatprogs Imaginarium ];
+  environment.systemPackages = with pkgs; [
+    amdctl
+    exfatprogs
+    Imaginarium
+  ];
 
   hardware = {
     opengl = {
@@ -58,7 +75,9 @@
 
   powerManagement = {
     cpuFreqGovernor = "powersave";
-    cpufreq = { max = 2500000; };
+    cpufreq = {
+      max = 2500000;
+    };
     powertop.enable = false;
   };
 

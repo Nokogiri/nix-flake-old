@@ -1,4 +1,10 @@
-{ pkgs, config, lib, ... }: {
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
+{
   services.phpfpm.pools.foodwiki = {
     user = "nokogiri";
     group = "users";
@@ -22,9 +28,13 @@
       root = "/srv/www/apps/foodwiki";
 
       locations = {
-        "~ /(conf/|bin/|inc/)" = { extraConfig = "deny all;"; };
+        "~ /(conf/|bin/|inc/)" = {
+          extraConfig = "deny all;";
+        };
 
-        "~ ^/data/" = { extraConfig = "internal;"; };
+        "~ ^/data/" = {
+          extraConfig = "internal;";
+        };
 
         "~ ^/lib.*.(js|css|gif|png|ico|jpg|jpeg)$" = {
           extraConfig = "expires 365d;";

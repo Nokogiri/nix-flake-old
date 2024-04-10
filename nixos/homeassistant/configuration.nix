@@ -1,6 +1,14 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
     # outputs.nixosModules.example
@@ -28,7 +36,9 @@
 
   nixpkgs = {
     overlays = [ outputs.overlays.additions ];
-    config = { allowUnfree = true; };
+    config = {
+      allowUnfree = true;
+    };
   };
 
   networking = {
@@ -36,7 +46,9 @@
     hostId = "2d3a30d6";
   };
 
-  boot = { tmp.cleanOnBoot = true; };
+  boot = {
+    tmp.cleanOnBoot = true;
+  };
 
   environment.systemPackages = with pkgs; [
     brightnessctl
@@ -48,10 +60,9 @@
 
   hardware.opengl = {
     enable = true;
-    extraPackages = with pkgs;
-      [
-        vaapiIntel # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
-      ];
+    extraPackages = with pkgs; [
+      vaapiIntel # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
+    ];
   };
   powerManagement = {
     cpuFreqGovernor = "schedutil";

@@ -1,4 +1,11 @@
-{ lib, config, modulesPath, pkgs, ... }: {
+{
+  lib,
+  config,
+  modulesPath,
+  pkgs,
+  ...
+}:
+{
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   boot = {
@@ -14,10 +21,21 @@
       zenpower
     ];
     initrd = {
-      availableKernelModules = [ "nvme" "xhci_pci" "ahci" ];
-      kernelModules = [ "amdgpu" "amd_pmf" "amdtee" ];
+      availableKernelModules = [
+        "nvme"
+        "xhci_pci"
+        "ahci"
+      ];
+      kernelModules = [
+        "amdgpu"
+        "amd_pmf"
+        "amdtee"
+      ];
     };
-    kernelModules = [ "kvm-amd" "zenpower" ];
+    kernelModules = [
+      "kvm-amd"
+      "zenpower"
+    ];
     kernelPackages = pkgs.linuxPackages;
     kernelParams = [
       "amd_pstate=active"
@@ -33,31 +51,46 @@
     "/" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
-      options = [ "subvol=nixos/root" "compress-force=zstd:6" ];
+      options = [
+        "subvol=nixos/root"
+        "compress-force=zstd:6"
+      ];
     };
 
     "/var/lib" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
-      options = [ "subvol=nixos/lib" "compress=zstd:6" ];
+      options = [
+        "subvol=nixos/lib"
+        "compress=zstd:6"
+      ];
     };
 
     "/var/log" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
-      options = [ "subvol=nixos/log" "compress=zstd:6" ];
+      options = [
+        "subvol=nixos/log"
+        "compress=zstd:6"
+      ];
     };
 
     "/nix" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
-      options = [ "subvol=nixos/store" "compress=zstd:6" ];
+      options = [
+        "subvol=nixos/store"
+        "compress=zstd:6"
+      ];
     };
 
     "/home" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
-      options = [ "subvol=@nokogiri" "compress=zstd:6" ];
+      options = [
+        "subvol=@nokogiri"
+        "compress=zstd:6"
+      ];
     };
 
     "/boot" = {
@@ -74,10 +107,12 @@
     };
   };
 
-  swapDevices = [{
-    device = "/dev/disk/by-uuid/93ae631f-7897-4c18-afd6-95d17c14ae2c";
-    priority = 100;
-  }];
+  swapDevices = [
+    {
+      device = "/dev/disk/by-uuid/93ae631f-7897-4c18-afd6-95d17c14ae2c";
+      priority = 100;
+    }
+  ];
 
   hardware = {
     cpu.amd.updateMicrocode = true;

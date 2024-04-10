@@ -1,4 +1,5 @@
-{ config, ... }: {
+{ config, ... }:
+{
   imports = [
     ./sites/cache.fishoeder.net.nix
     ./sites/files.fishoeder.net.nix

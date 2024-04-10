@@ -1,15 +1,20 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
 
   security.pam.services.swaylock.fprintAuth = true;
 
   security.pam.services.hyprlock = {
     text = "auth include login";
-    };
+  };
 
-  nixpkgs.config.packageOverrides = pkgs:
-    with pkgs; {
-      nerdfonts =
-        nerdfonts.override { fonts = [ "Hack" "NerdFontsSymbolsOnly" ]; };
+  nixpkgs.config.packageOverrides =
+    pkgs: with pkgs; {
+      nerdfonts = nerdfonts.override {
+        fonts = [
+          "Hack"
+          "NerdFontsSymbolsOnly"
+        ];
+      };
     };
 
   environment.systemPackages = with pkgs; [
@@ -70,5 +75,9 @@
   };
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  xdg.portal.config = { common = { default = [ "gtk" ]; }; };
+  xdg.portal.config = {
+    common = {
+      default = [ "gtk" ];
+    };
+  };
 }

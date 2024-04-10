@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   networking.networkmanager = {
     wifi.backend = "iwd";
     wifi.powersave = true;

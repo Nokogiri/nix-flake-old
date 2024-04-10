@@ -1,5 +1,8 @@
-{ config, pkgs, ... }: {
-  sops.secrets.vaultwarden = { sopsFile = ../../common/secrets.yaml; };
+{ config, pkgs, ... }:
+{
+  sops.secrets.vaultwarden = {
+    sopsFile = ../../common/secrets.yaml;
+  };
   services.vaultwarden = {
     enable = true;
     backupDir = "/media/Vault3.1/backup/vaultwarden";
@@ -27,8 +30,7 @@
         forceSSL = true;
         useACMEHost = "fishoeder.net";
         locations."/" = {
-          proxyPass =
-            "http://127.0.0.1:8812"; # changed the default rocket port due to some conflict
+          proxyPass = "http://127.0.0.1:8812"; # changed the default rocket port due to some conflict
           proxyWebsockets = true;
         };
         locations."/notifications/hub" = {

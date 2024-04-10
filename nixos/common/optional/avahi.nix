@@ -1,4 +1,5 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, ... }:
+{
   #networking.firewall.allowedUDPPorts = [ 5353 ];
   services.avahi = {
     enable = true;

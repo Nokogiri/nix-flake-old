@@ -21,7 +21,9 @@
       image = "tombursch/kitchenowl:latest";
       autoStart = true;
       #restart = "unless-stopped";
-      environment = { JWT_SECRET_KEY = "PLEASE_CHANGE_ME"; };
+      environment = {
+        JWT_SECRET_KEY = "PLEASE_CHANGE_ME";
+      };
       volumes = [ "/var/lib/pods/kitchenowl:/data" ];
     };
   };

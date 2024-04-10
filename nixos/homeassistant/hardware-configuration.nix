@@ -1,8 +1,16 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 # This is just an example, you should generate yours with nixos-generate-config and put it in here.
 {
   boot = {
-    blacklistedKernelModules = [ "b43" "snd_had_intel" ];
+    blacklistedKernelModules = [
+      "b43"
+      "snd_had_intel"
+    ];
     consoleLogLevel = 3;
     extraModprobeConfig = ''
       options hid_apple fnmode=2 swap_fn_leftctrl=1 iso_layout=0
@@ -51,45 +59,67 @@
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
     fsType = "btrfs";
-    options = [ "subvol=nixos/root" "compress=zstd:6" ];
+    options = [
+      "subvol=nixos/root"
+      "compress=zstd:6"
+    ];
   };
 
   fileSystems."/var/lib" = {
     device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
     fsType = "btrfs";
-    options = [ "subvol=nixos/lib" "compress=zstd:6" ];
+    options = [
+      "subvol=nixos/lib"
+      "compress=zstd:6"
+    ];
   };
 
   fileSystems."/var/log" = {
     device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
     fsType = "btrfs";
-    options = [ "subvol=nixos/log" "compress=zstd:6" ];
+    options = [
+      "subvol=nixos/log"
+      "compress=zstd:6"
+    ];
   };
 
   fileSystems."/home" = {
     device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
     fsType = "btrfs";
-    options = [ "subvol=home" "compress=zstd:6" ];
+    options = [
+      "subvol=home"
+      "compress=zstd:6"
+    ];
   };
 
   fileSystems."/nix" = {
     device = "/dev/disk/by-uuid/4611724f-8582-4a42-9a29-9e11c599ace9";
     fsType = "btrfs";
-    options = [ "subvol=nixos/store" "compress=zstd:6" ];
+    options = [
+      "subvol=nixos/store"
+      "compress=zstd:6"
+    ];
   };
 
   fileSystems."/media/Vault1.1" = {
     device = "/dev/disk/by-uuid/10a2e8f7-656f-414a-bddf-e3d5e6a6d7a0";
     fsType = "btrfs";
-    options = [ "compress=zstd:6" "noatime" "nofail" ];
+    options = [
+      "compress=zstd:6"
+      "noatime"
+      "nofail"
+    ];
   };
   fileSystems."/media/Vault3.1" = {
     device = "/dev/disk/by-uuid/aee8a1c9-f265-4103-ba79-869773e4e99c";
     fsType = "btrfs";
-    options = [ "compress=zstd:6" "noatime" "nofail" ];
+    options = [
+      "compress=zstd:6"
+      "noatime"
+      "nofail"
+    ];
   };
-  swapDevices =
-    [{ device = "/dev/disk/by-uuid/0cd7afe0-c1e1-4d9f-8172-48f677434826"; }];
+  swapDevices = [ { device = "/dev/disk/by-uuid/0cd7afe0-c1e1-4d9f-8172-48f677434826"; } ];
 
   fileSystems."/boot/efi" = {
     device = "/dev/disk/by-uuid/67E3-17ED";
@@ -113,8 +143,7 @@
   #};
 
   hardware = {
-    cpu.intel.updateMicrocode =
-      lib.mkDefault config.hardware.enableRedistributableFirmware;
+    cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     enableRedistributableFirmware = true;
     bluetooth.enable = false;
   };

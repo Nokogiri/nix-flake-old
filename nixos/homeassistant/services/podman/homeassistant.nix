@@ -21,7 +21,8 @@
       forceSSL = true;
       locations."/" = {
         proxyPass = "http://192.168.178.57:8123";
-        extraConfig = "proxy_redirect off;"
+        extraConfig =
+          "proxy_redirect off;"
           + "proxy_set_header Range $http_range;"
           + "proxy_set_header If-Range $http_if_range;"
           + "proxy_set_header X-Real-IP $remote_addr;"

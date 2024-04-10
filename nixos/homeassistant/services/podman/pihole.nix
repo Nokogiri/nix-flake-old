@@ -9,7 +9,9 @@
         "/var/lib/pods/pihole/etc-dnsmasq.d:/etc/dnsamsq.d"
         #"/etc/localtime:/etc/localtime:ro"
       ];
-      environment = { TZ = "Europe/Berlin"; };
+      environment = {
+        TZ = "Europe/Berlin";
+      };
       environmentFiles = [ /run/secrets/pihole ];
       ports = [
         "10.200.200.1:53:53/tcp"

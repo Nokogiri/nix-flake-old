@@ -1,4 +1,5 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, ... }:
+{
   sops.secrets.forgejo_mail = {
     sopsFile = ../../common/secrets.yaml;
     owner = config.services.forgejo.user;
@@ -52,7 +53,9 @@
         USER = "nokogiri@gefjon.org";
         PROTOCOL = "smtps";
       };
-      other = { SHOW_FOOTER_VERSION = false; };
+      other = {
+        SHOW_FOOTER_VERSION = false;
+      };
       indexer = {
         REPO_INDEXER_ENABLED = true;
         REPO_INDEXER_PATH = "indexers/repos.bleve";
@@ -60,7 +63,9 @@
         REPO_INDEXER_INCLUDE = "";
         REPO_INDEXER_EXCLUDE = "resources/bin/**";
       };
-      federation = { ENABLED = true; };
+      federation = {
+        ENABLED = true;
+      };
       cache = {
         ENABLED = true;
         ADAPTER = "redis";
@@ -91,9 +96,9 @@
           alias = "${config.services.forgejo.package.data}/public/assets/";
         };
         locations."/" = {
-          proxyPass =
-            "http://unix:/${config.services.forgejo.settings.server.HTTP_ADDR}";
-          extraConfig = "proxy_set_header Host $host;"
+          proxyPass = "http://unix:/${config.services.forgejo.settings.server.HTTP_ADDR}";
+          extraConfig =
+            "proxy_set_header Host $host;"
             + "proxy_set_header X-Real-IP $remote_addr;"
             + "proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;"
             + "proxy_set_header X-Forwarded-Proto $scheme;";

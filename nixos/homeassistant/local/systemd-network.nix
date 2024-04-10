@@ -15,7 +15,9 @@
   systemd.network.networks."wired" = {
     matchConfig.Name = [ "en*" ];
     DHCP = "yes";
-    dhcpV4Config = { UseDomains = true; };
+    dhcpV4Config = {
+      UseDomains = true;
+    };
     networkConfig = {
       IPv6AcceptRA = "no";
       MulticastDNS = true;

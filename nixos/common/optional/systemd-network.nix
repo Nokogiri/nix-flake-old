@@ -5,7 +5,13 @@
       enable = true;
       timeout = 20;
       anyInterface = false;
-      ignoredInterfaces = [ "haos" "veth0" "veth1" "podman0" "veth0@if2" ];
+      ignoredInterfaces = [
+        "haos"
+        "veth0"
+        "veth1"
+        "podman0"
+        "veth0@if2"
+      ];
     };
   };
 }

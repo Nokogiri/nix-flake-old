@@ -2,7 +2,10 @@
   services.fail2ban = {
     enable = true;
     bantime = "3600";
-    ignoreIP = [ "10.200.200.0/16" "192.168.178.0/24" ];
+    ignoreIP = [
+      "10.200.200.0/16"
+      "192.168.178.0/24"
+    ];
     jails = {
       sshd = {
         settings = {

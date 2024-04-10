@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   hardware = {
     bluetooth.enable = true;
     bluetooth.package = pkgs.bluez5-experimental;
@@ -13,9 +14,13 @@
       #  MaxConnectionInterval=6;
       #  ConnectionLatency=0;
       #};
-      Policy = { AutoEnable = true; };
+      Policy = {
+        AutoEnable = true;
+      };
     };
   };
-  systemd.services.bluetooth.serviceConfig.ExecStart =
-    [ "" "${pkgs.bluez}/libexec/bluetooth/bluetoothd --experimental" ];
+  systemd.services.bluetooth.serviceConfig.ExecStart = [
+    ""
+    "${pkgs.bluez}/libexec/bluetooth/bluetoothd --experimental"
+  ];
 }

@@ -19,8 +19,22 @@
   networking.firewall = {
     #enable = true;
     # for NFSv3; view with `rpcinfo -p`
-    allowedTCPPorts = [ 111 2049 4000 4001 4002 20048 ];
-    allowedUDPPorts = [ 111 2049 4000 4001 4002 20048 ];
+    allowedTCPPorts = [
+      111
+      2049
+      4000
+      4001
+      4002
+      20048
+    ];
+    allowedUDPPorts = [
+      111
+      2049
+      4000
+      4001
+      4002
+      20048
+    ];
   };
   services.nfs.server.exports = ''
     /export            10.200.200.0/24(rw,fsid=0,no_subtree_check) 192.168.178.0/24(rw,fsid=0,no_subtree_check)
