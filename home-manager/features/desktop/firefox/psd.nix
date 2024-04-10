@@ -1,4 +1,10 @@
-{ pkgs, lib, config, ... }:{
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+{
   home.packages = [ pkgs.profile-sync-daemon ];
 
   systemd.user = {
@@ -16,7 +22,9 @@
           ExecStop = "${pkgs.profile-sync-daemon}/bin/profile-sync-daemon unsync";
           Environment = "LAUNCHED_BY_SYSTEMD=1";
         };
-        Install = { WantedBy = [ "default.target" ]; };
+        Install = {
+          WantedBy = [ "default.target" ];
+        };
       };
       psd-resync = {
         Unit = {
@@ -30,7 +38,9 @@
           ExecStart = "${pkgs.profile-sync-daemon}/bin/profile-sync-daemon resync";
           Environment = "LAUNCHED_BY_SYSTEMD=1";
         };
-        Install = { WantedBy = [ "default.target" ]; };
+        Install = {
+          WantedBy = [ "default.target" ];
+        };
       };
     };
     timers = {
@@ -44,5 +54,5 @@
         };
       };
     };
-  };      
+  };
 }

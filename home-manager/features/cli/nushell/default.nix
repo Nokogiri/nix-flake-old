@@ -1,5 +1,6 @@
 { pkgs, lib, ... }:
-with lib; {
+with lib;
+{
   programs.starship.enableNushellIntegration = true;
   programs.atuin.enableNushellIntegration = true;
 

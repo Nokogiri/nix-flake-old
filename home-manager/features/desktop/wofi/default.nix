@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 let
   wofi = pkgs.wofi.overrideAttrs (oa: {
     patches = (oa.patches or [ ]) ++ [
@@ -9,7 +14,8 @@ let
   pass = config.programs.password-store.package;
   passEnabled = config.programs.password-store.enable;
   pass-wofi = pkgs.pass-wofi.override { inherit pass; };
-in {
+in
+{
   home.packages = [ wofi ] ++ (lib.optional passEnabled pass-wofi);
 
   xdg.configFile."wofi/style.css".source = ./style.css;
@@ -23,6 +29,6 @@ in {
     run-always_parse_args=true
     run-cache_file=/dev/null
     run-exec_search=true
-    
+
   '';
 }

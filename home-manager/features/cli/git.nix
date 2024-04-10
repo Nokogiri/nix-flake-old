@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs = {
     git = {
       enable = true;
@@ -10,13 +11,20 @@
         key = "3064C39BEA915CE6";
       };
       diff-so-fancy.enable = false;
-      ignores = [ "*~" "*.swp" ".direnv" "result" ];
+      ignores = [
+        "*~"
+        "*.swp"
+        ".direnv"
+        "result"
+      ];
       extraConfig = {
         init.defaultBranch = "main";
         feature.manyFiles = true;
         index.skipHash = false;
       };
-      lfs = { enable = true; };
+      lfs = {
+        enable = true;
+      };
       delta = {
         enable = true;
       };

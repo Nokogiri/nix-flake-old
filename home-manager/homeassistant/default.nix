@@ -1,1 +1,6 @@
-{ imports = [ ../global ../features/cli/nix-stuff.nix ]; }
+{
+  imports = [
+    ../global
+    ../features/cli/nix-stuff.nix
+  ];
+}

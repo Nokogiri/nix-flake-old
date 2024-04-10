@@ -10,8 +10,7 @@
       proc_per_core = true;
       proc_sorting = "cpu direct";
 
-      disks_filter =
-        "exclude=tmp /nix/store /var/lib /var/log /export/Vault3.1 /export/Downloads /export/Vault1.1 /boot/efi /boot / /home";
+      disks_filter = "exclude=tmp /nix/store /var/lib /var/log /export/Vault3.1 /export/Downloads /export/Vault1.1 /boot/efi /boot / /home";
     };
   };
 }

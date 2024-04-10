@@ -1,6 +1,14 @@
-{ inputs, lib, config, pkgs, ... }:
-let cfg = config.wayland.windowManager.sway.config;
-in {
+{
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+let
+  cfg = config.wayland.windowManager.sway.config;
+in
+{
   imports = [
     ./config.nix
     ./swaylock.nix

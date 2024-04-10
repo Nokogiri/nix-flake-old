@@ -1,4 +1,11 @@
-{ config, pkgs, lib, inputs, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
+{
 
   imports = [ ./psd.nix ];
   home.file.".mozilla/dracula" = {
@@ -6,7 +13,7 @@
     source = ./userChrome;
   };
   home.file.".mozilla/native-messaging-hosts/tridactyl.json".source = "${pkgs.tridactyl-native}/lib/mozilla/native-messaging-hosts/tridactyl.json";
-  
+
   home.packages = [ pkgs.tridactyl-native ];
   programs.firefox = {
     enable = true;
@@ -54,15 +61,13 @@
       userChrome = ''
         @import url("${
           builtins.fetchurl {
-            url =
-              "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/hide_tabs_toolbar.css";
+            url = "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/hide_tabs_toolbar.css";
             sha256 = "sha256-60fv8C7+nj7mUTAfMnfGTcEcdba2XUXfPnvzYluKzaw=";
           }
         }");
         /*@import url("${
           builtins.fetchurl {
-            url =
-              "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/window_control_placeholder_support.css";
+            url = "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/window_control_placeholder_support.css";
             sha256 = "sha256-q1BC2VHTYxwqr8PAt93GrIF+owDnzlI1ozLIkYQf9ac=";
           }
         }");*/
@@ -114,15 +119,13 @@
       userChrome = ''
         @import url("${
           builtins.fetchurl {
-            url =
-              "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/hide_tabs_toolbar.css";
+            url = "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/hide_tabs_toolbar.css";
             sha256 = "sha256-60fv8C7+nj7mUTAfMnfGTcEcdba2XUXfPnvzYluKzaw=";
           }
         }");
         /*@import url("${
           builtins.fetchurl {
-            url =
-              "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/window_control_placeholder_support.css";
+            url = "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/window_control_placeholder_support.css";
             sha256 = "sha256-q1BC2VHTYxwqr8PAt93GrIF+owDnzlI1ozLIkYQf9ac=";
           }
         }");*/

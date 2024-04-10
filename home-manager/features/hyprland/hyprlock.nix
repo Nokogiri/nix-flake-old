@@ -1,7 +1,6 @@
-{inputs, ...}: {
-  imports = [
-    inputs.hyprlock.homeManagerModules.hyprlock
-  ];
+{ inputs, ... }:
+{
+  imports = [ inputs.hyprlock.homeManagerModules.hyprlock ];
 
   programs.hyprlock = {
     enable = true;
@@ -21,7 +20,7 @@
         # Blur
         blur_passes = 3; # 0 disables blurring
         blur_size = 10;
-        noise = 0.0117;
+        noise = 1.17e-2;
         contrast = 0.8916;
         brightness = 0.8172;
         vibrancy = 0.1696;

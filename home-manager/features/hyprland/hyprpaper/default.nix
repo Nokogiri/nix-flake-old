@@ -1,4 +1,5 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, ... }:
+{
 
   xdg.configFile."hypr/hyprpaper.conf".text = ''
     preload = ${pkgs.Imaginarium}/wallpaper/Hildi.webp
@@ -22,7 +23,9 @@
   #};
   systemd.user.services = {
     hyprpaper = {
-      Unit = { Description = "Hyprpaper"; };
+      Unit = {
+        Description = "Hyprpaper";
+      };
       Service = {
         Type = "simple";
         ExecStart = "${pkgs.hyprpaper}/bin/hyprpaper";

@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
   xdg.configFile."waybar/colors.css".source = ./colors.css;
   home.packages = [ pkgs.wttrbar ];
   programs.waybar = {
@@ -13,7 +14,12 @@
 
         modules-left = [ "sway/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "tray" "battery" "network" "pulseaudio" ];
+        modules-right = [
+          "tray"
+          "battery"
+          "network"
+          "pulseaudio"
+        ];
 
         "wlr/taskbar" = {
           format = "{icon}";
@@ -23,7 +29,9 @@
           on-click = "activate";
           on-click-middle = "close";
           ignore-list = [ "Alacritty" ];
-          app_ids-mapping = { "firefoxdeveloperedition" = "firefox-developer-edition"; };
+          app_ids-mapping = {
+            "firefoxdeveloperedition" = "firefox-developer-edition";
+          };
           #rewrite = {
           #  "Firefox Web Browser" = "Firefox";
           #  "Foot Server" = "Terminal";
@@ -57,7 +65,18 @@
           format-charging = "{capacity}% {icon} 󱐌";
           format-full = "{capacity}% {icon}";
           format-discharging = "{capacity}% {icon}";
-          format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+          format-icons = [
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
+          ];
           tooltip = true;
         };
         "network" = {

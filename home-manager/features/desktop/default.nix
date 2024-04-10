@@ -1,18 +1,17 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   imports = [
     ./firefox
     ./gammastep.nix
     ./gpg-agent.nix
     ./kitty.nix
-    ./lite-xl
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix
     ./rofi
     ./style.nix
     ./udisks.nix
-    ./vscode.nix
     ./wofi
     ./wvkbd.nix
     ./xdg-portal.nix
@@ -20,7 +19,13 @@
     ./zathura.nix
   ];
 
-  home.packages = with pkgs; [ cliphist swayimg wl-clipboard xdg_utils lxqt.pcmanfm-qt  ];
+  home.packages = with pkgs; [
+    cliphist
+    swayimg
+    wl-clipboard
+    xdg_utils
+    lxqt.pcmanfm-qt
+  ];
 
   home.sessionVariables = {
     BROWSER = "${pkgs.firefox}/bin/firefox";
@@ -38,8 +43,7 @@
   };
 
   systemd.user.sessionVariables = {
-    PATH =
-      "/run/wrappers/bin:/home/nokogiri/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin";
+    PATH = "/run/wrappers/bin:/home/nokogiri/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin";
     QT_QPA_PLATFORM = "${config.home.sessionVariables.QT_QPA_PLATFORM}";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";

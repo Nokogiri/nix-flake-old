@@ -1,6 +1,13 @@
-{ config, lib, pkgs, ... }:
-let cfg = config.wayland.windowManager.sway.config;
-in {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+let
+  cfg = config.wayland.windowManager.sway.config;
+in
+{
   wayland.windowManager.sway = {
     enable = true;
     #package = pkgs.swayfx;
@@ -15,16 +22,39 @@ in {
     };
     config = {
       assigns = {
-        "1" = [ { app_id = "kitty"; } { app_id = "org.wezfurlong.wezterm"; } { app_id = "foot"; } ];
-        "2" = [ { app_id = "firefox"; } { app_id = "chromium-browser"; } { class = "Chromium-browser"; } ];
-        "3" = [{ app_id = "mpv"; }];
-        "4" = [ { class = "Emacs"; } { app_id = "emacs"; } ];
-        "5" = [ { app_id = "org.pwmt.zathura"; } { app_id = "com.github.maoschanz.drawing"; } ];
-        "6" = [ { class = "steam"; } { app_id = "heroic"; } ];
-        "7" =
-          [ { class = "Spotify"; } { app_id = "spotify-qt"; } { app_id = "dev.alextren.Spot"; } ];
-        "8" = [ { app_id = "transmission-qt"; } { app_id = "com.usebottles.bottles"; } ];
-        "9" = [{ class = "Com.github.johnfactotum.Foliate"; }];
+        "1" = [
+          { app_id = "kitty"; }
+          { app_id = "org.wezfurlong.wezterm"; }
+          { app_id = "foot"; }
+        ];
+        "2" = [
+          { app_id = "firefox"; }
+          { app_id = "chromium-browser"; }
+          { class = "Chromium-browser"; }
+        ];
+        "3" = [ { app_id = "mpv"; } ];
+        "4" = [
+          { class = "Emacs"; }
+          { app_id = "emacs"; }
+        ];
+        "5" = [
+          { app_id = "org.pwmt.zathura"; }
+          { app_id = "com.github.maoschanz.drawing"; }
+        ];
+        "6" = [
+          { class = "steam"; }
+          { app_id = "heroic"; }
+        ];
+        "7" = [
+          { class = "Spotify"; }
+          { app_id = "spotify-qt"; }
+          { app_id = "dev.alextren.Spot"; }
+        ];
+        "8" = [
+          { app_id = "transmission-qt"; }
+          { app_id = "com.usebottles.bottles"; }
+        ];
+        "9" = [ { class = "Com.github.johnfactotum.Foliate"; } ];
       };
       bars = [ ];
       colors = {
@@ -77,15 +107,15 @@ in {
           #  class = "steam";
           #  instance = "steamwebhelper";
           #}
-          {
-            app_id = "org.kde.kdeconnect-indicator";
-          }
+          { app_id = "org.kde.kdeconnect-indicator"; }
           #{ app_id = "mpv"; }
           { title = "File Operation Progress"; }
         ];
         modifier = "Mod4";
       };
-      focus = { followMouse = true; };
+      focus = {
+        followMouse = true;
+      };
       fonts = {
         names = [ "Hack Nerd Font Propo" ];
         style = "Regular";
@@ -108,16 +138,19 @@ in {
           tap = "enabled";
           dwt = "disable";
         };
-        "1386:18888:Wacom_HID_49C8_Finger" = { map_to_output = "eDP-1"; };
-        "1386:18888:Wacom_HID_49C8_Pen" = { map_to_output = "eDP-1"; };
+        "1386:18888:Wacom_HID_49C8_Finger" = {
+          map_to_output = "eDP-1";
+        };
+        "1386:18888:Wacom_HID_49C8_Pen" = {
+          map_to_output = "eDP-1";
+        };
       };
 
       keybindings = {
         # Basics apps
         "${cfg.modifier}+Return" = "exec ${cfg.terminal}";
         "${cfg.modifier}+p" = "exec pkill -9 rofi || rofi -show drun";
-        "${cfg.modifier}+i" =
-          "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
+        "${cfg.modifier}+i" = "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
 
         # basic internals
         "${cfg.modifier}+Shift+q" = "kill";
@@ -207,11 +240,9 @@ in {
 
         # mylock
         "${cfg.modifier}+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock";
-        "${cfg.modifier}+Shift+l" =
-          "exec ${config.home.homeDirectory}/.local/bin/mylock at-home-mode";
+        "${cfg.modifier}+Shift+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock at-home-mode";
         "${cfg.modifier}+Ctrl+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock safe-mode";
-        "${cfg.modifier}+Shift+Ctrl+l" =
-          "exec ${config.home.homeDirectory}/.local/bin/mylock lock-now";
+        "${cfg.modifier}+Shift+Ctrl+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock lock-now";
       };
       menu = "\${pkgs.fuzzel}/bin/fuzzel";
       modifier = "Mod4";
@@ -235,9 +266,7 @@ in {
           always = true;
         }
         { command = "wl-paste --watch cliphist store"; }
-        {
-          command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
-        }
+        { command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"; }
       ];
       terminal = "${pkgs.kitty}/bin/kitty";
       window = {
@@ -245,15 +274,21 @@ in {
         commands = [
           {
             command = "layout tabbed";
-            criteria = { app_id = "foot"; };
+            criteria = {
+              app_id = "foot";
+            };
           }
           {
             command = "resize set 1200 900";
-            criteria = { app_id = "pavucontrol-qt"; };
+            criteria = {
+              app_id = "pavucontrol-qt";
+            };
           }
           {
             command = "inhibit_idle fullscreen";
-            criteria = { app_id = "firefox"; };
+            criteria = {
+              app_id = "firefox";
+            };
           }
         ];
       };

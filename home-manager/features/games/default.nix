@@ -1,4 +1,10 @@
-{ pkgs, config, inputs, ... }: {
+{
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
+{
   imports = [ ./steam.nix ];
 
   home.sessionVariables.WINEDEBUG = "-all";

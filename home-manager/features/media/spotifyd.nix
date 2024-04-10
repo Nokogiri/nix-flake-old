@@ -1,4 +1,5 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, ... }:
+{
   services.spotifyd = {
     enable = true;
     package = pkgs.spotifyd.override {

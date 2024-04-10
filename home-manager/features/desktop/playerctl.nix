@@ -1,6 +1,9 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [ playerctl ];
-  services.playerctld = { enable = false; };
+  services.playerctld = {
+    enable = false;
+  };
   #systemd.user.services.playerctld = {
   #  Unit = { Description = "MPRIS media player daemon"; };
   #  Service = {

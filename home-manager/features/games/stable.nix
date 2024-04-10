@@ -1,4 +1,5 @@
-{ inputs, lib, ... }: {
+{ inputs, lib, ... }:
+{
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "sm64ex" ];
   home.packages = [
     #inputs.nixpkgs-old.legacyPackages.x86_64-linux.openmw

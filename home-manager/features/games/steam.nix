@@ -1,9 +1,16 @@
-{ pkgs, lib, config, inputs, ... }: {
-  nixpkgs.config.packageOverrides = pkgs:
-    with pkgs; {
+{
+  pkgs,
+  lib,
+  config,
+  inputs,
+  ...
+}:
+{
+  nixpkgs.config.packageOverrides =
+    pkgs: with pkgs; {
       steam = steam.override {
-        extraPkgs = pkgs:
-          with pkgs; [
+        extraPkgs =
+          pkgs: with pkgs; [
             gst_all_1.gst-vaapi
             gst_all_1.gst-plugins-good
             gst_all_1.gst-plugins-bad

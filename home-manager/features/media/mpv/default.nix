@@ -1,4 +1,5 @@
-{ pkgs, lib, ... }: {
+{ pkgs, lib, ... }:
+{
   programs.mpv = {
     enable = true;
     bindings = {
@@ -56,7 +57,11 @@
       cursor-autohide = "20";
       input-ipc-server = "/tmp/mpvsocket";
     };
-    scriptOpts = { ytdl_hook = { ytdl_path = "${pkgs.yt-dlp}/bin/yt-dlp"; }; };
+    scriptOpts = {
+      ytdl_hook = {
+        ytdl_path = "${pkgs.yt-dlp}/bin/yt-dlp";
+      };
+    };
     scripts = with pkgs; [
       mpvScripts.mpris
       mpvScripts.uosc

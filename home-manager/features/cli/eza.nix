@@ -5,5 +5,7 @@
     git = true;
     icons = true;
   };
-  home.sessionVariables = { EXA_COLORS = "xx=''"; };
+  home.sessionVariables = {
+    EXA_COLORS = "xx=''";
+  };
 }

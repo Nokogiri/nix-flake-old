@@ -1,4 +1,5 @@
-{ inputs, pkgs, ... }: {
+{ inputs, pkgs, ... }:
+{
   wayland.windowManager.hyprland = {
     plugins = [ inputs.hy3.packages.x86_64-linux.hy3 ];
     extraConfig = ''
@@ -91,7 +92,7 @@
          output=eDP-1
          enabled=true
       }
-      
+
       #plugin {
       #  hy3 {
       #  
@@ -256,26 +257,26 @@
       windowrulev2 = size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
       windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
       windowrulev2 = float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
-      
+
       windowrulev2 = center,class:^(xdg-desktop-portal-gtk)$title:^(Open With…)$
       windowrulev2 = float,center,size=60%,title:^(.*Picture-in-Picture.*)$,class:^(firefox)$
-      
+
       windowrulev2 = workspace 3 silent,class:^(mpv)$
-      
+
       windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam)$
       windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$
       windowrulev2 = pseudo,class:^(steam)$,title:^(Steam Big Picture Mode)$
-      
+
       windowrulev2 = float,class:^(pavucontrol-qt)$
       windowrulev2 = center,class:^(pavucontrol-qt)$
       windowrulev2 = size 66%,class:^(pavucontrol-qt)$
 
       windowrulev2 = float,title:^(Select EXE to Run)$
-      
+
       windowrulev2 = float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$
-      
+
       #windowrulev2 = forceinput,class:^(.gamescope-wrapped)$
-      
+
       windowrulev2 = workspace 7 silent,title:^(Spotify)$
       #windowrulev2 = fullscreen,opaque,noblur,class:^(gamescope)$
       layerrule=blur, gtk-layer-shell

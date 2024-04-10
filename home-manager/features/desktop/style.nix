@@ -1,9 +1,15 @@
-{ pkgs, inputs, config, ... }:
+{
+  pkgs,
+  inputs,
+  config,
+  ...
+}:
 let
   catTheme = "Catppuccin-Frappe-Standard-Sapphire-dark";
   schema = pkgs.gsettings-desktop-schemas;
   datadir = "${schema}/share/gsettings-schemas/${schema.name}";
-in {
+in
+{
   home.packages = with pkgs; [
     (pkgs.writeShellScriptBin "configure-gtk" ''
       export XDG_DATA_DIRS=${datadir}:$XDG_DATA_DIRS
@@ -24,7 +30,9 @@ in {
 
   gtk = {
     enable = true;
-    cursorTheme = { name = "Dracula-cursors"; };
+    cursorTheme = {
+      name = "Dracula-cursors";
+    };
     font = {
       name = "Hack Nerd Font Propo";
       size = 11.5;
@@ -57,8 +65,7 @@ in {
   };
   #home.file.".config/gtk-4.0/gtk.css".source =
   #  "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk.css";
-  home.file.".config/gtk-4.0/gtk-dark.css".source =
-    "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk-dark.css";
+  home.file.".config/gtk-4.0/gtk-dark.css".source = "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk-dark.css";
   home.file.".config/gtk-3.0/gtk.css".text = ''
     .window-frame {box-shadow: none;}
   '';

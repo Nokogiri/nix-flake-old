@@ -1,6 +1,8 @@
 { inputs, config, ... }:
-let hyprplugs = inputs.hyprplugs.packages."x86_64-linux";
-in {
+let
+  hyprplugs = inputs.hyprplugs.packages."x86_64-linux";
+in
+{
   home.packages = with hyprplugs; [ hyprfocus ];
   xdg.configFile."hypr/plugins.conf".text = ''
     plugin = ${hyprplugs.hyprfocus}/lib/libhyprfocus.so

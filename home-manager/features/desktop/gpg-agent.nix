@@ -1,4 +1,11 @@
-{ inputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   services = {
     gnome-keyring = {
       enable = true;
@@ -6,7 +13,7 @@
     };
     gpg-agent = {
       enable = true;
-        pinentryPackage = pkgs.pinentry-qt;
+      pinentryPackage = pkgs.pinentry-qt;
     };
   };
 }

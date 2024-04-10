@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
   xdg.configFile."waybar/colors.css".source = ./colors.css;
   home.packages = [ pkgs.wttrbar ];
   programs.waybar = {
@@ -13,7 +14,12 @@
 
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "tray" "battery" "network" "pulseaudio" ];
+        modules-right = [
+          "tray"
+          "battery"
+          "network"
+          "pulseaudio"
+        ];
 
         "hyprland/workspaces" = {
           format = "{icon}";
@@ -43,7 +49,18 @@
           format-charging = "{capacity}% {icon} 󱐌";
           format-full = "{capacity}% {icon}";
           format-discharging = "{capacity}% {icon}";
-          format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+          format-icons = [
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
+          ];
           tooltip = true;
         };
         "network" = {

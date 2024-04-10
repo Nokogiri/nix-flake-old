@@ -64,10 +64,8 @@
         #tab_powerline_style = "angled";
         active_tab_font_style = "bold";
         inactive_tab_font_style = "normal";
-        tab_title_template =
-          "{fmt.fg._5c6370}{fmt.bg.default}{fmt.fg._abb2bf}{fmt.bg._5c6370}{title[:15] + (title[15:] and '…')}{fmt.fg._5c6370}{fmt.bg.default}";
-        active_tab_title_template =
-          "{fmt.fg._f0f0f0}{fmt.bg.default}{fmt.fg._282c34}{fmt.bg._f0f0f0}{fmt.noitalic}{title[:40] + (title[40:] and '…')}{fmt.fg._f0f0f0}{fmt.bg.default}";
+        tab_title_template = "{fmt.fg._5c6370}{fmt.bg.default}{fmt.fg._abb2bf}{fmt.bg._5c6370}{title[:15] + (title[15:] and '…')}{fmt.fg._5c6370}{fmt.bg.default}";
+        active_tab_title_template = "{fmt.fg._f0f0f0}{fmt.bg.default}{fmt.fg._282c34}{fmt.bg._f0f0f0}{fmt.noitalic}{title[:40] + (title[40:] and '…')}{fmt.fg._f0f0f0}{fmt.bg.default}";
         #tab_title_template = ''
         #  "{f'{title[:30]}…' if title.rindex(title[-1]) + 1 > 30 else (title.center(6) if (title.rindex(title[-1]) + 1) % 2 == 0 else title.center(5))}"'';
 
@@ -181,5 +179,3 @@
     };
   };
 }
-
-

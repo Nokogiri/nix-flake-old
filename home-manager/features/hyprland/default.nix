@@ -1,4 +1,5 @@
-{ inputs, pkgs, ... }: {
+{ inputs, pkgs, ... }:
+{
   imports = [
     ./hyprpaper
     #./config.nix
@@ -15,9 +16,19 @@
     inputs.hyprland.homeManagerModules.default
   ];
 
-  nixpkgs.overlays = [ inputs.hyprland-contrib.overlays.default inputs.hyprlock.overlays.default ];
+  nixpkgs.overlays = [
+    inputs.hyprland-contrib.overlays.default
+    inputs.hyprlock.overlays.default
+  ];
 
-  home.packages = with pkgs; [ hyprpicker hyprpaper grimblast hyprprop iio-hyprland scratchpad ];
+  home.packages = with pkgs; [
+    hyprpicker
+    hyprpaper
+    grimblast
+    hyprprop
+    iio-hyprland
+    scratchpad
+  ];
 
   programs = {
     fish.loginShellInit = ''
@@ -36,6 +47,8 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    xwayland = { enable = true; };
+    xwayland = {
+      enable = true;
+    };
   };
 }

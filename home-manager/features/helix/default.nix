@@ -13,7 +13,9 @@
         normal = "block";
         select = "underline";
       };
-      editor.indent-guides = { render = true; };
+      editor.indent-guides = {
+        render = true;
+      };
     };
   };
 }

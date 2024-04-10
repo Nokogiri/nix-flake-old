@@ -1,4 +1,5 @@
-{ pkgs, ... }:{
+{ pkgs, ... }:
+{
 
   home.packages = with pkgs; [ rofimoji ];
   programs.rofi = {
@@ -14,7 +15,7 @@
       show-icons = true;
     };
     theme = ./dracula.rasi;
-  }; 
+  };
 
   #xdg.configFile."rofimoji.rc".text = ''
   #  files all
