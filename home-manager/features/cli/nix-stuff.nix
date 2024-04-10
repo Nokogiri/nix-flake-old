@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    nixfmt-classic
+    nixfmt-rfc-style
     nix-diff
     nix-direnv
     nix-top
