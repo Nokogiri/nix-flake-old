@@ -2,8 +2,8 @@
 {
   imports = [
     ./hyprpaper
-    #./config.nix
-    ./hy3land.nix
+    ./config.nix
+    #./hy3land.nix
     ./environment.nix
     ./hyprlock.nix
     ./hypridle.nix

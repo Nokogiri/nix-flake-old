@@ -93,11 +93,6 @@
          enabled=true
       }
 
-      #plugin {
-      #  hy3 {
-      #  
-      #  }
-      #}
       # Startup
       exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
       exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
@@ -174,32 +169,22 @@
       bind=SUPER,apostrophe,changegroupactive,f
       bind=SUPERSHIFT,apostrophe,changegroupactive,b
 
+      bindn=,mouse:272,hy3:focustab,mouse
+
       bind=SUPER,left,hy3:movefocus,l
       bind=SUPER,right,hy3:movefocus,r
       bind=SUPER,up,hy3:movefocus,u
       bind=SUPER,down,hy3:movefocus,d
-      bind=SUPER,h,movefocus,l
-      bind=SUPER,l,movefocus,r
-      bind=SUPER,k,movefocus,u
-      bind=SUPER,j,movefocus,d
 
       bind=SUPERSHIFT,left,hy3:movewindow,l
       bind=SUPERSHIFT,right,hy3:movewindow,r
       bind=SUPERSHIFT,up,hy3:movewindow,u
       bind=SUPERSHIFT,down,hy3:movewindow,d
-      bind=SUPERSHIFT,h,movewindow,l
-      bind=SUPERSHIFT,l,movewindow,r
-      bind=SUPERSHIFT,k,movewindow,u
-      bind=SUPERSHIFT,j,movewindow,d
 
       bind=SUPERCONTROL,left,focusmonitor,l
       bind=SUPERCONTROL,right,focusmonitor,r
       bind=SUPERCONTROL,up,focusmonitor,u
       bind=SUPERCONTROL,down,focusmonitor,d
-      bind=SUPERCONTROL,h,focusmonitor,l
-      bind=SUPERCONTROL,l,focusmonitor,r
-      bind=SUPERCONTROL,k,focusmonitor,u
-      bind=SUPERCONTROL,j,focusmonitor,d
 
       bind=SUPERCONTROL,1,focusmonitor,eDP-1
       bind=SUPERCONTROL,2,focusmonitor,DP-1
@@ -209,10 +194,6 @@
       bind=SUPERCONTROLSHIFT,right,movewindow,mon:r
       bind=SUPERCONTROLSHIFT,up,movewindow,mon:u
       bind=SUPERCONTROLSHIFT,down,movewindow,mon:d
-      bind=SUPERCONTROLSHIFT,h,movewindow,mon:l
-      bind=SUPERCONTROLSHIFT,l,movewindow,mon:r
-      bind=SUPERCONTROLSHIFT,k,movewindow,mon:u
-      bind=SUPERCONTROLSHIFT,j,movewindow,mon:d
 
       bind=SUPERCONTROLSHIFT,1,movewindow,mon:DP-1
       bind=SUPERCONTROLSHIFT,2,movewindow,mon:DP-2
@@ -222,10 +203,6 @@
       bind=SUPERALT,right,movecurrentworkspacetomonitor,r
       bind=SUPERALT,up,movecurrentworkspacetomonitor,u
       bind=SUPERALT,down,movecurrentworkspacetomonitor,d
-      bind=SUPERALT,h,movecurrentworkspacetomonitor,l
-      bind=SUPERALT,l,movecurrentworkspacetomonitor,r
-      bind=SUPERALT,k,movecurrentworkspacetomonitor,u
-      bind=SUPERALT,j,movecurrentworkspacetomonitor,d
 
       bind=SUPER,u,togglespecialworkspace
       bind=SUPERSHIFT,u,movetoworkspace,special
@@ -254,11 +231,16 @@
 
       windowrule = group set,^(mFoot)$
 
-      windowrulev2 = size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
-      windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
+      windowrulev2 = size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
+      windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
       windowrulev2 = float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
+      
+      windowrulev2 = float,class:^(electron)$,title:^(Select Executable)$
+      windowrulev2 = center,class:^(electron)$,title:^(Select Executable)$
+      windowrulev2 = size 60%,class:^(electron)$,title:^(Select Executable)$
 
-      windowrulev2 = center,class:^(xdg-desktop-portal-gtk)$title:^(Open With…)$
+
+      windowrulev2 = center,class:^(xdg-desktop-portal-gtk)$,title:^(Open With…)$
       windowrulev2 = float,center,size=60%,title:^(.*Picture-in-Picture.*)$,class:^(firefox)$
 
       windowrulev2 = workspace 3 silent,class:^(mpv)$

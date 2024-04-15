@@ -14,7 +14,8 @@
     ../features/games
     ../features/media
     ../features/nvim
-    ../features/hyprland
+    ../features/sway
+    #../features/hyprland
     inputs.nur.nixosModules.nur
   ];
 
@@ -32,5 +33,6 @@
     gimp
     krita
     mypaint
+    walker
   ];
 }

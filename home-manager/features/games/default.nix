@@ -55,5 +55,6 @@
     libretro.snes9x
     pcsx2
     ppsspp
+    ryujinx
   ];
 }

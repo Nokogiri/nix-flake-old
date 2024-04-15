@@ -24,7 +24,7 @@ in
 
     listeners = [
       {
-        timeout = 300;
+        timeout = 600;
         onTimeout = suspendScript.outPath;
       }
     ];
