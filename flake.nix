@@ -30,15 +30,15 @@
 
     extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest";
 
-    hyprland.url = "github:hyprwm/Hyprland/v0.38.1";
-    hypridle.url = "github:hyprwm/hypridle";
-    hyprlock.url = "github:hyprwm/hyprlock";
-    hyprland-contrib.url = "github:hyprwm/contrib";
-    hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
-    hy3 = {
-      url = "github:outfoxxed/hy3/hl0.38.0";
-      inputs.hyprland.follows = "hyprland";
-    };
+    #hyprland.url = "github:hyprwm/Hyprland/v0.39.0";
+    #hypridle.url = "github:hyprwm/hypridle";
+    #hyprlock.url = "github:hyprwm/hyprlock";
+    #hyprland-contrib.url = "github:hyprwm/contrib";
+    #hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
+    #hy3 = {
+    #  url = "github:outfoxxed/hy3/hl0.38.0";
+    #  inputs.hyprland.follows = "hyprland";
+    #};
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
