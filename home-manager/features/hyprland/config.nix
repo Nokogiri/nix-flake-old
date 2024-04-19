@@ -13,7 +13,7 @@
         cursor_inactive_timeout=0
       }
 
-      monitor=eDP-1,1920x1200@47.999,auto,1
+      monitor=eDP-1,1920x1200@60.00,auto,1
 
       gestures {
         workspace_swipe = true
@@ -251,6 +251,10 @@
       windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
       windowrulev2 = float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
 
+      windowrulev2 = float,class:^(electron)$,title:^(Select Executable)$
+      windowrulev2 = center,class:^(electron)$,title:^(Select Executable)$
+      windowrulev2 = size 60%,class:^(electron)$,title:^(Select Executable)$
+
       windowrulev2 = center,class:^(xdg-desktop-portal-gtk)$title:^(Open With…)$
       windowrulev2 = float,center,size=60%,title:^(.*Picture-in-Picture.*)$,class:^(firefox)$
 
@@ -260,11 +264,15 @@
       windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$
       windowrulev2 = pseudo,class:^(steam)$,title:^(Steam Big Picture Mode)$
 
+      windowrulev2 = float,class:^(pavucontrol-qt)$
+      windowrulev2 = center,class:^(pavucontrol-qt)$
+      windowrulev2 = size 66%,class:^(pavucontrol-qt)$
+
       windowrulev2 = float,title:^(Select EXE to Run)$
 
       windowrulev2 = float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$
 
-      #windowrulev2 = forceinput,class:^(.gamescope-wrapped)$
+      windowrulev2 = forceinput,class:^(.gamescope-wrapped)$
 
       windowrulev2 = workspace 7 silent,title:^(Spotify)$
       #windowrulev2 = fullscreen,opaque,noblur,class:^(gamescope)$

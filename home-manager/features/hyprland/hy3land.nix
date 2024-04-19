@@ -234,7 +234,7 @@
       windowrulev2 = size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
       windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
       windowrulev2 = float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
-      
+
       windowrulev2 = float,class:^(electron)$,title:^(Select Executable)$
       windowrulev2 = center,class:^(electron)$,title:^(Select Executable)$
       windowrulev2 = size 60%,class:^(electron)$,title:^(Select Executable)$

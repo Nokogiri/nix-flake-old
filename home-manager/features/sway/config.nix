@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 let
@@ -10,7 +11,8 @@ in
 {
   wayland.windowManager.sway = {
     enable = true;
-    #package = pkgs.swayfx;
+    package = inputs.swayfx.packages.x86_64-linux.default;
+    #pkgs.swayfx;
     extraSessionCommands = ''
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway
@@ -298,16 +300,16 @@ in
         bindgesture swipe:3:right workspace prev
         bindgesture swipe:3:left workspace next
         
-        #corner_radius 8
-        #blur enable
-        #blur_passes 1
-        #blur_radius 3
-        #titlebar_separator enable
-        #shadows enable
-        #shadow_offset 2 4
-        #shadow_blur_radius 2
-        #default_dim_inactive 0.6
-        #shadows_on_csd disable
+        corner_radius 8
+        blur enable
+        blur_passes 1
+        blur_radius 3
+        titlebar_separator enable
+        shadows enable
+        shadow_offset 2 4
+        shadow_blur_radius 2
+        default_dim_inactive 0.2
+        shadows_on_csd disable
         
 
       #  for_window [app_id="org.qutebrowser.qutebrowser"] inhibit_idle fullscreen

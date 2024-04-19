@@ -36,7 +36,7 @@
       "kvm-amd"
       "zenpower"
     ];
-    kernelPackages = pkgs.linuxPackages;
+    kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
       "amd_pstate=active"
       "mitigations=off"
