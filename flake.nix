@@ -31,7 +31,7 @@
     stylix.url = "github:danth/stylix";
 
     extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest";
-    swayfx.url = "github:ozwaldorf/swayfx";    
+    swayfx.url = "github:WillPower3309/swayfx";    
     hyprland.url = "github:hyprwm/Hyprland/v0.39.1";
     hypridle.url = "github:hyprwm/hypridle";
     hyprlock.url = "github:hyprwm/hyprlock";

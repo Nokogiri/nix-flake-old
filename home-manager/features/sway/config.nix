@@ -11,6 +11,7 @@ in
 {
   wayland.windowManager.sway = {
     enable = true;
+    checkConfig = false;
     package = inputs.swayfx.packages.x86_64-linux.default;
     #pkgs.swayfx;
     extraSessionCommands = ''
@@ -303,11 +304,11 @@ in
         corner_radius 8
         blur enable
         blur_passes 1
-        blur_radius 3
+        blur_radius 6
         titlebar_separator enable
         shadows enable
-        shadow_offset 2 4
-        shadow_blur_radius 2
+        shadow_offset 4 4
+        shadow_blur_radius 4
         default_dim_inactive 0.2
         shadows_on_csd disable
         
