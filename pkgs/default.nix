@@ -17,5 +17,5 @@
   #portmod = pkgs.callPackage ./portmod { };
   rofi-emoji = pkgs.callPackage ./rofi-emoji { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
-  swayfx-unwrapped = pkgs.callPackage ./swayfx { };
+  #swayfx-unwrapped = pkgs.callPackage ./swayfx { };
 }

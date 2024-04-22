@@ -64,7 +64,7 @@ in
         background = "#F8F8F2";
         focused = {
           border = "#6272A4";
-          background = "#6272A4e6";
+          background = "#6272A4";
           text = "#F8F8F2";
           indicator = "#6262A4";
           childBorder = "#6262A4";
@@ -85,7 +85,7 @@ in
         };
         unfocused = {
           border = "#282A36";
-          background = "#282A36e6";
+          background = "#282A36";
           text = "#BFBFBF";
           indicator = "#282A36";
           childBorder = "#282A36";
@@ -99,7 +99,7 @@ in
         };
       };
       floating = {
-        border = 2;
+        border = 0;
         criteria = [
           { app_id = "pavucontrol"; }
           { app_id = "retroarch"; }
@@ -273,7 +273,7 @@ in
       ];
       terminal = "${pkgs.kitty}/bin/kitty";
       window = {
-        border = 2;
+        border = 0;
         commands = [
           {
             command = "layout tabbed";
@@ -301,16 +301,16 @@ in
         bindgesture swipe:3:right workspace prev
         bindgesture swipe:3:left workspace next
         
-        corner_radius 8
-        blur enable
-        blur_passes 1
-        blur_radius 6
-        titlebar_separator enable
-        shadows enable
-        shadow_offset 4 4
-        shadow_blur_radius 4
-        default_dim_inactive 0.2
-        shadows_on_csd disable
+        #corner_radius 8
+        #blur enable
+        #blur_passes 1
+        #blur_radius 6
+        #titlebar_separator disable
+        #shadows disable
+        #shadow_offset 4 4
+        #shadow_blur_radius 4
+        #default_dim_inactive 0.2
+        #shadows_on_csd disable
         
 
       #  for_window [app_id="org.qutebrowser.qutebrowser"] inhibit_idle fullscreen

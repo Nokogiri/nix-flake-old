@@ -31,16 +31,33 @@
     stylix.url = "github:danth/stylix";
 
     extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest";
-    swayfx.url = "github:WillPower3309/swayfx";    
-    hyprland.url = "github:hyprwm/Hyprland/v0.39.1";
-    hypridle.url = "github:hyprwm/hypridle";
-    hyprlock.url = "github:hyprwm/hyprlock";
-    hyprland-contrib.url = "github:hyprwm/contrib";
-    hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
-    hy3 = {
-      url = "github:outfoxxed/hy3/hl0.38.0";
-      inputs.hyprland.follows = "hyprland";
+    swayfx = {
+      url = "github:WillPower3309/swayfx";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.scenefx.follows = "scenefx";
     };
+    scenefx = {
+      url = "github:wlrfx/scenefx";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    #hyprland = {
+    #  url = "github:hyprwm/Hyprland/v0.39.1";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
+    #hypridle = {
+    #  url = "github:hyprwm/hypridle";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
+    #hyprlock = {
+    #  url = "github:hyprwm/hyprlock";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
+    #hyprland-contrib.url = "github:hyprwm/contrib";
+    #hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
+    #hy3 = {
+    #  url = "github:outfoxxed/hy3/hl0.39.1";
+    #  inputs.hyprland.follows = "hyprland";
+    #};
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
