@@ -3,13 +3,13 @@
 * {
     border: none;
     /*background: none;*/
-    font-family: 'Hack', 'Symbols Nerd Font';
-    font-size:18px;
-    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+    font-family: 'M+2 Nerd Font', 'Symbols Nerd Font';
+    font-size: 18px;
+    /*font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';*/
 }
 
 tooltip {
-    font-size: 20px;
+    font-size: 23px;
     border: 2px solid @background-darker;
     background: @background;
     color: @foreground;
@@ -96,7 +96,7 @@ window#waybar.hidden {
 }
 /* 1st block */
 #custom-weather {
-    font-family: "Hack Nerd Font Propo";
+    font-family: "CaskaydiaCove Nerd Font";
     font-size: 18px;
     background-color: transparent;
     color: @foreground;

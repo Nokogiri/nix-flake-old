@@ -5,9 +5,9 @@
     extraConfig = ''
       return {
         color_scheme = "Dracula",
-        font_size = 11.5 ,
+        font_size = 12.5 ,
         font = wezterm.font_with_fallback {
-          'Hack Nerd Font Mono',
+          'CaskaydiaCove Nerd Font',
         },
         warn_about_missing_glyphs=false,
         animation_fps = 1,

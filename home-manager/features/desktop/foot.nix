@@ -10,7 +10,7 @@
         color = "ff0000 00ff00";
       };
       main = {
-        font = "Hack Nerd Font Mono:size=12";
+        font = "CaskaydiaCove Nerd Font:size=12";
         dpi-aware = "no";
         pad = "10x10";
       };

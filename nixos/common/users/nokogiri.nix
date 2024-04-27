@@ -46,12 +46,12 @@ in
     ];
     packages = [ pkgs.home-manager ];
   };
-  #home-manager = {
-  #  extraSpecialArgs = { inherit inputs outputs; };
-  #  users = {
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs; };
+    users = {
   #Import your home-manager configuration
-  #    nokogiri = import ../../../home-manager/${config.networking.hostName};
-  #  };
-  #};
+      nokogiri = import ../../../home-manager/${config.networking.hostName};
+    };
+  };
   services.geoclue2.enable = true;
 }

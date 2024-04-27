@@ -3,11 +3,10 @@
     kitty = {
       enable = true;
       font = {
-        #name = "JetBrainsMono Nerd Font Mono";
-        name = "Hack Nerd Font";
-        size = 11.5;
+        #name = "M+CodeLat60 Nerd Font";
+        size = 12;
       };
-      theme = "Dracula";
+      #theme = "Dracula";
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";
@@ -106,7 +105,7 @@
         resize_draw_strategy = "scale";
 
         # Opacity settings
-        background_opacity = "0.85";
+        #background_opacity = "0.85";
         dim_opacity = "0.4";
       };
       keybindings = {

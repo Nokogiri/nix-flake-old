@@ -10,7 +10,6 @@
     ./git.nix
     ./gpg-agent.nix
     ./micro
-    ./nushell
     ./ssh.nix
     ./starship.nix
     ./tmux.nix
@@ -20,7 +19,6 @@
 
   home.sessionVariables = {
     PATH = "$PATH:$HOME/.local/bin";
-    EDITOR = "${pkgs.helix}/bin/hx";
     #    MANPAGER
     XDG_CACHE_HOME = "\${HOME}/.cache";
     XDG_CONFIG_HOME = "\${HOME}/.config";

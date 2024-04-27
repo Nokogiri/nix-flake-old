@@ -3,6 +3,7 @@
 
   imports = [
     ./firefox
+    #./foot.nix
     ./gammastep.nix
     ./gpg-agent.nix
     ./kitty.nix
@@ -12,7 +13,7 @@
     ./rofi
     ./style.nix
     ./udisks.nix
-    ./wezterm
+    #./wezterm
     ./wofi
     ./wvkbd.nix
     ./xdg-portal.nix

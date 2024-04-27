@@ -33,6 +33,8 @@
     ./nfs.nix
     #./power.nix
     ./auto-cpufreq.nix
+
+    ../../stylix
   ];
 
   nixpkgs = {

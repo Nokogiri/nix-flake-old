@@ -7,15 +7,16 @@
     text = "auth include login";
   };
 
-  nixpkgs.config.packageOverrides =
-    pkgs: with pkgs; {
-      nerdfonts = nerdfonts.override {
-        fonts = [
-          "Hack"
-          "NerdFontsSymbolsOnly"
-        ];
-      };
-    };
+  #nixpkgs.config.packageOverrides =
+  #  pkgs: with pkgs; {
+  #    nerdfonts = nerdfonts.override {
+  #      fonts = [
+  #        "Hack"
+  #        "MPlus"
+  #        "NerdFontsSymbolsOnly"
+  #      ];
+  #    };
+  #  };
 
   environment.systemPackages = with pkgs; [
     dracula-theme
@@ -24,8 +25,8 @@
 
   fonts.packages = with pkgs; [
     dejavu_fonts
-    hack-font
-    nerdfonts
+    #hack-font
+    #nerdfonts
     noto-fonts
     noto-fonts-emoji
     noto-fonts-cjk-sans
@@ -39,12 +40,12 @@
     fontconfig = {
       enable = true;
       antialias = true;
-      defaultFonts = {
-        serif = [ "Hack Nerd Font Propo" ];
-        sansSerif = [ "Hack Nerd Font Propo" ];
-        monospace = [ "Hack Nerd Font" ];
-        emoji = [ "Noto Color Emoji" ];
-      };
+    #  defaultFonts = {
+    #    serif = [ "M+2 Nerd Font" ];
+    #    sansSerif = [ "M+2 Nerd Font" ];
+    #    monospace = [ "M+2 Nerd Font Mono" ];
+    #    emoji = [ "Noto Color Emoji" ];
+    #  };
     };
   };
 

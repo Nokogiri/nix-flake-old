@@ -14,6 +14,7 @@
     ../features/games
     ../features/media
     ../features/nvim
+    ../features/stylix
     ../features/sway
     #../features/hyprland
 
@@ -27,7 +28,8 @@
     handlr-regex
 
     appimage-run
-    transmission-qt
+    transmission_4-qt6
+    #transmission_4-gtk
     xournalpp
 
     # graphics stuff

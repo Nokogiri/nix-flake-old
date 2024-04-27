@@ -1,6 +1,5 @@
 {
   config,
-  lib,
   pkgs,
   inputs,
   ...
@@ -12,8 +11,7 @@ in
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = false;
-    package = inputs.swayfx.packages.x86_64-linux.default;
-    #pkgs.swayfx;
+    #package = inputs.swayfx.packages.x86_64-linux.default;
     extraSessionCommands = ''
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway
@@ -60,44 +58,44 @@ in
         "9" = [ { class = "Com.github.johnfactotum.Foliate"; } ];
       };
       bars = [ ];
-      colors = {
-        background = "#F8F8F2";
-        focused = {
-          border = "#6272A4";
-          background = "#6272A4";
-          text = "#F8F8F2";
-          indicator = "#6262A4";
-          childBorder = "#6262A4";
-        };
-        focusedInactive = {
-          border = "#44475A";
-          background = "#44475A";
-          text = "#F8F8F2";
-          indicator = "#44475A";
-          childBorder = "#44475A";
-        };
-        placeholder = {
-          border = "#282A36";
-          background = "#282A36";
-          text = "#F8F8F2";
-          indicator = "#282A36";
-          childBorder = "#282A36";
-        };
-        unfocused = {
-          border = "#282A36";
-          background = "#282A36";
-          text = "#BFBFBF";
-          indicator = "#282A36";
-          childBorder = "#282A36";
-        };
-        urgent = {
-          border = "#44475A";
-          background = "#FF5555";
-          text = "#F8F8F2";
-          indicator = "#FF5555";
-          childBorder = "#FF5555";
-        };
-      };
+      #colors = {
+      #  background = "#F8F8F2";
+      #  focused = {
+      #    border = "#6272A4";
+      #    background = "#6272A4";
+      #    text = "#F8F8F2";
+      #    indicator = "#6262A4";
+      #    childBorder = "#6262A4";
+      #  };
+      #  focusedInactive = {
+      #    border = "#44475A";
+      #    background = "#44475A";
+      #    text = "#F8F8F2";
+      #    indicator = "#44475A";
+      #    childBorder = "#44475A";
+      #  };
+      #  placeholder = {
+      #    border = "#282A36";
+      #    background = "#282A36";
+      #    text = "#F8F8F2";
+      #    indicator = "#282A36";
+      #    childBorder = "#282A36";
+      #  };
+      #  unfocused = {
+      #    border = "#282A36";
+      #    background = "#282A36";
+      #    text = "#BFBFBF";
+      #    indicator = "#282A36";
+      #    childBorder = "#282A36";
+      #  };
+      #  urgent = {
+      #    border = "#44475A";
+      #    background = "#FF5555";
+      #    text = "#F8F8F2";
+      #    indicator = "#FF5555";
+      #    childBorder = "#FF5555";
+      #  };
+      #};
       floating = {
         border = 0;
         criteria = [
@@ -106,23 +104,13 @@ in
           { app_id = ".blueman-manager-wrapped"; }
           { app_id = "nm-connection-editor"; }
           { app_id = "org.kde.polkit-kde-authentication-agent-1"; }
-          #{
-          #  class = "steam";
-          #  instance = "steamwebhelper";
-          #}
           { app_id = "org.kde.kdeconnect-indicator"; }
-          #{ app_id = "mpv"; }
           { title = "File Operation Progress"; }
         ];
         modifier = "Mod4";
       };
       focus = {
         followMouse = true;
-      };
-      fonts = {
-        names = [ "Hack Nerd Font Propo" ];
-        style = "Regular";
-        size = 12.0;
       };
       gaps = {
         inner = 3;
@@ -254,12 +242,12 @@ in
           #bg = "${config.home.homeDirectory}/.local/share/wallpaper/FireWatch.png fill";
           bg = "${pkgs.Imaginarium}/wallpaper/FireWatch_2.png fill";
           scale = "1";
-          resolution = "1920x1200@47.999Hz";
+          resolution = "1920x1200@60.000Hz";
         };
       };
       seat = {
         "*" = {
-          xcursor_theme = "${config.gtk.cursorTheme.name}";
+          #xcursor_theme = "${config.gtk.cursorTheme.name}";
           hide_cursor = "when-typing 10";
         };
       };
@@ -304,14 +292,18 @@ in
         #corner_radius 8
         #blur enable
         #blur_passes 1
-        #blur_radius 6
+        #blur_radius 2
+        #blur_noise 0.1
+        #blur_brightness 1.0
+        #blur_contrast 1.0
+        #blur_saturation 1.0
         #titlebar_separator disable
         #shadows disable
         #shadow_offset 4 4
         #shadow_blur_radius 4
         #default_dim_inactive 0.2
         #shadows_on_csd disable
-        
+        #layer_effects "rofi" blur enable; corner_radius 8;
 
       #  for_window [app_id="org.qutebrowser.qutebrowser"] inhibit_idle fullscreen
 
