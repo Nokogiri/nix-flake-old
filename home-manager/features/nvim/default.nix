@@ -11,7 +11,7 @@
     plugins = with pkgs.vimPlugins; [
       mason-nvim
       nvchad
-      nvim-treesitter
+      #nvim-treesitter
       nvchad-ui
       lazy-nvim
       LazyVim

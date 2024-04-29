@@ -7,7 +7,7 @@
 }:
 {
 
-  imports = [ ./psd.nix ];
+  #imports = [ ./psd.nix ];
   home.file.".mozilla/dracula" = {
     recursive = true;
     source = ./userChrome;
@@ -71,12 +71,12 @@
             sha256 = "sha256-q1BC2VHTYxwqr8PAt93GrIF+owDnzlI1ozLIkYQf9ac=";
           }
         }");*/
-        /* Remove close button*/ .titlebar-buttonbox-container{ display:none }
+        /*/* Remove close button*/ .titlebar-buttonbox-container{ display:none }
         #PersonalToolbar{
           position: absolute;
           display: flex;
           z-index: 1;
-        } 
+        } */
       '';
     };
 

@@ -28,14 +28,14 @@
     handlr-regex
 
     appimage-run
-    transmission_4-qt6
-    #transmission_4-gtk
+    #transmission_4-qt6
+    transmission_4-gtk
     xournalpp
 
     # graphics stuff
     gimp
     krita
     mypaint
-    walker
+    #walker
   ];
 }

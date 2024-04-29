@@ -13,7 +13,7 @@
         linux_display_server = "auto";
         touch_scroll_multiplier = "6.0";
         wayland_titlebar_color = "system";
-        hide_window_decorations = true;
+        hide_window_decorations = false;
         scrollback_lines = 9000;
         scrollback_pager = "less --chop-long-lines --RAW-CONTROL-CHARS +INPUT_LINE_NUMBER";
         scrollback_pager_history_size = 0;
@@ -70,6 +70,7 @@
 
         # Misc settings
         disable_ligatures = "cursor";
+        backgrund_blur = 16;
         #symbol_map = "U+F000-U+F0FF Weather Icons";
         adjust_line_height = 0;
         adjust_column_width = 0;

@@ -40,18 +40,12 @@
     fontconfig = {
       enable = true;
       antialias = true;
-    #  defaultFonts = {
-    #    serif = [ "M+2 Nerd Font" ];
-    #    sansSerif = [ "M+2 Nerd Font" ];
-    #    monospace = [ "M+2 Nerd Font Mono" ];
-    #    emoji = [ "Noto Color Emoji" ];
-    #  };
     };
   };
 
   gtk.iconCache.enable = true;
 
-  qt.style = "kvantum";
+  #qt.style = "kvantum";
 
   programs = {
     dconf.enable = true;

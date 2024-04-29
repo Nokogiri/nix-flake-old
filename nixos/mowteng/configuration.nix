@@ -21,6 +21,7 @@
     ../common/optional/fprintd.nix
     ../common/optional/networkmanager.nix
     ../common/optional/pipewire.nix
+    #../common/optional/plasma.nix
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
@@ -31,7 +32,6 @@
 
     ./firewall.nix
     ./nfs.nix
-    #./power.nix
     ./auto-cpufreq.nix
 
     ../../stylix

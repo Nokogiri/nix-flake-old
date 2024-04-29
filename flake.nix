@@ -30,7 +30,8 @@
 
     stylix.url = "github:danth/stylix";
 
-    extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest";
+    #extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest";
+    extest.url = "github:Nokogiri/extest";
     swayfx = {
       url = "github:WillPower3309/swayfx";
       inputs.nixpkgs.follows = "nixpkgs";

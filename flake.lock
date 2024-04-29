@@ -123,15 +123,15 @@
       "locked": {
         "lastModified": 1712168185,
         "narHash": "sha256-YAdg6sxrLMBIf+g5/ET7T/eLhGi7Nva6mQ/88Cf8ky0=",
-        "ref": "refs/heads/main",
+        "owner": "Nokogiri",
+        "repo": "extest",
         "rev": "ba1eee68d680d6541916bb3fffef6b41f7cdff8f",
-        "revCount": 8,
-        "type": "git",
-        "url": "https://forge.fishoeder.net/Nokogiri/extest"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "https://forge.fishoeder.net/Nokogiri/extest"
+        "owner": "Nokogiri",
+        "repo": "extest",
+        "type": "github"
       }
     },
     "fenix": {
@@ -260,11 +260,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1714203603,
-        "narHash": "sha256-eT7DENhYy7EPLOqHI9zkIMD9RvMCXcqh6gGqOK5BWYQ=",
+        "lastModified": 1714377222,
+        "narHash": "sha256-UsDsjWCKlWn8vbXi8Zza9Hkq3xyk8fpvFNo2VM5S74E=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "c1609d584a6b5e9e6a02010f51bd368cb4782f8e",
+        "rev": "2af7c78b7bb9cf18406a193eba13ef9f99388f49",
         "type": "github"
       },
       "original": {
@@ -301,11 +301,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1713869268,
-        "narHash": "sha256-o3CMQeu/S8/4zU0pMtYg51rd1FWdJsI2Xohzng1Ysdg=",
+        "lastModified": 1714273701,
+        "narHash": "sha256-bmoeZ5zMSSO/e8P51yjrzaxA9uzA3SZAEFvih6S3LFo=",
         "owner": "Mic92",
         "repo": "nix-index-database",
-        "rev": "dcb6ac44922858ce3a5b46f77a36d6030181460c",
+        "rev": "941c4973c824509e0356be455d89613611f76c8a",
         "type": "github"
       },
       "original": {
@@ -331,11 +331,11 @@
     },
     "nixpkgs-master": {
       "locked": {
-        "lastModified": 1714210837,
-        "narHash": "sha256-XCrUF3rwlEoFh9zCGnXJVbkk9BpUh2zugJJc5tp9rMI=",
+        "lastModified": 1714415970,
+        "narHash": "sha256-yKo6aPWVkPk5mAKhPjPmH+vH/LEuSEpoCul3V0U/hYU=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "8753c7c1bdfef557d724c7ed8d37b4c9a71fcda4",
+        "rev": "581bfcb126af2da9d261026b4b8dc1607b25b086",
         "type": "github"
       },
       "original": {
@@ -363,11 +363,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1713995372,
-        "narHash": "sha256-fFE3M0vCoiSwCX02z8VF58jXFRj9enYUSTqjyHAjrds=",
+        "lastModified": 1714272655,
+        "narHash": "sha256-3/ghIWCve93ngkx5eNPdHIKJP/pMzSr5Wc4rNKE1wOc=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "dd37924974b9202f8226ed5d74a252a9785aedf8",
+        "rev": "12430e43bd9b81a6b4e79e64f87c624ade701eaf",
         "type": "github"
       },
       "original": {
@@ -395,11 +395,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1714076141,
-        "narHash": "sha256-Drmja/f5MRHZCskS6mvzFqxEaZMeciScCTFxWVLqWEY=",
+        "lastModified": 1714253743,
+        "narHash": "sha256-mdTQw2XlariysyScCv2tTE45QSU9v/ezLcHJ22f0Nxc=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "7bb2ccd8cdc44c91edba16c48d2c8f331fb3d856",
+        "rev": "58a1abdbae3217ca6b702f03d3b35125d88a2994",
         "type": "github"
       },
       "original": {
@@ -443,11 +443,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1714205527,
-        "narHash": "sha256-56XsS0lhzwwBu+ZweifOpb/BpZFsnCtokRNB0EBoJ4A=",
+        "lastModified": 1714415442,
+        "narHash": "sha256-qDPTapELp7bCcHLvyRJK3OwhUL4bXGdGrmPQQP84s0c=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "09087b678bb32aa248c3ba37f6c603bcdcea899d",
+        "rev": "386baf3ef642a8257c435fa2a03ac9ddb39ded59",
         "type": "github"
       },
       "original": {
@@ -589,11 +589,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1713822111,
-        "narHash": "sha256-aQVHGi6oqceTlyzzzZnErVHYDJbDfG0sdWe+ItuH8a4=",
+        "lastModified": 1714370992,
+        "narHash": "sha256-EoMK5YvJpZSRMaDwgJGEAQPyL0idXAjA+JyzKBC8yDs=",
         "owner": "WillPower3309",
         "repo": "swayfx",
-        "rev": "a5a69d4d4e9a8fe306e27ca46cde3a8b9d312ae3",
+        "rev": "c6b4411b86b76e45b8ba23e92697325f182564f2",
         "type": "github"
       },
       "original": {
