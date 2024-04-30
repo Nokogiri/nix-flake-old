@@ -12,10 +12,10 @@
               command = ''${pkgs.linuxPackages.cpupower}/bin/cpupower ""'';
               options = [ "NOPASSWD" ];
             }
-	    {
-	      command = ''${pkgs.profile-sync-daemon}/bin/psd-overlay-helper ""'';
-	      options = [ "NOPASSWD" ];
-	    }
+            {
+              command = ''${pkgs.profile-sync-daemon}/bin/psd-overlay-helper ""'';
+              options = [ "NOPASSWD" ];
+            }
           ];
         }
       ];

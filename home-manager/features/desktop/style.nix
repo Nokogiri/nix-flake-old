@@ -5,7 +5,7 @@
   ...
 }:
 let
-#  #catTheme = "Catppuccin-Frappe-Standard-Sapphire-dark";
+  #  #catTheme = "Catppuccin-Frappe-Standard-Sapphire-dark";
   schema = pkgs.gsettings-desktop-schemas;
   datadir = "${schema}/share/gsettings-schemas/${schema.name}";
 in
@@ -33,9 +33,9 @@ in
 
   gtk = {
     enable = true;
-      cursorTheme = {
-        name = "Dracula-cursors";
-      };
+    cursorTheme = {
+      name = "Dracula-cursors";
+    };
     #  font = {
     #    name = "M+2 Nerd Font";
     #    size = 11.5;
@@ -45,26 +45,26 @@ in
       package = pkgs.dracula-icon-theme;
     };
     theme = {
-        name = "Ant";
-        package = pkgs.ant-theme;
+      name = "Ant";
+      package = pkgs.ant-theme;
+    };
+    gtk2 = {
+      extraConfig = ''
+        gtk-toolbar-style=GTK_TOOLBAR_ICONS
+        gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+        gtk-button-images=0
+        gtk-menu-images=1
+      '';
+    };
+    gtk3 = {
+      extraConfig = {
+        gtk-button-images = false;
+        gtk-menu-images = true;
+        gtk-enable-event-sounds = false;
+        gtk-enable-animations = true;
+        gtk-application-prefer-dark-theme = true;
       };
-      gtk2 = {
-        extraConfig = ''
-          gtk-toolbar-style=GTK_TOOLBAR_ICONS
-          gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
-          gtk-button-images=0
-          gtk-menu-images=1
-        '';
-      };
-       gtk3 = {
-         extraConfig = {
-           gtk-button-images = false;
-           gtk-menu-images = true;
-           gtk-enable-event-sounds = false;
-           gtk-enable-animations = true;
-           gtk-application-prefer-dark-theme = true;
-         };
-       };
+    };
   };
   #home.file.".config/gtk-4.0/gtk.css".source =
   #  "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk.css";
