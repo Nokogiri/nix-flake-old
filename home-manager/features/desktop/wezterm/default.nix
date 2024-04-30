@@ -7,7 +7,7 @@
         color_scheme = "Dracula",
         font_size = 12.5 ,
         font = wezterm.font_with_fallback {
-          'CaskaydiaCove Nerd Font',
+          'M+CodeLat60 Nerd Font',
         },
         warn_about_missing_glyphs=false,
         animation_fps = 1,
