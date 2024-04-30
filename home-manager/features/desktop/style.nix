@@ -4,32 +4,25 @@
   config,
   ...
 }:
-#let
+let
 #  #catTheme = "Catppuccin-Frappe-Standard-Sapphire-dark";
-#  schema = pkgs.gsettings-desktop-schemas;
-#  datadir = "${schema}/share/gsettings-schemas/${schema.name}";
-#in
+  schema = pkgs.gsettings-desktop-schemas;
+  datadir = "${schema}/share/gsettings-schemas/${schema.name}";
+in
 {
   home.packages = with pkgs; [
-    #(pkgs.writeShellScriptBin "configure-gtk" ''
-    #  export XDG_DATA_DIRS=${datadir}:$XDG_DATA_DIRS
-    #  gnome_schema=org.gnome.desktop.interface
-    #  ${pkgs.glib.bin}/bin/gsettings set $gnome_schema gtk-theme '${config.gtk.theme.name}'
-    ##  ${pkgs.glib.bin}/bin/gsettings set $gnome_schema icon-theme '${config.gtk.iconTheme.name}'
-    #  ${pkgs.glib.bin}/bin/gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
-    #'')
+    (pkgs.writeShellScriptBin "configure-gtk" ''
+      export XDG_DATA_DIRS=${datadir}:$XDG_DATA_DIRS
+      gnome_schema=org.gnome.desktop.interface
+      ${pkgs.glib.bin}/bin/gsettings set $gnome_schema gtk-theme '${config.gtk.theme.name}'
+      ${pkgs.glib.bin}/bin/gsettings set $gnome_schema icon-theme '${config.gtk.iconTheme.name}'
+      ${pkgs.glib.bin}/bin/gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
+      ${pkgs.glib.bin}/bin/gsettings set $gnome_schema color-scheme prefer-dark
+    '')
     #dracula-theme
-    #kdePackages.breeze.out
-    kdePackages.breeze.qt5
-    sierra-breeze-enhanced
-    kdePackages.qqc2-breeze-style
-    #libsForQt5.breeze-qt5
+    andromeda-gtk-theme
+    ant-theme
     dracula-icon-theme
-    kdePackages.breeze-gtk
-    kdePackages.breeze
-    catppuccin-qt5ct
-    catppuccin-kvantum
-    lightly-qt
     libsForQt5.qt5ct
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
@@ -40,9 +33,9 @@
 
   gtk = {
     enable = true;
-    #  cursorTheme = {
-    #    name = "Dracula-cursors";
-    #  };
+      cursorTheme = {
+        name = "Dracula-cursors";
+      };
     #  font = {
     #    name = "M+2 Nerd Font";
     #    size = 11.5;
@@ -51,27 +44,27 @@
       name = "Dracula";
       package = pkgs.dracula-icon-theme;
     };
-    #  theme = {
-    #    name = "Dracula";
-    #    package = pkgs.dracula-theme;
-    #  };
-    #  gtk2 = {
-    #    extraConfig = ''
-    #      gtk-toolbar-style=GTK_TOOLBAR_ICONS
-    #      gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
-    #      gtk-button-images=0
-    #      gtk-menu-images=1
-    #    '';
-    #  };
-    #   gtk3 = {
-    #     extraConfig = {
-    #       gtk-button-images = false;
-    #       gtk-menu-images = true;
-    #       gtk-enable-event-sounds = false;
-    #       gtk-enable-animations = true;
-    ##       gtk-application-prefer-dark-theme = true;
-    #     };
-    #   };
+    theme = {
+        name = "Ant";
+        package = pkgs.ant-theme;
+      };
+      gtk2 = {
+        extraConfig = ''
+          gtk-toolbar-style=GTK_TOOLBAR_ICONS
+          gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+          gtk-button-images=0
+          gtk-menu-images=1
+        '';
+      };
+       gtk3 = {
+         extraConfig = {
+           gtk-button-images = false;
+           gtk-menu-images = true;
+           gtk-enable-event-sounds = false;
+           gtk-enable-animations = true;
+           gtk-application-prefer-dark-theme = true;
+         };
+       };
   };
   #home.file.".config/gtk-4.0/gtk.css".source =
   #  "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk.css";

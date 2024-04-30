@@ -32,5 +32,8 @@
       popups = 0.85;
       terminal = 0.85;
     };
+    targets = {
+      gtk.enable = false;
+    };
   };
 }

@@ -10,7 +10,7 @@
     };
     gpg-agent = {
       enable = true;
-      pinentryPackage = pkgs.pinentry-rofi;
+      pinentryPackage = pkgs.pinentry-gnome3;
     };
   };
 }
