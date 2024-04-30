@@ -13,7 +13,7 @@
     ./rofi
     ./style.nix
     ./udisks.nix
-    ./wezterm
+    #./wezterm
     ./wofi
     ./wvkbd.nix
     ./xdg-portal.nix
