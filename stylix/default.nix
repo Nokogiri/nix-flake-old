@@ -4,6 +4,7 @@
     homeManagerIntegration.followSystem = true;
     image = ./wallpaper.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
+    polarity = "dark";
     cursor = {
       name = "Dracula-cursors";
       #package = 

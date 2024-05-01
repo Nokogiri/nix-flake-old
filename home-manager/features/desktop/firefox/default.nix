@@ -1,8 +1,6 @@
 {
   config,
   pkgs,
-  lib,
-  inputs,
   ...
 }:
 {
@@ -21,6 +19,7 @@
       tridactyl
       ublock-origin
       onetab
+      octotree
       improved-tube
       bitwarden
       dracula-dark-colorscheme
@@ -86,7 +85,6 @@
       tridactyl
       sidebery
       sponsorblock
-
       dracula-dark-colorscheme
       iina-open-in-mpv
     ];
