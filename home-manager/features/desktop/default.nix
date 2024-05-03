@@ -11,7 +11,6 @@
     ./playerctl.nix
     ./rbw.nix
     ./rofi
-    #./style.nix
     ./udisks.nix
     ./wezterm
     ./wofi

@@ -4,8 +4,6 @@
   imports = [ inputs.stylix.nixosModules.stylix ];
 
   environment.systemPackages = with pkgs; [
-    andromeda-gtk-theme
-    ant-theme
     everforest-theme
     libsForQt5.qt5ct
     qt6Packages.qt6ct
