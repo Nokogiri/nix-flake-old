@@ -1,37 +1,38 @@
-{ lib
-, stdenv
-, fetchFromGitHub
-, fetchpatch
-, addOpenGLRunpath
-, wrapGAppsHook
-, cmake
-, glslang
-, nasm
-, pkg-config
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  fetchpatch,
+  addOpenGLRunpath,
+  wrapGAppsHook,
+  cmake,
+  glslang,
+  nasm,
+  pkg-config,
 
-, SDL2
-, boost
-, cubeb
-, curl
-, fmt_9
-, glm
-, gtk3
-, hidapi
-, imgui
-, libpng
-, libusb1
-, libzip
-, libXrender
-, pugixml
-, rapidjson
-, vulkan-headers
-, wayland
-, wxGTK32
-, zarchive
-, gamemode
-, vulkan-loader
+  SDL2,
+  boost,
+  cubeb,
+  curl,
+  fmt_9,
+  glm,
+  gtk3,
+  hidapi,
+  imgui,
+  libpng,
+  libusb1,
+  libzip,
+  libXrender,
+  pugixml,
+  rapidjson,
+  vulkan-headers,
+  wayland,
+  wxGTK32,
+  zarchive,
+  gamemode,
+  vulkan-loader,
 
-, nix-update-script
+  nix-update-script,
 }:
 
 let
@@ -45,7 +46,6 @@ let
       sha256 = "sha256-gf47uLeNiXQic43buB5ZnMqiotlUfIyAsP+3H7yJuFg=";
     };
   };
-
 in
 stdenv.mkDerivation rec {
   pname = "cemu";
@@ -66,13 +66,19 @@ stdenv.mkDerivation rec {
     # Remove on next release
     # https://github.com/cemu-project/Cemu/pull/1076
     (fetchpatch {
-      url =
-        "https://github.com/cemu-project/Cemu/commit/72aacbdcecc064ea7c3b158c433e4803496ac296.patch";
+      url = "https://github.com/cemu-project/Cemu/commit/72aacbdcecc064ea7c3b158c433e4803496ac296.patch";
       hash = "sha256-x+ZVqXgGRSv0VYwJAX35C1p7PnmCHS7iEO+4k8j0/ug=";
     })
   ];
 
-  nativeBuildInputs = [ addOpenGLRunpath wrapGAppsHook cmake glslang nasm pkg-config ];
+  nativeBuildInputs = [
+    addOpenGLRunpath
+    wrapGAppsHook
+    cmake
+    glslang
+    nasm
+    pkg-config
+  ];
 
   buildInputs = [
     SDL2
@@ -107,9 +113,12 @@ stdenv.mkDerivation rec {
     "-DPORTABLE=OFF"
   ];
 
-  preConfigure = with lib;
-    let tag = last (splitString "-" version);
-    in ''
+  preConfigure =
+    with lib;
+    let
+      tag = last (splitString "-" version);
+    in
+    ''
       rm -rf dependencies/imgui
       ln -s ${imgui'}/include/imgui dependencies/imgui
       substituteInPlace src/Common/version.h --replace " (experimental)" "-${tag} (experimental)"
@@ -133,8 +142,10 @@ stdenv.mkDerivation rec {
   '';
 
   preFixup =
-    let libs = [ vulkan-loader ] ++ cubeb.passthru.backendLibs;
-    in ''
+    let
+      libs = [ vulkan-loader ] ++ cubeb.passthru.backendLibs;
+    in
+    ''
       gappsWrapperArgs+=(
         --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath libs}"
       )
@@ -147,7 +158,10 @@ stdenv.mkDerivation rec {
     homepage = "https://cemu.info";
     license = licenses.mpl20;
     platforms = [ "x86_64-linux" ];
-    maintainers = with maintainers; [ zhaofengli baduhai ];
+    maintainers = with maintainers; [
+      zhaofengli
+      baduhai
+    ];
     mainProgram = "cemu";
   };
 }

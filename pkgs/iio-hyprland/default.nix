@@ -1,4 +1,14 @@
-{ lib, stdenv, fetchFromGitHub, meson, pkg-config, ninja, dbus, cmake, systemd }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  meson,
+  pkg-config,
+  ninja,
+  dbus,
+  cmake,
+  systemd,
+}:
 
 stdenv.mkDerivation rec {
   pname = "iio-hyprland";
@@ -12,13 +22,16 @@ stdenv.mkDerivation rec {
     hash = "sha256-P+m2OIVS8QSQmeVYVIgt2A6Q/I3zZX3bK9UNLyQtNOg=";
   };
 
-  patches = [
-    ./test.patch
+  patches = [ ./test.patch ];
+
+  buildInputs = [
+    dbus
+    systemd
   ];
 
-  buildInputs = [ dbus systemd ];
-
-  nativeBuildInputs = [ ninja meson pkg-config ];
-
+  nativeBuildInputs = [
+    ninja
+    meson
+    pkg-config
+  ];
 }
-

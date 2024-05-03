@@ -1,4 +1,9 @@
-{ lib, stdenv, cmake, fetchFromGitHub }:
+{
+  lib,
+  stdenv,
+  cmake,
+  fetchFromGitHub,
+}:
 
 stdenv.mkDerivation rec {
   pname = "amdctl";
@@ -24,4 +29,3 @@ stdenv.mkDerivation rec {
     maintainers = with maintainers; [ nokogiri ];
   };
 }
-

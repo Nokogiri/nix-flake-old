@@ -1,21 +1,24 @@
-{ lib
-, stdenv
-, fetchFromGitHub
-, fetchYarnDeps
-, yarn
-, prefetch-yarn-deps
-, nodejs
-, python3
-, makeWrapper
-, electron
-, vulkan-helper
-, gogdl
-, legendary-gl
-, nile
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  fetchYarnDeps,
+  yarn,
+  prefetch-yarn-deps,
+  nodejs,
+  python3,
+  makeWrapper,
+  electron,
+  vulkan-helper,
+  gogdl,
+  legendary-gl,
+  nile,
 }:
 
-let appName = "heroic";
-in stdenv.mkDerivation rec {
+let
+  appName = "heroic";
+in
+stdenv.mkDerivation rec {
   pname = "heroic-unwrapped";
   version = "2.13.0";
 
@@ -35,7 +38,13 @@ in stdenv.mkDerivation rec {
     #sha256 = "1p3vmh26v5c62i4ld74s5gzgx63qbl7zgy7cagjp00g2k1sfyqyk";
   };
 
-  nativeBuildInputs = [ yarn prefetch-yarn-deps nodejs python3 makeWrapper ];
+  nativeBuildInputs = [
+    yarn
+    prefetch-yarn-deps
+    nodejs
+    python3
+    makeWrapper
+  ];
 
   patches = [
     # Reverts part of upstream PR 2761 so that we don't have to use a non-free Electron fork.
@@ -78,8 +87,10 @@ in stdenv.mkDerivation rec {
   # --disable-gpu-compositing is to work around upstream bug
   # https://github.com/electron/electron/issues/32317
   installPhase =
-    let binPlatform = if stdenv.isDarwin then "darwin" else "linux";
-    in ''
+    let
+      binPlatform = if stdenv.isDarwin then "darwin" else "linux";
+    in
+    ''
       runHook preInstall
 
       mkdir -p $out/share/{applications,${appName}}
@@ -117,7 +128,12 @@ in stdenv.mkDerivation rec {
     changelog = "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases";
     license = licenses.gpl3Only;
     maintainers = with maintainers; [ aidalgol ];
-    platforms = [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
+    platforms = [
+      "x86_64-linux"
+      "x86_64-darwin"
+      "aarch64-linux"
+      "aarch64-darwin"
+    ];
     mainProgram = appName;
   };
 }

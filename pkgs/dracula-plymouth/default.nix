@@ -1,4 +1,9 @@
-{ lib, stdenv, fetchFromGitHub, fetchgit }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  fetchgit,
+}:
 
 stdenv.mkDerivation {
   name = "dracula-plymouth";

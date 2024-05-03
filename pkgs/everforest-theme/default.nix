@@ -1,28 +1,31 @@
-{ lib, stdenvNoCC, fetchFromGitHub, gtk-engine-murrine }:
+{
+  lib,
+  stdenvNoCC,
+  fetchFromGitHub,
+  gtk-engine-murrine,
+}:
 stdenvNoCC.mkDerivation {
   pname = "everforest-theme";
   version = "0-unstable-2024-05-03";
   srcs = [
-  (fetchFromGitHub {
-    owner = "Fausto-Korpsvart";
-    repo  = "Everforest-GTK-Theme";
-    rev = "8481714cf9ed5148694f1916ceba8fe21e14937b";
-    hash = "sha256-NO12ku8wnW/qMHKxi5TL/dqBxH0+cZbe+fU0iicb9JU=";
-    name = "Everforest-GTK";
-   })
-  (fetchFromGitHub {
-    owner = "binEpilo";
-    repo = "materia-everforest-kvantum";
-    rev = "391eb1d917dab900dc1ef16ffdff1a4546308ee4";
-    hash = "sha256-5ihKScPJMDU0pbeYtUx/UjC4J08/r40mAK7D+1TK6wA=";
-    name = "Everforest-Kvantum";
-   })
+    (fetchFromGitHub {
+      owner = "Fausto-Korpsvart";
+      repo = "Everforest-GTK-Theme";
+      rev = "8481714cf9ed5148694f1916ceba8fe21e14937b";
+      hash = "sha256-NO12ku8wnW/qMHKxi5TL/dqBxH0+cZbe+fU0iicb9JU=";
+      name = "Everforest-GTK";
+    })
+    (fetchFromGitHub {
+      owner = "binEpilo";
+      repo = "materia-everforest-kvantum";
+      rev = "391eb1d917dab900dc1ef16ffdff1a4546308ee4";
+      hash = "sha256-5ihKScPJMDU0pbeYtUx/UjC4J08/r40mAK7D+1TK6wA=";
+      name = "Everforest-Kvantum";
+    })
   ];
   sourceRoot = ".";
 
-  propagatedUserEnvPkgs = [
-    gtk-engine-murrine
-  ];
+  propagatedUserEnvPkgs = [ gtk-engine-murrine ];
 
   installPhase = ''
     runHook preInstall
@@ -37,7 +40,5 @@ stdenvNoCC.mkDerivation {
     cp -a Everforest-Kvantum/MateriaEverforestDark/MateriaEverforestDark.svg $out/share/Kvantum/Everforest/Everforest.svg
 
     runHook postInstall
-    '';
-
-
+  '';
 }

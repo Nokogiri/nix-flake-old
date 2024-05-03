@@ -1,4 +1,9 @@
-{ lib, fetchgit, python310Packages, ryzenadj }:
+{
+  lib,
+  fetchgit,
+  python310Packages,
+  ryzenadj,
+}:
 with python310Packages;
 
 buildPythonApplication rec {

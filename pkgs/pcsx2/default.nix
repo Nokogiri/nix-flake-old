@@ -1,34 +1,35 @@
-{ cmake
-, fetchFromGitHub
-, lib
-, llvmPackages_17
-, cubeb
-, curl
-, extra-cmake-modules
-, ffmpeg
-, libaio
-, libbacktrace
-, libpcap
-, libwebp
-, libXrandr
-, libzip
-, lz4
-, makeWrapper
-, pkg-config
-, qtbase
-, qtsvg
-, qttools
-, qtwayland
-, SDL2
-, soundtouch
-, strip-nondeterminism
-, vulkan-headers
-, vulkan-loader
-, wayland
-, wrapQtAppsHook
-, xz
-, zip
-, zstd
+{
+  cmake,
+  fetchFromGitHub,
+  lib,
+  llvmPackages_17,
+  cubeb,
+  curl,
+  extra-cmake-modules,
+  ffmpeg,
+  libaio,
+  libbacktrace,
+  libpcap,
+  libwebp,
+  libXrandr,
+  libzip,
+  lz4,
+  makeWrapper,
+  pkg-config,
+  qtbase,
+  qtsvg,
+  qttools,
+  qtwayland,
+  SDL2,
+  soundtouch,
+  strip-nondeterminism,
+  vulkan-headers,
+  vulkan-loader,
+  wayland,
+  wrapQtAppsHook,
+  xz,
+  zip,
+  zstd,
 }:
 
 let
@@ -54,11 +55,20 @@ llvmPackages_17.stdenv.mkDerivation rec {
 
   patches = [ ./define-rev.patch ];
 
-  cmakeFlags =
-    [ "-DDISABLE_ADVANCE_SIMD=ON" "-DUSE_LINKED_FFMPEG=ON" "-DPCSX2_GIT_REV=v${version}" ];
+  cmakeFlags = [
+    "-DDISABLE_ADVANCE_SIMD=ON"
+    "-DUSE_LINKED_FFMPEG=ON"
+    "-DPCSX2_GIT_REV=v${version}"
+  ];
 
-  nativeBuildInputs =
-    [ cmake extra-cmake-modules pkg-config strip-nondeterminism wrapQtAppsHook zip ];
+  nativeBuildInputs = [
+    cmake
+    extra-cmake-modules
+    pkg-config
+    strip-nondeterminism
+    wrapQtAppsHook
+    zip
+  ];
 
   buildInputs = [
     curl
@@ -94,8 +104,10 @@ llvmPackages_17.stdenv.mkDerivation rec {
   '';
 
   qtWrapperArgs =
-    let libs = lib.makeLibraryPath ([ vulkan-loader ] ++ cubeb.passthru.backendLibs);
-    in [ "--prefix LD_LIBRARY_PATH : ${libs}" ];
+    let
+      libs = lib.makeLibraryPath ([ vulkan-loader ] ++ cubeb.passthru.backendLibs);
+    in
+    [ "--prefix LD_LIBRARY_PATH : ${libs}" ];
 
   # https://github.com/PCSX2/pcsx2/pull/10200
   # Can't avoid the double wrapping, the binary wrapper from qtWrapperArgs doesn't support --run
@@ -115,8 +127,14 @@ llvmPackages_17.stdenv.mkDerivation rec {
       PC, with many additional features and benefits.
     '';
     homepage = "https://pcsx2.net";
-    license = with licenses; [ gpl3 lgpl3 ];
-    maintainers = with maintainers; [ hrdinka govanify ];
+    license = with licenses; [
+      gpl3
+      lgpl3
+    ];
+    maintainers = with maintainers; [
+      hrdinka
+      govanify
+    ];
     mainProgram = "pcsx2-qt";
     platforms = platforms.x86_64;
   };

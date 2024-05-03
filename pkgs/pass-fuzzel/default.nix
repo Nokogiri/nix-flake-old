@@ -1,17 +1,18 @@
-{ lib
-, pkgs
-, stdenv
-, fetchFromGitHub
-, makeWrapper
-, pass
-, jq
-, fuzzel
-, libnotify
-, wl-clipboard
-, findutils
-, gnused
-, coreutils
-, hyprland
+{
+  lib,
+  pkgs,
+  stdenv,
+  fetchFromGitHub,
+  makeWrapper,
+  pass,
+  jq,
+  fuzzel,
+  libnotify,
+  wl-clipboard,
+  findutils,
+  gnused,
+  coreutils,
+  hyprland,
 }:
 
 with lib;
@@ -30,7 +31,19 @@ stdenv.mkDerivation {
   installPhase = ''
     install -Dm 0755 $src $out/bin/pass-fuzzel
     wrapProgram $out/bin/pass-fuzzel --set PATH \
-      "${makeBinPath [ pass jq fuzzel libnotify wl-clipboard findutils gnused coreutils hyprland ]}"
+      "${
+        makeBinPath [
+          pass
+          jq
+          fuzzel
+          libnotify
+          wl-clipboard
+          findutils
+          gnused
+          coreutils
+          hyprland
+        ]
+      }"
   '';
 
   meta = {
@@ -39,4 +52,3 @@ stdenv.mkDerivation {
     platforms = platforms.all;
   };
 }
-

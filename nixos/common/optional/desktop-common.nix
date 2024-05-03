@@ -7,26 +7,8 @@
     text = "auth include login";
   };
 
-  #nixpkgs.config.packageOverrides =
-  #  pkgs: with pkgs; {
-  #    nerdfonts = nerdfonts.override {
-  #      fonts = [
-  #        "Hack"
-  #        "MPlus"
-  #        "NerdFontsSymbolsOnly"
-  #      ];
-  #    };
-  #  };
-
-  environment.systemPackages = with pkgs; [
-    #dracula-theme
-    dracula-icon-theme
-  ];
-
   fonts.packages = with pkgs; [
     dejavu_fonts
-    #hack-font
-    #nerdfonts
     noto-fonts
     noto-fonts-emoji
     noto-fonts-cjk-sans
@@ -44,8 +26,6 @@
   };
 
   gtk.iconCache.enable = true;
-
-  #qt.style = "kvantum";
 
   programs = {
     dconf.enable = true;

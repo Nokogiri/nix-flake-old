@@ -1,4 +1,13 @@
-{ lib, stdenv, cmake, openmw, fetchFromGitHub, luajit, makeWrapper, symlinkJoin }:
+{
+  lib,
+  stdenv,
+  cmake,
+  openmw,
+  fetchFromGitHub,
+  luajit,
+  makeWrapper,
+  symlinkJoin,
+}:
 
 # revisions are taken from https://github.com/GrimKriegor/TES3MP-deploy
 
@@ -17,7 +26,10 @@ let
       sha256 = "WIaJkSQnoOm9T7GoAwmWl7fNg79coIo/ILUsWcbH+lA=";
     };
 
-    cmakeFlags = [ "-DCMAKE_BUILD_TYPE=Release" "-DCRABNET_ENABLE_DLL=OFF" ];
+    cmakeFlags = [
+      "-DCMAKE_BUILD_TYPE=Release"
+      "-DCRABNET_ENABLE_DLL=OFF"
+    ];
 
     nativeBuildInputs = [ cmake ];
 
@@ -96,7 +108,10 @@ let
       homepage = "https://tes3mp.com/";
       license = licenses.gpl3Only;
       maintainers = with maintainers; [ peterhoeg ];
-      platforms = [ "x86_64-linux" "i686-linux" ];
+      platforms = [
+        "x86_64-linux"
+        "i686-linux"
+      ];
     };
   });
 
@@ -112,7 +127,6 @@ let
       chmod -R u+w "$data"/server
     fi
   '';
-
 in
 symlinkJoin {
   name = "openmw-tes3mp-${unwrapped.version}";

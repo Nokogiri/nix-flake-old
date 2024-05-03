@@ -1,29 +1,43 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, fetchpatch
-, pytestCheckHook
-, p7zip
-, cabextract
-, zip
-, lzip
-, zpaq
-, gnutar
-, gnugrep
-, diffutils
-, file
-, gzip
-, bzip2
-, xz
-, zstd
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  fetchpatch,
+  pytestCheckHook,
+  p7zip,
+  cabextract,
+  zip,
+  lzip,
+  zpaq,
+  gnutar,
+  gnugrep,
+  diffutils,
+  file,
+  gzip,
+  bzip2,
+  xz,
+  zstd,
 }:
 
 # unrar is unfree, as well as 7z with unrar support, not including it (patool doesn't support unar)
 # it will still use unrar if present in the path
 
 let
-  compression-utilities =
-    [ p7zip gnutar cabextract zip lzip zpaq gzip gnugrep diffutils bzip2 file xz zstd ];
+  compression-utilities = [
+    p7zip
+    gnutar
+    cabextract
+    zip
+    lzip
+    zpaq
+    gzip
+    gnugrep
+    diffutils
+    bzip2
+    file
+    xz
+    zstd
+  ];
 in
 buildPythonPackage rec {
   pname = "patool";
@@ -48,17 +62,14 @@ buildPythonPackage rec {
     # https://github.com/wummel/patool/pull/130
     (fetchpatch {
       name = "apk-sometimes-has-mime-android-package.patch";
-      url =
-        "https://github.com/wummel/patool/commit/e8a1eea1d273b278a1b6f5029d2e21cb18bc9ffd.patch";
+      url = "https://github.com/wummel/patool/commit/e8a1eea1d273b278a1b6f5029d2e21cb18bc9ffd.patch";
       hash = "sha256-AVooVdU4FNIixUfwyrn39N2SDFHNs4CUYzS5Eey+DrU=";
     })
   ];
 
   postPatch = ''
     substituteInPlace patoolib/util.py \
-      --replace "path = None" 'path = os.environ["PATH"] + ":${
-        lib.makeBinPath compression-utilities
-      }"'
+      --replace "path = None" 'path = os.environ["PATH"] + ":${lib.makeBinPath compression-utilities}"'
   '';
 
   nativeCheckInputs = [ pytestCheckHook ] ++ compression-utilities;

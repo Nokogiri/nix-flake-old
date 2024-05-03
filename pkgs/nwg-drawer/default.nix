@@ -1,13 +1,14 @@
-{ lib
-, buildGo122Module
-, fetchFromGitHub
-, cairo
-, gobject-introspection
-, gtk3
-, gtk-layer-shell
-, pkg-config
-, wrapGAppsHook
-, xdg-utils
+{
+  lib,
+  buildGo122Module,
+  fetchFromGitHub,
+  cairo,
+  gobject-introspection,
+  gtk3,
+  gtk-layer-shell,
+  pkg-config,
+  wrapGAppsHook,
+  xdg-utils,
 }:
 
 buildGo122Module rec {
@@ -25,9 +26,16 @@ buildGo122Module rec {
 
   #patches = [ ./nwg-drawer-power-icons.diff ];
 
-
-  buildInputs = [ cairo gtk3 gtk-layer-shell ];
-  nativeBuildInputs = [ pkg-config wrapGAppsHook gobject-introspection ];
+  buildInputs = [
+    cairo
+    gtk3
+    gtk-layer-shell
+  ];
+  nativeBuildInputs = [
+    pkg-config
+    wrapGAppsHook
+    gobject-introspection
+  ];
 
   doCheck = false;
 
@@ -56,4 +64,3 @@ buildGo122Module rec {
     maintainers = with maintainers; [ plabadens ];
   };
 }
-
