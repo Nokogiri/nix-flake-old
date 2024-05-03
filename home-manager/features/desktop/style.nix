@@ -45,26 +45,26 @@ in
       package = pkgs.dracula-icon-theme;
     };
     theme = {
-      name = "Ant";
-      package = pkgs.ant-theme;
+      name = "Andromeda";
+      package = pkgs.andromeda-gtk-theme;
     };
-    gtk2 = {
-      extraConfig = ''
-        gtk-toolbar-style=GTK_TOOLBAR_ICONS
-        gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
-        gtk-button-images=0
-        gtk-menu-images=1
-      '';
-    };
-    gtk3 = {
-      extraConfig = {
-        gtk-button-images = false;
-        gtk-menu-images = true;
-        gtk-enable-event-sounds = false;
-        gtk-enable-animations = true;
-        gtk-application-prefer-dark-theme = true;
-      };
-    };
+    #gtk2 = {
+    #  extraConfig = ''
+    #    gtk-toolbar-style=GTK_TOOLBAR_ICONS
+    #    gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+    #    gtk-button-images=0
+    #    gtk-menu-images=1
+    #  '';
+    #};
+    #gtk3 = {
+    #  extraConfig = {
+    #    gtk-button-images = false;
+    #    gtk-menu-images = true;
+    #    gtk-enable-event-sounds = false;
+    #    gtk-enable-animations = true;
+    #    gtk-application-prefer-dark-theme = true;
+    #  };
+    #};
   };
   #home.file.".config/gtk-4.0/gtk.css".source =
   #  "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0/gtk.css";
@@ -73,10 +73,10 @@ in
   ##  .window-frame {box-shadow: none;}
   #'';
   # for flatpaks
-  home.file.".themes/Dracula" = {
-    recursive = true;
-    source = "${pkgs.dracula-theme}/share/themes/Dracula";
-  };
+  #home.file.".themes/Dracula" = {
+  #  recursive = true;
+  #  source = "${pkgs.dracula-theme}/share/themes/Dracula";
+  #};
 
   home.pointerCursor = {
     x11.enable = true;

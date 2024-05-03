@@ -1,8 +1,5 @@
 {
   inputs,
-  outputs,
-  lib,
-  config,
   pkgs,
   ...
 }:
@@ -14,7 +11,7 @@
     ../features/games
     ../features/media
     ../features/nvim
-    ../features/stylix
+    ../../stylix/home.nix
     ../features/sway
     #../features/hyprland
 

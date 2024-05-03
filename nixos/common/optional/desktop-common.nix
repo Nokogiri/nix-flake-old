@@ -19,7 +19,7 @@
   #  };
 
   environment.systemPackages = with pkgs; [
-    dracula-theme
+    #dracula-theme
     dracula-icon-theme
   ];
 

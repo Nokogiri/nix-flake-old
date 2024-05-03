@@ -32,15 +32,15 @@
 
     #extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest";
     extest.url = "github:Nokogiri/extest";
-    swayfx = {
-      url = "github:WillPower3309/swayfx";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.scenefx.follows = "scenefx";
-    };
-    scenefx = {
-      url = "github:wlrfx/scenefx";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #swayfx = {
+    #  url = "github:WillPower3309/swayfx";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #  inputs.scenefx.follows = "scenefx";
+    #};
+    #scenefx = {
+    #  url = "github:wlrfx/scenefx";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     #hyprland = {
     #  url = "github:hyprwm/Hyprland/v0.39.1";
     #  inputs.nixpkgs.follows = "nixpkgs";

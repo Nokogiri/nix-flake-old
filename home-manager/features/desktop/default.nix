@@ -11,9 +11,9 @@
     ./playerctl.nix
     ./rbw.nix
     ./rofi
-    ./style.nix
+    #./style.nix
     ./udisks.nix
-    #./wezterm
+    ./wezterm
     ./wofi
     ./wvkbd.nix
     ./xdg-portal.nix

@@ -11,7 +11,8 @@ in
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = false;
-    package = inputs.swayfx.packages.x86_64-linux.default;
+    #package = inputs.swayfx.packages.x86_64-linux.default;
+    package = pkgs.swayfx;
     extraSessionCommands = ''
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway
@@ -247,7 +248,6 @@ in
       };
       seat = {
         "*" = {
-          #xcursor_theme = "${config.gtk.cursorTheme.name}";
           hide_cursor = "when-typing 10";
         };
       };
@@ -260,6 +260,7 @@ in
         { command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"; }
       ];
       terminal = "${pkgs.kitty}/bin/kitty";
+      #terminal = "${pkgs.wezterm}/bin/wezterm-gui";
       window = {
         border = 0;
         commands = [
