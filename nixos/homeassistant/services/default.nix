@@ -2,7 +2,7 @@
   imports = [
     ./dave.nix
     ./fail2ban.nix
-    ./forgejo.nix
+    #./forgejo.nix
     ./nfs-server.nix
     ./nginx
     #./nix-serve.nix
