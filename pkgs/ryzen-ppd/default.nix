@@ -1,34 +1,36 @@
 {
   lib,
+  pkgs,
   fetchgit,
-  python310Packages,
+  python311Packages,
   ryzenadj,
+  wrapGAppsHook,
 }:
-with python310Packages;
+#with python311Packages;
 
-buildPythonApplication rec {
+python311Packages.buildPythonApplication rec {
   pname = "ryzen-ppd";
   version = "0.5";
 
   src = fetchgit {
-    url = "https://forge.fishoeder.net/Nokogiri/ryzen-ppd.git";
-    rev = "a001bdfb08eb660a0ca3d012174782ca5ece7f8d";
-    sha256 = "sha256-w3Nq14QJkI68E4WH0gEiyp9ZQ01mLu8uWH8icy1w6Sc=";
+    url = "https://codeberg.org/Nokogiri/ryzen-ppd.git";
+    rev = "f1fe7aba834b32e117a33a33fe5b36e4192469a2";
+    sha256 = "sha256-+yDdkL7DzgEFp5ncfg86h3eCtlK5mACdAW4N0rJoXyA=";
   };
 
   propagatedBuildInputs = [
-    python310Packages.dbus-python
-    python310Packages.pygobject3
-    python310Packages.setuptools
-    python310Packages.dbus-next
+    python311Packages.dbus-python
+    python311Packages.pygobject3
+    python311Packages.setuptools
+    python311Packages.dbus-next
     ryzenadj
   ];
   buildInputs = [ ryzenadj ];
-  nativeBuildInputs = [ ryzenadj ];
+  nativeBuildInputs = [ ryzenadj wrapGAppsHook ];
   postInstall = ''
     install -Dm644 $src/scripts/systemd/ryzen-ppd.service -t $out/lib/systemd/system
     substituteInPlace $out/lib/systemd/system/ryzen-ppd.service --replace "/usr/bin/ryzen-ppd" "$out/bin/ryzen-ppd"
-    substituteInPlace $out/lib/python3.10/site-packages/ryzen_ppd/cpu.py --replace "libryzenadj.so" "${pkgs.ryzenadj}/lib/libryzenadj.so"
+    substituteInPlace $out/lib/python3.11/site-packages/ryzen_ppd/cpu.py --replace "libryzenadj.so" "${pkgs.ryzenadj}/lib/libryzenadj.so"
   '';
   doCheck = false;
 
@@ -36,6 +38,5 @@ buildPythonApplication rec {
     description = "CHANGE";
     homepage = "https://github.com/CHANGE/ryzen-ppd";
     license = licenses.gpl3;
-    maintainers = with maintainers; [ ];
   };
 }

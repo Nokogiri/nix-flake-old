@@ -1,5 +1,6 @@
 # This file defines overlays
-{ inputs, ... }: {
+{ inputs, ... }:
+{
   # This one brings our custom packages from the 'pkgs' directory
   additions = final: _prev: import ../pkgs { pkgs = final; };
 
@@ -7,13 +8,13 @@
   # You can change versions, add patches, set compilation flags, anything really.
   # https://nixos.wiki/wiki/Overlays
   modifications = final: prev: {
-  #foot = prev.foot.overrideAttrs (old: { patches = (old.patches or []) ++ [ ./foot-fs-transparency.patch ]; })
-  fprintd = prev.fprintd.overrideAttrs (_: { 
-    mesonCheckFlags = [ 
-      "--no-suite" "fprintd:TestPamFprintd"
-    ]; 
-  });
-
+    #foot = prev.foot.overrideAttrs (old: { patches = (old.patches or []) ++ [ ./foot-fs-transparency.patch ]; })
+    #fprintd = prev.fprintd.overrideAttrs (_: {
+    #  mesonCheckFlags = [
+    #    "--no-suite"
+    #    "fprintd:TestPamFprintd"
+    #  ];
+    #});
   };
   #unstable-smallish = self: super: {
   #  chromium = inputs.unstable-small.legacyPackages.x86_64-linux.chromium;

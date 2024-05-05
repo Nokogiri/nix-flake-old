@@ -21,7 +21,9 @@
 
     nur.url = "github:nix-community/NUR";
 
-    spicetify-nix = { url = "github:the-argus/spicetify-nix"; };
+    spicetify-nix = {
+      url = "github:the-argus/spicetify-nix";
+    };
 
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
@@ -30,48 +32,47 @@
 
     stylix.url = "github:danth/stylix";
 
-    #extest.url = "git+https://forge.fishoeder.net/Nokogiri/extest";
     extest.url = "github:Nokogiri/extest";
-    #swayfx = {
-    #  url = "github:WillPower3309/swayfx";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #  inputs.scenefx.follows = "scenefx";
-    #};
-    #scenefx = {
-    #  url = "github:wlrfx/scenefx";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    #hyprland = {
-    #  url = "github:hyprwm/Hyprland/v0.39.1";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    #hypridle = {
-    #  url = "github:hyprwm/hypridle";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    #hyprlock = {
-    #  url = "github:hyprwm/hyprlock";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    #hyprland-contrib.url = "github:hyprwm/contrib";
-    #hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
-    #hy3 = {
-    #  url = "github:outfoxxed/hy3/hl0.39.1";
-    #  inputs.hyprland.follows = "hyprland";
-    #};
+    hypridle = {
+      url = "github:hyprwm/hypridle";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprlock = {
+      url = "github:hyprwm/hyprlock";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
     let
       inherit (self) outputs;
-      forAllSystems = nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" ];
-    in rec {
-      packages = forAllSystems
-        (system: let pkgs = nixpkgs.legacyPackages.${system}; in import ./pkgs { inherit pkgs; });
+      forAllSystems = nixpkgs.lib.genAttrs [
+        "x86_64-linux"
+        "x86_64-darwin"
+      ];
+    in
+    rec {
+      packages = forAllSystems (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        import ./pkgs { inherit pkgs; }
+      );
 
-      devShells = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./shell.nix { inherit pkgs; });
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        import ./shell.nix { inherit pkgs; }
+      );
       overlays = import ./overlays { inherit inputs; };
 
       nixosModules = import ./modules/nixos;
@@ -81,22 +82,27 @@
       nixosConfigurations = {
         mowteng = nixpkgs.lib.nixosSystem {
           modules = [ ./nixos/mowteng/configuration.nix ] ++ (builtins.attrValues nixosModules);
-          specialArgs = { inherit inputs outputs; };
+          specialArgs = {
+            inherit inputs outputs;
+          };
         };
       };
 
       nixosConfigurations = {
         homeassistant = nixpkgs.lib.nixosSystem {
-          modules = [ ./nixos/homeassistant/configuration.nix ]
-            ++ (builtins.attrValues nixosModules);
-          specialArgs = { inherit inputs outputs; };
+          modules = [ ./nixos/homeassistant/configuration.nix ] ++ (builtins.attrValues nixosModules);
+          specialArgs = {
+            inherit inputs outputs;
+          };
         };
       };
 
       homeConfigurations = {
         "nokogiri@mowteng" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
+          extraSpecialArgs = {
+            inherit inputs outputs;
+          };
           modules = [ ./home-manager/mowteng ];
         };
       };
@@ -104,7 +110,9 @@
       homeConfigurations = {
         "nokogiri@homeassistant" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
+          extraSpecialArgs = {
+            inherit inputs outputs;
+          };
           modules = [ ./home-manager/homeassistant ];
         };
       };

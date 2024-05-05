@@ -1,11 +1,9 @@
 {
   pkgs,
-  config,
-  inputs,
   ...
 }:
 {
-  imports = [ ./steam.nix ];
+  imports = [ ./mangohud.nix ./steam.nix ];
 
   home.sessionVariables.WINEDEBUG = "-all";
 

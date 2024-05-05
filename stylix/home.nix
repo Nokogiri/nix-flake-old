@@ -6,9 +6,6 @@
 }:
 {
   home.packages = with pkgs; [
-    #andromeda-gtk-theme
-    #ant-theme
-    #dracula-icon-theme
     everforest-theme
     libsForQt5.qt5ct
     qt6Packages.qt6ct
@@ -34,19 +31,11 @@
     };
   };
 
-  #home.file.".config/Kvantum/Everforest" = {
-  #  source = "${pkgs.everforest-theme}/share/Kvantum/Everforest-Kvantum";
-  #  recursive = false;
-  #};
-  #home.file.".config/gtk-4.0/gtk.css".source = "${pkgs.everforest-theme}/share/themes/Everforest-Dark-BL/gtk-4.0/gtk.css";
-  #home.file.".config/gtk-4.0/gtk-dark.css".source = "${pkgs.everforest-theme}/share/themes/Everforest-Dark-BL/gtk-4.0/gtk-dark.css";
-  #home.file.".config/gtk-4.0/assets" = {
-  #  recursive = true;
-  #  source = "${pkgs.everforest-theme}/share/themes/Everforest-Dark-BL/gtk-4.0/assets";
-  #};
   stylix.targets = {
     gtk.enable = false;
     kde.enable = false;
+    mangohud.enable = false;
+
     nixvim.enable = false;
     rofi.enable = false;
     vim.enable = false;

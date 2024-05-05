@@ -238,14 +238,14 @@ in
       };
       menu = "\${pkgs.fuzzel}/bin/fuzzel";
       modifier = "Mod4";
-      output = {
-        eDP-1 = {
+      #output = {
+      #  eDP-1 = {
           #bg = "${config.home.homeDirectory}/.local/share/wallpaper/FireWatch.png fill";
-          bg = "${pkgs.Imaginarium}/wallpaper/FireWatch_2.png fill";
-          scale = "1";
-          resolution = "1920x1200@60.000Hz";
-        };
-      };
+      #    bg = "${pkgs.Imaginarium}/wallpaper/FireWatch_2.png fill";
+      #    scale = "1";
+      #    resolution = "1920x1200@60.000Hz";
+      #  };
+      #};
       seat = {
         "*" = {
           hide_cursor = "when-typing 10";
