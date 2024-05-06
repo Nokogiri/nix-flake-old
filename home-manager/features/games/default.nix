@@ -1,9 +1,9 @@
+{ pkgs, ... }:
 {
-  pkgs,
-  ...
-}:
-{
-  imports = [ ./mangohud.nix ./steam.nix ];
+  imports = [
+    ./mangohud.nix
+    ./steam.nix
+  ];
 
   home.sessionVariables.WINEDEBUG = "-all";
 

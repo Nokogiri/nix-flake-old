@@ -2,23 +2,41 @@
 {
 
   #imports = [ ./psd.nix ];
-  home.file.".mozilla/dracula" = {
-    recursive = true;
-    source = ./userChrome;
-  };
+  #home.file.".mozilla/dracula" = {
+  #  recursive = true;
+  #  source = ./userChrome;
+  #};
   home.file.".mozilla/native-messaging-hosts/tridactyl.json".source = "${pkgs.tridactyl-native}/lib/mozilla/native-messaging-hosts/tridactyl.json";
 
   home.packages = [ pkgs.tridactyl-native ];
+
+  home.file.".mozilla/firefox/nokogiri/chrome" = {
+      source = pkgs.fetchFromGitHub {
+        owner = "KiKaraage";
+        repo = "ArcWTF";
+        rev = "bb6f2b7ef7e3d201e23d86bf8636e5d0ea4bd68b";
+        hash = "sha256-gyJiIVnyZOYVX6G3m4SSbsb7K9g4zKZWlrHphEIQwsY=";
+      };
+      recursive = true;
+    };
+  home.file.".mozilla/firefox/private/chrome" = {
+      source = pkgs.fetchFromGitHub {
+        owner = "KiKaraage";
+        repo = "ArcWTF";
+        rev = "bb6f2b7ef7e3d201e23d86bf8636e5d0ea4bd68b";
+        hash = "sha256-gyJiIVnyZOYVX6G3m4SSbsb7K9g4zKZWlrHphEIQwsY=";
+      };
+      recursive = true;
+    };
+
   programs.firefox = {
     enable = true;
     profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons; [
       tridactyl
       ublock-origin
       onetab
-      octotree
       improved-tube
       bitwarden
-      dracula-dark-colorscheme
       sidebery
       sponsorblock
       iina-open-in-mpv
@@ -53,35 +71,14 @@
         "svg.context-properties.content.enabled" = true;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
-      userChrome = ''
-        @import url("${
-          builtins.fetchurl {
-            url = "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/hide_tabs_toolbar.css";
-            sha256 = "sha256-60fv8C7+nj7mUTAfMnfGTcEcdba2XUXfPnvzYluKzaw=";
-          }
-        }");
-        /*@import url("${
-          builtins.fetchurl {
-            url = "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/window_control_placeholder_support.css";
-            sha256 = "sha256-q1BC2VHTYxwqr8PAt93GrIF+owDnzlI1ozLIkYQf9ac=";
-          }
-        }");*/
-        /*/* Remove close button*/ .titlebar-buttonbox-container{ display:none }
-        #PersonalToolbar{
-          position: absolute;
-          display: flex;
-          z-index: 1;
-        } */
-      '';
     };
-
+    
     profiles.private.extensions = with config.nur.repos.rycee.firefox-addons; [
       ublock-origin
       onetab
       tridactyl
       sidebery
       sponsorblock
-      dracula-dark-colorscheme
       iina-open-in-mpv
     ];
     profiles.private = {
@@ -110,21 +107,6 @@
         "gfx.webrender.all" = true;
         "media.ffmpeg.vaapi.enable" = true;
       };
-      userChrome = ''
-        @import url("${
-          builtins.fetchurl {
-            url = "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/hide_tabs_toolbar.css";
-            sha256 = "sha256-60fv8C7+nj7mUTAfMnfGTcEcdba2XUXfPnvzYluKzaw=";
-          }
-        }");
-        /*@import url("${
-          builtins.fetchurl {
-            url = "https://github.com/MrOtherGuy/firefox-csshacks/raw/master/chrome/window_control_placeholder_support.css";
-            sha256 = "sha256-q1BC2VHTYxwqr8PAt93GrIF+owDnzlI1ozLIkYQf9ac=";
-          }
-        }");*/
-        /* Remove close button*/ .titlebar-buttonbox-container{ display:none } 
-      '';
     };
   };
 }

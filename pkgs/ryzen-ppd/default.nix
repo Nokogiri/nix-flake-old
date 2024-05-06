@@ -9,7 +9,7 @@
 #with python311Packages;
 
 python311Packages.buildPythonApplication {
-#rec {
+  #rec {
   pname = "ryzen-ppd";
   version = "0.5";
 
@@ -27,7 +27,10 @@ python311Packages.buildPythonApplication {
     ryzenadj
   ];
   buildInputs = [ ryzenadj ];
-  nativeBuildInputs = [ ryzenadj wrapGAppsHook ];
+  nativeBuildInputs = [
+    ryzenadj
+    wrapGAppsHook
+  ];
   postInstall = ''
     install -Dm644 $src/scripts/systemd/ryzen-ppd.service -t $out/lib/systemd/system
     substituteInPlace $out/lib/systemd/system/ryzen-ppd.service --replace "/usr/bin/ryzen-ppd" "$out/bin/ryzen-ppd"
