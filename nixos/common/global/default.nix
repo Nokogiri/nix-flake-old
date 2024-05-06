@@ -2,8 +2,6 @@
 {
   lib,
   inputs,
-  outputs,
-  pkgs,
   config,
   ...
 }:
@@ -11,6 +9,7 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     inputs.nix-index-database.nixosModules.nix-index
+    inputs.lix-module.nixosModules.default
     ./applications.nix
     ./console.nix
     ./fish.nix
@@ -47,11 +46,11 @@
     settings = {
       substituters = [
         "https://nix-community.cachix.org"
-        #"https://hyprland.cachix.org"
+        "https://cache.lix.systems"
       ];
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-        #"hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+        "cache.lix.systems:aBnZUw8zA7H35Cz2RyKFVs3H4PlGTLawyY5KRbvJR8o="
       ];
       trusted-users = [
         "root"

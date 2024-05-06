@@ -6,14 +6,14 @@
     #./hy3land.nix
     ./environment.nix
     ./hyprlock.nix
-    ./hypridle.nix
+    #./hypridle.nix
     ./plugins
     ./swaync.nix
     ./swayosd.nix
     ./user-services.nix
     ./waybar
     ./wlogout.nix
-    inputs.hyprland.homeManagerModules.default
+    #inputs.hyprland.homeManagerModules.default
   ];
 
   nixpkgs.overlays = [

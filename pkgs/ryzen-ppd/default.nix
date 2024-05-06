@@ -8,7 +8,8 @@
 }:
 #with python311Packages;
 
-python311Packages.buildPythonApplication rec {
+python311Packages.buildPythonApplication {
+#rec {
   pname = "ryzen-ppd";
   version = "0.5";
 

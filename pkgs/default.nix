@@ -10,7 +10,7 @@
   everforest-theme = pkgs.callPackage ./everforest-theme { };
   #fastfetch = pkgs.callPackage ./fastfetch { };
   #gamescope = pkgs.callPackage ./gamescope { };
-  #iio-hyprland = pkgs.callPackage ./iio-hyprland { };
+  iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   Imaginarium = pkgs.callPackage ./Imaginarium { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   nwg-drawer = pkgs.callPackage ./nwg-drawer { };
