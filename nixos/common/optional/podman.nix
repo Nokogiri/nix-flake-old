@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   virtualisation.oci-containers.backend = "podman";
   virtualisation.podman = {
@@ -8,7 +8,7 @@
   };
   virtualisation.containers.storage.settings = {
     storage = {
-      driver = "btrfs";
+      driver = lib.mkDefault "btrfs";
       graphroot = "/var/lib/containers/storage";
       runroot = "/run/containers/storage";
     };

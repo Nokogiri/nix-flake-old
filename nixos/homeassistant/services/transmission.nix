@@ -9,7 +9,7 @@
     transmission = {
       enable = true;
       user = "nokogiri";
-      package = pkgs.transmission_4;
+      #package = pkgs.transmission_4;
       openPeerPorts = true;
       credentialsFile = "/var/lib/secrets/transmission/settings.json";
       settings = {
