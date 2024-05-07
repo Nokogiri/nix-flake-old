@@ -22,6 +22,13 @@ stdenvNoCC.mkDerivation {
       hash = "sha256-5ihKScPJMDU0pbeYtUx/UjC4J08/r40mAK7D+1TK6wA=";
       name = "Everforest-Kvantum";
     })
+    (fetchFromGitHub {
+    owner = "Apeiros-46B";
+    repo = "everforest-walls";
+    rev = "0ae7c31e34385b9af33a74a707b9c4acbfef4d8c";
+    hash = "sha256-RKebxSl3c18cqGQgiF/wOHezmwjEYKn+YhgEAc9nJPc=";
+    name = "Everforest-Wallpaper";
+    })
   ];
   sourceRoot = ".";
 
@@ -33,12 +40,13 @@ stdenvNoCC.mkDerivation {
     mkdir -p $out/share/themes
     mkdir -p $out/share/icons
     mkdir -p $out/share/Kvantum/Everforest
+    mkdir -p $out/share/wallpaper/Everforest
 
     cp -a Everforest-GTK/themes $out/share
     cp -a Everforest-GTK/icons $out/share
     cp -a Everforest-Kvantum/MateriaEverforestDark/MateriaEverforestDark.kvconfig $out/share/Kvantum/Everforest/Everforest.kvconfig
     cp -a Everforest-Kvantum/MateriaEverforestDark/MateriaEverforestDark.svg $out/share/Kvantum/Everforest/Everforest.svg
-
+    cp -a Everforest-Wallpaper/*/*.png $out/share/wallpaper/Everforest/
     runHook postInstall
   '';
 }
