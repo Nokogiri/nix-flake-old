@@ -18,9 +18,8 @@
   ];
   stylix = {
     homeManagerIntegration.followSystem = true;
-    image = ./wallpaper.png;
+    image = "${pkgs.everforest-theme}/share/wallpaper/Everforest/rocky_beach_1.png";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
-    #base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
     polarity = "dark";
     cursor = {
       name = "Bibata-Modern-Ice";

@@ -1,7 +1,5 @@
 {
   pkgs,
-  inputs,
-  config,
   ...
 }:
 {
@@ -33,7 +31,6 @@
 
   stylix.targets = {
     gtk.enable = false;
-    #hypridle.enable = false;
     kde.enable = false;
     mangohud.enable = false;
 
