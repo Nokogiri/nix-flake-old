@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  inputs,
   ...
 }:
 let
@@ -11,7 +10,6 @@ in
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = false;
-    #package = inputs.swayfx.packages.x86_64-linux.default;
     package = pkgs.swayfx;
     extraSessionCommands = ''
       export XDG_SESSION_TYPE=wayland
@@ -59,44 +57,6 @@ in
         "9" = [ { class = "Com.github.johnfactotum.Foliate"; } ];
       };
       bars = [ ];
-      #colors = {
-      #  background = "#F8F8F2";
-      #  focused = {
-      #    border = "#6272A4";
-      #    background = "#6272A4";
-      #    text = "#F8F8F2";
-      #    indicator = "#6262A4";
-      #    childBorder = "#6262A4";
-      #  };
-      #  focusedInactive = {
-      #    border = "#44475A";
-      #    background = "#44475A";
-      #    text = "#F8F8F2";
-      #    indicator = "#44475A";
-      #    childBorder = "#44475A";
-      #  };
-      #  placeholder = {
-      #    border = "#282A36";
-      #    background = "#282A36";
-      #    text = "#F8F8F2";
-      #    indicator = "#282A36";
-      #    childBorder = "#282A36";
-      #  };
-      #  unfocused = {
-      #    border = "#282A36";
-      #    background = "#282A36";
-      #    text = "#BFBFBF";
-      #    indicator = "#282A36";
-      #    childBorder = "#282A36";
-      #  };
-      #  urgent = {
-      #    border = "#44475A";
-      #    background = "#FF5555";
-      #    text = "#F8F8F2";
-      #    indicator = "#FF5555";
-      #    childBorder = "#FF5555";
-      #  };
-      #};
       floating = {
         border = 0;
         criteria = [
@@ -238,14 +198,6 @@ in
       };
       menu = "\${pkgs.fuzzel}/bin/fuzzel";
       modifier = "Mod4";
-      #output = {
-      #  eDP-1 = {
-      #bg = "${config.home.homeDirectory}/.local/share/wallpaper/FireWatch.png fill";
-      #    bg = "${pkgs.Imaginarium}/wallpaper/FireWatch_2.png fill";
-      #    scale = "1";
-      #    resolution = "1920x1200@60.000Hz";
-      #  };
-      #};
       seat = {
         "*" = {
           hide_cursor = "when-typing 10";
@@ -260,7 +212,6 @@ in
         { command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"; }
       ];
       terminal = "${pkgs.kitty}/bin/kitty";
-      #terminal = "${pkgs.wezterm}/bin/wezterm-gui";
       window = {
         border = 0;
         commands = [
