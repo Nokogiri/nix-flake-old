@@ -37,9 +37,9 @@
     ];
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
-      "amd_pstate=active"
+      "amd_pstate=passive"
       "mitigations=off"
-      "cpufreq.default_governor=powersave"
+      "cpufreq.default_governor=onedmand"
     ];
     loader.efi.efiSysMountPoint = "/boot";
     supportedFilesystems = [ "btrfs" ];
