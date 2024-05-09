@@ -16,6 +16,7 @@
 
     # general
     #cartridges
+    bottles
     gamescope
     mangohud
     vkbasalt

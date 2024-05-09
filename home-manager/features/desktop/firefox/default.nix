@@ -37,10 +37,13 @@
       onetab
       improved-tube
       bitwarden
+      refined-github
       sidebery
       sponsorblock
+      stylus
       iina-open-in-mpv
     ];
+
     profiles.nokogiri = {
       name = "nokogiri";
       path = "nokogiri";

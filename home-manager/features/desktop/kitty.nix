@@ -3,10 +3,10 @@
     kitty = {
       enable = true;
       font = {
-        #name = "M+CodeLat60 Nerd Font";
+        name = "M+CodeLat60 Nerd Font";
         size = 12;
       };
-      #theme = "Dracula";
+      theme = "Everforest Dark Medium";
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";
@@ -106,7 +106,7 @@
         resize_draw_strategy = "scale";
 
         # Opacity settings
-        #background_opacity = "0.85";
+        background_opacity = "0.85";
         dim_opacity = "0.4";
       };
       keybindings = {

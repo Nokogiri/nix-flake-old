@@ -75,7 +75,7 @@
       terminal = 0.9;
     };
     targets = {
-      gtk.enable = false;
+      gtk.enable = true;
       plymouth.logoAnimated = false;
     };
   };

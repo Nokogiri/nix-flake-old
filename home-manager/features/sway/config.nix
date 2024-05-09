@@ -243,10 +243,10 @@ in
         
         corner_radius 8
         blur enable
-        blur_passes 1
-        blur_radius 2
-        blur_noise 0.1
-        blur_brightness 1.0
+        blur_passes 2
+        blur_radius 8
+        blur_noise 0.0
+        blur_brightness 0.9
         blur_contrast 1.0
         blur_saturation 1.0
         titlebar_separator disable
