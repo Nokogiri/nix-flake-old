@@ -10,6 +10,7 @@
     ./git.nix
     ./gpg-agent.nix
     ./micro
+    ./nushell
     ./ssh.nix
     ./starship.nix
     ./tmux.nix

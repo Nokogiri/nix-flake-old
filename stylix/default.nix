@@ -16,14 +16,15 @@
     "/share/themes"
     "/share/icons"
   ];
+
   stylix = {
     homeManagerIntegration.followSystem = true;
     image = "${pkgs.everforest-theme}/share/wallpaper/Everforest/flowers.png";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
     polarity = "dark";
     cursor = {
-      name = "Bibata-Modern-Ice";
-      package = pkgs.bibata-cursors;
+      name = "phinger-cursors-light";
+      package = pkgs.phinger-cursors;
       size = 24;
     };
     fonts = {

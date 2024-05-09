@@ -37,7 +37,7 @@
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     XCURSOR_SIZE = "24";
-    XCURSOR_THEME = "Dracula-cursors";
+    XCURSOR_THEME = "${config.gtk.cursorTheme.name}";
   };
 
   systemd.user.sessionVariables = {

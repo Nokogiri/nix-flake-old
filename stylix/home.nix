@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   ...
 }:
 {
@@ -10,6 +11,13 @@
     libsForQt5.qtstyleplugin-kvantum
     qt6Packages.qtstyleplugin-kvantum
   ];
+
+  home.file.".icons/default/index.theme".text = ''
+    [Icon Theme]
+    Name=Default
+    Comment=Default Cursor Theme
+    Inherits=${config.gtk.cursorTheme.name}
+  '';
 
   qt.style.name = "Kvantum-Dark";
 
