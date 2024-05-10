@@ -19,7 +19,7 @@
 
   stylix = {
     homeManagerIntegration.followSystem = true;
-    image = "${pkgs.everforest-theme}/share/wallpaper/Everforest/flowers.png";
+    image = "${pkgs.everforest-theme}/share/wallpaper/Everforest/ocean_front_2.png";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
     polarity = "dark";
     cursor = {
