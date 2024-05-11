@@ -42,6 +42,7 @@
       sponsorblock
       stylus
       iina-open-in-mpv
+      enhancer-for-youtube
     ];
 
     profiles.nokogiri = {
