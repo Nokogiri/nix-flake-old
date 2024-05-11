@@ -4,6 +4,7 @@
     ./fail2ban.nix
     ./forgejo.nix
     ./nfs-server.nix
+    ./nix-serve.nix
     ./nginx
     ./samba.nix
     ./podman
