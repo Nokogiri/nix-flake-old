@@ -3,6 +3,7 @@
   imports = [
     ./mangohud.nix
     ./steam.nix
+    ./wine.nix
   ];
 
   home.sessionVariables.WINEDEBUG = "-all";
@@ -16,7 +17,7 @@
 
     # general
     #cartridges
-    bottles
+    #bottles
     gamescope
     mangohud
     vkbasalt

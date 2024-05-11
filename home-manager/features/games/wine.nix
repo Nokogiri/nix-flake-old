@@ -41,6 +41,7 @@
     #STL
     unixtools.xxd
     wget
+    winetricks
     xdotool
     xorg.xprop
     xorg.xwininfo
